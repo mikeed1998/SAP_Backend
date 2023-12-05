@@ -8,7 +8,7 @@
 
 @section('content')
 	<div class="row mb-4 px-2">
-		<a href="{{ route('config.index') }}" class="col col-md-2 btn btn-sm grey darken-2 text-white mr-auto"><i class="fa fa-reply"></i> Regresar</a>
+		<a href="{{ route('config.faq.index') }}" class="col col-md-2 btn btn-sm grey darken-2 text-white mr-auto rounded-pill"><i class="fa fa-reply"></i> Regresar</a>
 	</div>
 
 	<div class="col-12 col-md-8 mx-auto">
@@ -26,13 +26,14 @@
 						<textarea name="answer" id="answer" rows="10" class="form-control" style="resize:none;">{{ $faq->respuesta }}</textarea>
 					</div>
 					<div class="form-group text-center">
-						<button type="submit" class="btn btn-primary">Guardar</button>
+						<button type="submit" class="btn btn-primary rounded-pill">Guardar</button>
 					</div>
 				</form>
 			</div>
 		</div>
 	</div>
 @endsection
+
 @section('jsLibExtras2')
 	<script>
 	    tinymce.init({

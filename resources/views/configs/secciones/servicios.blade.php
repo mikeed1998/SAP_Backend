@@ -234,6 +234,9 @@
                 </div>
                 
                 <div class="col-12 mt-3 d-flex flex-column" style="text-align: justify;">
+                    <div class="col-12 mt-2">
+                        <input type="color" class="form-control py-2 editar_text_seccion_global" value="{{ $s->color }}" onchange="actualizarColor()"  data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$s->id}}" data-table="ZServicio" data-campo="color">
+                    </div>
                     <h5><input type="text" class="form-control editar_text_seccion_global" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$s->id}}" data-table="ZServicio" data-campo="titulo" value="{{$s->titulo}}"></h5>
                     <textarea name="" id="" cols="30" rows="3" class="form-control" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$s->id}}" data-table="ZServicio" data-campo="descripcion">{{$s->descripcion}}</textarea>
                     <textarea name="" id="" cols="30" rows="3" class="form-control" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$s->id}}" data-table="ZServicio" data-campo="descripcion2">{{$s->descripcion2}}</textarea>

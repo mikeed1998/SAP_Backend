@@ -151,6 +151,9 @@ Route::prefix('admin')->group(function(){
 			Route::post('elimSolu','SeccionController@elimSolu')->name('elimSolu');
 			///////////////////////////////////////////////// soluciones /////////////////////////////////////////////////
 
+			Route::post('agVacante','SeccionController@agVacante')->name('agVacante');
+			Route::post('elimVacante','SeccionController@elimVacante')->name('elimVacante');
+
 			///////////////////////////////////////////////// global /////////////////////////////////////////////////
 			Route::post('image_input_ejemplo', 'SeccionController@image_input_ejemplo')->name('image_input_ejemplo');
 			Route::post('/imgPortadaGlobal','SeccionController@imgPortadaGlobal')->name('imgPortadaGlobal');

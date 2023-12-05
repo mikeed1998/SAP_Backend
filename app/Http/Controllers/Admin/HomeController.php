@@ -26,7 +26,7 @@ class HomeController extends Controller
 		 * @return \Illuminate\Http\Response
 		 */
 		public function index()
-		{
+		{ 
 			$cards = array(
 				array('icon' => 'fas fa-cogs', 'route' => 'config.general', 'text' => 'Config. general'),
 				array('icon' => 'fas fa-paper-plane', 'route' => 'config.contact', 'text' => 'Contacto'),

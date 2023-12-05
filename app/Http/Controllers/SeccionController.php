@@ -877,6 +877,7 @@ class SeccionController extends Controller
         $solucion->orden = $request->orden;
         $solucion->descripcion = $request->desc_der;
         $solucion->descripcion2 = $request->desc_izq;
+        $solucion->color = $request->colorPicker;
 
         if($solucion->save()){
             \Toastr::success('Servicio agregado');
@@ -889,6 +890,38 @@ class SeccionController extends Controller
     }
 
     public function elimSolu(ZServicio $id) {
+
+    }
+
+    public function agVacante(Request $request){
+        $vacante = new ZVacante;
+
+        if(!empty($request->file('archivo'))){
+            $file = $request->file('archivo');
+            $extension = $file->getClientOriginalExtension();
+            $namefile = Str::random(30) . '.' . $extension;
+
+            \Storage::disk('local')->put("/img/photos/vacantes/" . $namefile, \File::get($file));
+
+            $vacante->portada = $namefile;
+        }
+
+        $vacante->titulo = $request->titulov;
+        $vacante->orden = $request->orden;
+        $vacante->descripcion = $request->descripcionv;
+        $vacante->color = $request->colorPicker;
+
+        if($vacante->save()){
+            \Toastr::success('Servicio agregado');
+        }else{
+            \Toastr::error('Error al algregar el servicio');
+        }
+        
+        return redirect()->back();
+
+    }
+
+    public function elimVacante(ZVacante $id) {
 
     }
 

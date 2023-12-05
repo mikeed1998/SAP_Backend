@@ -11,6 +11,7 @@ class ZServicio extends Model
         'descripcion',
         'descripcion2',
         'orden',
+        'color',
         'portada',
         'imagen',
     ];

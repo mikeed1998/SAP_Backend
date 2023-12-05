@@ -8,8 +8,8 @@
 
 @section('content')
 	<div class="row mb-2 px-2">
-		<a href="{{ route('config.index') }}" class="col col-md-2 btn btn-sm grey darken-2 text-white mr-auto"><i class="fa fa-reply"></i> Regresar</a>
-		<a href="{{ route('config.faq.create') }}" class="col col-md-2 btn btn-sm green darken-2 text-white"><i class="fa fa-plus"></i> Agregar</a>
+		<a href="{{ route('config.index') }}" class="col col-md-2 btn btn-sm grey darken-2 text-white mr-auto rounded-pill"><i class="fa fa-reply"></i> Regresar</a>
+		<a href="{{ route('config.faq.create') }}" class="col col-md-2 btn btn-sm green darken-2 text-white rounded-pill"><i class="fa fa-plus"></i> Agregar</a>
 	</div>
 
 	<div class="accordion sortable" data-table="Faq" id="acordionfaqs">
@@ -23,10 +23,10 @@
 					</h2>
 					<div class="mb-0 w-25 text-right">
 						<div class="btn-group btn-group-sm" role="group" aria-label="...">
-							<a href="{{route('config.faq.edit',$f->id)}}" class="btn btn-sm btn-info text-right">
+							<a href="{{route('config.faq.edit',$f->id)}}" class="btn btn-sm btn-info text-right rounded-pill">
 								<i class="fas fa-pen"></i>
 							</a>
-							<button class="btn btn-sm btn-danger text-right" data-toggle="modal" data-target="#frameModalDel" data-id="{{$f->id}}">
+							<button class="btn btn-sm btn-danger text-right rounded-pill" data-toggle="modal" data-target="#frameModalDel" data-id="{{$f->id}}">
 								<i class="fas fa-trash-alt"></i>
 							</button>
 						</div>

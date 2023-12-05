@@ -11,5 +11,6 @@ class ZVacante extends Model
         'descripcion',
         'orden',
         'portada',
+        'color',
     ];
 }

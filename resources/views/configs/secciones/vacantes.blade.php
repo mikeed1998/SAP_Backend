@@ -191,7 +191,7 @@
             <div class="col-4 p-3 " style="border-radius:26px;">
                 <div class="card position-relative">
                     <img src="{{asset('img/photos/vacantes/'.$v->portada)}}" alt="" class="img-fluid">
-                    <div class="card w-100 position-absolute top-50 start-50 translate-middle bg-transparent border-0">
+                    <div class="card w-100 position-absolute top-0 start-0 bg-transparent border-0">
                         <form id="form_aux-{{ $v->id }}" action="image_input_ejemplo" method="POST" class="file-upload px-auto col-7" enctype="multipart/form-data">
                             @csrf
                             <input type="hidden" name="id_elemento" value="{{ $v->id }}">
@@ -205,13 +205,20 @@
                             });
                         </script>
                     </div>
+                    <div class="col-3 position-absolute top-0 end-0">
+                        <div class="row">
+                            <div class="col text-center p-3">
+                                <input type="number" class="form-control fw-bold editar_text_seccion_global" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$v->id}}" data-table="ZVacante" data-campo="orden" value="{{$v->orden}}" style="box-shadow: 0;" placeholder="Orden">
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-12 mt-3 d-flex flex-column" style="text-align: justify;">
                     
                     <h5><input type="text" class="form-control editar_text_seccion_global" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$v->id}}" data-table="ZVacante" data-campo="titulo" value="{{$v->titulo}}"></h5>
                     {{-- <hr class="my-2"> --}}
 					<textarea class="col-12 mx-0 scrollux editar_text_seccion_global" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$v->id}}" data-table="ZVacante" data-campo="descripcion"  cols="30" rows="5" style="background: #f2f2f2; border:none; border-radius: 10px;">{{$v->descripcion}}</textarea>
-                    <form action="{{route('config.seccion.elimProy')}}" method="POST" class="col-12 text-center">
+                    <form action="{{route('config.seccion.elimVacante')}}" method="POST" class="col-12 text-center">
                         @csrf
                         <input type="text" name="id_proy" value="{{$v->id}}" hidden>
                         <style>
@@ -238,7 +245,7 @@
     </div> --}}
 
 {{-- modal agregar vacante --}}
-<form action="{{route('config.seccion.agproyect')}}" method="POST" class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" enctype="multipart/form-data">
+<form action="{{route('config.seccion.agVacante')}}" method="POST" class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" enctype="multipart/form-data">
     <div class="modal-dialog modal-dialog-centered">
     <div  class="modal-content" style="border-radius: 16px;" >
         @csrf
