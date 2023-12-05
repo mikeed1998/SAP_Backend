@@ -242,16 +242,17 @@
                     <textarea name="" id="" cols="30" rows="3" class="form-control" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$s->id}}" data-table="ZServicio" data-campo="descripcion2">{{$s->descripcion2}}</textarea>
                     {{-- <hr class="my-2"> --}}
 					{{-- <textarea class="col-12 mx-0 scrollux editar_text_seccion_global" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$s->id}}" data-table="services" data-campo="descripcion"  cols="30" rows="5" style="background: #f2f2f2; border:none; border-radius: 10px;">{{$s->descripcion}}</textarea> --}}
-                    <form action="{{route('config.seccion.elimProy')}}" method="POST" class="col-12 text-center">
+                    <form action="{{route('config.seccion.elimserv', ['servicio' => $s->id])}}" id="form-{{ $s->id }}" method="POST" class="col-12 text-center">
                         @csrf
-                        <input type="text" name="id_proy" value="{{$s->id}}" hidden>
+                        @method('DELETE')
+                        {{-- <input type="text" name="serv" value="{{$s->id}}" hidden> --}}
                         <style>
                             .fa-trash:hover{
                                 opacity: 50%;
                             }
                         </style>
                         <button class="col-12" style="background: none; border:none;">
-                            <i  class="fa-solid fa-trash my-3" style="font-size: 20px;"></i>
+                            <i class="fa-solid fa-trash my-3" style="font-size: 20px;"></i>
                         </button>
                     </form>
                 </div>

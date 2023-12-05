@@ -224,9 +224,10 @@
                     <textarea class="col-12 mx-0 scrollux editar_text_seccion_global" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$p->id}}" data-table="ZProyecto" data-campo="descripcion"  cols="30" rows="5" style="background: #f2f2f2; border:none; border-radius: 10px;">{{$p->descripcion}}</textarea>
                 </div>	
                 <div class="col-12 mt-2">
-                    <form action="{{route('config.seccion.elimProy')}}" method="POST" class="col-12 text-center">
+                    <form action="{{route('config.seccion.elimProy', ['proyecto' => $p->id])}}" id="form-{{ $p->id }}" method="POST" class="col-12 text-center">
                         @csrf
-                        <input type="text" name="id_proy" value="{{$p->id}}" hidden>
+                        @method('DELETE')
+                        {{-- <input type="text" name="id_proy" value="{{$p->id}}" hidden> --}}
                         <style>
                             .fa-trash:hover{
                                 opacity: 50%;

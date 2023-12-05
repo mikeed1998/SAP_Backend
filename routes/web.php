@@ -128,7 +128,7 @@ Route::prefix('admin')->group(function(){
 			
 			///////////////////////////////////////////////// proyectos /////////////////////////////////////////////////
 			Route::post('agproyect','SeccionController@agproyect')->name('agproyect');
-			Route::post('elimProy','SeccionController@elimProy')->name('elimProy');
+			Route::delete('elimProy/{proyecto}','SeccionController@elimProy')->name('elimProy');
 			///////////////////////////////////////////////// proyectos /////////////////////////////////////////////////
 
 			///////////////////////////////////////////////// Puntos de Venta /////////////////////////////////////////////////
@@ -148,11 +148,11 @@ Route::prefix('admin')->group(function(){
 
 			///////////////////////////////////////////////// soluciones /////////////////////////////////////////////////
 			Route::post('agservicio','SeccionController@agservicio')->name('agservicio');
-			Route::post('elimSolu','SeccionController@elimSolu')->name('elimSolu');
+			Route::delete('elimserv/{servicio}','SeccionController@elimserv')->name('elimserv');
 			///////////////////////////////////////////////// soluciones /////////////////////////////////////////////////
 
 			Route::post('agVacante','SeccionController@agVacante')->name('agVacante');
-			Route::post('elimVacante','SeccionController@elimVacante')->name('elimVacante');
+			Route::delete('elimVacante/{vacante}','SeccionController@elimVacante')->name('elimVacante');
 
 			///////////////////////////////////////////////// global /////////////////////////////////////////////////
 			Route::post('image_input_ejemplo', 'SeccionController@image_input_ejemplo')->name('image_input_ejemplo');

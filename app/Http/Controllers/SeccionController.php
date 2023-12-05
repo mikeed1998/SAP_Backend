@@ -829,12 +829,10 @@ class SeccionController extends Controller
 
     }
 
-    public function elimProy(Request $request){
-
-        $proyecto = ZProyecto::find($request->id_proy);
+    public function elimProy(ZProyecto $proyecto){
         
-        if(!empty($proyecto->imagen)){
-            \Storage::disk('local')->delete("/img/photos/proyectos/" .$proyecto->imagen);
+        if(!empty($proyecto->portado)){
+            \Storage::disk('local')->delete("/img/photos/proyectos/" .$proyecto->portado);
         }
 
         if($proyecto->delete()){
@@ -889,8 +887,34 @@ class SeccionController extends Controller
 
     }
 
-    public function elimSolu(ZServicio $id) {
+    public function elimserv(ZServicio $servicio) {
+        $proyectos = ZProyecto::all();
 
+        if(!empty($servicio->portada)){
+            \Storage::disk('local')->delete("/img/photos/servicios/" .$servicio->portada);
+        }
+
+        if(!empty($servicio->imagen)){
+            \Storage::disk('local')->delete("/img/photos/servicios/" .$servicio->imagen);
+        }
+
+        foreach($proyectos as $py) {
+            if($py->servicio == $servicio->id) {
+                if(!empty($proyecto->portado)){
+                    \Storage::disk('local')->delete("/img/photos/proyectos/" .$py->portado);
+                }
+
+                $py->delete();
+            }
+        }
+
+        if($servicio->delete()){
+            \Toastr::success('Servicio eliminado');
+        }else{
+            \Toastr::error('Error al eliminar el servicio');
+        }
+        
+        return redirect()->back();
     }
 
     public function agVacante(Request $request){
@@ -921,8 +945,19 @@ class SeccionController extends Controller
 
     }
 
-    public function elimVacante(ZVacante $id) {
+    public function elimVacante(ZVacante $vacante) {
+        
+        if(!empty($vacante->portada)){
+            \Storage::disk('local')->delete("/img/photos/vacantes/" .$vacante->portada);
+        }
 
+        if($vacante->delete()){
+            \Toastr::success('Vacante Eliminada');
+        }else{
+            \Toastr::error('Error al eliminar la vacante');
+        }
+
+        return redirect()->back();
     }
 
     public function imgSider(Request $request) {
