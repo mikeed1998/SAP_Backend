@@ -20,8 +20,12 @@ use Carbon\Carbon;
 Route::name('front.')->group(function(){
 
 	Route::get('/', 'FrontController@index')->name('index');
+	Route::get('servicio/{id}','FrontController@servicio')->name('servicio');
 	Route::get('tienda','FrontController@tienda')->name('tienda');
 	Route::get('producto/{id}','FrontController@producto')->name('producto');
+	Route::get('vacantes','FrontController@vacantes')->name('vacantes');
+	Route::get('blog','FrontController@blog')->name('blog');
+	Route::get('blog_detalle/{id}','FrontController@blog_detalle')->name('blog_detalle');
 	Route::get('soluciones','FrontController@soluciones')->name('soluciones');
 	Route::get('punto_venta','FrontController@punto_venta')->name('punto_venta');
 	Route::get('subdistribuidor','FrontController@subdistribuidor')->name('subdistribuidor');

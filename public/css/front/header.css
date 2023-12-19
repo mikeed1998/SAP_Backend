@@ -1,0 +1,142 @@
+.menu-sub {
+    border-top-left-radius: 4rem;
+    border-top-right-radius: 4rem;
+    border-bottom-left-radius: 4rem;
+    border-bottom-right-radius: 4rem;
+    background-color: #201E1F;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+}
+
+.texto-hover {
+    color: #ffffff;
+}
+
+.texto-hover:hover {
+    color: #FFC000;
+}
+
+.subtitulo {
+    font-weight: 100;
+    color: #B6B5B6;
+}
+
+.subtitulo:hover {
+    font-weight: 100;
+    color: #FFC000;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media(min-width: 1800px) {
+
+    .icono-contact {
+        width: 3.4rem;
+        height: 3.4rem;
+    }
+
+    .icono {
+        border-radius: 100%; 
+        padding: 0.5rem; 
+        background-color: #FFC000;
+    }
+    
+}
+
+/* xxl */
+@media (min-width: 1400px) and (max-width: 1799px) {
+    
+    .icono-contact {
+        width: 2.6rem;
+        height: 2.6rem;
+    }
+
+    .icono {
+        border-radius: 100%; 
+        padding: 0.5rem; 
+        background-color: #FFC000;
+    }
+
+}
+
+/* xl */
+@media (min-width: 1200px) and (max-width: 1400px) {
+
+    .icono-contact {
+        width: 2.6rem;
+        height: 2.6rem;
+    }
+
+    .icono {
+        border-radius: 100%; 
+        padding: 0.5rem; 
+        background-color: #FFC000;
+    }
+
+  
+}
+
+/* lg */
+@media (min-width: 992px) and (max-width: 1200px) {
+
+    .icono-contact {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .icono {
+        border-radius: 100%; 
+        padding: 0.3rem; 
+        background-color: #FFC000;
+    }
+
+}
+
+/* md */
+@media (min-width: 768px) and (max-width: 992px) {
+
+    .icono-contact {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .icono {
+        border-radius: 100%; 
+        padding: 0.5rem; 
+        background-color: #FFC000;
+    }
+
+}
+
+/* sm */
+@media (min-width: 576px) and (max-width: 768px) {
+
+    .icono-contact {
+        width: 3.6rem;
+        height: 3.6rem;
+    }
+
+    .icono {
+        border-radius: 100%; 
+        padding: 0.5rem; 
+        background-color: #FFC000;
+    }
+
+}
+
+/* xs */
+@media (min-width: 0px) and (max-width: 576px) {
+
+    .icono-contact {
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+
+    .icono {
+        border-radius: 100%; 
+        padding: 0.5rem; 
+        background-color: #FFC000;
+    }
+
+}

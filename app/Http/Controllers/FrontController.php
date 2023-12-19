@@ -18,6 +18,7 @@ use App\herramientas;
 use App\equipo;
 use App\logoequipos;
 use Carbon\Carbon;
+use App\ZBeneficio;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
@@ -44,6 +45,10 @@ class FrontController extends Controller
 		// $elements = Elemento::where('seccion',1)->get();
 	
 		return view('front.index', compact('pagina'));
+	}
+
+	public function servicio($id) {
+		return view('front.servicio');
 	}
 
 	public function tienda() {
@@ -88,7 +93,27 @@ class FrontController extends Controller
 	}
 
 	public function aboutus() {
-		
+		return view('front.aboutus');
+	}
+
+	public function vacantes() {
+		$beneficios = ZBeneficio::all();
+		$cont = 0;
+		$band = 0;
+
+		return view('front.vacantes', compact('beneficios', 'cont', 'band'));
+	}
+
+	public function blog() {
+		$entradas = ["#CDE700","#FE6E63","#CCAEEC","#A2E9FF"];
+		$cont = 1;
+
+		return view('front.blog', compact('entradas', 'cont'));
+	}
+
+	public function blog_detalle($id) {
+
+		return view('front.blog_detalle');
 	}
 
 	public function contact(){

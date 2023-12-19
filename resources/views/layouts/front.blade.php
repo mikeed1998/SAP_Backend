@@ -10,10 +10,10 @@
 		<title>
 			SAP - @yield('title')
 		</title>
-		<link rel="icon" type="image/jpg" href="{{asset('img/design/pepe1.png')}}"/>
+		{{-- <link rel="icon" type="image/jpg" href="{{asset('img/design/pepe1.png')}}"/> --}}
 
 		{{-- Estilos de bootstrap --}}
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 		{{-- Estilos de slicks --}}
 		
 		{{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw==" crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
@@ -41,7 +41,14 @@
 
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.min.css">
 
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+		<link rel="stylesheet" href="{{ asset('vendor/leaflet/leaflet.css') }}">
+
 		{{-- <link rel="stylesheet" href="{{ asset('fonts/Neusharp-Bold/neusharp-bold.css') }}"> --}}
+
+		<link rel="stylesheet" href="{{ asset('css/front/header.css') }}">
+		<link rel="stylesheet" href="{{ asset('css/front/footer.css') }}">
 
 		
 
@@ -49,7 +56,7 @@
 		@yield('cssExtras')
 		@yield('styleExtras')
 	</head>
-	<body>
+	<body style="background-color: #201E1F;">
 
 		@include('layouts.partials.header')
 
@@ -58,7 +65,7 @@
 		@include('layouts.partials.footer')
 
 		<script src="https://use.fontawesome.com/005ad652c9.js"></script>
-    	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 		<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 		<script type="text/javascript" src="{{asset('js/app.js')}}"></script>
@@ -69,6 +76,26 @@
 		{{-- <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> --}}
 		<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script src="{{ asset('vendor/leaflet/leaflet.js') }}"></script>
+
+		<script>
+			AOS.init();
+		</script>
+		<script>
+			
+			var modal = document.querySelector('.menu-modal');
+			modal.style.display = "none";
+	
+			function activarModal() {
+				modal.style.display = "block";
+			}
+	
+			function cerrarModal() {
+				modal.style.display = "none";
+			}
+	
+		</script>
 
 		{!! Toastr::message() !!}
 		@yield('jsLibExtras2')

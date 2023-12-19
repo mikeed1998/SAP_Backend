@@ -1,0 +1,93 @@
+
+@media(min-width: 1800px) {
+
+    .portada-post {
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 58rem;
+    }
+     
+}
+
+/* xxl */
+@media (min-width: 1400px) and (max-width: 1799px) {
+    
+    .portada-post {
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 50rem;
+    }
+
+}
+
+/* xl */
+@media (min-width: 1200px) and (max-width: 1399px) {
+
+    .portada-post {
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 50rem;
+    }
+
+}
+
+/* lg */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .portada-post {
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 46rem;
+    }
+
+}
+
+/* md */
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .portada-post {
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 42rem;
+    }
+
+}
+
+/* sm */
+@media (min-width: 576px) and (max-width: 767px) {
+
+    .portada-post {
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 38rem;
+    }
+
+}
+
+/* xs */
+@media (min-width: 0px) and (max-width: 575px) {
+
+    .portada-post {
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 34rem;
+    }
+
+}
+
+
+

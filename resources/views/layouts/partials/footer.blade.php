@@ -1,94 +1,99 @@
-<footer>
-    <div class="container-fluid" style="background-color: #005395;">
-        <div class="row py-5">
-            <div class="col-11 mx-auto">
-                <div class="row py-3">
-                    <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 col-11 mx-auto mt-3 border-end border-dark">
+<section>
+    <div class="container-fluid" style="background-color: #201E1F;">
+        <div class="row">
+            <div class="col-11 mx-auto py-5">
+                <div class="row">
+                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 py-2">
                         <div class="row">
-                            <div class="col-12">
-                                <img src="{{ asset('img/design/footer/foot.png') }}" alt="" class="img-fluid w-75">
+                            <div class="col-12 fs-4 py-2" style="color: #FFC000;">
+                                Ubicación
                             </div>
-                        </div>
-                        <div class="row mt-5">
-                            <div class="col-1"></div>
-                            <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 col-3 text-start rounded-circle">
-                                <img src="{{ asset('img/design/footer/icono01.png') }}" alt="" class="img-fluid">
+                            <div class="col-12 py-2 display-5 fw-bolder">
+                                <a href="#" class="texto-hover">ENCUÉNTRANOS</a>
                             </div>
-                            <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 col-3 text-start">
-                                <img src="{{ asset('img/design/footer/icono02.png') }}" alt="" class="img-fluid">
+                            <div class="col-12 py-2 text-light">
+                                <div class="row">
+                                    <div class="col-xxl-4 col-xl-4 col-lg-4 fs-5 text-decoration-underline">
+                                        Av. Rio San Joaquín 436, Amp Granada, Miguel Hidalgo, CDMX
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 col-3 text-start">
-                                <img src="{{ asset('img/design/footer/icono03.png') }}" alt="" class="img-fluid">
+                            <div class="col-12 py-2">
+                                <div class="row">
+                                    <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-3 col-sm-4 col-5 py-2">
+                                        <div class="row">
+                                            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 text-center mx-auto bg-white" style="border-radius: 100%; padding: 0.5rem;">
+                                                <a href="#">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="black" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                                        <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 text-center mx-auto bg-white" style="border-radius: 100%; padding: 0.5rem;">
+                                                <a href="#">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="black" class="bi bi-facebook" viewBox="0 0 16 16">
+                                                        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                            <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 text-center mx-auto bg-white" style="border-radius: 100%; padding: 0.5rem;">
+                                                <a href="#">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="black" class="bi bi-instagra" viewBox="0 0 16 16">
+                                                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                                                    </svg>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 pt-5 text-secondary">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <small>SAP 2023. TODOS LOS DERECHOS RESERVADOS DISEÑO POR WOZIAL.</small>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-xxl-1 col-xl-1 col-lg-1 col-md-12 col-sm-12 col-xs-12 col-12"></div>
-                    <div class="col-xxl-6 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-xs-12 col-11 mx-auto text-white mt-xxl-1 mt-xl-1 mt-lg-1 mt-md-5 mt-sm-3 mt-xs-3 mt-3">
+                    <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 py-2">
                         <div class="row">
-                            <div class="col-md-4 mt-xxl-0 mt-xl-0 mt-lg-0 mt-md-0 mt-sm-3 mt-xs-3 mt-3 text-start">
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="row">
-                                    <div class="col-12 py-0 mb-3 fs-4 fw-bolder">
-                                        NAVEGACIÓN
+                                    <div class="col-12 fs-4 py-2" style="color: #FFC000;">
+                                        Navegación
                                     </div>
-                                    <div class="col-12 py-1" style="color: #BCBCB0;">
-                                        <a href="{{ route('front.index') }}" style="text-decoration: none; color: #BCBCB0;">Inicio</a>
+                                    <div class="col-12 pt-2 pb-2 display-5 fw-bolder text-white">
+                                        <a href="#" class="texto-hover">INICIO</a>
                                     </div>
-                                    <div class="col-12 py-1" style="color: #BCBCB0;">
-                                        <a href="{{ route('front.tienda') }}" style="text-decoration: none; color: #BCBCB0;">Tienda</a>
+                                    <div class="col-12 py-1 display-5 fw-bolder text-white">
+                                        <a href="#" class="texto-hover">SERVICIOS</a>
                                     </div>
-                                    <div class="col-12 py-1" style="color: #BCBCB0;">
-                                        <a href="{{ route('front.soluciones') }}" style="text-decoration: none; color: #BCBCB0;">Soluciones</a>
+                                    <div class="col-6 text-light text-start" style="line-height: 1;"><small><a href="#" class="texto-hover">CARTELERA</a></small></div>
+                                    <div class="col-6 text-light text-start" style="line-height: 1;"><small><a href="#" class="texto-hover">PUENTES</a></small></div>
+                                    <div class="col-6 text-light text-start" style="line-height: 1;"><small><a href="#" class="texto-hover">PANTALLA DIGITAL</a></small></div>
+                                    <div class="col-6 text-light text-start" style="line-height: 1;"><small><a href="#" class="texto-hover">MUROS</a></small></div>
+                                    <div class="col-6 text-light text-start" style="line-height: 1;"><small><a href="#" class="texto-hover">AUTOBUSES</a></small></div>
+                                    <div class="col-6 text-light text-start" style="line-height: 1;"><small><a href="#" class="texto-hover">VALLA MÓVIL</a></small></div>
+                                    <div class="col-6 text-light text-start" style="line-height: 1;"><small><a href="#" class="texto-hover">MUPIS</a></small></div>
+                                    <div class="col-12 py-1 display-5 fw-bolder text-white">
+                                        <a href="#" class="texto-hover">NOSOTROS</a>
                                     </div>
-                                    <div class="col-12 py-1" style="color: #BCBCB0;">
-                                        <a href="{{ route('front.aboutus') }}" style="text-decoration: none; color: #BCBCB0;">Nosotros</a>
-                                    </div>
-                                    <div class="col-12 py-1" style="color: #BCBCB0;">
-                                        <a href="{{ route('config.contact') }}" style="text-decoration: none; color: #BCBCB0;">Contacto</a>
-                                    </div>
-                                    <div class="col-12 py-1" style="color: #BCBCB0;">
-                                        <a href="{{ route('front.subdistribuidor') }}" style="text-decoration: none; color: #BCBCB0;">Subdistribuidor</a>
+                                    <div class="col-12 py-1 display-5 fw-bolder text-white">
+                                        <a href="#" class="texto-hover">BLOG</a>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4 mt-xxl-0 mt-xl-0 mt-lg-0 mt-md-0 mt-sm-3 mt-xs-3 mt-3 text-start">
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="row">
-                                    <div class="col py-0 mb-3 fs-4 fw-bolder">
-                                        AYUDA
+                                    <div class="col-12 fs-4 py-2" style="color: #FFC000;">
+                                        Contacto
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 py-1" style="color: #BCBCB0;">
-                                        <a href="{{ route('front.faqs') }}" style="text-decoration: none; color: #BCBCB0;">Preguntas Frecuentes</a>
+                                    <div class="col-12 py-2 display-5 fw-bolder text-white">
+                                        <a href="#" class="texto-hover">CONTACTO</a>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 py-1" style="color: #BCBCB0;">
-                                        <a href="{{ route('front.politicas') }}" style="text-decoration: none; color: #BCBCB0;">Aviso de Privacidad</a>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 py-1" style="color: #BCBCB0;">
-                                        <a href="{{ route('front.metodos_pago') }}" style="text-decoration: none; color: #BCBCB0;">Métodos de Pago</a>
-                                    </div>
-                                    <div class="col-12 py-1" style="color: #BCBCB0;">
-                                        <a href="{{ route('front.punto_venta') }}" style="text-decoration: none; color: #BCBCB0;">Punto de Venta</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4 mt-xxl-0 mt-xl-0 mt-lg-0 mt-md-0 mt-sm-3 mt-xs-3 mt-3 mt-3 text-start">
-                                <div class="row">
-                                    <div class="col py-0 mb-3 fs-4 fw-bolder">
-                                        CONTACTO
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 py-1" style="color: #BCBCB0;">
-                                        Tel. {{ $config->telefono }}
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12 py-1" style="color: #BCBCB0;">
-                                        {{ $config->direccion }}
+                                    <div class="col-12 py-1 display-5 fw-bolder text-white" style="line-height: 1;">
+                                        <a href="#" class="texto-hover">BOLSA DE TRABAJO</a>
                                     </div>
                                 </div>
                             </div>
@@ -97,11 +102,5 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col py-3 text-center" style="background-color: #014076; color: #BCBCB0;">
-                P E P E&nbsp;&nbsp;&nbsp;F E S T E R&nbsp;&nbsp;&nbsp;2 0 2 3&nbsp;&nbsp;&nbsp;T O D O S&nbsp;&nbsp;&nbsp;L O S&nbsp;&nbsp;&nbsp;D E R E C H O S&nbsp;&nbsp;&nbsp;R E S E R V A D O S&nbsp;&nbsp;&nbsp;D I S E Ñ O&nbsp;&nbsp;&nbsp;P O R&nbsp;&nbsp;&nbsp;W O Z I A L
-            </div>
-        </div>
     </div>
-</footer>
-    
+</section>

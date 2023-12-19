@@ -1,465 +1,153 @@
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-
-<style>
-
-.dropdown-toggle::after {
-  display: none;
-}
-        @media(min-width: 1800px) {
-            .menu-grande {
-                display: block;
-            }
-
-            .menu-movil {
-                display: none;
-            }
-
-            .boton-xs {
-                display: none;
-             } 
-
-        }
-
-        /* xxl */
-        @media (min-width: 1400px) and (max-width: 1799px) {
-            .menu-grande {
-                display: block;
-            }
-
-            .menu-movil {
-                display: none;
-            }
-
-            .boton-xs {
-                display: none;
-            }
-
-        }
-
-        /* xl */
-        @media (min-width: 1200px) and (max-width: 1399px) {
-            .menu-grande {
-                display: block;
-            }
-
-            .menu-movil {
-                display: none;
-            }
-
-            .boton-xs {
-                display: none;
-            }
-
-        }
-
-        /* lg */
-        @media (min-width: 992px) and (max-width: 1199px) {
-            .menu-grande {
-                display: none;
-            }
-
-            .menu-movil {
-                display: block;
-            }
-
-            .boton-xs {
-                display: none;
-            }
-
-        }
-
-        /* md */
-        @media (min-width: 768px) and (max-width: 991px) {
-            .menu-grande {
-                display: none;
-            }
-
-            .menu-movil {
-                display: block;
-            }
-
-            .boton-xs {
-                display: none;
-            }
-
-        }
-
-        /* sm */
-        @media (min-width: 576px) and (max-width: 767px) {
-            .menu-grande {
-                display: none;
-            }
-
-            .menu-movil {
-                display: block;
-            }
-
-            .boton-xs {
-                display: none;
-            }
-
-        }
-
-        /* xs */
-        @media (min-width: 0px) and (max-width: 575px) {
-            .menu-grande {
-                display: none;
-            }
-
-            .menu-movil {
-                display: block;
-            }
-
-            .boton-md {
-                display: none;
-            }
-
-            .boton-xs {
-                display: block;
-            }
-    
-        }
-        
-    </style>
-
-        @if ($pagina == 'tienda')
-            <header class="menu-grande py-3" style="background-color: #E7E7E7;">
-        @elseif ($pagina == 'home' || $pagina == 'subdistribuidor' || $pagina == 'contacto' || $pagina == 'nosotros')
-            <header class="menu-grande pt-3" style="background-color: #E7E7E7;">
-        @else
-            <header class="menu-grande py-3" style="background-color: white;">
-        @endif
-            <div class="row mt-0">
-                <div class="col-2 fs-5 mt-xxl-0 mt-xl-4 mt-lg-0 text-center ps-5 pe-3">
+    <header data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="500">
+        <div class="container-fluid" style="background-color: #201E1F;">
+            <div class="row px-5">
+                <div class="col px-5 mx-auto py-3 position-relative" style="flex-grow: 1;">
                     <div class="row">
-                        <div class="col">
-                            <img src="{{ asset('img/design/home/logo.png') }}" class="img-fluid"/>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-10 bg-white mt-4 shadow" style="border-top-left-radius: 36px; border-bottom-left-radius: 36px;">
-                    <div class="row">
-                        <div class="col header-btn d-flex align-content-center justify-content-center h6 m-0 fw-bolder text-center">
-                            <a href="{{ route('front.index') }}" class="py-4" style="text-decoration: none;">
-                                Inicio
-                            </a>
-                        </div>
-                        <div class="col header-btn d-flex align-content-center justify-content-center h6 m-0 fw-bolder text-center">
-                            <a href="{{ route('front.tienda') }}" class="py-4" style="text-decoration: none;">
-                                Tienda
-                            </a>
-                        </div>
-                        <div class="col header-btn d-flex align-content-center justify-content-center h6 m-0 fw-bolder text-center">
-                            <a href="{{ route('front.soluciones') }}" class="py-4" style="text-decoration: none;">
-                                Soluciones
-                            </a>
-                        </div>
-                        <div class="col-2 header-btn d-flex align-content-center justify-content-center h6 m-0 fw-bolder text-center">
-                            <a href="{{ route('front.punto_venta') }}" class="py-4" style="text-decoration: none;">
-                                Punto de venta
-                            </a>
-                        </div>
-                        <div class="col header-btn d-flex align-content-center justify-content-center h6 m-0 fw-bolder text-center">
-                            <a href="{{ route('front.subdistribuidor') }}" class="py-4" style="text-decoration: none;">
-                                Subdistribuidor
-                            </a>
-                        </div>
-                        <div class="col header-btn d-flex align-content-center justify-content-center h6 m-0 fw-bolder text-center">
-                            <a href="{{ route('front.aboutus') }}" class="py-4" style="text-decoration: none;">
-                                Nosotros
-                            </a>
-                        </div>
-                        <div class="col header-btn d-flex align-content-center justify-content-center h6 m-0 fw-bolder text-center">
-                            <a href="{{ route('front.contact') }}" class="py-4" style="text-decoration: none;">
-                                Contacto
-                            </a>
-                        </div>
-                        <div class="col bg-white h6 m-0 fw-normal d-flex align-content-center justify-content-center text-success text-center">
-                            {{-- <a href="{{url('login')}}" style="color: #E30920;"><i class="fa-solid mt-4 fa-user me-3 icon-use" style="font-size: 20px;"></i></a> --}}
-                            <a class="navbar-brand mt-1" href="{{ url('login') }}" style="color: #E30920; font-size: 14px; font-weight: 700;">
-                                <i class="fa-solid mt-3 fa-user me-3 icon-use" style="font-size: 20px; color: #E30920;"></i>
-                                @if(auth()->check())
-                                    {{ auth()->user()->name }}
-                                @else
-                                    Usuario
-                                @endif
-                            </a>
-                        </div>
-                        <div class="col bg-white py-3 d-flex align-content-center justify-content-center fs-5 fw-normal text-success text-center">
-                            <a href="{{url('miCarrito')}}">
+                        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-3 col-sm-8 col-12 mx-auto ">
                             <div class="row">
-                                <div class="col position-relative">
-                                    <img src="{{ asset('img/design/header/carrito.png') }}" alt="" class="img-fluid text-start">
-                                    <div class="col position-absolute top-0 end-0 translate-middle bg-white text-danger rounded-circle">
-                                        @if(session('carrito'))
-                                        {{-- <i class="fa-solid fa-circle" style="position: absolute; top: -10px; left: 20px; color: red; font-size: 12px;"></i> --}}
-                                          @php
-                                              $cuenta = count(session('carrito'));
-                                          @endphp
-                                          @if($cuenta > 9)
-                                          9+
-                                          {{-- <p style="position: absolute; top: -2px; left: 8px; color: white; font-size: 11px;">9+</p> --}}
-                                          @else
-                                          {{ $cuenta }}
-                                            {{-- <p style="position: absolute; top: -1px; left: 11px; color: white; font-size: 11px;">{{$cuenta}}</p> --}}
-                                          @endif
-                                        @endif
+                                <div class="col-1"></div>
+                                <div class="col-xxl-5 col-xl-5 col-lg-5 mt-3">
+                                    <div class="row">
+                                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 text-center mx-auto icono">
+                                            <a href="#/" class="">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="black" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                                                    <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 text-center mx-auto icono">
+                                            <a href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="black" class="bi bi-facebook" viewBox="0 0 16 16">
+                                                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 text-center mx-auto icono">
+                                            <a href="#">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="black" class="bi bi-instagra" viewBox="0 0 16 16">
+                                                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                                                </svg>
+                                            </a>
+                                        </div>
                                     </div>
-                                        
-                                        
-                                      
                                 </div>
                             </div>
-                            </a>
-                            
+                        </div>
+                        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-3 col-sm-9 col-9 mx-auto position-relative">
+                            <div class="row">
+                                <div class="col-6 mx-auto mt-4 text-center">
+                                    <a href="#/" class="btn btn-outline border w-100 text-white">Cotizar</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-9 col-9 mx-auto ">
+                            <div class="row">
+                                <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-8 py-2 text-end">
+                                    <a href="index.php"><img src="{{ asset('img/images/home/logo.png') }}" alt="sap" class="img-fluid"></a>
+                                </div>
+                                <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 d-flex align-items-center justify-content-center">
+                                    <button class="btn btn-menu border-0 bg-transparent w-100" onclick="activarModal()">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="fs-1" id="menu-icono"  width="48" height="48" fill="#FFC000" class="bi bi-list" viewBox="0 0 16 16">
+                                            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>    
-            </div>
-        </header>   
-
-        <header class="menu-movil">
-            <div class="row">
-                <div class="col-md-6 col-sm-6 col-xs-12 col-12 fs-3 text-center">
-                    <div class="boton-md">
-                        <img src="{{ asset('img/design/home/logo.png') }}" class="img-fluid"/>
-                    </div>
-                    <div class="boton-xs">
-                    </div>
-                </div>
-                <div class="col-md-6 col-sm-6 col-xs-12 col-12 text-center">
-                    <!-- Botón para colapsar/mostrar las columnas -->
-                    <div class="boton-md">
-                        <button class="btn btn-outline border-dark mt-md-4 mt-sm-4 mt-xs-4 mt-0" data-bs-toggle="collapse" data-bs-target="#miColapso"><span uk-icon="icon: menu; ratio: 2;"></span></button>
-                    </div>
-                    <div class="boton-xs">
-                        <button class="btn-link btn-outline border-0 mt-md-4 mt-sm-4 mt-xs-4 mt-0 py-3" data-bs-toggle="collapse" data-bs-target="#miColapso" style="text-decoration: none;"><img src="{{ asset('img/design/home/logo.png') }}" class="img-fluid w-100"/></button>
-                    </div>
-                    <!-- <button class="btn-link w-100 btn-outline border-0 bg-white m-0 btn-p-0" data-bs-toggle="collapse" data-bs-target="#miColapso"><img src="img/logo.png" class="img-fluid" style=""/></button> -->
-                </div>
-                <div class="col-12">
-                    <!-- Elemento colapsable que contiene las columnas -->
-                    <div id="miColapso" class="collapse">
-                        <div class="row mt-2 mb-2">
-                            <div class="col-md-3 col-sm-2 col-xs-2 col-2"></div>
-                            <div class="col-md-9 col-sm-10 col-xs-10 col-10 bg-white" style="border-top-left-radius: 36px; border-bottom-left-radius: 36px;">
+                    <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 menu-modal position-absolute top-50 end-0 translate-middle-y rounded-pill" style="height: 100%; z-index: 3;">
+                        <div class="row">
+                            <div class="col mt-2 mt-3 menu-sub shadow-lg text-white" style="line-height: 1.2;">
                                 <div class="row">
-                                <div class="col-12 header-btn_movil fs-3 fw-bolder py-3 text-center">
-                                <a href="{{ route('front.index') }}" style="text-decoration: none;">
-                                    Inicio
-                                </a>
-                            </div>
-                            <div class="col-12 header-btn_movil fs-3 fw-bolder py-3 text-center">
-                                <a href="{{ route('front.tienda') }}" style="text-decoration: none;">
-                                    Tienda
-                                </a>
-                            </div>
-                            <div class="col-12 header-btn_movil fs-3 fw-bolder py-3 text-center">
-                                <a href="{{ route('front.soluciones') }}" style="text-decoration: none;">
-                                    Soluciones
-                                </a>
-                            </div>
-                            <div class="col-12 header-btn_movil fs-3 fw-bolder py-3 text-center">
-                                <a href="{{ route('front.punto_venta') }}" style="text-decoration: none;">
-                                    Punto de venta
-                                </a>
-                            </div>
-                            <div class="col-12 header-btn_movil fs-3 fw-bolder py-3 text-center">
-                                <a href="{{ route('front.subdistribuidor') }}" style="text-decoration: none;">
-                                    Subdistribuidor
-                                </a>
-                            </div>
-                            <div class="col-12 header-btn_movil fs-3 fw-bolder py-3 text-center">
-                                <a href="{{ route('front.aboutus') }}" style="text-decoration: none;">
-                                    Nosotros
-                                </a>
-                            </div>
-                            <div class="col-12 header-btn_movil fs-3 fw-bolder py-3 text-center">
-                                <a href="{{ route('front.contact') }}" style="text-decoration: none;">
-                                    Contacto
-                                </a>
-                            </div>
-                            <div class="col fs-5 fw-normal py-3 text-success text-end">
-                                <!-- <a href="index.php" style="text-decoration: none; color: #E30920;">
-                                    <img src="img/header/usuario.png" alt="" class="img-fluid">Cuenta 
-                                </a> -->
-                                <div class="dropdown">
-                                    <button class="btn border-white dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="box-shadow: none;">
+                                    <div class="col-11 mt-3 mx-auto text-end">
+                                        <button class="btn mt-3 btn-outline text-white" onclick="cerrarModal()">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                                                <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10 m-0 p-0 fs-1 fw-bolder mx-auto">
+                                        <a href="index.php" class="texto-hover">Inicio</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10 texto-hover m-0 p-0 fs-1 fw-bolder mx-auto">
+                                        <a href="#/" class="texto-hover">Servicios</a>
+                                    </div>
+                                    <div class="col-10 subtitulo m-0 p-0 fs-4 texto-hover mx-auto"><a href="servicio.php" class="texto-hover">CARTELERA</a></div>
+                                    <div class="col-10 subtitulo m-0 p-0 fs-4 texto-hover mx-auto"><a href="servicio.php" class="texto-hover">PUENTES</a></div>
+                                    <div class="col-10 subtitulo m-0 p-0 fs-4 texto-hover mx-auto"><a href="servicio.php" class="texto-hover">PANTALLA DIGITAL</a></div>
+                                    <div class="col-10 subtitulo m-0 p-0 fs-4 texto-hover mx-auto"><a href="servicio.php" class="texto-hover">MUROS</a></div>
+                                    <div class="col-10 subtitulo m-0 p-0 fs-4 texto-hover mx-auto"><a href="servicio.php" class="texto-hover">AUTOBUSES</a></div>
+                                    <div class="col-10 subtitulo m-0 p-0 fs-4 texto-hover mx-auto"><a href="servicio.php" class="texto-hover">VALLA MÓVIL</a></div>
+                                    <div class="col-10 subtitulo m-0 p-0 fs-4 texto-hover mx-auto"><a href="servicio.php" class="texto-hover">MUPIS</a></div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10 texto-hover m-0 p-0 fs-1 fw-bolder mx-auto">
+                                        <a href="nosotros.php" class="texto-hover">Nosotros</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10 texto-hover m-0 p-0 fs-1 fw-bolder mx-auto">
+                                        <a href="bolsa_trabajo.php" class="texto-hover">Bolsa de Trabajo</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10 texto-hover m-0 p-0 fs-1 fw-bolder mx-auto">
+                                        <a href="contacto.php" class="texto-hover">Contacto</a>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-10 texto-hover m-0 p-0 fs-1 fw-bolder mx-auto">
+                                        <a href="blog.php" class="texto-hover">Blog</a>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-10 col-10 m-0 p-0 pb-4 pt-2 fs-1 fw-bolder mx-auto border-top border-white">
                                         <div class="row">
-                                            <div class="col text-center " style="color: #E30920;">
-                                                <img src="{{ asset('img/design/header/usuario.png') }}" alt="" class="img-fluid">Cuenta
+                                            <div class="col-xxl-7 col-xl-7 col-lg-9 col-md-12 py-4 fs-4 fw-light text-white">
+                                                TEL. 33 33 33 33 33
+                                            </div>
+                                            <div class="col-xxl-5 col-xl-7 col-lg-7 col-md-7 col-sm-9 col-9 py-3">
+                                                <div class="row">
+                                                    <div class="col-xxl-4 col-xl-4 col-lg-3 col-md-3 col-sm-3 col-3 mx-xxl-0 mx-xl-0 mx-lg-auto mx-md-auto mx-sm-0 mx-0">
+                                                        <div class="row">
+                                                            <a href="#" class="col-10 mx-auto d-flex align-items-center justify-content-center border border-white text-center bg-white rounded-circle header-btn">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="black" class="bi bi-whatsapp icono-contact" viewBox="0 0 16 16">
+                                                                    <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.898 7.898 0 0 0 13.6 2.326zM7.994 14.521a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
+                                                                </svg>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xxl-4 col-xl-4 col-lg-3 col-md-3 col-sm-3 col-3 mx-xxl-0 mx-xl-0 mx-lg-auto mx-md-auto mx-sm-0 mx-0">
+                                                        <div class="row">
+                                                            <a href="#" class="col-10 mx-auto d-flex align-items-center justify-content-center border border-white text-center bg-white rounded-circle">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="black" class="bi bi-facebook icono-contact" viewBox="0 0 16 16">
+                                                                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                                                                </svg>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xxl-4 col-xl-4 col-lg-3 col-md-3 col-sm-3 col-3 mx-xxl-0 mx-xl-0 mx-lg-auto mx-md-auto mx-sm-0 mx-0">
+                                                        <div class="row">
+                                                            <a href="#" class="col-10 mx-auto d-flex align-items-center justify-content-center border border-white text-center bg-white rounded-circle">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="black" class="bi bi-instagra icono-contact" viewBox="0 0 16 16">
+                                                                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                                                                </svg>
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item fs-5" href="login.php" style="color: #E30920;">Ingresar</a></li>
-                                        <li><a class="dropdown-item fs-5" href="register.php" style="color: #E30920;">Resgistrarse</a></li>
-                                    </ul>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col fs-5 fw-normal py-3 text-success text-center">
-                                <a href="{{url('miCarrito')}}" style="position: relative;">
-                                    <img src="{{ asset('img/design/header/carrito.png') }}" alt="" class="img-fluid">
-                                    @if(session('carrito'))
-                                    <i class="fa-solid fa-circle" style="position: absolute; top: -10px; left: 20px; color: red; font-size: 12px;"></i>
-                                      @php
-                                          $cuenta = count(session('carrito'));
-                                      @endphp
-                                      @if($cuenta > 9)
-                                      <p style="position: absolute; top: -2px; left: 8px; color: white; font-size: 11px;">9+</p>
-                                      @else
-                                        <p style="position: absolute; top: -1px; left: 11px; color: white; font-size: 11px;">{{$cuenta}}</p>
-                                      @endif
-                                    @endif
-                                  </a>
-                                {{-- <a href="carrito.php" style="text-decoration: none; color: #00AD61;">
-                                    <img src="{{ asset('img/design/header/carrito.png') }}" alt="" class="img-fluid">
-                                </a> --}}
-                            </div>
-                                </div>
-                            </div>
-                            
                         </div>
                     </div>
                 </div>
             </div>
-        </header>  
-
-
-
-
-{{-- <!-- Menu de la cabecera -->
-<style>
-
-    .icon_menu{
-      display: none;
-    }
-    .icon-use{
-      display: none;
-    }
-
-  @media only screen and (max-width: 780px){  
-    .div_menu{
-      display: none !important;
-    }
-    .icon_redes{
-    
-      font-size: 15px;
-  }
-  .icon_menu{
-      display: block;
-    }
-  }  
-  @media only screen and (max-width: 490px){  
-  .icon_redes{
-    display: none;
-  }
-    .div_menu_movil{
-      display: block !important;
-    }
-    .icon-use{
-      display: block;
-    }
-  }
-</style>
-
-
-<div class="menu_completo col-12 py-3 d-flex align-items-center" style="background: ; position: ; top:0; z-index: 1000;">
-  <div class="col-12 px-3 px-lg-5 d-flex justify-content-between justify-content-md-between align-items-center">
-
-      <div class="col-8 col-md-3 col-lg-auto row d-flex justify-content-start align-items-center" style="background:;">
-        <img src="{{asset('img/design/logo.png')}}" style="width: 100%; max-width: 150px;" alt="">
-      </div>
-
-    <div class="div_menu col-12 col-md-9 col-lg-6 d-flex justify-content-md-end justify-content-lg-center align-items-center" style="background:  ;">
-      <a href="{{route('front.index')}}" class="col-auto mx-4 my-auto text-center" style="text-decoration: none; color: black; font-size: 13px; font-weight: bold;">Home</a>
-      <a href="{{route('front.products')}}" class="col-auto mx-4 my-auto text-center" style="text-decoration: none; color: black; font-size: 13px; font-weight: bold;">Store</a>
-      <a href="{{route('front.projects')}}" class="col-auto mx-4 my-auto text-center" style="text-decoration: none; color: black; font-size: 13px; font-weight: bold;">Proyectos</a>
-      <a href="{{route('front.contact')}}" class="col-auto mx-4 my-auto text-center" style="text-decoration: none; color: black; font-size: 13px; font-weight: bold;">Contacto</a>
-      <div class="col-auto ms-5 d-flex justify-content-center align-items-center flex-row">
-        <a href="https://api.whatsapp.com/send?phone={{$config->whatsapp}}&text=Hola,%20estoy%20interesado%20en%20obtener%20m%C3%A1s%20informaci%C3%B3n"><i class="my-auto p-1 text-center fa-brands fa-whatsapp icon_redes" style="font-size: 1.8rem; background: ; border:1px solid #a99091; width: 40px; border-radius: 50%; color: #a99091;"></i></a>
-        <a href="{{$config->facebook}}"><i class="my-auto p-1 text-center fa-brands fa-facebook-f mx-3 mx-md-3 mx-lg-4 icon_redes" style="font-size: 1.8rem; background: ; border:1px solid #a99091; width: 40px; border-radius: 50%; color: #a99091;"></i></a>
-        <a href="{{$config->instagram}}"><i class="my-auto p-1 text-center fa-brands fa-instagram icon_redes" style="font-size: 1.8rem; background: ; border:1px solid #a99091; width: 40px; border-radius: 50%; color: #a99091;"></i></a>
-        <a href=""><i class="my-auto p-1 text-center fab fa-tiktok icon_redes mx-3 mx-md-3 mx-lg-4" style="font-size: 1.8rem; background: ; border:1px solid #a99091; width: 40px; border-radius: 50%; color: #a99091;"></i></a>
-      </div>
-    </div>
-
-
-    <div class="col-auto d-flex justify-content-between align-items-center flex-row" style="background: ; color: rgb(0, 0, 0); font-size: 15px;">
-      <a href="{{url('login')}}" class="me-3 my-auto icon_redes" style="text-decoration: none; color: black;">@if(isset($user)) {{$user->name." ".$user->lastname }} @else Iniciar sesion @endif</a>
-      <a href="{{url('login')}}" style="color: black;"><i class="fa-solid fa-user me-3 icon-use" style="font-size: 20px;"></i></a>
-      <a href="{{url('miCarrito')}}" style="position: relative;">
-        <i class="fas fa-shopping-cart me-0 me-md-4"  style="font-size: 22px; color: black;"></i>
-        @if(session('carrito'))
-        <i class="fa-solid fa-circle" style="position: absolute; top: -10px; left: 20px; color: red; font-size: 12px;"></i>
-          @php
-              $cuenta = count(session('carrito'));
-          @endphp
-          @if($cuenta > 9)
-          <p style="position: absolute; top: -2px; left: 8px; color: white; font-size: 11px;">9+</p>
-          @else
-            <p style="position: absolute; top: -1px; left: 11px; color: white; font-size: 11px;">{{$cuenta}}</p>
-          @endif
-        @endif
-      </a>
-      
-      <i onclick="toggleDiv()" class="fa-solid fa-bars ms-4 icon_menu" style="color: black; font-size: 30px;"></i>
-    </div>
-
-
-
-  </div>
-
-
-</div>
-<div id="miDiv" class=" col-12 mt-0" style="height: 0px; overflow: hidden; background: white;">
-  <div class="container d-flex flex-column mt-3">
-    <div class="col-12" style="">
-
-    </div>
-    <a href="{{route('front.index')}}" class="col-12 ps-5 d-flex align-items-center" style="color: black; text-decoration: none;"><img src="{{asset('img/assets/icono_menú.png')}}" alt=""><p class="my-auto mx-2">Home</p></a>
-    <hr style="color: white;">
-    <a href="{{route('front.products')}}" class="col-12 ps-5 d-flex align-items-center" style="color: black; text-decoration: none;"><img src="{{asset('img/assets/icono_menú.png')}}" alt=""><p class="my-auto mx-2">Store</p></a>
-    <hr style="color: white;">
-    <a href="{{route('front.projects')}}" class="col-12 ps-5 d-flex align-items-center" style="color: black; text-decoration: none;"><img src="{{asset('img/assets/icono_menú.png')}}" alt=""><p class="my-auto mx-2">Proyectos</p></a>
-    <hr style="color: white;">
-    <a href="{{route('front.contact')}}" class="col-12 ps-5 d-flex align-items-center" style="color: black; text-decoration: none;"><img src="{{asset('img/assets/icono_menú.png')}}" alt=""><p class="my-auto mx-2">Contacto</p></a>
-    <hr style="color: white;">
-  </div>
-  <div class="col-auto d-flex justify-content-center align-items-center flex-row mb-3" style="background: ; color: black; font-size: 20px;">
-    <a href="https://api.whatsapp.com/send?phone={{$config->whatsapp}}&text=Hola,%20estoy%20interesado%20en%20obtener%20m%C3%A1s%20informaci%C3%B3n"><i class="my-auto fa-brands fa-whatsapp "></i></a>
-    <a href="{{$config->facebook}}"><i class="my-auto fa-brands fa-facebook-f mx-3 mx-md-3 mx-lg-5 "></i></a>
-    <a href="{{$config->instagram}}"><i class="my-auto fa-brands fa-instagram "></i></a>
-  </div>
-</div>
-
-<!-- Menu de la cabecera -->
-<script>
-function toggleDiv() {
-  var div = $("#miDiv");
-  if (div.height() == 0) {
-    div.animate({height: 'auto'}, 500);
-  } else {
-    div.animate({height: '0px'}, 500);
-  }
-}
-
-$(window).scroll(function() {
-  
-  var scroll = $(window).scrollTop();
-  
-  if (scroll > 0) {
-    console.log('mayor');
-    $('.menu_completo').addClass('menu-scrolled');
-  } else {
-    console.log('cero');
-    $('.menu_completo').removeClass('menu-scrolled');
-  }
-});
-
-  $(document).ready(function() {
-    // código que se ejecuta cuando el documento esté listo
-
-  });
-</script> --}}
+        </div>
+    </header>
