@@ -71,7 +71,7 @@
 	{{-- @include('notify::messages') --}}
 
 	<main class="col-12" style="margin-left: 0%; margin-top: -28px;">
-		<div class="card scrollux px-5 py-5" style="background: white;  border-radius: 16px; max-height: 92vh; box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.291); overflow: auto;">
+		<div class="card scrollux px-5 py-5" style="background-color: #201E1F;  border-radius: 16px; max-height: 92vh; box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.291); overflow: auto;">
 			@yield('content')
 		</div>
 	</main>

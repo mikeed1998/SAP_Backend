@@ -13,7 +13,7 @@
 @section('content')
 
     <section data-aos="fade-zoom-in"
-     data-aos-easing="ease-in-back"
+     data-aos-easing="ease-in-back" 
      data-aos-delay="300"
      data-aos-offset="0" style="background-color: #201E1F;">
         <div class="container-fluid py-5" style="background-color: #201E1F;">
@@ -617,11 +617,19 @@
         <div class="modal-dialog modal-fullscreen">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Estado</h1>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    
                 </div>
                 <div class="modal-body">
-                    ...
+                    <div class="container bg-secondary border-dark">
+                        <div class="row">
+                            <div class="col-6 border-dark">
+
+                            </div>
+                            <div class="col-6 border-dark">
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
@@ -846,10 +854,21 @@
 
         geojsonLayer.on('click', function (e) {
             var stateName = e.layer.feature.properties.state_name;
+            var modalHeader = $('.modal-header');
             var modalBody = $('.modal-body');
-            
+            modalHeader.html("<p style='font-size: 2rem; font-weight: 500;'>Nuestras sucursales en " + stateName + "</p>" + 
+                             "<button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>");
             // Set the content of the modal body
-            modalBody.html('<p style="font-size: 2rem; font-weight: 500;">' + stateName + '</p>');
+            modalBody.html('<div class="container-fluid border border-dark">' +
+                               '<div class="row">' +
+                                   '<div class="col-6 border border-dark py-5">'+ 
+                                        'Lista de sucursales' +
+                                    '</div> ' + 
+                                    '<div class="col-6 border border-dark py-5"> ' + 
+                                        ' Carrusel de fotos ' +
+                                    '</div> ' + 
+                                '</div> ' + 
+                            '</div>');
 
             // Show the modal
             $('#exampleModal').modal('show');
@@ -857,4 +876,16 @@
     });
 
 </script>
+
+<div class="container border border-dark">
+    <div class="row">
+        <div class="col-6 border border-dark py-5">
+
+        </div>
+        <div class="col-6 border border-dark py-5">
+
+        </div>
+    </div>
+</div>
+
 @endsection
