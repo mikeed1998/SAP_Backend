@@ -22,6 +22,8 @@
 	{{-- <link rel="stylesheet" href="{{asset('css/mdb.min.css')}}"> --}}
 	<link rel="stylesheet" href="{{asset('css/mdb-ad.css')}}">
 	<link rel="stylesheet" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css">
+	<link rel="stylesheet" href="{{ asset('vendor/leaflet/leaflet.css') }}">
+	<script src="{{ asset('vendor/leaflet/leaflet.js') }}"></script>
 	{{-- @notifyCss --}}
 
 	<link rel="stylesheet" href="{{ asset('css/style.css') }}">

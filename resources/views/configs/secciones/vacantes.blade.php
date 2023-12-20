@@ -170,7 +170,7 @@
 
        
         <div class="col-12 my-5 text-center d-flex justify-content-center align-items-center flex-column">
-            <p class="mt-5" style="font-size: 4.5rem; font-family:'Neusharp Bold'; color: #909986;">VACANTES</p>
+            <p class="mt-5" style="font-size: 4.5rem; font-family:'Neusharp Bold'; color: white;">VACANTES</p>
 			<div class="col-6">
 				{{-- <div class="col-12 mb-2 text-center"><i class="fa-solid fa-pencil" style="font-size: 1.5rem;"></i></div>
 				<textarea class="col-12 text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[0]->id}}" data-table="elemento" data-campo="texto" name="" id="" cols="30" rows="3" style="border-radius: 10px; border:none; background: #ededed">{{$elements[0]->texto}}</textarea> --}}
@@ -180,9 +180,9 @@
     <div class="col-12">
 
         <div class="col-12 text-center d-flex justify-content-center flex-column">
-            <h4 style="font-family:'Neusharp Bold';">Agregar Vacante</h4>
+            <h4 style="font-family:'Neusharp Bold'; color: white;">Agregar Vacante</h4>
             <div >
-                <button style="background: none !important; border:none;" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-circle-plus" style="font-size: 2rem;"></i></button>
+                <button style="background: none !important; border:none;" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-circle-plus" style="font-size: 2rem; color: white;"></i></button>
             </div>
         </div>
 
@@ -214,8 +214,10 @@
                     </div>
                 </div>
                 <div class="col-12 mt-3 d-flex flex-column" style="text-align: justify;">
-                    
-                    <h5><input type="text" class="form-control editar_text_seccion_global" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$v->id}}" data-table="ZVacante" data-campo="titulo" value="{{$v->titulo}}"></h5>
+                    <div class="col-12 mt-2">
+                        <input type="color" class="form-control py-2 editar_text_seccion_global" value="{{ $v->color }}" onchange="actualizarColor()"  data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$v->id}}" data-table="ZVacante" data-campo="color">
+                    </div>
+                    <h5><input type="text" class="form-control mt-2 editar_text_seccion_global" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$v->id}}" data-table="ZVacante" data-campo="titulo" value="{{$v->titulo}}"></h5>
                     {{-- <hr class="my-2"> --}}
 					<textarea class="col-12 mx-0 scrollux editar_text_seccion_global" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$v->id}}" data-table="ZVacante" data-campo="descripcion"  cols="30" rows="5" style="background: #f2f2f2; border:none; border-radius: 10px;">{{$v->descripcion}}</textarea>
                     <form action="{{route('config.seccion.elimVacante', ['vacante' => $v->id])}}" method="POST" id="form-{{ $v->id }}" class="col-12 text-center">
