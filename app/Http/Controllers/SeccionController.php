@@ -29,6 +29,8 @@ use App\ZCliente;
 use App\ZServicio;
 use App\ZProyecto;
 use App\ZVacante;
+use App\Estado;
+use App\Municipio;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -134,10 +136,12 @@ class SeccionController extends Controller
         $proyectos = ZProyecto::all();
         $clientes = ZCliente::all();
         $vacantes = ZVacante::all();
+        $estados = Estado::all();
+        $municipios = Municipio::all();
 
         $ruta = 'configs.secciones.'.$seccion->seccion;
 
-		return view($ruta,compact('elements', 'config', 'elem_general', 'slider_principal', 'servicios', 'proyectos', 'clientes', 'vacantes'));
+		return view($ruta,compact('elements', 'config', 'elem_general', 'slider_principal', 'servicios', 'proyectos', 'clientes', 'vacantes', 'estados', 'municipios'));
     }
 
     /**

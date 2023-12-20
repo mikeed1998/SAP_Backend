@@ -169,13 +169,13 @@
      data-aos-offset="0" style="background-color: #201E1F;">
         <div class="container-fluid py-5" style="background-color: #201E1F;">
             <div class="row py-5">
-                <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-11 col-11 titulo-pri mx-auto fw-bold text-end titulo-index">
-                    ELEVA la presencia de tu EMPRESA
+                <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-11 col-11 titulo-pri mx-auto fw-bold text-end">
+                    <textarea class="col-12 display-5 text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[0]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="3" style="border-radius: 10px; border:none; background: #ededed">{{$elements[0]->texto}}</textarea>
                 </div>
             </div>
             <div class="row">
                 <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-8 col-sm-11 col-11 py-4 mx-auto text-white texto-ind">
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt temporibus tempora minima quos, dolor nesciunt impedit magnam inventore deleniti explicabo.
+                    <textarea class="col-12 text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[1]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="3" style="border-radius: 10px; border:none; background: #ededed">{{$elements[1]->texto}}</textarea>
                 </div>
             </div>
             <div class="row">
@@ -222,15 +222,15 @@
             </div>
         </div>
         <div class="row py-5">
-            <div class="col position-relative text-center fs-1 border text-white py-5">
+            <div class="col py-5 position-relative text-center fs-1 fw-bolder border text-white py-5">
                 SERVICIOS
                 <div class="col-12 d-flex align-content-center justify-content-center position-absolute top-0 bottom-0 start-0 cuadro">
-                   
+
                 </div>
             </div>
         </div>
         <div class="row py-5">
-            <div class="col position-relative text-center fs-1 border text-white py-5">
+            <div class="col py-5 position-relative text-center fs-1 fw-bolder border text-white py-5">
                 SUCURSALES
                 <div class="col-12 d-flex align-content-center justify-content-center position-absolute top-0 bottom-0 start-0 cuadro">
                    
@@ -243,9 +243,22 @@
                     <div class="row">
                         <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12" data-aos="zoom-in" data-aos-delay="100">
                             <div class="row">
-                                <div class="col-xxl-10 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 position-relative mx-auto circulo-imagen" style="background-image: url('{{ asset('img/images/home/index1.png') }}'); background-color: #CDE700;">
+                                <div class="col-xxl-10 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 position-relative mx-auto circulo-imagen" style="background-image: url('{{ asset('img/photos/imagenes_estaticas/'.$elements[8]->imagen) }}'); background-color: #CDE700;">
                                     <div class="col-11 ms-5 position-absolute top-0 start-0 mt-5">
-                                        <h2><span><span>Tu campaña merce la mejor ubicación</span></span></h2>
+                                        <textarea class="col-12 fs-3 fw-bolder text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[7]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="3" style="border-radius: 10px; border:none; background: #ededed">{{$elements[7]->texto}}</textarea>
+                                    </div>
+                                    <div class="col-12 position-absolute top-50 start-50 translate-middle">
+                                        <form id="form_aux2" action="image_input_ejemplo" method="POST" class="file-upload px-auto col-7" enctype="multipart/form-data">
+                                            @csrf
+                                            <input type="hidden" name="id_elemento" value="{{ $elements[8]->id }}">
+                                            <input id="img_aux2" class="m-0 p-0" type="file" name="archivo">
+                                            <label class="col-12 m-0 px-2 d-flex justify-content-center align-items-center" for="img_aux2" style=" height: 100%; opacity: 100%; border-radius: 20px;">Seleccionar archivo</label>
+                                        </form>
+                                        <script>
+                                            $('#img_aux2').change(function(e) {
+                                                $('#form_aux2').trigger('submit');
+                                            });
+                                        </script>
                                     </div>
                                 </div>
                             </div>
@@ -254,7 +267,20 @@
                             <div class="row">
                                 <div class="col-xxl-10 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 position-relative mx-auto circulo-imagen" style="background-image: url('{{ asset('img/images/home/index2.png') }}'); background-color: #CCAEEC;">
                                     <div class="col-11 ms-5 position-absolute top-0 start-0 mt-5">
-                                        <h2><span><span>Diariamente millones de consumidores circulan por nuestras ubicaciones</span></span></h2>
+                                        <textarea class="col-12 fs-3 fw-bolder text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[9]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="3" style="border-radius: 10px; border:none; background: #ededed">{{$elements[9]->texto}}</textarea>
+                                    </div>
+                                    <div class="col-12 position-absolute top-50 start-50 translate-middle">
+                                        <form id="form_aux3" action="image_input_ejemplo" method="POST" class="file-upload px-auto col-7" enctype="multipart/form-data">
+                                            @csrf
+                                            <input type="hidden" name="id_elemento" value="{{ $elements[10]->id }}">
+                                            <input id="img_aux3" class="m-0 p-0" type="file" name="archivo">
+                                            <label class="col-12 m-0 px-2 d-flex justify-content-center align-items-center" for="img_aux3" style=" height: 100%; opacity: 100%; border-radius: 20px;">Seleccionar archivo</label>
+                                        </form>
+                                        <script>
+                                            $('#img_aux3').change(function(e) {
+                                                $('#form_aux3').trigger('submit');
+                                            });
+                                        </script>
                                     </div>
                                 </div>
                             </div>
@@ -267,7 +293,20 @@
                             <div class="row">
                                 <div class="col-xxl-10 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 position-relative mx-auto circulo-imagen" style="background-image: url('{{ asset('img/images/home/index3.png') }}'); background-color: #FE6E63;">
                                     <div class="col-11 ms-5 position-absolute top-0 start-0 mt-5">
-                                        <h2><span><span>Ponemos tu publicidad en lo más alto</span></span></h2>
+                                        <textarea class="col-12 fs-3 fw-bolder text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[11]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="3" style="border-radius: 10px; border:none; background: #ededed">{{$elements[11]->texto}}</textarea>
+                                    </div>
+                                    <div class="col-12 position-absolute top-50 start-50 translate-middle">
+                                        <form id="form_aux4" action="image_input_ejemplo" method="POST" class="file-upload px-auto col-7" enctype="multipart/form-data">
+                                            @csrf
+                                            <input type="hidden" name="id_elemento" value="{{ $elements[12]->id }}">
+                                            <input id="img_aux4" class="m-0 p-0" type="file" name="archivo">
+                                            <label class="col-12 m-0 px-2 d-flex justify-content-center align-items-center" for="img_aux4" style=" height: 100%; opacity: 100%; border-radius: 20px;">Seleccionar archivo</label>
+                                        </form>
+                                        <script>
+                                            $('#img_aux4').change(function(e) {
+                                                $('#form_aux4').trigger('submit');
+                                            });
+                                        </script>
                                     </div>
                                 </div>
                             </div>
@@ -276,8 +315,21 @@
                             <div class="row">
                                 <div class="col-xxl-10 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 position-relative mx-auto circulo-imagen" style="background-image: url('{{ asset('img/images/home/index4.png') }}'); background-color: #A2E9FF;">
                                     <div class="col-11 ms-5 position-absolute top-0 start-0 mt-5">
-                                        <h2><span><span>75% de las personas recuerdan las marcas</span></span></h2>
-                                    </div>    
+                                        <textarea class="col-12 fs-3 fw-bolder text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[13]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="3" style="border-radius: 10px; border:none; background: #ededed">{{$elements[13]->texto}}</textarea>
+                                    </div>
+                                    <div class="col-12 position-absolute top-50 start-50 translate-middle">
+                                        <form id="form_aux5" action="image_input_ejemplo" method="POST" class="file-upload px-auto col-7" enctype="multipart/form-data">
+                                            @csrf
+                                            <input type="hidden" name="id_elemento" value="{{ $elements[14]->id }}">
+                                            <input id="img_aux5" class="m-0 p-0" type="file" name="archivo">
+                                            <label class="col-12 m-0 px-2 d-flex justify-content-center align-items-center" for="img_aux5" style=" height: 100%; opacity: 100%; border-radius: 20px;">Seleccionar archivo</label>
+                                        </form>
+                                        <script>
+                                            $('#img_aux5').change(function(e) {
+                                                $('#form_aux5').trigger('submit');
+                                            });
+                                        </script>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -294,7 +346,7 @@
                 <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-9 col-sm-11 col-11 position-absolute top-50 start-50 translate-middle"  style="margin-top: -2rem;">
                     <div class="card shadow" style="border-top-right-radius: 32px; border-top-left-radius: 32px; border-bottom-right-radius: 0px; border-bottom-left-radius: 32px;">
                         <div class="card-body fs-2 text-center" style="line-height: 1;">
-                        SAP te hace llegar a millones de consumidores en movimiento dentro de las ciudades más importantes del país las 24 horas del día, ofreciendote las mejores ubicaciones en rutas de alto flujo vehícular y peatonal.
+                            <textarea class="col-12 fs-3 fw-bolder text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[15]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="3" style="border-radius: 10px; border:none; background: #ededed">{{$elements[15]->texto}}</textarea>
                         </div>
                     </div>
                 </div>
@@ -341,7 +393,7 @@
             <div class="col mt-5 py-5">
                 <div class="row">
                     <div class="col text-center display-1 fw-bolder">
-                        Déjanos un mensaje, nos ponemos en contacto
+                        <textarea class="col-12 fs-3 fw-bolder text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[16]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="3" style="border-radius: 10px; border:none; background: #ededed">{{$elements[16]->texto}}</textarea>
                     </div>
                 </div>
             </div>
