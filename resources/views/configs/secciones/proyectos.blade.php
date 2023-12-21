@@ -62,7 +62,7 @@
 
                     .file-upload label {
                     display: inline-block;
-                    background-color: #00000031;
+                    background-color: #00000091;
                     color: #fff;
                     padding: 6px 12px;
                     cursor: pointer;
@@ -170,7 +170,7 @@
 
        
         <div class="col-12 my-5 text-center d-flex justify-content-center align-items-center flex-column">
-            <p class="mt-5" style="font-size: 4.5rem; font-family:'Neusharp Bold'; color: #909986;">PROYECTOS</p>
+            <p class="mt-5" style="font-size: 4.5rem; font-family:'Neusharp Bold'; color: #FFFFFF;">PROYECTOS</p>
 			<div class="col-6">
 				{{-- <div class="col-12 mb-2 text-center"><i class="fa-solid fa-pencil" style="font-size: 1.5rem;"></i></div> --}}
 				{{-- <textarea class="col-12 text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[0]->id}}" data-table="elemento" data-campo="texto" name="" id="" cols="30" rows="3" style="border-radius: 10px; border:none; background: #ededed">{{$elements[0]->texto}}</textarea> --}}
@@ -180,9 +180,9 @@
     <div class="col-12">
 
         <div class="col-12 text-center d-flex justify-content-center flex-column">
-            <h4 style="font-family:'Neusharp Bold';">Agregar Proyecto</h4>
+            <h4 style="font-family:'Neusharp Bold'; color: #FFFFFF;">Agregar Proyecto</h4>
             <div >
-                <button style="background: none !important; border:none;" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-circle-plus" style="font-size: 2rem;"></i></button>
+                <button style="background: none !important; border:none; color: #FFFFFF;" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-circle-plus" style="font-size: 2rem;"></i></button>
             </div>
         </div>
 
@@ -234,7 +234,7 @@
                             }
                         </style>
                         <button class="col-12" style="background: none; border:none;">
-                            <i  class="fa-solid fa-trash my-3" style="font-size: 20px;"></i>
+                            <i  class="fa-solid fa-trash my-3" style="font-size: 40px; color: red;"></i>
                         </button>
                     </form>
                 </div>

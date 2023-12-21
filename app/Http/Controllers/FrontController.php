@@ -55,7 +55,11 @@ class FrontController extends Controller
 	}
 
 	public function servicio($id) {
-		return view('front.servicio');
+		$config = Configuracion::find(1);
+		$servicio = ZServicio::find($id);
+		$proyectos = ZProyecto::all();
+
+		return view('front.servicio', compact('config', 'servicio', 'proyectos'));
 	}
 
 	public function tienda() {

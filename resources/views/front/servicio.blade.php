@@ -14,18 +14,18 @@
 <section>
     <div class="container-fluid">
         <div class="row">
-            <div class="col px-0 portada-servicio position-realtive" style="background-image: url('{{ asset('img/images/servicio/portada2.png') }}');">
+            <div class="col px-0 portada-servicio position-realtive" style="background-image: url('{{ asset('img/photos/servicios/'.$servicio->imagen) }}');">
                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 py-5 position-absolute">
                     <div class="row">
                         <div class="col-9 mx-auto">
                             <div class="row">
                                 <div class="col text-start display-1 fw-bolder text-white">
-                                    Servicio
+                                    {{ $servicio->titulo }}
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col py-1 fs-5 fw-normal text-white text-start" style="line-height: 1.1;">
-                                    Lorem Dicta, possimus! Lorem, ipsum dolor. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque, est. sit amet consectetur adipisicing elit. Dicta placeat commodi animi dolores! Esse, labore. Placeat sunt tempora repudiandae iusto.
+                                    {{ $servicio->descripcion }}
                                 </div>
                             </div>
                         </div>
@@ -35,8 +35,8 @@
                     <div class="row">
                         <div class="col-9 mx-auto">
                             <div class="row">
-                                <div class="col py-1 fs-5 fw-normal text-white text-start" style="line-height: 1.1;">
-                                    Lorem Dicta, possimus! Lorem, ipsum dolor. Atque, est. Dicta placeat Esse, labore. Placeat sunt tempora repudiandae iusto.
+                                <div class="col py-1 fs-5 fw-normal text-white text-start" style="line-height: 1.1; max-height: 6rem; overflow: auto;">
+                                    {{ $servicio->descripcion2 }}
                                 </div>
                             </div>
                             <div class="row">
@@ -55,7 +55,7 @@
 </section>
 
 <section>
-    <div class="container-fluid">
+    <div class="container-fluid mt-5">
         <div class="row">
             <div class="col col-pri position-relative">
                 <div class="col-12 position-absolute top-0 start-0 z-3">
@@ -64,36 +64,37 @@
                         <div uk-slider>
                             <ul class="uk-slider-items uk-child-width-1-3@l uk-child-width-1-3@m uk-child-width-1@s">
 
-                                @for($i = 0; $i < 4; $i++)
-                                            <li>
-                                                <div class="col-12 px-3 py-1">
-                                                    <div class="card carta-imagen border-dark border-1 rounded-0" style="background-image: url('{{ asset('img/images/servicio/ser1.png') }}');">
-                                                        <div class="overlay">
-                                                            <div class="row">
-                                                                <div class="col position-relative">
-                                                                    <div class="col-12 px-3 py-2 position-absolute top-0 text-start fw-bolder titulo-card">
-                                                                        Título del proyecto realizado
-                                                                    </div>
-                                                                    <div class="col-11 px-3 py-2 position-absolute top-0 mar-text">
-                                                                        <div class="row">
-                                                                            <div class="col-2"></div>
-                                                                            <div class="col-10 text-end fw-bolder" style="line-height: 1.1;">
-                                                                                Lorem ipsum dolor sit amet consectetur. Officia iste voluptatibus asperiores iure ex. Facere quod eos possimus natus nulla.
-                                                                            </div>
-                                                                        </div>
+                                @foreach ($proyectos as $proye)
+                                    @if ($proye->servicio == $servicio->id)
+                                    <li>
+                                        <div class="col-12 px-3 py-1">
+                                            <div class="card carta-imagen border-dark border-1 rounded-0" style="background-image: url('{{ asset('img/photos/proyectos/'.$proye->portado) }}');">
+                                                <div class="overlay" style="background-color: {{ $proye->color }};">
+                                                    <div class="row">
+                                                        <div class="col position-relative" >
+                                                            <div class="col-12 px-3 py-2 position-absolute top-0 text-start fw-bolder titulo-card">
+                                                                {{ $proye->titulo }}
+                                                            </div>
+                                                            <div class="col-11 px-3 py-2 position-absolute top-0 mar-text">
+                                                                <div class="row">
+                                                                    <div class="col-2"></div>
+                                                                    <div class="col-10 text-end fw-bolder" style="line-height: 1.1;">
+                                                                        {{ $proye->descripcion }}
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </li>
-                                @endfor
+                                            </div>
+                                        </div>
+                                    </li>
+                                    @endif
+                                @endforeach
+
                             </ul>
                         </div>
 
-         
-                        
                     </div>
                 </div>
             </div>
