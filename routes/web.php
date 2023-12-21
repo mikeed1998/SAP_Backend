@@ -124,6 +124,9 @@ Route::prefix('admin')->group(function(){
 			Route::post('/imgSiderCliente','SeccionController@imgSiderCliente')->name('imgSiderCliente');
 			Route::delete('/delSideCliente/{cliente}','SeccionController@delSideCliente')->name('delSideCliente');
 
+			Route::post('/siderBeneficio','SeccionController@siderBeneficio')->name('siderBeneficio');
+			Route::delete('/delBeneficio/{beneficio}','SeccionController@delBeneficio')->name('delBeneficio');
+
 			///////////////////////////////////////////////// categoria /////////////////////////////////////////////////
 			Route::post('agcategoria','SeccionController@agcategoria')->name('agcategoria');
 			Route::post('elimCat','SeccionController@elimCat')->name('elimCat');

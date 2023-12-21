@@ -36,14 +36,14 @@
                         <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-3 col-sm-9 col-9 mx-auto position-relative">
                             <div class="row">
                                 <div class="col-6 mx-auto mt-4 text-center">
-                                    <a href="#/" class="btn btn-outline border w-100 text-white">Cotizar</a>
+                                    <a href="{{ route('front.contact') }}" class="btn btn-outline border w-100 text-white">Cotizar</a>
                                 </div>
                             </div>
                         </div>
                         <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-9 col-9 mx-auto ">
                             <div class="row">
                                 <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-8 py-2 text-end">
-                                    <a href="index.php"><img src="{{ asset('img/images/home/logo.png') }}" alt="sap" class="img-fluid"></a>
+                                    <a href="{{ route('front.index') }}"><img src="{{ asset('img/images/home/logo.png') }}" alt="sap" class="img-fluid"></a>
                                 </div>
                                 <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-4 d-flex align-items-center justify-content-center">
                                     <button class="btn btn-menu border-0 bg-transparent w-100" onclick="activarModal()">
@@ -69,39 +69,37 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-10 m-0 p-0 fs-1 fw-bolder mx-auto">
-                                        <a href="index.php" class="texto-hover">Inicio</a>
+                                        <a href="{{ route('front.index') }}" class="texto-hover">Inicio</a>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-10 texto-hover m-0 p-0 fs-1 fw-bolder mx-auto">
                                         <a href="#/" class="texto-hover">Servicios</a>
                                     </div>
-                                    <div class="col-10 subtitulo m-0 p-0 fs-4 texto-hover mx-auto"><a href="servicio.php" class="texto-hover">CARTELERA</a></div>
-                                    <div class="col-10 subtitulo m-0 p-0 fs-4 texto-hover mx-auto"><a href="servicio.php" class="texto-hover">PUENTES</a></div>
-                                    <div class="col-10 subtitulo m-0 p-0 fs-4 texto-hover mx-auto"><a href="servicio.php" class="texto-hover">PANTALLA DIGITAL</a></div>
-                                    <div class="col-10 subtitulo m-0 p-0 fs-4 texto-hover mx-auto"><a href="servicio.php" class="texto-hover">MUROS</a></div>
-                                    <div class="col-10 subtitulo m-0 p-0 fs-4 texto-hover mx-auto"><a href="servicio.php" class="texto-hover">AUTOBUSES</a></div>
-                                    <div class="col-10 subtitulo m-0 p-0 fs-4 texto-hover mx-auto"><a href="servicio.php" class="texto-hover">VALLA MÓVIL</a></div>
-                                    <div class="col-10 subtitulo m-0 p-0 fs-4 texto-hover mx-auto"><a href="servicio.php" class="texto-hover">MUPIS</a></div>
+                                    <div class="col-10 subtitulo m-0 p-0 fs-4 texto-hover mx-auto">
+                                        <a href="{{ route('front.servicio', ['id' => 7]) }}" class="texto-hover">
+                                            CARTELERA
+                                        </a>
+                                    </div>           
                                 </div>
                                 <div class="row">
                                     <div class="col-10 texto-hover m-0 p-0 fs-1 fw-bolder mx-auto">
-                                        <a href="nosotros.php" class="texto-hover">Nosotros</a>
+                                        <a href="{{ route('front.aboutus') }}" class="texto-hover">Nosotros</a>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-10 texto-hover m-0 p-0 fs-1 fw-bolder mx-auto">
-                                        <a href="bolsa_trabajo.php" class="texto-hover">Bolsa de Trabajo</a>
+                                        <a href="{{ route('front.vacantes') }}" class="texto-hover">Bolsa de Trabajo</a>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-10 texto-hover m-0 p-0 fs-1 fw-bolder mx-auto">
-                                        <a href="contacto.php" class="texto-hover">Contacto</a>
+                                        <a href="{{ route('front.contact') }}" class="texto-hover">Contacto</a>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-10 texto-hover m-0 p-0 fs-1 fw-bolder mx-auto">
-                                        <a href="blog.php" class="texto-hover">Blog</a>
+                                        <a href="{{ route('front.blog') }}" class="texto-hover">Blog</a>
                                     </div>
                                 </div>
                                 <div class="row mt-3">

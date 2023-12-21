@@ -31,6 +31,7 @@ use App\ZProyecto;
 use App\ZVacante;
 use App\Estado;
 use App\Municipio;
+use App\ZBeneficio;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -138,10 +139,11 @@ class SeccionController extends Controller
         $vacantes = ZVacante::all();
         $estados = Estado::all();
         $municipios = Municipio::all();
+        $beneficios = ZBeneficio::all();
 
         $ruta = 'configs.secciones.'.$seccion->seccion;
 
-		return view($ruta,compact('elements', 'config', 'elem_general', 'slider_principal', 'servicios', 'proyectos', 'clientes', 'vacantes', 'estados', 'municipios'));
+		return view($ruta,compact('elements', 'config', 'elem_general', 'slider_principal', 'servicios', 'proyectos', 'clientes', 'vacantes', 'estados', 'municipios', 'beneficios'));
     }
 
     /**
@@ -244,20 +246,20 @@ class SeccionController extends Controller
 
                     \Toastr::success('Guardado');
                     return redirect()->back();
-                } else if($request->tipo == 'producto') {
-                    $uproducto = PFProducto::find($request->id_elemento);
+                } else if($request->tipo == 'vacante') {
+                    $uvacante = ZVacante::find($request->id_elemento);
                     
-                    $file_producto = $request->file('archivo');
-                    $oldFileProducto = 'img/photos/productos/'.$uproducto->imagen;
-                    $extension_producto = $file_producto->getClientOriginalExtension();
-                    $namefile_producto = Str::random(30) . '.' . $extension_producto;
+                    $file_vacante = $request->file('archivo');
+                    $oldFileVacante = 'img/photos/vacantes/'.$uvacante->portada;
+                    $extension_vacante = $file_vacante->getClientOriginalExtension();
+                    $namefile_vacante = Str::random(30) . '.' . $extension_vacante;
     
-                    \Storage::disk('local')->put("/img/photos/productos/" . $namefile_producto, \File::get($file_producto));
-                    unlink($oldFileProducto);
+                    \Storage::disk('local')->put("/img/photos/vacantes/" . $namefile_vacante, \File::get($file_vacante));
+                    unlink($oldFileVacante);
 
-                    $uproducto->imagen = $namefile_producto;
+                    $uvacante->portada = $namefile_vacante;
 
-                    $uproducto->update();
+                    $uvacante->update();
 
                     \Toastr::success('Guardado');
                     return redirect()->back();
@@ -1110,6 +1112,43 @@ class SeccionController extends Controller
         \Toastr::success('Mapa Actualizado');
         return redirect()->back();
     }
+
+
+    public function siderBeneficio(Request $request) {
+        $beneficio = new ZBeneficio;
+        // dd($request->archivo);
+        if ($request->hasFile('archivo')) {
+            $file = $request->file('archivo');
+            $extension = $file->getClientOriginalExtension();
+            $namefile = Str::random(30).'.'.$extension;
+
+            \Storage::disk('local')->put("/img/photos/beneficios/".$namefile , \File::get($file));
+
+            $beneficio->icono = $namefile;
+        }
+
+        $beneficio->beneficio = $request->beneficio;
+        $beneficio->color = $request->colorPicker;
+
+        $beneficio->save();
+        
+        \Toastr::success('Guardado');
+        return redirect()->back();
+    }
+
+
+    public function delBeneficio(ZBeneficio $beneficio) {
+        $foto = 'img/photos/beneficios/'.$beneficio->icono;
+        unlink($foto);
+
+        $beneficio->delete();
+
+        \Toastr::success('Beneficio eliminado');
+        return redirect()->back();
+    }
+
+
+
 }
 
 

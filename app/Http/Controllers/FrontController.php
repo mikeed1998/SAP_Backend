@@ -50,6 +50,7 @@ class FrontController extends Controller
 		$config = Configuracion::find(1);
 		$clientes = ZCliente::all();
 		$elements = Elemento::where('seccion',1)->get();
+		
 	
 		return view('front.index', compact('pagina', 'slider_principal', 'config', 'elements', 'servicios', 'clientes'));
 	}
@@ -58,6 +59,7 @@ class FrontController extends Controller
 		$config = Configuracion::find(1);
 		$servicio = ZServicio::find($id);
 		$proyectos = ZProyecto::all();
+		
 
 		return view('front.servicio', compact('config', 'servicio', 'proyectos'));
 	}
@@ -65,6 +67,7 @@ class FrontController extends Controller
 	public function tienda() {
 
 		$pagina = 'tienda';
+
 
 		return view('front.tienda', compact('pagina'));
 	}
@@ -104,18 +107,26 @@ class FrontController extends Controller
 	}
 
 	public function aboutus() {
-		return view('front.aboutus');
+		$config = Configuracion::find(1);
+		$elements = Elemento::where('seccion',8)->get();
+
+		return view('front.aboutus', compact('config', 'elements'));
 	}
 
 	public function vacantes() {
 		$beneficios = ZBeneficio::all();
+		$vacantes = ZVacante::all();
+		$config = Configuracion::find(1);
+		$elements = Elemento::where('seccion',11)->get();
+		
 		$cont = 0;
 		$band = 0;
 
-		return view('front.vacantes', compact('beneficios', 'cont', 'band'));
+		return view('front.vacantes', compact('config', 'elements', 'beneficios', 'cont', 'band', 'vacantes'));
 	}
 
 	public function blog() {
+		
 		$entradas = ["#CDE700","#FE6E63","#CCAEEC","#A2E9FF"];
 		$cont = 1;
 
@@ -123,13 +134,15 @@ class FrontController extends Controller
 	}
 
 	public function blog_detalle($id) {
+		
 
 		return view('front.blog_detalle');
 	}
 
 	public function contact(){
 		$pagina = 'contacto';
-
+		
+		
 		$config = Configuracion::find(1);
 		$elements = Elemento::where('seccion',4)->get();
 

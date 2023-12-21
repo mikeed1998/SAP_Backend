@@ -13,20 +13,20 @@
 @section('content')
 <div class="container-fluid">
     <div class="row">
-        <div class="col-11 text-center titulo-bolsa">
-            CONOCE sobre nuestra BOLSA DE TRABAJO
+        <div class="col-11 mt-5 text-center titulo-bolsa">
+            {{ $elements[0]->texto }}
         </div>
     </div>
     <div class="row">
         <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-9 col-sm-11 col-11 mx-auto text-center texto-bolsa">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione voluptas corrupti, reiciendis labore quae eos est veniam, quidem perferendis odit iusto fugit recusandae accusantium facere, mollitia fugiat architecto numquam dolorum.
+            {{ $elements[1]->texto }}
         </div>
     </div>
 </div>
 
 <div class="container-fluid">
     <div class="row py-5">
-        <div class="col imagen-vacantes" style="background-image: url('{{ asset('img/images/bolsa_trabajo/para_vacantes2.png') }}');"></div>
+        <div class="col imagen-vacantes" style="background-image: url('{{ asset('img/photos/imagenes_estaticas/'.$elements[2]->imagen) }}');"></div>
     </div>
     
  
@@ -36,20 +36,16 @@
                     <div class="row">
                         <div class="servicios">
 
+                            @foreach ($vacantes as $vac)
                             <div class="col-3">
-                                <div class="card position-relative carta border-0" style="background-color: #CDE700;">
-                                    <div class="card-img-overlay" style="
-                                        background-image: url('https://picsum.photos/200');
-                                    ">
+                                <div class="card position-relative carta border-0" style="background-color: {{ $vac->color }};">
+                                    <div class="card-img-overlay" style="background-image: url('{{ asset('img/photos/vacantes/'.$vac->portada) }}');">
                                     </div>
                                     <div class="card-body">
-                                        <small class="card-orden">01</small>
-                                        <h3 class="card-title p-0 m-0">VACANTE</h3>
+                                        <small class="card-orden">{{ $vac->orden }}</small>
+                                        <h3 class="card-title p-0 m-0">{{ $vac->titulo }}</h3>
                                         <p class="card-text">
-                                            Somos un medio de alta exposición y gran impacto con alto flujo vehicular. 
-                                            Tenemos carteleras en las principal avenidas del país logrando una visualización del medio forzosa. 
-                                            Contamos con más de 3500 caras de exhibición, estructuras de calidad, iluminadas, con altura y posición, logrando el mayor impacto visual.
-                                            
+                                            {{ $vac->descripcion }}
                                         </p>
                                     </div>
                                     <div class="position-relative cont-btn">
@@ -66,180 +62,7 @@
                                     
                                 </div>
                             </div>
-
-                            <div class="col-3">
-                                <div class="card position-relative carta border-0" style="background-color: #CCAEEC;">
-                                    <div class="card-img-overlay" style="
-                                        background-image: url('https://picsum.photos/200');
-                                    ">
-                                    </div>
-                                    <div class="card-body">
-                                        <small class="card-orden">02</small>
-                                        <h3 class="card-title p-0 m-0">VACANTE</h3>
-                                        <p class="card-text">
-                                            Somos un medio de alta exposición y gran impacto con alto flujo vehicular. 
-                                            Tenemos carteleras en las principal avenidas del país logrando una visualización del medio forzosa. 
-                                            Contamos con más de 3500 caras de exhibición, estructuras de calidad, iluminadas, con altura y posición, logrando el mayor impacto visual.
-                                        </p>
-                                    </div>
-                                    <div class="position-relative cont-btn">
-                                        <div class="card bg-transparent border-0 ms-4 position-absolute bottom-0 start-0 translate-middle-y">
-                                            <div class="row">
-                                                <div class="col-xxl-4 link-servicio">
-                                                    <a href="#" class="text-center  rounded-circle">
-                                                        <img src="{{ asset('img/images/3my-imagetct2.png') }}" alt="right-up" class="img-fluid btn-serv rounded-circle">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-3">
-                                <div class="card position-relative carta border-0" style="background-color: #FE6E63;">
-                                    <div class="card-img-overlay" style="
-                                        background-image: url('https://picsum.photos/200');
-                                    ">
-                                    </div>
-                                    <div class="card-body">
-                                        <small class="card-orden">03</small>
-                                        <h3 class="card-title p-0 m-0">VACANTE</h3>
-                                        <p class="card-text">
-                                            Somos un medio de alta exposición y gran impacto con alto flujo vehicular. 
-                                            Tenemos carteleras en las principal avenidas del país logrando una visualización del medio forzosa. 
-                                            Contamos con más de 3500 caras de exhibición, estructuras de calidad, iluminadas, con altura y posición, logrando el mayor impacto visual.
-                                        </p>
-                                    </div>
-                                    <div class="position-relative cont-btn">
-                                        <div class="card bg-transparent border-0 ms-4 position-absolute bottom-0 start-0 translate-middle-y">
-                                            <div class="row">
-                                                <div class="col-xxl-4 link-servicio">
-                                                    <a href="#" class="text-center  rounded-circle">
-                                                        <img src="{{ asset('img/images/3my-imagetct2.png') }}" alt="right-up" class="img-fluid btn-serv rounded-circle">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-3">
-                                <div class="card position-relative carta border-0" style="background-color: #FFC000;">
-                                    <div class="card-img-overlay" style="
-                                        background-image: url('https://picsum.photos/200');
-                                    ">
-                                    </div>
-                                    <div class="card-body">
-                                        <small class="card-orden">04</small>
-                                        <h3 class="card-title p-0 m-0">VACANTE</h3>
-                                        <p class="card-text">
-                                            Somos un medio de alta exposición y gran impacto con alto flujo vehicular. 
-                                            Tenemos carteleras en las principal avenidas del país logrando una visualización del medio forzosa. 
-                                            Contamos con más de 3500 caras de exhibición, estructuras de calidad, iluminadas, con altura y posición, logrando el mayor impacto visual.
-                                        </p>
-                                    </div>
-                                    <div class="position-relative cont-btn">
-                                        <div class="card bg-transparent border-0 ms-4 position-absolute bottom-0 start-0 translate-middle-y">
-                                            <div class="row">
-                                                <div class="col-xxl-4 link-servicio">
-                                                    <a href="#" class="text-center  rounded-circle">
-                                                        <img src="{{ asset('img/images/3my-imagetct2.png') }}" alt="right-up" class="img-fluid btn-serv rounded-circle">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-3">
-                                <div class="card position-relative carta border-0" style="background-color: #FFC000;">
-                                    <div class="card-img-overlay" style="
-                                        background-image: url('https://picsum.photos/200');
-                                    ">
-                                    </div>
-                                    <div class="card-body">
-                                        <small class="card-orden">05</small>
-                                        <h3 class="card-title p-0 m-0">VACANTE</h3>
-                                        <p class="card-text">
-                                            Somos un medio de alta exposición y gran impacto con alto flujo vehicular. 
-                                            Tenemos carteleras en las principal avenidas del país logrando una visualización del medio forzosa. 
-                                            Contamos con más de 3500 caras de exhibición, estructuras de calidad, iluminadas, con altura y posición, logrando el mayor impacto visual.
-                                        </p>
-                                    </div>
-                                    <div class="position-relative cont-btn">
-                                        <div class="card bg-transparent border-0 ms-4 position-absolute bottom-0 start-0 translate-middle-y">
-                                            <div class="row">
-                                                <div class="col-xxl-4 link-servicio">
-                                                    <a href="#" class="text-center  rounded-circle">
-                                                        <img src="{{ asset('img/images/3my-imagetct2.png') }}" alt="right-up" class="img-fluid btn-serv rounded-circle">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-3">
-                                <div class="card position-relative carta border-0" style="background-color: #FFC000;">
-                                    <div class="card-img-overlay" style="
-                                        background-image: url('https://picsum.photos/200');
-                                    ">
-                                    </div>
-                                    <div class="card-body">
-                                        <small class="card-orden">06</small>
-                                        <h3 class="card-title p-0 m-0">VACANTE</h3>
-                                        <p class="card-text">
-                                            Somos un medio de alta exposición y gran impacto con alto flujo vehicular. 
-                                            Tenemos carteleras en las principal avenidas del país logrando una visualización del medio forzosa. 
-                                            Contamos con más de 3500 caras de exhibición, estructuras de calidad, iluminadas, con altura y posición, logrando el mayor impacto visual.
-                                        </p>
-                                    </div>
-                                    <div class="position-relative cont-btn">
-                                        <div class="card bg-transparent border-0 ms-4 position-absolute bottom-0 start-0 translate-middle-y">
-                                            <div class="row">
-                                                <div class="col-xxl-4 link-servicio">
-                                                    <a href="#" class="text-center  rounded-circle">
-                                                        <img src="{{ asset('img/images/3my-imagetct2.png') }}" alt="right-up" class="img-fluid btn-serv rounded-circle">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-3">
-                                <div class="card position-relative carta border-0" style="background-color: #FFC000;">
-                                    <div class="card-img-overlay" style="
-                                        background-image: url('https://picsum.photos/200');
-                                    ">
-                                    </div>
-                                    <div class="card-body">
-                                        <small class="card-orden">05</small>
-                                        <h3 class="card-title p-0 m-0">VACANTE</h3>
-                                        <p class="card-text">
-                                            Somos un medio de alta exposición y gran impacto con alto flujo vehicular. 
-                                            Tenemos carteleras en las principal avenidas del país logrando una visualización del medio forzosa. 
-                                            Contamos con más de 3500 caras de exhibición, estructuras de calidad, iluminadas, con altura y posición, logrando el mayor impacto visual.
-                                        </p>
-                                    </div>
-                                    <div class="position-relative cont-btn">
-                                        <div class="card bg-transparent border-0 ms-4 position-absolute bottom-0 start-0 translate-middle-y">
-                                            <div class="row">
-                                                <div class="col-xxl-4 link-servicio">
-                                                    <a href="#" class="text-center  rounded-circle">
-                                                        <img src="{{ asset('img/images/3my-imagetct2.png') }}" alt="right-up" class="img-fluid btn-serv rounded-circle">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
 
                         </div>
                     </div>
@@ -285,7 +108,7 @@
             </div>
             <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 col-2 ms-3 d-flex abengn-content-start justify-content-start rounded-circle">
                 <div class="beneficio-color position-relative" style="background-color: {{ $ben->color }};">
-                    <div class="beneficio-icono position-absolute top-50 start-50 translate-middle" style="background-image: url('{{ asset($ben->icono) }}');"></div>
+                    <div class="beneficio-icono position-absolute top-50 start-50 translate-middle" style="background-image: url('{{ asset('img/photos/beneficios/'.$ben->icono) }}');"></div>
                 </div>
             </div>
         </div>

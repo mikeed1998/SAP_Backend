@@ -230,7 +230,7 @@
                             }
                         </style>
                         <button class="col-12" style="background: none; border:none;">
-                            <i  class="fa-solid fa-trash my-3" style="font-size: 20px;"></i>
+                            <i  class="fa-solid fa-trash my-3" style="font-size: 40px; color: red;"></i>
                         </button>
                     </form>
                 </div>

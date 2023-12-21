@@ -7,6 +7,12 @@
 @endsection
 @section('styleExtras')
 <style>
+    @font-face {
+        font-family: 'Neusharp Bold';
+        font-style: normal;
+        font-weight: normal;
+        src: local('Neusharp Bold'), url({{ asset('fonts/Neusharp-Bold/NeusharpBold-7B8RV.woff') }}) format('woff');
+    }
 /* input con opacidad y sin boton de selecciond e archivo */
 .file-upload input[type="file"] {
     position: absolute;
@@ -107,11 +113,48 @@
                 <textarea class="col-12 text-start editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[3]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="1" style="border-radius: 10px; border:none; background: #ededed">{{$elements[3]->texto}}</textarea>
             </div>
         </div>
+        <div class="row">
+            <div class="col text-center py-3 fs-5">
+                <h4 style="font-family:'Neusharp Bold'; color: black;">Agregar Beneficio</h4>
+                <button style="background: none !important; border:none;" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-circle-plus" style="font-size: 2rem;"></i></button>
+            </div>
+        </div>
         <div class="row py-5">
             <div class="col py-5 position-relative text-center fs-1 fw-bolder border text-dark py-5">
-                BENEFICIOS
-                <div class="col-12 d-flex align-content-center justify-content-center position-absolute top-0 bottom-0 start-0 cuadro">
-
+                <div class="row">
+                    @foreach ($beneficios as $benef)
+                        <div class="col-3 mt-5">
+                            <div class="row">
+                                <div class="col">
+                                    <textarea class="col-12 fs-3 text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{ $benef->id }}" data-table="ZBeneficio" data-campo="beneficio" name="" id="" cols="30" rows="2" style="border-radius: 10px; border:none; background: #ededed">{{ $benef->beneficio }}</textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <input type="color" class="col-12 fs-3 text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{ $benef->id }}" data-table="ZBeneficio" data-campo="color" name="" id="" style="border-radius: 10px; border:none; background: #ededed" value="{{ $benef->color }}">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col position-relative">
+                                    <div style="
+                                        background-image: url('{{ asset('img/photos/beneficios/'.$benef->icono) }}');
+                                        background-size: contain;
+                                        background-position: center center;
+                                        background-repeat: no-repeat;
+                                        height: 120px;
+                                        width: 100%;
+                                    "></div>
+                                    <div class="col-4 py-3 position-absolute top-0 end-0">
+                                        <form action="{{ route('config.seccion.delBeneficio', ['beneficio' => $benef->id]) }}" method="POST" style="display: inline;">						
+                                            @csrf
+                                            @method('DELETE') 
+                                            <button type="submit" class="btn btn-danger btn-block bg-danger rounded-pill"><i class="fas fa-trash"></i></button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -272,7 +315,53 @@
            
         </div>
     </section>
-    
+
+    {{-- modal agregar vacante --}}
+<form action="{{route('config.seccion.siderBeneficio')}}" method="POST" class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" enctype="multipart/form-data">
+    <div class="modal-dialog modal-dialog-centered">
+    <div  class="modal-content" style="border-radius: 16px;" >
+        @csrf
+        <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Nuevo beneficio</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <style>
+                .backr{
+                    background: #1555bc !important;
+                }
+            </style>
+            <div class="col-12 mb-2" style="height: 100px; position: relative;">
+                    <div  class="file-upload col-12 p-0 m-0" style=" top: 0; bottom: 0; background: ; height: 100%;" >
+                        @csrf
+                        <input id="input_img_element" class="m-0 p-0" type="file" name="archivo">
+                        <label id="label_form" class="col-12 m-0 p-0 d-flex justify-content-center align-items-center" for="input_img_element" style="opacity: 100%; height: 100%;  border-radius: 16px;">Selecciona el icono</label>
+                    </div>
+                    <script>
+                        ///////////////////// Editar campos imegn categoria ////////////////////
+                        $('#input_img_element').change(function(e) {
+                            $('#label_form').addClass('backr');
+                            $('#label_form').html('Imagen añadida');
+                        });
+                        ///////////////////// Editar campos imegn categoria ////////////////////
+                    </script>
+            </div>
+            <div class="col-12 mb-2">
+                <label for="colorPicker" class="form-label">Selecciona el color de fondo para el icono:</label>
+                <input type="color" class="form-control" id="colorPicker" name="colorPicker" value="#CCAEEC" onchange="actualizarColor()">
+            </div>
+            <div class="col-12 mb-2">
+                <input class="form-control fs-5" type="text" name="beneficio" placeholder="Ingresa el beneficio">
+            </div>
+        </div>
+        <div class="modal-footer">
+        <div class="btn btn-secondary" data-bs-dismiss="modal" style="background: red !important; border:none;">Cerrar</div>
+        <button type="submit" class="btn btn-primary" style="background: #1555bc !important; border:none;">Agregar</button>
+        </div>
+    </div>
+    </div>
+</form>
+{{-- modal agregar vacante --}}
 
 @endsection
 @section('jsLibExtras2')
@@ -306,6 +395,56 @@
 
 
     $('.servicios').slick({
+        dots: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        prevArrow: true,
+        nextArrow: true,
+        centerMode: false,
+        responsive: [
+        {
+            breakpoint: 1201,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true
+            }
+        },
+        {
+            breakpoint: 993,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 769,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 577,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        },
+        {
+            breakpoint: 321,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+            }
+        }
+        ]
+    });
+
+    $('.beneficios').slick({
         dots: true,
         infinite: false,
         speed: 300,
