@@ -261,20 +261,20 @@ class SeccionController extends Controller
 
                     \Toastr::success('Guardado');
                     return redirect()->back();
-                } else if($request->tipo == 'solucion_imagen') {
-                    $usolucion = PFSolucion::find($request->id_elemento);
+                } else if($request->tipo == 'servicio_imagen') {
+                    $serv = ZServicio::find($request->id_elemento);
                     
                     $file_solucion = $request->file('archivo');
-                    $oldFilesolucion = 'img/photos/soluciones/'.$usolucion->imagen;
-                    $extension_solucion = $file_solucion->getClientOriginalExtension();
-                    $namefile_solucion = Str::random(30) . '.' . $extension_solucion;
+                    $oldFilesolucion = 'img/photos/servicios/'.$serv->imagen;
+                    $extension_serv = $file_solucion->getClientOriginalExtension();
+                    $namefile_serv = Str::random(30) . '.' . $extension_serv;
     
-                    \Storage::disk('local')->put("/img/photos/soluciones/" . $namefile_solucion, \File::get($file_solucion));
+                    \Storage::disk('local')->put("/img/photos/servicios/" . $namefile_serv, \File::get($file_solucion));
                     unlink($oldFilesolucion);
 
-                    $usolucion->imagen = $namefile_solucion;
+                    $serv->imagen = $namefile_serv;
 
-                    $usolucion->update();
+                    $serv->update();
 
                     \Toastr::success('Guardado');
                     return redirect()->back();

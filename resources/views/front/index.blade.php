@@ -19,12 +19,12 @@
         <div class="container-fluid py-5" style="background-color: #201E1F;">
             <div class="row py-5">
                 <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-11 col-11 titulo-pri mx-auto fw-bold text-end titulo-index">
-                    ELEVA la presencia de tu EMPRESA
+                    {{ $elements[0]->texto }}
                 </div>
             </div>
             <div class="row">
                 <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-8 col-sm-11 col-11 py-4 mx-auto text-white texto-ind">
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deserunt temporibus tempora minima quos, dolor nesciunt impedit magnam inventore deleniti explicabo.
+                    {{ $elements[1]->texto }}
                 </div>
             </div>
             <div class="row">
@@ -41,23 +41,13 @@
         </div>
     </section>
 
-    <section data-aos="fade-up"
-     data-aos-anchor-placement="center-bottom"  style="background-color: #201E1F;">
+    <section data-aos="fade-up" data-aos-anchor-placement="center-bottom"  style="background-color: #201E1F;">
         <div class="container-fluid mt-0">
             <div class="row">
                 <div class="slider-principal px-0">
-                    <div class="col-12 imagen-slider" style="
-                        background-image: url('https://picsum.photos/1200/1000');
-                    "></div>
-                    <div class="col-12 imagen-slider" style="
-                        background-image: url('https://picsum.photos/1200/1000');
-                    "></div>
-                    <div class="col-12 imagen-slider" style="
-                        background-image: url('https://picsum.photos/1200/1000');
-                    "></div>
-                    <div class="col-12 imagen-slider" style="
-                        background-image: url('https://picsum.photos/1200/1000');
-                    "></div>
+                    @foreach ($slider_principal as $sp)
+                        <div class="col-12 imagen-slider" style="background-image: url('{{ asset('img/photos/slider_principal/'.$sp->slider) }}');"></div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -75,20 +65,16 @@
                     <div class="row">
                         <div class="servicios">
 
+                            @foreach ($servicios as $serv)
                             <div class="col-3">
-                                <div class="card position-relative carta border-0" style="background-color: #CDE700;">
-                                    <div class="card-img-overlay" style="
-                                        background-image: url('https://picsum.photos/200');
-                                    ">
+                                <div class="card position-relative carta border-0" style="background-color: {{  $serv->color  }};">
+                                    <div class="card-img-overlay" style="background-image: url('{{ asset('img/photos/servicios/'.$serv->imagen) }}');">
                                     </div>
                                     <div class="card-body">
-                                        <small class="card-orden">01</small>
-                                        <h3 class="card-title p-0 m-0">CARTELEREA</h3>
+                                        <small class="card-orden">{{ $serv->orden }}</small>
+                                        <h3 class="card-title p-0 m-0">{{ $serv->titulo }}</h3>
                                         <p class="card-text">
-                                            Somos un medio de alta exposición y gran impacto con alto flujo vehicular. 
-                                            Tenemos carteleras en las principal avenidas del país logrando una visualización del medio forzosa. 
-                                            Contamos con más de 3500 caras de exhibición, estructuras de calidad, iluminadas, con altura y posición, logrando el mayor impacto visual.
-                                            
+                                            {{ $serv->descripcion }}
                                         </p>
                                     </div>
                                     <div class="position-relative cont-btn">
@@ -105,180 +91,72 @@
                                     
                                 </div>
                             </div>
+                            @endforeach
 
-                            <div class="col-3">
-                                <div class="card position-relative carta border-0" style="background-color: #CCAEEC;">
-                                    <div class="card-img-overlay" style="
-                                        background-image: url('https://picsum.photos/200');
-                                    ">
-                                    </div>
-                                    <div class="card-body">
-                                        <small class="card-orden">02</small>
-                                        <h3 class="card-title p-0 m-0">PUENTES</h3>
-                                        <p class="card-text">
-                                            Somos un medio de alta exposición y gran impacto con alto flujo vehicular. 
-                                            Tenemos carteleras en las principal avenidas del país logrando una visualización del medio forzosa. 
-                                            Contamos con más de 3500 caras de exhibición, estructuras de calidad, iluminadas, con altura y posición, logrando el mayor impacto visual.
-                                        </p>
-                                    </div>
-                                    <div class="position-relative cont-btn">
-                                        <div class="card bg-transparent border-0 ms-4 position-absolute bottom-0 start-0 translate-middle-y">
-                                            <div class="row">
-                                                <div class="col-xxl-4 link-servicio">
-                                                    <a href="#" class="text-center  rounded-circle">
-                                                        <img src="{{ asset('img/images/3my-imagetct2.png') }}" alt="right-up" class="img-fluid btn-serv rounded-circle">
-                                                    </a>
+                            
+{{-- 
+                            <div class="container-fluid" style="background-color: #5277A9">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="col text-center py-5" style="font-family: FuenteDruk; font-size: 80px; color: #162D47">
+                                                {!!($elements[102]->texto)!!}
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="row">
+                                                    <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-5 col-sm-11 col-11 mx-auto">
+                                                        <button  class="py-4 w-100" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border-radius: 65px; background-color: #162D47;">
+                                                            <div class="fuente" style="color: white; font-size: 27px; letter-spacing: 3px;">{!!($elements[50]->texto)!!}</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-5 col-sm-11 col-11 mx-auto">
+                                                        <button  class="py-4 w-100" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border-radius: 65px; background-color: #162D47;">
+                                                            <div class="fuente" style="color: white; font-size: 27px; letter-spacing: 3px;">{!!($elements[52]->texto)!!}</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-5 col-sm-11 col-11 mx-auto">
+                                                        <button  class="py-4 w-100" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border-radius: 65px; background-color: #162D47;">
+                                                            <div class="fuente" style="color: white; font-size: 27px; letter-spacing: 3px;">{!!($elements[54]->texto)!!}</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-5 col-sm-11 col-11 mx-auto">
+                                                        <button  class="py-4 w-100" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border-radius: 65px; background-color: #162D47;">
+                                                            <div class="fuente" style="color: white; font-size: 27px; letter-spacing: 3px;">{!!($elements[56]->texto)!!}</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-5 col-sm-11 col-11 mx-auto">
+                                                        <button  class="py-4 w-100" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border-radius: 65px; background-color: #162D47;">
+                                                            <div class="fuente" style="color: white; font-size: 27px; letter-spacing: 3px;">{!!($elements[58]->texto)!!}</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-5 col-sm-11 col-11 mx-auto">
+                                                        <button  class="py-4 w-100" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border-radius: 65px; background-color: #162D47;">
+                                                            <div class="fuente" style="color: white; font-size: 27px; letter-spacing: 3px;">{!!($elements[60]->texto)!!}</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-5 col-sm-11 col-11 mx-auto">
+                                                        <button  class="py-4 w-100" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border-radius: 65px; background-color: #162D47;">
+                                                            <div class="fuente" style="color: white; font-size: 27px; letter-spacing: 3px;">{!!($elements[62]->texto)!!}</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-5 col-sm-11 col-11 mx-auto">
+                                                        <button  class="py-4 w-100" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border-radius: 65px; background-color: #162D47;">
+                                                            <div class="fuente" style="color: white; font-size: 27px; letter-spacing: 3px;">{!!($elements[64]->texto)!!}</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-5 col-sm-11 col-11 mx-auto">
+                                                        <button  class="py-4 w-100" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border-radius: 65px; background-color: #162D47;">
+                                                            <div class="fuente" style="color: white; font-size: 27px; letter-spacing: 3px;">{!!($elements[66]->texto)!!}</div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <div class="col-3">
-                                <div class="card position-relative carta border-0" style="background-color: #FE6E63;">
-                                    <div class="card-img-overlay" style="
-                                        background-image: url('https://picsum.photos/200');
-                                    ">
-                                    </div>
-                                    <div class="card-body">
-                                        <small class="card-orden">03</small>
-                                        <h3 class="card-title p-0 m-0">PANTALLA DIGITAL</h3>
-                                        <p class="card-text">
-                                            Somos un medio de alta exposición y gran impacto con alto flujo vehicular. 
-                                            Tenemos carteleras en las principal avenidas del país logrando una visualización del medio forzosa. 
-                                            Contamos con más de 3500 caras de exhibición, estructuras de calidad, iluminadas, con altura y posición, logrando el mayor impacto visual.
-                                        </p>
-                                    </div>
-                                    <div class="position-relative cont-btn">
-                                        <div class="card bg-transparent border-0 ms-4 position-absolute bottom-0 start-0 translate-middle-y">
-                                            <div class="row">
-                                                <div class="col-xxl-4 link-servicio">
-                                                    <a href="#" class="text-center  rounded-circle">
-                                                        <img src="{{ asset('img/images/3my-imagetct2.png') }}" alt="right-up" class="img-fluid btn-serv rounded-circle">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-3">
-                                <div class="card position-relative carta border-0" style="background-color: #FFC000;">
-                                    <div class="card-img-overlay" style="
-                                        background-image: url('https://picsum.photos/200');
-                                    ">
-                                    </div>
-                                    <div class="card-body">
-                                        <small class="card-orden">04</small>
-                                        <h3 class="card-title p-0 m-0">MUROS</h3>
-                                        <p class="card-text">
-                                            Somos un medio de alta exposición y gran impacto con alto flujo vehicular. 
-                                            Tenemos carteleras en las principal avenidas del país logrando una visualización del medio forzosa. 
-                                            Contamos con más de 3500 caras de exhibición, estructuras de calidad, iluminadas, con altura y posición, logrando el mayor impacto visual.
-                                        </p>
-                                    </div>
-                                    <div class="position-relative cont-btn">
-                                        <div class="card bg-transparent border-0 ms-4 position-absolute bottom-0 start-0 translate-middle-y">
-                                            <div class="row">
-                                                <div class="col-xxl-4 link-servicio">
-                                                    <a href="#" class="text-center  rounded-circle">
-                                                        <img src="{{ asset('img/images/3my-imagetct2.png') }}" alt="right-up" class="img-fluid btn-serv rounded-circle">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-3">
-                                <div class="card position-relative carta border-0" style="background-color: #FFC000;">
-                                    <div class="card-img-overlay" style="
-                                        background-image: url('https://picsum.photos/200');
-                                    ">
-                                    </div>
-                                    <div class="card-body">
-                                        <small class="card-orden">05</small>
-                                        <h3 class="card-title p-0 m-0">AUTOBUSES</h3>
-                                        <p class="card-text">
-                                            Somos un medio de alta exposición y gran impacto con alto flujo vehicular. 
-                                            Tenemos carteleras en las principal avenidas del país logrando una visualización del medio forzosa. 
-                                            Contamos con más de 3500 caras de exhibición, estructuras de calidad, iluminadas, con altura y posición, logrando el mayor impacto visual.
-                                        </p>
-                                    </div>
-                                    <div class="position-relative cont-btn">
-                                        <div class="card bg-transparent border-0 ms-4 position-absolute bottom-0 start-0 translate-middle-y">
-                                            <div class="row">
-                                                <div class="col-xxl-4 link-servicio">
-                                                    <a href="#" class="text-center  rounded-circle">
-                                                        <img src="{{ asset('img/images/3my-imagetct2.png') }}" alt="right-up" class="img-fluid btn-serv rounded-circle">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-3">
-                                <div class="card position-relative carta border-0" style="background-color: #FFC000;">
-                                    <div class="card-img-overlay" style="
-                                        background-image: url('https://picsum.photos/200');
-                                    ">
-                                    </div>
-                                    <div class="card-body">
-                                        <small class="card-orden">06</small>
-                                        <h3 class="card-title p-0 m-0">VALLA MÓVIL</h3>
-                                        <p class="card-text">
-                                            Somos un medio de alta exposición y gran impacto con alto flujo vehicular. 
-                                            Tenemos carteleras en las principal avenidas del país logrando una visualización del medio forzosa. 
-                                            Contamos con más de 3500 caras de exhibición, estructuras de calidad, iluminadas, con altura y posición, logrando el mayor impacto visual.
-                                        </p>
-                                    </div>
-                                    <div class="position-relative cont-btn">
-                                        <div class="card bg-transparent border-0 ms-4 position-absolute bottom-0 start-0 translate-middle-y">
-                                            <div class="row">
-                                                <div class="col-xxl-4 link-servicio">
-                                                    <a href="#" class="text-center  rounded-circle">
-                                                        <img src="{{ asset('img/images/3my-imagetct2.png') }}" alt="right-up" class="img-fluid btn-serv rounded-circle">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-3">
-                                <div class="card position-relative carta border-0" style="background-color: #FFC000;">
-                                    <div class="card-img-overlay" style="
-                                        background-image: url('https://picsum.photos/200');
-                                    ">
-                                    </div>
-                                    <div class="card-body">
-                                        <small class="card-orden">05</small>
-                                        <h3 class="card-title p-0 m-0">MUPIS</h3>
-                                        <p class="card-text">
-                                            Somos un medio de alta exposición y gran impacto con alto flujo vehicular. 
-                                            Tenemos carteleras en las principal avenidas del país logrando una visualización del medio forzosa. 
-                                            Contamos con más de 3500 caras de exhibición, estructuras de calidad, iluminadas, con altura y posición, logrando el mayor impacto visual.
-                                        </p>
-                                    </div>
-                                    <div class="position-relative cont-btn">
-                                        <div class="card bg-transparent border-0 ms-4 position-absolute bottom-0 start-0 translate-middle-y">
-                                            <div class="row">
-                                                <div class="col-xxl-4 link-servicio">
-                                                    <a href="#" class="text-center  rounded-circle">
-                                                        <img src="{{ asset('img/images/3my-imagetct2.png') }}" alt="right-up" class="img-fluid btn-serv rounded-circle">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            </div> --}}
 
                         </div>
                     </div>
@@ -390,18 +268,18 @@
                         <div class="row">
                             <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12" data-aos="zoom-in" data-aos-delay="100">
                                 <div class="row">
-                                    <div class="col-xxl-10 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 position-relative mx-auto circulo-imagen" style="background-image: url('{{ asset('img/images/home/index1.png') }}'); background-color: #CDE700;">
+                                    <div class="col-xxl-10 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 position-relative mx-auto circulo-imagen" style="background-image: url('{{ asset('img/photos/imagenes_estaticas/'.$elements[8]->imagen) }}'); background-color: #CDE700;">
                                         <div class="col-11 ms-5 position-absolute top-0 start-0 mt-5">
-                                            <h2><span><span>Tu campaña merce la mejor ubicación</span></span></h2>
+                                            <h2><span><span>{{ $elements[7]->texto }}</span></span></h2>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 col-baja" data-aos="zoom-in" data-aos-delay="100"> 
                                 <div class="row">
-                                    <div class="col-xxl-10 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 position-relative mx-auto circulo-imagen" style="background-image: url('{{ asset('img/images/home/index2.png') }}'); background-color: #CCAEEC;">
+                                    <div class="col-xxl-10 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 position-relative mx-auto circulo-imagen" style="background-image: url('{{ asset('img/photos/imagenes_estaticas/'.$elements[10]->imagen) }}'); background-color: #CCAEEC;">
                                         <div class="col-11 ms-5 position-absolute top-0 start-0 mt-5">
-                                            <h2><span><span>Diariamente millones de consumidores circulan por nuestras ubicaciones</span></span></h2>
+                                            <h2><span><span>{{ $elements[9]->texto }}</span></span></h2>
                                         </div>
                                     </div>
                                 </div>
@@ -412,18 +290,18 @@
                         <div class="row">
                             <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12" data-aos="zoom-in" data-aos-delay="100">
                                 <div class="row">
-                                    <div class="col-xxl-10 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 position-relative mx-auto circulo-imagen" style="background-image: url('{{ asset('img/images/home/index3.png') }}'); background-color: #FE6E63;">
+                                    <div class="col-xxl-10 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 position-relative mx-auto circulo-imagen" style="background-image: url('{{ asset('img/photos/imagenes_estaticas/'.$elements[12]->imagen) }}'); background-color: #FE6E63;">
                                         <div class="col-11 ms-5 position-absolute top-0 start-0 mt-5">
-                                            <h2><span><span>Ponemos tu publicidad en lo más alto</span></span></h2>
+                                            <h2><span><span>{{ $elements[11]->texto }}</span></span></h2>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 col-baja" data-aos="zoom-in" data-aos-delay="100">
                                 <div class="row">
-                                    <div class="col-xxl-10 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 position-relative mx-auto circulo-imagen" style="background-image: url('{{ asset('img/images/home/index4.png') }}'); background-color: #A2E9FF;">
+                                    <div class="col-xxl-10 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 position-relative mx-auto circulo-imagen" style="background-image: url('{{ asset('img/photos/imagenes_estaticas/'.$elements[14]->imagen) }}'); background-color: #A2E9FF;">
                                         <div class="col-11 ms-5 position-absolute top-0 start-0 mt-5">
-                                            <h2><span><span>75% de las personas recuerdan las marcas</span></span></h2>
+                                            <h2><span><span>{{ $elements[13]->texto }}</span></span></h2>
                                         </div>    
                                     </div>
                                 </div>
@@ -464,7 +342,7 @@
                     <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-9 col-sm-11 col-11 position-absolute top-50 start-50 translate-middle"  style="margin-top: -2rem;">
                         <div class="card shadow" style="border-top-right-radius: 32px; border-top-left-radius: 32px; border-bottom-right-radius: 0px; border-bottom-left-radius: 32px;">
                             <div class="card-body fs-2 text-center" style="line-height: 1;">
-                            SAP te hace llegar a millones de consumidores en movimiento dentro de las ciudades más importantes del país las 24 horas del día, ofreciendote las mejores ubicaciones en rutas de alto flujo vehícular y peatonal.
+                                {{ $elements[15]->texto }}
                             </div>
                         </div>
                     </div>
@@ -475,24 +353,9 @@
                 <div class="col-11 mx-auto">
                     <div class="row">
                         <div class="slider-clientes">
-                            <div class="col imagen-cliente" style="
-                                background-image: url('{{ asset('img/images/cocacola.png') }}');
-                            "></div>
-                            <div class="col imagen-cliente" style="
-                                background-image: url('{{ asset('img/images/cocacola.png') }}');
-                            "></div>
-                            <div class="col imagen-cliente" style="
-                                background-image: url('{{ asset('img/images/cocacola.png') }}');
-                            "></div>
-                            <div class="col imagen-cliente" style="
-                                background-image: url('{{ asset('img/images/cocacola.png') }}');
-                            "></div>
-                            <div class="col imagen-cliente" style="
-                                background-image: url('{{ asset('img/images/cocacola.png') }}');
-                            "></div>
-                            <div class="col imagen-cliente" style="
-                                background-image: url('{{ asset('img/images/cocacola.png') }}');
-                            "></div>
+                            @foreach ($clientes as $cli)
+                                <div class="col imagen-cliente" style="background-image: url('{{ asset('img/photos/clientes/'.$cli->logo) }}');"></div>
+                            @endforeach        
                         </div>
                     </div>
                 </div>
@@ -502,7 +365,7 @@
                 <div class="col mt-5 py-5">
                     <div class="row">
                         <div class="col text-center display-1 fw-bolder">
-                            Déjanos un mensaje, nos ponemos en contacto
+                            {{ $elements[16]->texto }}
                         </div>
                     </div>
                 </div>

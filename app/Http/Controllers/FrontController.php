@@ -19,6 +19,13 @@ use App\equipo;
 use App\logoequipos;
 use Carbon\Carbon;
 use App\ZBeneficio;
+use App\ZSliderPrincipal;
+use App\ZCliente;
+use App\ZServicio;
+use App\ZProyecto;
+use App\ZVacante;
+use App\Estado;
+use App\Municipio;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
@@ -36,15 +43,15 @@ class FrontController extends Controller
 	 */
 	public function index(){
 		
-
 		$pagina = 'home';
 
+		$slider_principal = ZSliderPrincipal::all();
+		$servicios = ZServicio::orderBy('orden', 'asc')->get();
+		$config = Configuracion::find(1);
+		$clientes = ZCliente::all();
+		$elements = Elemento::where('seccion',1)->get();
 	
-
-		// $config = Configuracion::find(1);
-		// $elements = Elemento::where('seccion',1)->get();
-	
-		return view('front.index', compact('pagina'));
+		return view('front.index', compact('pagina', 'slider_principal', 'config', 'elements', 'servicios', 'clientes'));
 	}
 
 	public function servicio($id) {

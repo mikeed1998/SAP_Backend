@@ -169,19 +169,19 @@
 
        
         <div class="col-12 my-5 text-center d-flex justify-content-center align-items-center flex-column">
-            <p class="mt-5" style="font-size: 4.5rem; font-family:'Neusharp Bold'; color: #909986;">SERVICIOS</p>
-			<div class="col-6">
+            <p class="mt-5" style="font-size: 4.5rem; font-family:'Neusharp Bold'; color: #FFFFFF;">SERVICIOS</p>
+			{{-- <div class="col-6">
 				<div class="col-12 mb-2 text-center"><i class="fa-solid fa-pencil" style="font-size: 1.5rem;"></i></div>
 				<textarea class="col-12 text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[0]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="3" style="border-radius: 10px; border:none; background: #ededed">{{$elements[0]->texto}}</textarea>
-			</div>
+			</div> --}}
         </div>
 
     <div class="col-12">
 
         <div class="col-12 text-center d-flex justify-content-center flex-column">
-            <h4 style="font-family:'Neusharp Bold';">Agregar Servicio</h4>
+            <h4 style="font-family:'Neusharp Bold'; color: white;">Agregar Servicio</h4>
             <div>
-                <button style="background: none !important; border:none;" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-circle-plus" style="font-size: 2rem;"></i></button>
+                <button style="background: none !important; border:none;" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-circle-plus" style="font-size: 2rem; color: #FFFFFF;"></i></button>
             </div>
         </div>
 
@@ -191,12 +191,12 @@
             <div class="col-4 p-3 " style="border-radius:26px;">
                 <div class="row">
                     <div class="col position-relative px-0 card position-relative">
-                        <img src="{{asset('img/photos/servicios/'.$s->portada)}}" alt="" class="img-fluid">
+                        <img src="{{asset('img/photos/servicios/'.$s->imagen)}}" alt="" class="img-fluid">
                         <div class="card d-flex justify-content-center align-items-center w-100 position-absolute bottom-0 start-50 translate-middle bg-transparent border-0">
 							<form id="form_aux-{{ $s->id }}" action="image_input_ejemplo" method="POST" class="file-upload px-auto col-7" enctype="multipart/form-data">
 								@csrf
 								<input type="hidden" name="id_elemento" value="{{ $s->id }}">
-								<input type="hidden" name="tipo" value="solucion_imagen">
+								<input type="hidden" name="tipo" value="servicio_imagen">
 								<input id="img_aux-{{ $s->id }}" class="m-0 p-0" type="file" name="archivo">
 								<label class="col-12 m-0 px-2 d-flex justify-content-center align-items-center" for="img_aux-{{ $s->id }}" style=" height: 100%; opacity: 100%; border-radius: 20px;">Actualizar Portada</label>
 							</form>
@@ -206,7 +206,7 @@
 								});
 							</script>
 						</div>
-                        <div class="card d-flex justify-content-center align-items-center w-100 position-absolute top-0 start-0 bg-transparent border-0">
+                        {{-- <div class="card d-flex justify-content-center align-items-center w-100 position-absolute top-0 start-0 bg-transparent border-0">
 							<form id="iform_aux-{{ $s->id }}" action="image_input_ejemplo" method="POST" class="file-upload px-auto col-7" enctype="multipart/form-data">
 								@csrf
 								<input type="hidden" name="id_elemento" value="{{ $s->id }}">
@@ -219,11 +219,9 @@
 									$('#iform_aux-{{ $s->id }}').trigger('submit');
 								});
 							</script>
-						</div>
+						</div> --}}
                         <div class="col-3 card position-absolute">
-                            <div class="row">
-                                <img src="{{asset('img/photos/servicios/'.$s->imagen)}}" alt="" class="img-fluid">
-                            </div>
+                            
                             <div class="row">
                                 <div class="col text-center p-3">
                                     <input type="number" class="form-control fw-bold editar_text_seccion_global" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$s->id}}" data-table="ZServicio" data-campo="orden" value="{{$s->orden}}" style="box-shadow: 0;" placeholder="Orden">
@@ -252,7 +250,7 @@
                             }
                         </style>
                         <button class="col-12" style="background: none; border:none;">
-                            <i class="fa-solid fa-trash my-3" style="font-size: 20px;"></i>
+                            <i class="fa-solid fa-trash my-3" style="font-size: 20px; color: red;"></i>
                         </button>
                     </form>
                 </div>
@@ -284,21 +282,21 @@
                     background: #1555bc !important;
                 }
             </style>
-            <div class="col-12 mb-2" style="height: 100px; position: relative;">
+            {{-- <div class="col-12 mb-2" style="height: 100px; position: relative;">
                 <div  class="file-upload col-12 p-0 m-0" style=" top: 0; bottom: 0; background: ; height: 100%;" >
                     @csrf
                     <input id="input_img_element" class="m-0 p-0" type="file" name="archivo">
                     <label id="label_form" class="col-12 m-0 p-0 d-flex justify-content-center align-items-center" for="input_img_element" style="opacity: 100%; height: 100%;  border-radius: 16px;">Agregar icono</label>
                 </div>
                 <script>
-                    ///////////////////// Editar campos imegn categoria ////////////////////
+             
                     $('#input_img_element').change(function(e) {
                         $('#label_form').addClass('backr');
                         $('#label_form').html('Imagen añadida');
                     });
-                    ///////////////////// Editar campos imegn categoria ////////////////////
+
                 </script>
-            </div>
+            </div> --}}
             <div class="col-12 mb-2" style="height: 100px; position: relative;">
                 <div  class="file-upload2 col-12 p-0 m-0" style=" top: 0; bottom: 0; background: ; height: 100%;" >
                     @csrf
