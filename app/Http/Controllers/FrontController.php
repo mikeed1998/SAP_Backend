@@ -27,6 +27,8 @@ use App\ZVacante;
 use App\Estado;
 use App\Municipio;
 use App\ZBlog;
+use App\ZSucursal;
+use App\ZSucursalFoto;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;

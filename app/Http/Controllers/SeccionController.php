@@ -32,6 +32,8 @@ use App\ZVacante;
 use App\Estado;
 use App\Municipio;
 use App\ZBeneficio;
+use App\ZSucursal;
+use App\ZSucursalFoto;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -83,10 +85,14 @@ class SeccionController extends Controller
 
     public function sucursalCreate(Request $request){
 
-        $sucursal = new services;
+        $sucursal = new ZSucursal;
 
-        $sucursal->icono = $request->iframe;
-        $sucursal->descripcion = $request->descripcion;
+        // dd($request);
+        $sucursal->estado = $request->estado;
+        $sucursal->municipio = $request->municipio;
+        $sucursal->sucursal = $request->direccion; 
+        $sucursal->coordX = $request->coordX;
+        $sucursal->coordY = $request->coordY;
 
         if($sucursal->save()){
             \Toastr::success('Guardado');
@@ -140,10 +146,11 @@ class SeccionController extends Controller
         $estados = Estado::all();
         $municipios = Municipio::all();
         $beneficios = ZBeneficio::all();
+        $sucursales = ZSucursal::all();
 
         $ruta = 'configs.secciones.'.$seccion->seccion;
 
-		return view($ruta,compact('elements', 'config', 'elem_general', 'slider_principal', 'servicios', 'proyectos', 'clientes', 'vacantes', 'estados', 'municipios', 'beneficios'));
+		return view($ruta,compact('elements', 'config', 'elem_general', 'slider_principal', 'servicios', 'proyectos', 'clientes', 'vacantes', 'estados', 'municipios', 'beneficios', 'sucursales'));
     }
 
     /**
