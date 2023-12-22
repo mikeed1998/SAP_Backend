@@ -106,6 +106,16 @@ Route::prefix('admin')->group(function(){
 			Route::put('/{id}','PoliticaController@update')->name('update');
 		});
 
+		Route::prefix('blogs')->name('blog.')->group(function(){
+			Route::get('/','BlogController@index')->name('index');
+			Route::get('/create','BlogController@create')->name('create');
+			Route::get('/edit/{id}','BlogController@edit')->name('edit');
+			Route::post('/post','BlogController@store')->name('store');
+			Route::put('/update/{id}','BlogController@update')->name('update');
+			Route::delete('/{id}','BlogController@destroy')->name('delete');
+			Route::post('/guardar_imagen','BlogController@guardar_imagen')->name('guardar_imagen');
+		});
+
 		Route::prefix('secciones')->name('seccion.')->group(function(){
 			Route::get('/','SeccionController@index')->name('index');
 			Route::get('/{slug}','SeccionController@show')->name('show');

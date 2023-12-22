@@ -26,6 +26,7 @@ use App\ZProyecto;
 use App\ZVacante;
 use App\Estado;
 use App\Municipio;
+use App\ZBlog;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
@@ -126,17 +127,18 @@ class FrontController extends Controller
 	}
 
 	public function blog() {
-		
-		$entradas = ["#CDE700","#FE6E63","#CCAEEC","#A2E9FF"];
+		// $entradas = ["#CDE700","#FE6E63","#CCAEEC","#A2E9FF"];
+		$blogs = ZBlog::all();
+		$config = Configuracion::find(1);
 		$cont = 1;
 
-		return view('front.blog', compact('entradas', 'cont'));
+		return view('front.blog', compact('blogs', 'cont'));
 	}
 
 	public function blog_detalle($id) {
-		
+		$blog = ZBlog::find($id);
 
-		return view('front.blog_detalle');
+		return view('front.blog_detalle', compact('blog'));
 	}
 
 	public function contact(){

@@ -14,11 +14,11 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col py-5 text-center fw-bolder text-white display-1 text-decoration-underline">
-            Título del tema
+            {{ $blog->titulo }}
         </div>
     </div>
     <div class="row">
-        <div class="col portada-post" style="background-image: url('{{ asset('img/images/blog/blog1.png') }}');"></div>
+        <div class="col portada-post" style="background-image: url('{{ asset('img/photos/blog/'.$blog->portada) }}');"></div>
     </div>
 </div>
 
@@ -27,37 +27,10 @@
         <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-10 col-sm-11 col-11 mx-auto">
             <div class="row">
                 <div class="col">
-                    <p class="fs-4" style="hyphens: auto; line-height: 1;">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi expedita quod debitis explicabo illo saepe sapiente iure corporis velit vitae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima dolores voluptatibus illum modi cumque animi corporis fugit nulla eos quos. Minima hic excepturi incidunt optio esse rerum minus sed dolore magnam reprehenderit.
-                    </p>
-                    <p class="fs-4 mt-5" style="hyphens: auto; line-height: 1;">
-                        Temporibus, accusantium. Quo aperiam officia amet tempora commodi quod incidunt nesciunt ad! Sint eligendi, tempore eius blanditiis nihil explicabo sapiente deleniti atque! sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi expedita quod debitis explicabo illo saepe sapiente iure corporis velit vitae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima dolores voluptatibus illum modi cumque animi corporis fugit nulla eos quos. Minima hic excepturi incidunt optio esse rerum minus sed dolore magnam reprehenderit.
-                    </p>
+                    {!! $blog->post !!}
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12">
-                    <hr>
-                </div>
-                <div class="col" style="
-                    background-image: url('{{ asset('img/images/blog/blog1.png') }}');
-                    background-size: cover;
-                    background-position: center center;
-                    background-repeat: no-repeat;
-                    width: 100%;
-                    height: 50rem;
-                "></div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <p class="fs-4 mt-5" style="hyphens: auto; line-height: 1;">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi expedita quod debitis explicabo illo saepe sapiente iure corporis velit vitae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima dolores voluptatibus illum modi cumque animi corporis fugit nulla eos quos. Minima hic excepturi incidunt optio esse rerum minus sed dolore magnam reprehenderit.
-                    </p>
-                    <p class="fs-4 mt-5 mb-5" style="hyphens: auto; line-height: 1;">
-                        Temporibus, accusantium. Quo aperiam officia amet tempora commodi quod incidunt nesciunt ad! Sint eligendi, tempore eius blanditiis nihil explicabo sapiente deleniti atque! sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi expedita quod debitis explicabo illo saepe sapiente iure corporis velit vitae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima dolores voluptatibus illum modi cumque animi corporis fugit nulla eos quos. Minima hic excepturi incidunt optio esse rerum minus sed dolore magnam reprehenderit.
-                    </p>
-                </div>
-            </div>
+            
         </div>
         <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-10 col-sm-9 col-9 mt-5 mx-auto">
             <div class="row">
