@@ -20,6 +20,10 @@
             overflow-y: auto;
         }
 
+        .filtro::placeholder {
+            color: #FFFFFF;
+        }
+
 </style>
 @endsection
 
@@ -32,7 +36,8 @@
     <div class="container-fluid text-white">
         <div class="row">
             <div class="col-9 mx-auto">
-                <textarea name="descripcion" id="" cols="30" rows="10" class="form-control"></textarea>
+                {{-- <textarea name="descripcion" id="" cols="30" rows="10" class="form-control"></textarea> --}}
+                <textarea class="col-12 mx-0 scrollux editar_text_seccion_global" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{ $elem_general[5]->id }}" data-table="Elemento" data-campo="texto"  cols="30" rows="8" style="background: #f2f2f2; border:none; border-radius: 10px;">{{ $elem_general[5]->texto }}</textarea>
             </div>
         </div>
         <div class="row">
@@ -74,7 +79,7 @@
         </div>
         <div class="row">
             <div class="col py-3 text-center">
-                Poner la barra de busqueda que filtra por estado o municipio
+                <input class="form-control filtro border border-white text-white" style="background-color: #212529;" id="myInput" type="text" placeholder="Ingresa el nombre del estado o el municipio para filtrar los resultados">
             </div>
         </div>
         <div class="row">
@@ -82,16 +87,16 @@
                 <table class="table table-dark table-hover">
                     <thead class="thead">
                         <tr>
-                            <th class="col fs-5">Estado</th>
-                            <th class="col fs-5">Municipio</th>
-                            <th class="col fs-5" colspan="2">Coordenadas de la sucursal (X, Y)</th>
-                            <th class="col fs-5">Dirección de la sucursal</th>
+                            <th class="col fs-5 fw-bolder">Estado</th>
+                            <th class="col fs-5 fw-bolder">Municipio</th>
+                            <th class="col fs-5 fw-bolder" colspan="2">Coordenadas de la sucursal en el mapa (X, Y)</th>
+                            <th class="col fs-5 fw-bolder">Dirección de la sucursal</th>
                         </tr>
                     </thead>
-                    <tbody class="tbody">
+                    <tbody class="tbody" id="myTable">
                         @foreach ($sucursales as $suc)
                             <tr>
-                                <td class="fs-5 text-light">
+                                <td class=" text-light">
                                     @foreach ($estados as $esta)
                                         @if ($esta->id == $suc->estado)
                                             {{ $esta->nombre }}
@@ -99,7 +104,7 @@
                                         @endif
                                     @endforeach
                                 </td>
-                                <td class="fs-5 text-light">
+                                <td class=" text-light">
                                     @foreach ($municipios as $municip)
                                         @if ($municip->id == $suc->municipio)
                                             {{ $municip->nombre }}
@@ -107,9 +112,15 @@
                                         @endif
                                     @endforeach
                                 </td>
-                                <td class="fs-5 text-light">1234567890</td>
-                                <td class="fs-5 text-light">-1234567890</td>
-                                <td class="fs-5 text-light">{{ $suc->sucursal }}</td>
+                                <td class=" text-light">
+                                    <input type="text" class="col-12 form-control border border-white text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{ $suc->id }}" data-table="ZSucursal" data-campo="coordX" name="" id="" style="background-color: #212529; border 1px solid #FFFFFF; border-radius: 10px; border:none; color: #FFFFFF;" value="{{ $suc->coordX }}">
+                                </td>
+                                <td class=" text-light">
+                                    <input type="text" class="col-12 form-control border border-white text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{ $suc->id }}" data-table="ZSucursal" data-campo="coordY" name="" id="" style="background-color: #212529; border 1px solid #FFFFFF; border-radius: 10px; border:none; color: #FFFFFF;" value="{{ $suc->coordY }}">
+                                </td>
+                                <td class="text-light">
+                                    <input type="text" class="col-12 form-control border border-white text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{ $suc->id }}" data-table="ZSucursal" data-campo="sucursal" name="" id="" style="background-color: #212529; border 1px solid #FFFFFF; border-radius: 10px; border:none; color: #FFFFFF;" value="{{ $suc->sucursal }}">
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>
@@ -136,7 +147,7 @@
             </style>
             <div class="col-12 mb-2">
                 <label for="estados" class="fs-5">Estado</label>
-                <select name="estado" id="estados" class="form-control">
+                <select name="estado" id="estados" class="form-control" required>
                     @foreach ($estados as $es)
                         <option value="{{ $es->id }}">{{ $es->nombre }}</option>
                     @endforeach
@@ -144,7 +155,7 @@
             </div>
             <div class="col-12 mb-2">
                 <label for="municipios" class="fs-5">Municipios</label>
-                <select name="municipio" id="municipios" class="form-control">
+                <select name="municipio" id="municipios" class="form-control" required>
                     @foreach ($municipios as $mun)
                         <option value="{{ $mun->id }}" data-estado="{{ $mun->estado_id }}">{{ $mun->nombre }}</option>
                     @endforeach
@@ -152,7 +163,7 @@
             </div>
             <div class="col-12 mb-2">
                 <label for="direccion" class="fs-5">Dirección de la sucursal</label>
-                <textarea class="col-12 form-control" id="direccion" name="direccion" id="" rows="5" placeholder="Dirección de la sucursal"></textarea>
+                <textarea class="col-12 form-control" id="direccion" name="direccion" id="" rows="5" placeholder="Dirección de la sucursal" required></textarea>
             </div>
             <div class="col-12 mt-3">
                 <div class="row">
@@ -231,4 +242,16 @@
         });
     });
 </script>
+<script>
+    $(document).ready(function(){
+        $("#myInput").on("keyup", function() {
+            var value = $(this).val().toLowerCase();
+            $("#myTable tr").filter(function() {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
+        });
+    });
+</script>
 @endsection
+
+

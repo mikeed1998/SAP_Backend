@@ -93,71 +93,6 @@
                             </div>
                             @endforeach
 
-                            
-{{-- 
-                            <div class="container-fluid" style="background-color: #5277A9">
-                                <div class="row">
-                                    <div class="col">
-                                        <div class="row">
-                                            <div class="col text-center py-5" style="font-family: FuenteDruk; font-size: 80px; color: #162D47">
-                                                {!!($elements[102]->texto)!!}
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="col">
-                                                <div class="row">
-                                                    <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-5 col-sm-11 col-11 mx-auto">
-                                                        <button  class="py-4 w-100" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border-radius: 65px; background-color: #162D47;">
-                                                            <div class="fuente" style="color: white; font-size: 27px; letter-spacing: 3px;">{!!($elements[50]->texto)!!}</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-5 col-sm-11 col-11 mx-auto">
-                                                        <button  class="py-4 w-100" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border-radius: 65px; background-color: #162D47;">
-                                                            <div class="fuente" style="color: white; font-size: 27px; letter-spacing: 3px;">{!!($elements[52]->texto)!!}</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-5 col-sm-11 col-11 mx-auto">
-                                                        <button  class="py-4 w-100" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border-radius: 65px; background-color: #162D47;">
-                                                            <div class="fuente" style="color: white; font-size: 27px; letter-spacing: 3px;">{!!($elements[54]->texto)!!}</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-5 col-sm-11 col-11 mx-auto">
-                                                        <button  class="py-4 w-100" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border-radius: 65px; background-color: #162D47;">
-                                                            <div class="fuente" style="color: white; font-size: 27px; letter-spacing: 3px;">{!!($elements[56]->texto)!!}</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-5 col-sm-11 col-11 mx-auto">
-                                                        <button  class="py-4 w-100" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border-radius: 65px; background-color: #162D47;">
-                                                            <div class="fuente" style="color: white; font-size: 27px; letter-spacing: 3px;">{!!($elements[58]->texto)!!}</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-5 col-sm-11 col-11 mx-auto">
-                                                        <button  class="py-4 w-100" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border-radius: 65px; background-color: #162D47;">
-                                                            <div class="fuente" style="color: white; font-size: 27px; letter-spacing: 3px;">{!!($elements[60]->texto)!!}</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-5 col-sm-11 col-11 mx-auto">
-                                                        <button  class="py-4 w-100" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border-radius: 65px; background-color: #162D47;">
-                                                            <div class="fuente" style="color: white; font-size: 27px; letter-spacing: 3px;">{!!($elements[62]->texto)!!}</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-5 col-sm-11 col-11 mx-auto">
-                                                        <button  class="py-4 w-100" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border-radius: 65px; background-color: #162D47;">
-                                                            <div class="fuente" style="color: white; font-size: 27px; letter-spacing: 3px;">{!!($elements[64]->texto)!!}</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-5 col-sm-11 col-11 mx-auto">
-                                                        <button  class="py-4 w-100" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" style="border-radius: 65px; background-color: #162D47;">
-                                                            <div class="fuente" style="color: white; font-size: 27px; letter-spacing: 3px;">{!!($elements[66]->texto)!!}</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div> --}}
-
                         </div>
                     </div>
                 </div>
@@ -236,10 +171,7 @@
                             <div class="col-12 position-absolute top-0 start-50 translate-middle z-3" style="margin-top: 2rem;">
                                 <div class="card" style="border-color: #ffffff; border-top-left-radius: 32px; border-top-right-radius: 32px; border-bottom-left-radius: 0px; border-bottom-right-radius: 32px; box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); padding: 1rem;">
                                     <div class="card-body letrero">
-                                        Somos una empres con más de 25 años de experiencia en el medio de publicidad exterior, ofreciendo un servicio completo de publicidad a través de medios exteriores como:
-                                        Espectaculares, muros, pantallas digitales, mupies, transporte público, vallas móviles, puentes peatonales y vehiculares, centros comerciales y aeropuertos.
-                                        Con cobertura nacional en las principales ciudades del país. 
-                                        Siendo un medio único que permite un gran alcance, gran impacto, cobertura, calidad y experiencia, siendo un medio único por excelencia. 
+                                        {{ $elements[5]->texto }}
                                     </div>
                                 </div>
                             </div>
@@ -716,39 +648,80 @@
         });
 
         geojsonLayer.on('click', function (e) {
+            var sucursales = @json($sucursales);
+            console.log(sucursales);
+            var estados = @json($estados);
+            console.log(estados);
+            var municipios = @json($municipios);
+            console.log(municipios);
+
             var stateName = e.layer.feature.properties.state_name;
+            var stateId = e.layer.feature.properties.state_code;
             var modalHeader = $('.modal-header');
             var modalBody = $('.modal-body');
-            modalHeader.html("<p style='font-size: 2rem; font-weight: 500;'>Nuestras sucursales en " + stateName + "</p>" + 
-                             "<button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>");
+
+            modalHeader.html("<p style='font-size: 3rem; font-weight: 500;'>Nuestras sucursales en " + stateName + "</p>" + 
+                "<button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>");
+
+            // Crear una lista HTML para las sucursales
+            var sucursalesHTML = '<ul>';
+            sucursales.forEach(sucursal => {
+                if (sucursal.estado == stateId) {
+                    var nombreMunicipio;
+
+                    for (const mun of municipios) {
+                        if (mun.id == sucursal.municipio) {
+                            nombreMunicipio = mun.nombre;
+                            break;
+                        }
+                    }
+
+                    sucursalesHTML += '<li class="fs-3">' + sucursal.sucursal + ' - <strong>' + nombreMunicipio + '</strong></li>';
+                }
+            });
+            sucursalesHTML += '</ul>';
+
             // Set the content of the modal body
             modalBody.html('<div class="container-fluid border border-dark">' +
-                               '<div class="row">' +
-                                   '<div class="col-6 border border-dark py-5">'+ 
-                                        'Lista de sucursales' +
-                                    '</div> ' + 
-                                    '<div class="col-6 border border-dark py-5"> ' + 
-                                        ' Carrusel de fotos ' +
-                                    '</div> ' + 
-                                '</div> ' + 
-                            '</div>');
+                '<div class="row">' +
+                   '<div class="col-6 border border-dark py-5 fs-3">'+ 
+                        'Lista de sucursales' +
+                            sucursalesHTML +
+                        '</div> ' + 
+                        '<div class="col-6 border border-dark py-1"> ' + 
+                            ' Carrusel de fotos ' +
+                        '</div> ' + 
+                    '</div> ' + 
+                '</div>');
 
             // Show the modal
             $('#exampleModal').modal('show');
         });
+
+        
     });
+
 
 </script>
 
-<div class="container border border-dark">
-    <div class="row">
-        <div class="col-6 border border-dark py-5">
+@foreach ($sucursales as $sucu)
+<script>
+    var coordX = {{ $sucu->coordX }};
+    var coordY = {{ $sucu->coordY }};
+    var sucursalPopup = L.popup().setContent('{{ $sucu->sucursal }}');
 
-        </div>
-        <div class="col-6 border border-dark py-5">
+    // Agrega marcadores
+    var marker = L.marker([coordX, coordY]).addTo(map);
 
-        </div>
-    </div>
-</div>
+    // Asigna el popup al marcador y agrega el evento click
+    marker.bindPopup(sucursalPopup);
+
+    marker.on('click', function () {
+        marker.openPopup();
+    });
+</script>
+@endforeach
+
+
 
 @endsection

@@ -45,6 +45,7 @@
 		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 		<link rel="stylesheet" href="{{ asset('vendor/leaflet/leaflet.css') }}">
+		<script src="{{ asset('vendor/leaflet/leaflet.js') }}"></script>
 
 		{{-- <link rel="stylesheet" href="{{ asset('fonts/Neusharp-Bold/neusharp-bold.css') }}"> --}}
 
@@ -82,7 +83,7 @@
 		<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js"></script>
 		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-		<script src="{{ asset('vendor/leaflet/leaflet.js') }}"></script>
+		{{-- <script src="{{ asset('vendor/leaflet/leaflet.js') }}"></script> --}}
 
 		<script>
 			AOS.init();

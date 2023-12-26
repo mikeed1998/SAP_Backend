@@ -53,9 +53,11 @@ class FrontController extends Controller
 		$config = Configuracion::find(1);
 		$clientes = ZCliente::all();
 		$elements = Elemento::where('seccion',1)->get();
+		$sucursales = ZSucursal::all();
+		$estados = Estado::all();
+		$municipios = Municipio::all();
 		
-	
-		return view('front.index', compact('pagina', 'slider_principal', 'config', 'elements', 'servicios', 'clientes'));
+		return view('front.index', compact('pagina', 'slider_principal', 'config', 'elements', 'servicios', 'clientes', 'sucursales', 'estados', 'municipios'));
 	}
 
 	public function servicio($id) {
@@ -149,8 +151,9 @@ class FrontController extends Controller
 		
 		$config = Configuracion::find(1);
 		$elements = Elemento::where('seccion',4)->get();
+		$sucursales = ZSucursal::all();
 
-		return view('front.contacto', compact('pagina', 'elements', 'config', 'config'));
+		return view('front.contacto', compact('pagina', 'elements', 'config', 'config', 'sucursales'));
 	}
 
 

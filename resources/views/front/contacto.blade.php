@@ -16,6 +16,8 @@
 
 @section('content')
 
+
+
 <div class="container-fluid bg-white">
     <div class="row mt-5" data-aos="zoom-in">
         <div class="col-11 mx-auto mt-5 py-5">
@@ -235,6 +237,39 @@
     <div class="row">
         <div class="col">
             <div id="map"></div>
+            <script>
+                // Coordenadas aproximadas del centro de México
+                var latitud = 23.6345;
+                var longitud = -102.5528;
+            
+     
+                // Inicializa el mapa
+                var mymap = L.map('map').setView([latitud, longitud], 6);
+            
+                // Agrega un mapa base de OpenStreetMap
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '© OpenStreetMap contributors'
+                }).addTo(mymap);
+            </script>
+
+            @foreach ($sucursales as $sucu)
+                <script>
+                    var coordX = {{ $sucu->coordX }};
+                    var coordY = {{ $sucu->coordY }};
+                    var sucursalPopup = L.popup().setContent('{{ $sucu->sucursal }}');
+
+                    // Agrega marcadores
+                    var marker = L.marker([coordX, coordY]).addTo(mymap);
+
+                    // Asigna el popup al marcador y agrega el evento click
+                    marker.bindPopup(sucursalPopup);
+
+                    marker.on('click', function () {
+                        marker.openPopup();
+                    }); 
+                </script>
+            @endforeach
+            
         </div>
     </div>
 </div>
@@ -242,7 +277,35 @@
 @endsection
 
 @section('jqueryExtra')
-<script>
+
+ <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var tituloBolsa = document.querySelector('.titulo-contacto');
+
+        // Obtén el texto del elemento
+        var texto = tituloBolsa.textContent;
+
+        // Separa el texto en palabras
+        var palabras = texto.split(/\s+/);
+
+        // Aplica estilos según si la palabra es mayúscula o minúscula
+        var resultado = palabras.map(function (palabra) {
+            if (palabra === palabra.toUpperCase()) {
+                return '<span class="mayuscula">' + palabra + '</span>';
+            } else {
+                return '<span class="minuscula">' + palabra + '</span>';
+            }
+        });
+
+        // Actualiza el contenido con los estilos aplicados
+        tituloBolsa.innerHTML = resultado.join(' ');
+    });
+</script>
+@endsection
+
+
+
+{{-- <script>
     // Coordenadas aproximadas del centro de México
     var latitud = 23.6345;
     var longitud = -102.5528;
@@ -276,28 +339,4 @@
         .bindPopup('Monterrey')
         .openPopup();
 
-</script>
- <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var tituloBolsa = document.querySelector('.titulo-contacto');
-
-        // Obtén el texto del elemento
-        var texto = tituloBolsa.textContent;
-
-        // Separa el texto en palabras
-        var palabras = texto.split(/\s+/);
-
-        // Aplica estilos según si la palabra es mayúscula o minúscula
-        var resultado = palabras.map(function (palabra) {
-            if (palabra === palabra.toUpperCase()) {
-                return '<span class="mayuscula">' + palabra + '</span>';
-            } else {
-                return '<span class="minuscula">' + palabra + '</span>';
-            }
-        });
-
-        // Actualiza el contenido con los estilos aplicados
-        tituloBolsa.innerHTML = resultado.join(' ');
-    });
-</script>
-@endsection
+</script> --}}
