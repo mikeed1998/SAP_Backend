@@ -1154,6 +1154,41 @@ class SeccionController extends Controller
         return redirect()->back();
     }
 
+    public function galeria_S($id) {
+        $estados = Estado::all();
+        $municipios = Municipio::all();
+        $sucursal = ZSucursal::find($id);
+        $galeria = ZSucursalFoto::all();
+
+        return view('configs.sucursales.galeria', compact('sucursal', 'galeria', 'estados', 'municipios'));
+    }
+
+    public function imgSiderGaleria(Request $request) {
+        $galeria = new ZSucursalFoto;
+        // dd($request->archivo);
+        if ($request->hasFile('archivo')) {
+            $file = $request->file('archivo');
+            $extension = $file->getClientOriginalExtension();
+            $namefile = Str::random(30).'.'.$extension;
+
+            \Storage::disk('local')->put("/img/photos/sucursales/galeria/".$namefile , \File::get($file));
+
+            $galeria->foto = $namefile;
+        }
+
+        $galeria->sucursal = $request->sucursal;
+        $galeria->estado = $request->estado;
+        $galeria->municipio = $request->municipio;
+        
+        $galeria->save();
+        
+        \Toastr::success('Guardado');
+        return redirect()->back();
+    }
+
+    public function delSideGaleria(ZSucursalFoto $galeria) {
+
+    }
 
 
 }

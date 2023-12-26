@@ -134,6 +134,10 @@ Route::prefix('admin')->group(function(){
 			Route::post('/imgSiderCliente','SeccionController@imgSiderCliente')->name('imgSiderCliente');
 			Route::delete('/delSideCliente/{cliente}','SeccionController@delSideCliente')->name('delSideCliente');
 
+			Route::get('/galeria_s/{id}','SeccionController@galeria_s')->name('galeria_s');
+			Route::post('/imgSiderGaleria','SeccionController@imgSiderGaleria')->name('imgSiderGaleria');
+			Route::delete('/delSideGaleria/{galeria}','SeccionController@delSideGaleria')->name('delSideGaleria');
+
 			Route::post('/siderBeneficio','SeccionController@siderBeneficio')->name('siderBeneficio');
 			Route::delete('/delBeneficio/{beneficio}','SeccionController@delBeneficio')->name('delBeneficio');
 
@@ -191,6 +195,7 @@ Route::prefix('admin')->group(function(){
 			///////////////////////////////////////////////// Sucursal /////////////////////////////////////////////////
 			Route::post('/sucursalCreate','SeccionController@sucursalCreate')->name('sucursalCreate');
 			Route::post('/sucursalDelete','SeccionController@sucursalDelete')->name('sucursalDelete');
+
 			///////////////////////////////////////////////// Sucursal /////////////////////////////////////////////////
 
 			///////////////////////////////////////////////// inicio /////////////////////////////////////////////////

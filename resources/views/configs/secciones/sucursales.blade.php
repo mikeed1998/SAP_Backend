@@ -36,7 +36,6 @@
     <div class="container-fluid text-white">
         <div class="row">
             <div class="col-9 mx-auto">
-                {{-- <textarea name="descripcion" id="" cols="30" rows="10" class="form-control"></textarea> --}}
                 <textarea class="col-12 mx-0 scrollux editar_text_seccion_global" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{ $elem_general[5]->id }}" data-table="Elemento" data-campo="texto"  cols="30" rows="8" style="background: #f2f2f2; border:none; border-radius: 10px;">{{ $elem_general[5]->texto }}</textarea>
             </div>
         </div>
@@ -47,30 +46,6 @@
                     <div class="col-12"><button style="background: none !important; border:none;" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-circle-plus" style="font-size: 2rem; color: white;"></i></button></div>
                 </div>
             </div>
-            {{-- <div class="col-9 mx-auto py-3">
-                <div class="row">
-                    <div class="col-3 mx-auto">
-                        <label for="estados" class="fs-5">Estado</label>
-                        <select name="estados" id="estados" class="form-control">
-                            @foreach ($estados as $es)
-                                <option value="{{ $es->id }}">{{ $es->nombre }}</option>
-                            @endforeach
-                        </select>
-                    </div>
-                    <div class="col-3 mx-auto">
-                        <label for="municipios" class="fs-5">Municipios</label>
-                        <select name="municipios" id="municipios" class="form-control">
-                            @foreach ($municipios as $mun)
-                                <option value="{{ $mun->id }}" data-estado="{{ $mun->estado_id }}">{{ $mun->nombre }}</option>
-                            @endforeach
-                        </select>
-                    </div>
-                    <div class="col-6 mx-auto">
-                        <label for="direccion" class="fs-5">Dirección de la sucursal</label>
-                        <input type="text" id="direccion" name="direccion" class="form-control" placeholder="">
-                    </div>
-                </div>
-            </div> --}}
         </div>
         <div class="row mt-5 fs-3" style="font-family:'Neusharp Bold'; color: white;">
             <div class="col py-3 text-center">
@@ -89,14 +64,14 @@
                         <tr>
                             <th class="col fs-5 fw-bolder">Estado</th>
                             <th class="col fs-5 fw-bolder">Municipio</th>
-                            <th class="col fs-5 fw-bolder" colspan="2">Coordenadas de la sucursal en el mapa (X, Y)</th>
+                            <th class="col fs-5 fw-bolder" colspan="3">Coordenadas de la sucursal en el mapa (X, Y)</th>
                             <th class="col fs-5 fw-bolder">Dirección de la sucursal</th>
                         </tr>
                     </thead>
                     <tbody class="tbody" id="myTable">
                         @foreach ($sucursales as $suc)
                             <tr>
-                                <td class=" text-light">
+                                <td class="text-light">
                                     @foreach ($estados as $esta)
                                         @if ($esta->id == $suc->estado)
                                             {{ $esta->nombre }}
@@ -104,7 +79,7 @@
                                         @endif
                                     @endforeach
                                 </td>
-                                <td class=" text-light">
+                                <td class="text-light">
                                     @foreach ($municipios as $municip)
                                         @if ($municip->id == $suc->municipio)
                                             {{ $municip->nombre }}
@@ -112,11 +87,16 @@
                                         @endif
                                     @endforeach
                                 </td>
-                                <td class=" text-light">
+                                <td class="text-light">
                                     <input type="text" class="col-12 form-control border border-white text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{ $suc->id }}" data-table="ZSucursal" data-campo="coordX" name="" id="" style="background-color: #212529; border 1px solid #FFFFFF; border-radius: 10px; border:none; color: #FFFFFF;" value="{{ $suc->coordX }}">
                                 </td>
-                                <td class=" text-light">
+                                <td class="text-light">
                                     <input type="text" class="col-12 form-control border border-white text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{ $suc->id }}" data-table="ZSucursal" data-campo="coordY" name="" id="" style="background-color: #212529; border 1px solid #FFFFFF; border-radius: 10px; border:none; color: #FFFFFF;" value="{{ $suc->coordY }}">
+                                </td>
+                                <td class="text-light">
+                                    <a href="{{ route('config.seccion.galeria_s', ['id' => $suc->estado]) }}" class="btn btn-outline bg-transparent p-0 m-0">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="32" width="32" fill="white" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M149.1 64.8L138.7 96H64C28.7 96 0 124.7 0 160V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H373.3L362.9 64.8C356.4 45.2 338.1 32 317.4 32H194.6c-20.7 0-39 13.2-45.5 32.8zM256 192a96 96 0 1 1 0 192 96 96 0 1 1 0-192z"/></svg>
+                                    </a>
                                 </td>
                                 <td class="text-light">
                                     <input type="text" class="col-12 form-control border border-white text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{ $suc->id }}" data-table="ZSucursal" data-campo="sucursal" name="" id="" style="background-color: #212529; border 1px solid #FFFFFF; border-radius: 10px; border:none; color: #FFFFFF;" value="{{ $suc->sucursal }}">
