@@ -620,6 +620,10 @@
 </script>
 
 <script>
+
+    var sucursaless = @json($sucursales);
+    console.log(sucursaless);
+
     var map = L.map('map',  { attributionControl: false }).setView([23.6345, -102.5528], 5);
 
     // Cargar el archivo GeoJSON y agregarlo al mapa con un estilo personalizado
@@ -631,6 +635,22 @@
                 fillOpacity: 0.8  // Opacidad del relleno
             }
         }).addTo(map);
+
+        sucursaless.forEach(succ => {
+
+            var sucursalPopup = L.popup().setContent(succ.sucursal);
+
+            // Agrega marcadores
+            var marker = L.marker([succ.coordX, succ.coordY]).addTo(map);
+
+            // Asigna el popup al marcador y agrega el evento click
+            marker.bindPopup(sucursalPopup);
+
+            marker.on('click', function () {
+                marker.openPopup();
+            });
+        });
+
 
         // Añadir efecto de hover para todos los estados
         geojsonLayer.on('mouseover', function (e) {
