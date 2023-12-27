@@ -57,13 +57,13 @@
     <section data-aos="zoom-in" data-aos-delay="500"  style="background-color: #201E1F;">
         <div class="container-fluid contenedor-serv py-5">
             <div class="row py-5">
-                <div class="col-xxk-11 col-xl-11 col-lg-11 col-md-12 col-sm-12 col-12 mx-auto">
+                <div class="col-xxk-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mx-auto">
                     <div class="row">
                         <div class="col fw-bold display-2 text-white py-4 serv-ttt">
                             Servicios
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row" style="overflow: hidden;"> 
                         <div class="servicios">
 
                             @foreach ($servicios as $serv)
@@ -287,7 +287,11 @@
                     <div class="row">
                         <div class="slider-clientes">
                             @foreach ($clientes as $cli)
-                                <div class="col imagen-cliente" style="background-image: url('{{ asset('img/photos/clientes/'.$cli->logo) }}');"></div>
+                                <div class="col">
+                                    <div class="card border-0 p-4">
+                                        <div class="imagen-cliente" style="background-image: url('{{ asset('img/photos/clientes/'.$cli->logo) }}');"></div>
+                                    </div>
+                                </div>
                             @endforeach        
                         </div>
                     </div>
@@ -303,6 +307,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="row formu-grande pb-5" data-aos="zoom-in">
                 <form action="" id="form-grande">
                     <div class="col-11 mx-auto">
@@ -433,7 +438,6 @@
             </div>
         </div>
     </div>
-
 
 @endsection
 
@@ -717,15 +721,15 @@
             // Set the content of the modal body
             modalBody.html('<div class="container-fluid border border-dark">' +
                 '<div class="row">' +
-                   '<div class="col-6 border border-dark py-5 fs-3">'+ 
+                   '<div class="col-xxl-6 col-xl-6 col-lg-9 col-md-11 col-sm-11 col-11 mx-auto border border-dark py-5 fs-3">'+ 
                         'Lista de sucursales' +
-                            sucursalesHTML +
-                        '</div> ' + 
-                        '<div class="col-6 border border-dark py-1"> ' + 
-                            sucursales_galeriaHTML +
-                        '</div> ' + 
+                        sucursalesHTML +
                     '</div> ' + 
-                '</div>');
+                    '<div class="col-xxl-6 col-xl-6 col-lg-9 col-md-11 col-sm-11 col-11 mx-auto border border-dark py-1"> ' + 
+                        sucursales_galeriaHTML +
+                    '</div> ' + 
+                '</div> ' + 
+            '</div>');
 
             // Show the modal
             $('#exampleModal').modal('show');

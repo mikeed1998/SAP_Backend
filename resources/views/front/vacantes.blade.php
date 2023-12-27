@@ -31,9 +31,9 @@
     
  
             <div class="row py-5">
-                <div class="col-xxk-11 col-xl-11 col-lg-11 col-md-12 col-sm-12 col-12 mx-auto">
+                <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mx-auto">
                     
-                    <div class="row">
+                    <div class="row" style="overflow: hidden;">
                         <div class="servicios">
 
                             @foreach ($vacantes as $vac)

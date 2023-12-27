@@ -154,12 +154,13 @@ class FrontController extends Controller
 	public function contact(){
 		$pagina = 'contacto';
 		
-		
 		$config = Configuracion::find(1);
 		$elements = Elemento::where('seccion',4)->get();
 		$sucursales = ZSucursal::all();
+		$estados = Estado::all();
+		$municipios = Municipio::all();
 
-		return view('front.contacto', compact('pagina', 'elements', 'config', 'config', 'sucursales'));
+		return view('front.contacto', compact('pagina', 'elements', 'config', 'config', 'sucursales', 'estados', 'municipios'));
 	}
 
 

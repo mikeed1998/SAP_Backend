@@ -364,26 +364,28 @@
             </div>
         </div>
         <div class="row bg-white">
-            <div class="clientes">
-                @foreach ($clientes as $clie)
-					<div class="col position-relative">
-						<div style="
-							background-image: url('{{ asset('img/photos/clientes/'.$clie->logo) }}');
-							background-size: contain;
-							background-position: center center;
-							background-repeat: no-repeat;
-							height: 120px;
-							width: 100%;
-						"></div>
-						<div class="col-4 py-3 position-absolute top-0 end-0">
-							<form action="{{ route('config.seccion.delSideCliente', ['cliente' => $clie->id]) }}" method="POST" style="display: inline;">						
-								@csrf
-								@method('DELETE') 
-								<button type="submit" class="btn btn-danger btn-block bg-danger rounded-pill"><i class="fas fa-trash"></i></button>
-							</form>
-						</div>
-					</div>
-				@endforeach
+            <div class="col-11 mx-auto">
+                <div class="clientes">
+                    @foreach ($clientes as $clie)
+                        <div class="col position-relative">
+                            <div style="
+                                background-image: url('{{ asset('img/photos/clientes/'.$clie->logo) }}');
+                                background-size: contain;
+                                background-position: center center;
+                                background-repeat: no-repeat;
+                                height: 120px;
+                                width: 100%;
+                            "></div>
+                            <div class="col-4 py-3 position-absolute top-0 end-0">
+                                <form action="{{ route('config.seccion.delSideCliente', ['cliente' => $clie->id]) }}" method="POST" style="display: inline;">						
+                                    @csrf
+                                    @method('DELETE') 
+                                    <button type="submit" class="btn btn-danger btn-block bg-danger rounded-pill"><i class="fas fa-trash"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
             </div>
         </div>
 

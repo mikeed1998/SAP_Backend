@@ -233,11 +233,45 @@
         </div>
 </div>
 
-<div class="container-fluid px-0">
+<div class="container-fluid px-0 bg-white">
+    <div class="row">
+        <div class="col-11 mx-auto py-5 bg-white">
+            <div class="row">
+                <div class="direcciones">
+                    @foreach ($sucursales as $sucurs)
+                    <div class="card">
+                        <div class="row">
+                            <div class="col-2 text-end">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="32" width="24" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
+                            </div>
+                            <div class="col-10">                
+                                {{ $sucurs->sucursal }}, 
+                                @foreach ($municipios as $municip)
+                                    @if ($municip->id == $sucurs->municip)
+                                        {{ $municip->nombre }},
+                                    @endif
+                                @endforeach
+                                @foreach ($estados as $estado)
+                                    @if ($estado->id == $sucurs->estado)
+                                        {{ $estado->nombre }}
+                                    @endif
+                                @endforeach
+                            </div>
+                        </div>
+                    </div>
+                    @endforeach
+                </div>
+            </div>
+           
+        </div>
+    </div>
     <div class="row">
         <div class="col">
             <div id="map"></div>
             <script>
+                var sucursaless = @json($sucursales);
+                console.log(sucursaless);
+
                 // Coordenadas aproximadas del centro de México
                 var latitud = 23.6345;
                 var longitud = -102.5528;
@@ -250,25 +284,25 @@
                 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                     attribution: '© OpenStreetMap contributors'
                 }).addTo(mymap);
-            </script>
 
-            @foreach ($sucursales as $sucu)
-                <script>
-                    var coordX = {{ $sucu->coordX }};
-                    var coordY = {{ $sucu->coordY }};
-                    var sucursalPopup = L.popup().setContent('{{ $sucu->sucursal }}');
+
+                sucursaless.forEach(succ => {
+
+                    var sucursalPopup = L.popup().setContent(succ.sucursal);
 
                     // Agrega marcadores
-                    var marker = L.marker([coordX, coordY]).addTo(mymap);
+                    var marker = L.marker([succ.coordX, succ.coordY]).addTo(mymap);
 
                     // Asigna el popup al marcador y agrega el evento click
                     marker.bindPopup(sucursalPopup);
 
                     marker.on('click', function () {
                         marker.openPopup();
-                    }); 
-                </script>
-            @endforeach
+                    });
+                });
+
+            </script>
+
             
         </div>
     </div>
@@ -300,6 +334,43 @@
         // Actualiza el contenido con los estilos aplicados
         tituloBolsa.innerHTML = resultado.join(' ');
     });
+</script>
+<script>
+    $('.direcciones').slick({
+//   dots: true,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
 </script>
 @endsection
 

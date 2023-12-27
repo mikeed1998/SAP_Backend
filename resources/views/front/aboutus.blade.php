@@ -64,7 +64,7 @@
         <div class="col-11 mx-auto">
             <div class="row">
                 <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-9 col-sm-11 col-12 mx-auto py-5">
-                    <div class="card border-0 px-5">
+                    <div class="card border-0 px-4">
                         <div class="col position-relative border border-dark py-5">
                             <div class="col-3 bg-white py-5 position-absolute top-0 start-0 translate-middle"></div>
                             <div class="col-3 bg-white py-5 position-absolute top-0 start-100 translate-middle"></div>
@@ -84,7 +84,7 @@
                     </div>
                 </div>
                 <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-9 col-sm-11 col-12 mx-auto py-5">
-                    <div class="card border-0 px-5">
+                    <div class="card border-0 px-4">
                         <div class="col position-relative border border-dark py-5">
                             <div class="col-3 bg-white py-5 position-absolute top-0 start-0 translate-middle"></div>
                             <div class="col-3 bg-white py-5 position-absolute top-0 start-100 translate-middle"></div>
@@ -104,7 +104,7 @@
                     </div>
                 </div>
                 <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-9 col-sm-11 col-12 mx-auto py-5">
-                    <div class="card border-0 px-5">
+                    <div class="card border-0 px-4">
                         <div class="col position-relative border border-dark py-5">
                             <div class="col-3 bg-white py-5 position-absolute top-0 start-0 translate-middle"></div>
                             <div class="col-3 bg-white py-5 position-absolute top-0 start-100 translate-middle"></div>
