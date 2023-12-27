@@ -1154,7 +1154,7 @@ class SeccionController extends Controller
         return redirect()->back();
     }
 
-    public function galeria_S($id) {
+    public function galeria_s($id) {
         $estados = Estado::all();
         $municipios = Municipio::all();
         $sucursal = ZSucursal::find($id);
@@ -1179,7 +1179,7 @@ class SeccionController extends Controller
         $galeria->sucursal = $request->sucursal;
         $galeria->estado = $request->estado;
         $galeria->municipio = $request->municipio;
-        
+
         $galeria->save();
         
         \Toastr::success('Guardado');
@@ -1187,7 +1187,13 @@ class SeccionController extends Controller
     }
 
     public function delSideGaleria(ZSucursalFoto $galeria) {
+        $img = "img/photos/sucursales/galeria/".$galeria->foto;
+        unlink($img);
 
+        $galeria->delete();
+
+        \Toastr::success('Foto eliminada');
+        return redirect()->back();
     }
 
 

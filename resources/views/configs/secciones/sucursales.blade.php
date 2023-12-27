@@ -30,7 +30,7 @@
 @section('content')
 	
     <div class="row mb-4 px-2">
-		<a href="{{ route('config.index') }}" class="col col-md-2 btn btn-sm grey darken-2 text-white mr-auto"><i class="fa fa-reply"></i> Regresar</a>
+		<a href="{{ route('config.seccion.index') }}" class="col col-md-2 btn btn-sm grey darken-2 text-white mr-auto"><i class="fa fa-reply"></i> Regresar</a>
 	</div>
 
     <div class="container-fluid text-white">
@@ -94,7 +94,7 @@
                                     <input type="text" class="col-12 form-control border border-white text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{ $suc->id }}" data-table="ZSucursal" data-campo="coordY" name="" id="" style="background-color: #212529; border 1px solid #FFFFFF; border-radius: 10px; border:none; color: #FFFFFF;" value="{{ $suc->coordY }}">
                                 </td>
                                 <td class="text-light">
-                                    <a href="{{ route('config.seccion.galeria_s', ['id' => $suc->estado]) }}" class="btn btn-outline bg-transparent p-0 m-0">
+                                    <a href="{{ route('config.seccion.galeria_s', ['id' => $suc->id]) }}" class="btn btn-outline bg-transparent p-0 m-0">
                                         <svg xmlns="http://www.w3.org/2000/svg" height="32" width="32" fill="white" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M149.1 64.8L138.7 96H64C28.7 96 0 124.7 0 160V416c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H373.3L362.9 64.8C356.4 45.2 338.1 32 317.4 32H194.6c-20.7 0-39 13.2-45.5 32.8zM256 192a96 96 0 1 1 0 192 96 96 0 1 1 0-192z"/></svg>
                                     </a>
                                 </td>

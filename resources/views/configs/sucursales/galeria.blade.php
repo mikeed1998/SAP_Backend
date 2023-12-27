@@ -52,18 +52,18 @@
 
 @section('content')
 	<div class="row mb-4 px-2">
-		<a href="{{ route('config.index') }}" class="col col-md-2 btn btn-sm grey darken-2 text-white mr-auto"><i class="fa fa-reply"></i> Regresar</a>
+		<a href="{{ route('config.seccion.show', ['slug' => 'sucursals']) }}" class="col col-md-2 btn btn-sm grey darken-2 text-white mr-auto"><i class="fa fa-reply"></i> Regresar</a>
 	</div>
 
     <div class="container-fluid">
         <div class="row">
             <div class="col fs-1 text-white text-center">
-                Galeria de imagenes del estado de:  
-                @foreach ($estados as $est)
+                Galeria de imagenes de la sucursal: {{ $sucursal->sucursal }}
+                {{-- @foreach ($estados as $est)
                     @if ($est->id == $sucursal->estado)
                         {{ $est->nombre }}
                     @endif
-                @endforeach 
+                @endforeach  --}}
             </div>
         </div>
         <div class="row">
@@ -83,8 +83,9 @@
     <div class="container-fluid mt-5 py-5">
         <div class="row">
             @foreach ($galeria as $gal)
-                <div class="col-3">
-                    <div class="card bg-transparent px-5">
+                @if ($sucursal->id == $gal->sucursal)
+                <div class="col-3 position-relative">
+                    <div class="card text-center bg-transparent px-2">
                         <div style="
                             background-image: url('{{ asset('img/photos/sucursales/galeria/'.$gal->foto) }}');
                             background-position: center center;
@@ -95,7 +96,15 @@
                             border-radius: 1rem;
                         "></div>
                     </div>
+                    <div class="col-3 py-3 position-absolute top-0 end-0 translate-middle-y">
+                        <form action="{{ route('config.seccion.delSideGaleria', [$gal->id]) }}" method="POST" style="display: inline;">						
+                            @csrf
+                            @method('DELETE') 
+                            <button type="submit" class="btn btn-danger btn-block bg-danger rounded-pill"><i class="fas fa-trash"></i></button>
+                        </form>
+                    </div>
                 </div>
+                @endif 
             @endforeach
         </div>
     </div>

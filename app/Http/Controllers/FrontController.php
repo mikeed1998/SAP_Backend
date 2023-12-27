@@ -56,8 +56,14 @@ class FrontController extends Controller
 		$sucursales = ZSucursal::all();
 		$estados = Estado::all();
 		$municipios = Municipio::all();
+		$galeria = ZSucursalFoto::all();
+
+		$contador = 0;
+		foreach ($sucursales as $sc) {
+			$contador++;
+		}
 		
-		return view('front.index', compact('pagina', 'slider_principal', 'config', 'elements', 'servicios', 'clientes', 'sucursales', 'estados', 'municipios'));
+		return view('front.index', compact('pagina', 'galeria', 'contador', 'slider_principal', 'config', 'elements', 'servicios', 'clientes', 'sucursales', 'estados', 'municipios'));
 	}
 
 	public function servicio($id) {

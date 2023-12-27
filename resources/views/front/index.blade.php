@@ -4,6 +4,7 @@
 
 @section('cssExtras')
     <link rel="stylesheet" href="{{ asset('css/front/index.css') }}">
+
 @endsection
 
 @section('styleExtras')
@@ -447,7 +448,7 @@
             valorActual++;
             contadorElemento.text(valorActual);
       
-            if (valorActual === 110) {
+            if (valorActual === {{ $contador }}) {
                 clearInterval(intervalo);
             }
         }
@@ -617,6 +618,7 @@
     });
 
 </script>
+
 <script>
     var map = L.map('map',  { attributionControl: false }).setView([23.6345, -102.5528], 5);
 
@@ -654,6 +656,8 @@
             console.log(estados);
             var municipios = @json($municipios);
             console.log(municipios);
+            var galeria = @json($galeria);
+            console.log(galeria);
 
             var stateName = e.layer.feature.properties.state_name;
             var stateId = e.layer.feature.properties.state_code;
@@ -679,7 +683,16 @@
                     sucursalesHTML += '<li class="fs-3">' + sucursal.sucursal + ' - <strong>' + nombreMunicipio + '</strong></li>';
                 }
             });
+
             sucursalesHTML += '</ul>';
+            // Crear una lista HTML para las sucursales
+            var sucursales_galeriaHTML = '<div class="row"><div class="slider_galeria">';
+            galeria.forEach(gal => {
+                if (gal.estado == stateId) {
+                    sucursales_galeriaHTML += '<div class="col"><div class="carrusel-interno" style="background-image: url(img/photos/sucursales/galeria/' + gal.foto + ');"></div></div>';
+                }
+            });
+            sucursales_galeriaHTML += '</div></div>';
 
             // Set the content of the modal body
             modalBody.html('<div class="container-fluid border border-dark">' +
@@ -689,15 +702,55 @@
                             sucursalesHTML +
                         '</div> ' + 
                         '<div class="col-6 border border-dark py-1"> ' + 
-                            ' Carrusel de fotos ' +
+                            sucursales_galeriaHTML +
                         '</div> ' + 
                     '</div> ' + 
                 '</div>');
 
             // Show the modal
             $('#exampleModal').modal('show');
+
+            // Inicializar el carrusel después de mostrar el modal
+            initSlider();
+
+            // Cerrar el modal al hacer clic en el botón de cerrar
+            $('#exampleModal').on('hidden.bs.modal', function () {
+                // Limpiar el contenido del modal al cerrarlo
+                modalBody.html('');
+            });
         });
 
+        // Función para inicializar el carrusel
+        function initSlider() {
+            var sliderItems = document.querySelectorAll('.slider_galeria .carrusel-interno');
+            var currentIndex = 0;
+
+            function showItem(index) {
+                sliderItems.forEach((item, i) => {
+                    item.style.display = i === index ? 'block' : 'none';
+                });
+            }
+
+            function nextItem() {
+                currentIndex = (currentIndex + 1) % sliderItems.length;
+                showItem(currentIndex);
+            }
+
+            function prevItem() {
+                currentIndex = (currentIndex - 1 + sliderItems.length) % sliderItems.length;
+                showItem(currentIndex);
+            }
+
+            // Mostrar el primer elemento al iniciar
+            showItem(currentIndex);
+
+            // Agregar eventos de clic para navegar
+            document.querySelector('.slider_galeria').addEventListener('click', function (e) {
+                if (e.target.classList.contains('carrusel-interno')) {
+                    nextItem();
+                }
+            }); 
+        }
         
     });
 
@@ -720,6 +773,11 @@
         marker.openPopup();
     });
 </script>
+
+<script>
+    
+</script>
+
 @endforeach
 
 
