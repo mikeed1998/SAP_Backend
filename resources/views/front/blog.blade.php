@@ -79,7 +79,7 @@
                     <div class="col-xxl-6 col-xl-6 col-lg-6 col-mx-9 col-sm-11 col-11 mx-auto position-relative margen-col px-0">
                         <div class="col-12 position-absolute top-50 start-50 translate-middle px-0">
                             <div class="row">
-                                <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-10 col-sm-10 col-10 py-2 fondo-color" style="background-color: {{ $blog }};"></div>
+                                <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-10 col-sm-10 col-10 py-2 fondo-color" style="background-color: {{ $blog->color }};"></div>
                                 <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-2 col-sm-2 col-2 py-2"></div>
                             </div>
                         </div>

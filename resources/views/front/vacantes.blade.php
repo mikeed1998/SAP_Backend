@@ -135,7 +135,9 @@
             </div>
         </div>
         <div class="row formu-grande pb-5" data-aos="zoom-in">
-            <form action="" id="form-grande">
+            <form action="{{ route('formularioContac') }}" id="form-grande" method="POST" enctype="multipart/form-data">
+                @csrf
+                <input type="hidden" name="tipoForm" value="vacante">
                 <div class="col-11 mx-auto">
                     <div class="row">
                         <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-9 mx-auto position-relative">
@@ -157,7 +159,7 @@
                                                 </div>
                                             </div>    
                                         </button>
-                                        <input type="file" id="fileInput" style="display: none;">
+                                        <input type="file" name="curriculum" id="fileInput" style="display: none;">
                                     </div>
                                 </div>
                                 <div class="row">
@@ -179,22 +181,22 @@
                         <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-9 mx-auto position-relative py-3">
                             <div class="row">
                                 <div class="col pt-4">
-                                    <input type="text" class="form-control fs-3 bg-transparent rounded-0"  placeholder="Nombre" style="border-bottom: 2px solid black; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;">
+                                    <input type="text" name="nombre" class="form-control fs-3 bg-transparent rounded-0"  placeholder="Nombre" style="border-bottom: 2px solid black; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col pt-4">
-                                    <input type="email" class="form-control fs-3 bg-transparent rounded-0"  placeholder="Email" style="border-bottom: 2px solid black; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;">
+                                    <input type="email" name="correo" class="form-control fs-3 bg-transparent rounded-0"  placeholder="Email" style="border-bottom: 2px solid black; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col pt-4">
-                                    <input type="text" class="form-control fs-3 bg-transparent rounded-0"  placeholder="Vacante" style="border-bottom: 2px solid black; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;">
+                                    <input type="text" name="vacante" class="form-control fs-3 bg-transparent rounded-0"  placeholder="Vacante" style="border-bottom: 2px solid black; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col pt-4">
-                                    <input type="text" class="form-control fs-3 bg-transparent rounded-0"  placeholder="Mensaje" style="border-bottom: 2px solid black; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;">
+                                    <input type="text" name="mensaje" class="form-control fs-3 bg-transparent rounded-0"  placeholder="Mensaje" style="border-bottom: 2px solid black; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;">
                                 </div>
                             </div>
                             
@@ -206,29 +208,31 @@
         </div>
 
         <div class="row formu-small pb-5" data-aos="zoom-in" style="background-color: #FFFFFF;">
-            <form action="" id="form-small">
+            <form action="{{ route('formularioContac') }}" id="form-small" method="POST" enctype="multipart/form-data">
+                @csrf
+                <input type="hidden" name="tipoForm" value="vacante">
                 <div class="col-11 mx-auto">
                     <div class="row">
                         
                         <div class="col-md-9 col-sm-12 col-12 mx-auto position-relative py-3">
                             <div class="row">
                                 <div class="col pt-4">
-                                    <input type="text" class="form-control fs-3 bg-transparent rounded-0"  placeholder="Nombre" style="border-bottom: 2px solid black; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;">
+                                    <input type="text" name="nombre" class="form-control fs-3 bg-transparent rounded-0"  placeholder="Nombre" style="border-bottom: 2px solid black; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col pt-4">
-                                    <input type="email" class="form-control fs-3 bg-transparent rounded-0"  placeholder="Email" style="border-bottom: 2px solid black; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;">
+                                    <input type="email" name="correo" class="form-control fs-3 bg-transparent rounded-0"  placeholder="Email" style="border-bottom: 2px solid black; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col pt-4">
-                                    <input type="text" class="form-control fs-3 bg-transparent rounded-0"  placeholder="Vacante" style="border-bottom: 2px solid black; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;">
+                                    <input type="text" name="vacante" class="form-control fs-3 bg-transparent rounded-0"  placeholder="Vacante" style="border-bottom: 2px solid black; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col pt-4">
-                                    <input type="text" class="form-control fs-3 bg-transparent rounded-0"  placeholder="Mensaje" style="border-bottom: 2px solid black; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;">
+                                    <input type="text" name="mensaje" class="form-control fs-3 bg-transparent rounded-0"  placeholder="Mensaje" style="border-bottom: 2px solid black; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;">
                                 </div>
                             </div>
                             
@@ -243,16 +247,17 @@
                 
                             <div class="row mb-3 mt-3">
                                 <div class="col-md-6 col-sm-9 col-10 mx-auto text-center">
-                                    <button type="submit" class="btn btn-outline rounded-pill py-3 w-100" style="background-color: #201E1F; color: #FFC000;">
+                                    <button type="button" id="fileButton2" class="btn btn-outline rounded-pill py-3 w-100" style="background-color: #201E1F; color: #FFC000;">
                                         <div class="row">
-                                            <div class="col-md-8 col-sm-8 col-8 text-end position-relative">
+                                            <div class="col-8 text-end position-relative">
                                                 ADJUNTAR C.V.
                                                 <div class="col-4 text-end position-absolute top-50 start-100 translate-middle">
-                                                <svg xmlns="http://www.w3.org/2000/svg" height="16" width="18" fill="#FFC000" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V299.6l-94.7 94.7c-8.2 8.2-14 18.5-16.8 29.7l-15 60.1c-2.3 9.4-1.8 19 1.4 27.8H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128zM549.8 235.7l14.4 14.4c15.6 15.6 15.6 40.9 0 56.6l-29.4 29.4-71-71 29.4-29.4c15.6-15.6 40.9-15.6 56.6 0zM311.9 417L441.1 287.8l71 71L382.9 487.9c-4.1 4.1-9.2 7-14.9 8.4l-60.1 15c-5.5 1.4-11.2-.2-15.2-4.2s-5.6-9.7-4.2-15.2l15-60.1c1.4-5.6 4.3-10.8 8.4-14.9z"/></svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" height="16" width="18" fill="#FFC000" viewBox="0 0 576 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M0 64C0 28.7 28.7 0 64 0H224V128c0 17.7 14.3 32 32 32H384V299.6l-94.7 94.7c-8.2 8.2-14 18.5-16.8 29.7l-15 60.1c-2.3 9.4-1.8 19 1.4 27.8H64c-35.3 0-64-28.7-64-64V64zm384 64H256V0L384 128zM549.8 235.7l14.4 14.4c15.6 15.6 15.6 40.9 0 56.6l-29.4 29.4-71-71 29.4-29.4c15.6-15.6 40.9-15.6 56.6 0zM311.9 417L441.1 287.8l71 71L382.9 487.9c-4.1 4.1-9.2 7-14.9 8.4l-60.1 15c-5.5 1.4-11.2-.2-15.2-4.2s-5.6-9.7-4.2-15.2l15-60.1c1.4-5.6 4.3-10.8 8.4-14.9z"/></svg>
                                                 </div>
                                             </div>
                                         </div>    
                                     </button>
+                                    <input type="file" name="curriculum" id="fileInput" style="display: none;">
                                 </div>
                             </div>
                             <div class="row">
@@ -394,6 +399,18 @@
         var selectedFile = this.files[0];
         if (selectedFile) {
             console.log('Archivo seleccionado:', selectedFile.name);
+        }
+    };
+
+    document.getElementById('fileButton2').onclick = function() {
+        document.getElementById('fileInput2').click();
+    };
+
+    document.getElementById('fileInput2').onchange = function() {
+        // Aquí puedes realizar acciones cuando se selecciona un archivo
+        var selectedFile2 = this.files[0];
+        if (selectedFile2) {
+            console.log('Archivo seleccionado:', selectedFile2.name);
         }
     };
 </script>

@@ -32,7 +32,7 @@
                 <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-8 col-sm-11 col-11 mx-auto">
                     <div class="row">
                         <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-7 col-sm-9 col-12 mx-xxl-0 mx-xl-0 mx-lg-0 mx-md-0 mx-sm-auto mx-auto text-center">
-                            <a href="{{ route('front.contact') }}" class="btn btn-outline py-2 fw-bolder bg-white rounded-pill w-100 text-dark">
+                            <a href="{{ route('front.contact') }}" class="btn btn-outline py-3 fs-5 fw-bolder bg-white rounded-pill w-100 text-dark">
                                 COTIZAR AQUÍ <svg xmlns="http://www.w3.org/2000/svg" height="1.4rem" width="3rem" fill="#FFC000" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
                             </a>
                         </div>s
@@ -317,7 +317,9 @@
             </div>
 
             <div class="row formu-grande pb-5" data-aos="zoom-in">
-                <form action="" id="form-grande">
+                <form action="{{ route('formularioContac') }}" id="form-grande" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    <input type="hidden" name="tipoForm" id="" value="inicio">
                     <div class="col-11 mx-auto">
                         <div class="row">
                             <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-9 mx-auto position-relative">
@@ -341,22 +343,22 @@
                             <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-9 mx-auto position-relative py-3">
                                 <div class="row">
                                     <div class="col pt-4">
-                                        <input type="text" class="form-control fs-3 bg-transparent rounded-0"  placeholder="Nombre" style="border-bottom: 2px solid black; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;">
+                                        <input type="text" name="nombre" class="form-control fs-3 bg-transparent rounded-0"  placeholder="Nombre" style="border-bottom: 2px solid black; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col pt-4">
-                                        <input type="email" class="form-control fs-3 bg-transparent rounded-0"  placeholder="Email" style="border-bottom: 2px solid black; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;">
+                                        <input type="email" name="correo" class="form-control fs-3 bg-transparent rounded-0"  placeholder="Email" style="border-bottom: 2px solid black; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col pt-4">
-                                        <input type="text" class="form-control fs-3 bg-transparent rounded-0"  placeholder="Ciudad" style="border-bottom: 2px solid black; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;">
+                                        <input type="text" name="ciudad" class="form-control fs-3 bg-transparent rounded-0"  placeholder="Ciudad" style="border-bottom: 2px solid black; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col pt-4">
-                                        <input type="text" class="form-control fs-3 bg-transparent rounded-0"  placeholder="Mensaje" style="border-bottom: 2px solid black; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;">
+                                        <input type="text" name="mensaje" class="form-control fs-3 bg-transparent rounded-0"  placeholder="Mensaje" style="border-bottom: 2px solid black; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;">
                                     </div>
                                 </div>
                                 
@@ -368,29 +370,31 @@
             </div>
 
             <div class="row formu-small pb-5" data-aos="zoom-in" style="background-color: #FFFFFF;">
-                <form action="" id="form-small">
+                <form action="{{ route('formularioContac') }}" id="form-small" method="POST" enctype="multipart/form-data">
+                    @csrf
+                    <input type="hidden" name="tipoForm" value="inicio">
                     <div class="col-11 mx-auto">
                         <div class="row">
                             
                             <div class="col-md-9 col-sm-12 col-12 mx-auto position-relative py-3">
                                 <div class="row">
                                     <div class="col pt-4">
-                                        <input type="text" class="form-control fs-3 bg-transparent rounded-0"  placeholder="Nombre" style="border-bottom: 2px solid black; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;">
+                                        <input type="text" name="nombre" class="form-control fs-3 bg-transparent rounded-0"  placeholder="Nombre" style="border-bottom: 2px solid black; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col pt-4">
-                                        <input type="email" class="form-control fs-3 bg-transparent rounded-0"  placeholder="Email" style="border-bottom: 2px solid black; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;">
+                                        <input type="email" name="correo" class="form-control fs-3 bg-transparent rounded-0"  placeholder="Email" style="border-bottom: 2px solid black; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col pt-4">
-                                        <input type="text" class="form-control fs-3 bg-transparent rounded-0"  placeholder="Ciudad" style="border-bottom: 2px solid black; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;">
+                                        <input type="text" name="ciudad" class="form-control fs-3 bg-transparent rounded-0"  placeholder="Ciudad" style="border-bottom: 2px solid black; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;">
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col pt-4">
-                                        <input type="text" class="form-control fs-3 bg-transparent rounded-0"  placeholder="Mensaje" style="border-bottom: 2px solid black; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;">
+                                        <input type="text" name="mensaje" class="form-control fs-3 bg-transparent rounded-0"  placeholder="Mensaje" style="border-bottom: 2px solid black; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;">
                                     </div>
                                 </div>
                                 
@@ -543,56 +547,6 @@
         }
         ]
     });
-
-    // $('.servicios').slick({
-    //     dots: true,
-    //     infinite: false,
-    //     speed: 300,
-    //     slidesToShow: 4,
-    //     slidesToScroll: 1,
-    //     prevArrow: true,
-    //     nextArrow: true,
-    //     centerMode: false,
-    //     responsive: [
-    //     {
-    //         breakpoint: 1201,
-    //         settings: {
-    //             slidesToShow: 3,
-    //             slidesToScroll: 1,
-    //             infinite: true,
-    //             dots: true
-    //         }
-    //     },
-    //     {
-    //         breakpoint: 993,
-    //         settings: {
-    //             slidesToShow: 3,
-    //             slidesToScroll: 1
-    //         }
-    //     },
-    //     {
-    //         breakpoint: 769,
-    //         settings: {
-    //             slidesToShow: 1,
-    //             slidesToScroll: 1
-    //         }
-    //     },
-    //     {
-    //         breakpoint: 577,
-    //         settings: {
-    //             slidesToShow: 1,
-    //             slidesToScroll: 1
-    //         }
-    //     },
-    //     {
-    //         breakpoint: 321,
-    //         settings: {
-    //             slidesToShow: 1,
-    //             slidesToScroll: 1
-    //         }
-    //     }
-    //     ]
-    // });
 
     $('.slider-principal').slick({
         dots: true,

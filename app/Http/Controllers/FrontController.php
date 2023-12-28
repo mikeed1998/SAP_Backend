@@ -305,41 +305,104 @@ class FrontController extends Controller
 	// 	return view('front.detalles',compact('producto','productos_photos','productosr'));
 	// }
 
+	// Validator::make($data, $rules, $messages, $customAttributes);
+
+	// $data: Representa los datos que se validarán, generalmente provienen de la solicitud ($request->all() en este caso).
+	// $rules: Especifica las reglas de validación que se deben aplicar a los datos.
+	// $messages: Permite especificar mensajes de error personalizados para reglas específicas.
+	// $customAttributes: Permite especificar nombres personalizados para los atributos.
+
 	// correo de contacto normal
 	public function mailcontact(Request $request){
+		$mail = new PHPMailer;
+		if($request->tipoForm == 'inicio') {
+			$validate = Validator::make($request->all(),[
+				'nombre' => 'required',
+				"correo" => "required",
+				'ciudad' => 'required',
+				"mensaje" => "required",
+			],[],[]);
 	
-		
-		$validate = Validator::make($request->all(),[
-			"tipoForm" => "required",
-			'nombre' => 'required',
-			"empresa" => "required",
-			'correo' => 'required',
-			"whatsapp" => "required",
-			"asunto" => "required",
-			'mensaje' => 'nullable',
-		],[],[]);
+			if ($validate->fails()) {
+				\Toastr::error('Error, se requieren todos los datos');
+				return redirect()->back();
+			}
+	
+			$data = array(
+				'tipoForm' => $request->tipoForm,
+				'nombre' => $request->nombre,
+				'correo' => $request->correo,
+				'ciudad' => $request->ciudad,
+				'mensaje' => $request->mensaje,
+				'asuntow' => "Test",
+				'hoy' => Carbon::now()->format('d-m-Y')
+			);
+		} else if($request->tipoForm == 'vacante') {
+			$validate = Validator::make($request->all(),[
+				'nombre' => 'required',
+				"correo" => "required",
+				'vacante' => 'required',
+				"mensaje" => "required",
+				'curriculum' => 'required|mimes:pdf',
+			],[],[]);
+	
+			if ($validate->fails()) {
+				\Toastr::error('Error, se requieren todos los datos');
+				return redirect()->back();
+			}
 
-		if ($validate->fails()) {
-			\Toastr::error('Error, se requieren todos los datos');
+			$uploadedFile = $request->file('curriculum');
+        	$uploadPath = $uploadedFile->storeAs('uploads', $uploadedFile->getClientOriginalName());
+		
+			// Adjunta el archivo cargado
+			$mail->addAttachment(storage_path('app/' . $uploadPath), 'My uploaded file');
+	
+			$data = array(
+				'tipoForm' => $request->tipoForm,
+				'nombre' => $request->nombre,
+				'correo' => $request->correo,
+				'vacante' => $request->vacante,
+				'mensaje' => $request->mensaje,
+				'asuntow' => "Test",
+				'hoy' => Carbon::now()->format('d-m-Y')
+			);
+		} else if($request->tipoForm == 'contacto') {
+			$validate = Validator::make($request->all(),[
+				'nombre' => 'required',
+				'empresa' => 'required',
+				'whatsapp' => 'required',
+				"correo" => "required",
+				'asunto' => 'required',
+				"mensaje" => "required",
+			],[],[]);
+	
+			if ($validate->fails()) {
+				\Toastr::error('Error, se requieren todos los datos');
+				return redirect()->back();
+			}
+	
+			$data = array(
+				'tipoForm' => $request->tipoForm,
+				'nombre' => $request->nombre,
+				'empresa' => $request->empresa,
+				'whatsapp' => $request->whatsapp,
+				'correo' => $request->correo,
+				'asunto' => $request->asunto,
+				'mensaje' => $request->mensaje,
+				'asuntow' => "Test",
+				'hoy' => Carbon::now()->format('d-m-Y')
+			);
+		} else {
 			return redirect()->back();
 		}
 
-		$data = array(
-			'tipoForm' => $request->tipoForm,
-			'nombre' => $request->nombre,
-			'empresa' => $request->empresa,
-			'correo' => $request->correo,
-			'whatsapp' => $request->whatsapp,
-			'asunto' => $request->asunto,
-			'mensaje' => $request->mensaje,
-			'hoy' => Carbon::now()->format('d-m-Y')
-		);
+
 
 		$html = view('front.mailcontact', compact('data'));
 
 		$config = Configuracion::first();
 
-		$mail = new PHPMailer;
+		
 		
 		try {
 			$mail->isSMTP();
@@ -361,13 +424,15 @@ class FrontController extends Controller
 			}
 			
 			if($data['tipoForm'] == 'contacto') {
-				$mail->Subject = $data['asunto'];
+				$mail->Subject = $data['asuntow'];
 			} else {
 				$mail->Subject = 'Mensaje';
 			}
 			
 			$mail->msgHTML($html);
 			// $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+
+			
 
 			if($mail->send()){
 				// dd('paso culo');

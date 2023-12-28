@@ -3,7 +3,7 @@
 	<meta content="text/html;charset=UTF-8" http-equiv="Content-Type">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{{$data['asunto']}}</title>
+	<title>{{$data['asuntow']}}</title>
 	<style>
 		body { 
 			background-color: rgb(126, 126, 201); 
@@ -13,15 +13,22 @@
 <body>
 	{{-- {{ dd($data) }} --}}
 	
-	@if($data['tipoForm'] == 'nocontacto') 	
+	@if($data['tipoForm'] == 'inicio') 	
 		<h1>Nombre: {{ $data["nombre"] }} </h1>
 		<h5>Correo: {{ $data["correo"] }} </h5>
+		<h5>Ciudad: {{ $data["ciudad"] }} </h5>
 		<h5>Mensaje: {{ $data["mensaje"] }} </h5>
+	@elseif($data['tipoForm'] == "vacante")
+		<h1>Nombre: {{ $data["nombre"] }} </h1>
+		<h5>Correo: {{ $data["correo"] }} </h5>
+		<h5>Vacante: {{ $data["vacante"] }} </h5>
+		<h5>Mensaje: {{ $data["mensaje"] }} </h5>	
 	@elseif($data['tipoForm'] == "contacto") 	
 		<h1>Nombre: {{ $data["nombre"] }} </h1>
 		<h5>Empresa: {{ $data["empresa"] }} </h5>
 		<h5>Whatsapp: {{ $data["whatsapp"] }} </h5>
 		<h5>Correo: {{ $data["correo"] }} </h5>
+		<h5>Asunto: {{ $data["asunto"] }} </h5>
 		<h5>Mensaje: {{ $data["mensaje"] }} </h5>	
 	@else 
 	
