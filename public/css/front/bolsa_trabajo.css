@@ -54,17 +54,17 @@
 
 @media(min-width: 1800px) {
 
-    .titulo-bolsa {
+    .titulo-bolsa, .titulo-bolsa2 {
         font-size: 8.6rem;
         font-weight: 500;
         line-height: 1.1;
     }
     
-    .titulo-bolsa .mayuscula {
+    .titulo-bolsa .mayuscula, .titulo-bolsa2 .mayuscula2 {
         color: #CDE700;
     }
     
-    .titulo-bolsa .minuscula {
+    .titulo-bolsa .minuscula, .titulo-bolsa2 .minuscula2 {
         color: white;
     }
     
@@ -207,17 +207,17 @@
 /* xxl */
 @media (min-width: 1400px) and (max-width: 1799px) {
     
-    .titulo-bolsa {
+    .titulo-bolsa, .titulo-bolsa2 {
         font-size: 6.6rem;
         font-weight: 500;
         line-height: 1.1;
     }
     
-    .titulo-bolsa .mayuscula {
+    .titulo-bolsa .mayuscula, .titulo-bolsa2 .mayuscula2 {
         color: #CDE700;
     }
     
-    .titulo-bolsa .minuscula {
+    .titulo-bolsa .minuscula, .titulo-bolsa2 .minuscula2 {
         color: white;
     }
     
@@ -360,17 +360,17 @@
 /* xl */
 @media (min-width: 1200px) and (max-width: 1400px) {
 
-    .titulo-bolsa {
+    .titulo-bolsa, .titulo-bolsa2 {
         font-size: 6rem;
         font-weight: 500;
         line-height: 1.1;
     }
     
-    .titulo-bolsa .mayuscula {
+    .titulo-bolsa .mayuscula, .titulo-bolsa2 .mayuscula2 {
         color: #CDE700;
     }
     
-    .titulo-bolsa .minuscula {
+    .titulo-bolsa .minuscula, .titulo-bolsa2 .minuscula2 {
         color: white;
     }
     
@@ -513,17 +513,17 @@
 /* lg */
 @media (min-width: 992px) and (max-width: 1200px) {
 
-    .titulo-bolsa {
+    .titulo-bolsa, .titulo-bolsa2 {
         font-size: 5rem;
         font-weight: 500;
         line-height: 1.1;
     }
     
-    .titulo-bolsa .mayuscula {
+    .titulo-bolsa .mayuscula, .titulo-bolsa2 .mayuscula2 {
         color: #CDE700;
     }
     
-    .titulo-bolsa .minuscula {
+    .titulo-bolsa .minuscula, .titulo-bolsa2 .minuscula2 {
         color: white;
     }
     
@@ -666,17 +666,17 @@
 /* md */
 @media (min-width: 768px) and (max-width: 992px) {
 
-    .titulo-bolsa {
+    .titulo-bolsa, .titulo-bolsa2 {
         font-size: 4rem;
         font-weight: 500;
         line-height: 1.1;
     }
     
-    .titulo-bolsa .mayuscula {
+    .titulo-bolsa .mayuscula, .titulo-bolsa2 .mayuscula2 {
         color: #CDE700;
     }
     
-    .titulo-bolsa .minuscula {
+    .titulo-bolsa .minuscula, .titulo-bolsa2 .minuscula2 {
         color: white;
     }
     
@@ -819,17 +819,17 @@
 /* sm */
 @media (min-width: 576px) and (max-width: 768px) {
 
-    .titulo-bolsa {
+    .titulo-bolsa, .titulo-bolsa2 {
         font-size: 3rem;
         font-weight: 500;
         line-height: 1.1;
     }
     
-    .titulo-bolsa .mayuscula {
+    .titulo-bolsa .mayuscula, .titulo-bolsa2 .mayuscula2 {
         color: #CDE700;
     }
     
-    .titulo-bolsa .minuscula {
+    .titulo-bolsa .minuscula, .titulo-bolsa2 .minuscula2 {
         color: white;
     }
     
@@ -972,17 +972,17 @@
 /* xs */
 @media (min-width: 0px) and (max-width: 576px) {
 
-    .titulo-bolsa {
+    .titulo-bolsa, .titulo-bolsa2 {
         font-size: 2.2rem;
         font-weight: 500;
         line-height: 1.1;
     }
     
-    .titulo-bolsa .mayuscula {
+    .titulo-bolsa .mayuscula, .titulo-bolsa2 .mayuscula2 {
         color: #CDE700;
     }
     
-    .titulo-bolsa .minuscula {
+    .titulo-bolsa .minuscula, .titulo-bolsa2 .minuscula2 {
         color: white;
     }
     

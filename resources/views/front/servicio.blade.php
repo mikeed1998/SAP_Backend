@@ -41,7 +41,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-12 mx-xxl-0 mx-xl-0 mx-lg-0 mx-md-0 mx-sm-auto mx-auto text-center py-4">
-                                    <a href="#" class="btn btn-outline py-2 fs-5 fw-bolder bg-white border border-white rounded-pill w-100 text-dark">
+                                    <a href="#" class="btn btn-outline py-3 fs-5 fw-bolder bg-white border border-white rounded-pill w-100 text-dark">
                                         COTIZAR AQUÍ <svg xmlns="http://www.w3.org/2000/svg" height="1.4rem" width="5rem" fill="#000000" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
                                     </a>
                                 </div>
@@ -55,7 +55,7 @@
 </section>
 
 <section>
-    <div class="container-fluid mt-5">
+    <div class="container-fluid">
         <div class="row">
             <div class="col col-pri position-relative">
                 <div class="col-12 position-absolute top-0 start-0 z-3">
@@ -72,13 +72,13 @@
                                                 <div class="overlay" style="background-color: {{ $proye->color }};">
                                                     <div class="row">
                                                         <div class="col position-relative" >
-                                                            <div class="col-12 px-3 py-2 position-absolute top-0 text-start fw-bolder titulo-card">
+                                                            <div class="col-12 p-4 position-absolute top-0 text-start fw-bolder titulo-card">
                                                                 {{ $proye->titulo }}
                                                             </div>
-                                                            <div class="col-11 px-3 py-2 position-absolute top-0 mar-text">
+                                                            <div class="col-11 p-4 position-absolute top-0 mar-text">
                                                                 <div class="row">
                                                                     <div class="col-2"></div>
-                                                                    <div class="col-10 text-end fw-bolder" style="line-height: 1.1;">
+                                                                    <div class="col-10 text-end fw-bolder texto-card">
                                                                         {{ $proye->descripcion }}
                                                                     </div>
                                                                 </div>

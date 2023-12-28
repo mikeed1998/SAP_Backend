@@ -26,14 +26,14 @@
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 68rem;
+        height: 78rem;
     }
 
     .carta-imagen {
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 34.383125rem;
+        height: 36.383125rem;
     }
 
     .col-pri {
@@ -49,12 +49,19 @@
         margin-top: 28rem;
     }
 
+    .texto-card {
+        line-height: 1.1; 
+        margin-top: 2rem; 
+        max-height: 3rem; 
+        overflow: scroll;
+    }
+
     .contenedor-dots {
-        padding-top: 24rem;
+        padding-top: 34rem;
     }
 
     .cont-izq {
-        margin-top: 0rem;
+        margin-top: 16rem;
     }
      
 }
@@ -82,15 +89,22 @@
 
     .titulo-card {
         line-height: 1.1;
-        font-size: 3rem;
+        font-size: 2.4rem;
     }
 
     .mar-text {
         margin-top: 23rem;
     }
 
+    .texto-card {
+        line-height: 1.1; 
+        margin-top: -1rem; 
+        max-height: 3.2rem; 
+        overflow: scroll;
+    }
+
     .contenedor-dots {
-        padding-top: 18rem;
+        padding-top: 24rem;
     }
 
     .cont-izq {
@@ -106,7 +120,7 @@
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 46rem;
+        height: 56rem;
     }
 
     .carta-imagen {
@@ -129,12 +143,19 @@
         margin-top: 18rem;
     }
 
+    .texto-card {
+        line-height: 1.1; 
+        margin-top: 1rem; 
+        max-height: 3.2rem; 
+        overflow: scroll;
+    }
+
     .contenedor-dots {
         padding-top: 18rem;
     }
 
     .cont-izq {
-        margin-top: -20rem;
+        margin-top: -8rem;
     }
 
 }
@@ -146,14 +167,14 @@
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 46rem;
+        height: 52rem;
     }
 
     .carta-imagen {
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 20.446875rem;
+        height: 22.446875rem;
     }
 
     .col-pri {
@@ -170,12 +191,19 @@
         margin-top: 13rem;
     }
 
+    .texto-card {
+        line-height: 1.1; 
+        margin-top: 3rem; 
+        max-height: 3.2rem; 
+        overflow: scroll;
+    }
+
     .contenedor-dots {
         padding-top: 10rem;
     }
 
     .cont-izq {
-        margin-top: -23rem;
+        margin-top: -12rem;
     }
 
 }
@@ -187,7 +215,7 @@
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 46rem;
+        height: 50.015rem;
     }
 
     .carta-imagen {
@@ -211,12 +239,19 @@
         margin-top: 40rem;
     }
 
+    .texto-card {
+        line-height: 1.1; 
+        margin-top: 2rem; 
+        max-height: 5rem; 
+        overflow: scroll;
+    }
+
     .contenedor-dots {
         padding-top: 40rem;
     }
 
     .cont-izq {
-        margin-top: -23rem;
+        margin-top: -20rem;
     }
 
 }
@@ -228,7 +263,7 @@
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 56rem;
+        height: 60rem;
     }
 
     .carta-imagen {
@@ -252,12 +287,19 @@
         margin-top: 28rem;
     }
 
+    .texto-card {
+        line-height: 1.1; 
+        margin-top: 2rem; 
+        max-height: 3.2rem; 
+        overflow: scroll;
+    }
+
     .contenedor-dots {
         padding-top: 26rem;
     }
 
     .cont-izq {
-        margin-top: 6rem;
+        margin-top: 4rem;
     }
 
 }
@@ -276,7 +318,7 @@
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 18.90375rem;
+        height: 20.90375rem;
     }
 
     .col-pri {
@@ -293,12 +335,19 @@
         margin-top: 11rem;
     }
 
+    .texto-card {
+        line-height: 1.1; 
+        margin-top: 3rem; 
+        max-height: 3.2rem; 
+        overflow: scroll;
+    }
+
     .contenedor-dots {
         padding-top: 9rem;
     }
 
     .cont-izq {
-        margin-top: -8rem;
+        margin-top: 0rem;
     }
 
 }

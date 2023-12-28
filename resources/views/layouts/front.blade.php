@@ -35,10 +35,12 @@
 		<script src="http://cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 		<script src="http://cdn.bootcss.com/toastr.js/latest/js/toastr.min.js"></script> --}}
 
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.17.0/js/uikit.min.js" integrity="sha512-xUVCfhBKjmVY7TmslnmOcqQl/A7pQ4Qd6bvPiSaXuG4vZRGLSrU51j3MymL4yH4h0fH17Vh7WqB/5R0sncrk8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.17.0/css/uikit.min.css" integrity="sha512-o/SwOc4ZXjB2wHymBdn0YrUG7tFFedWxliiYNmpziB2lkYqZUfh4/r+LdUSQAWq5kLYOin0jfYPLPs+J0bE4jA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.17.0/js/uikit-icons.min.js" integrity="sha512-QfebRrW6/OIJ+2b9rUILdsXcX0lO6UO6dCgJyGtd5VnCMyZ0jewXH3afwdEtRBB0z0rfCO+oO6i0V+/sat1wPQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<!-- UIkit CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/css/uikit.min.css" />
 
+<!-- UIkit JS -->
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/js/uikit.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/js/uikit-icons.min.js"></script>
 
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.min.css">
 

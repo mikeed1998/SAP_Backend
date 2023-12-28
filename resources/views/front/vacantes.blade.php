@@ -66,6 +66,14 @@
 
                         </div>
                     </div>
+                    <div class="row mt-5">
+                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-8 col-sm-12 col-12"></div>
+                        <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-8 col-sm-10 col-xs-10 col-10 mx-xxl-0 mx-xl-0 mx-lg-0 mx-md-auto mx-sm-auto mx-auto slide-dotresp position-relative text-center slider-dots-container-pri">
+                            <button class="slick-prev-pri btn position-absolute start-0" style="overflow: hidden"><img src="{{ asset('img/design/chevron-left.png') }}" alt="" class="img-fluid"></button>    
+                            <div class="slider-dots"></div>
+                            <button class="slick-next-pri btn position-absolute end-0" style="overflow: hidden"><img src="{{ asset('img/design/chrevron-right.png') }}" alt="" class="img-fluid"></button>
+                        </div>
+                    </div>
                 </div>
             </div>
  
@@ -120,7 +128,7 @@
         <div class="row" data-aos="zoom-in">
             <div class="col py-5">
                 <div class="row">
-                    <div class="col text-center titulo-bolsa">
+                    <div class="col text-center titulo-bolsa2">
                         Postúlate con NOSOTROS                           
                     </div>
                 </div>
@@ -295,20 +303,45 @@
 
         // Actualiza el contenido con los estilos aplicados
         tituloBolsa.innerHTML = resultado.join(' ');
+
+        
     });
+
+    document.addEventListener('DOMContentLoaded', function () {
+
+    var tituloBolsa2 = document.querySelector('.titulo-bolsa2');
+
+        // Obtén el texto del elemento
+        var texto2 = tituloBolsa2.textContent;
+
+        // Separa el texto2 en palabras
+        var palabras2 = texto2.split(/\s+/);
+
+        // Aplica estilos según si la palabra es mayúscula o minúscula
+        var resultado = palabras2.map(function (palabra) {
+            if (palabra2 === palabra2.toUpperCase()) {
+                return '<span class="mayuscula2">' + palabra2 + '</span>';
+            } else {
+                return '<span class="minuscula2">' + palabra2 + '</span>';
+            }
+        });
+
+        // Actualiza el contenido con los estilos aplicados
+        tituloBolsa2.innerHTML = resultado.join(' ');
+    });
+
 </script>
 <script>
 
-
     $('.servicios').slick({
         dots: true,
+        appendDots: $('.slider-dots-container-pri'),
         infinite: false,
         speed: 300,
         slidesToShow: 4,
         slidesToScroll: 1,
-        prevArrow: true,
-        nextArrow: true,
-        centerMode: false,
+        prevArrow: '.slick-prev-pri', // Selector del botón anterior
+        nextArrow: '.slick-next-pri', // Selector del botón siguiente
         responsive: [
         {
             breakpoint: 1201,
@@ -349,6 +382,7 @@
         }
         ]
     });
+
 </script>
 <script>
     document.getElementById('fileButton').onclick = function() {

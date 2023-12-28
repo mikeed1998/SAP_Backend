@@ -70,9 +70,9 @@ class FrontController extends Controller
 		$config = Configuracion::find(1);
 		$servicio = ZServicio::find($id);
 		$proyectos = ZProyecto::all();
-		
+		$servicios = ZServicio::orderBy('orden', 'asc')->get();
 
-		return view('front.servicio', compact('config', 'servicio', 'proyectos'));
+		return view('front.servicio', compact('config', 'servicio', 'proyectos', 'servicios'));
 	}
 
 	public function tienda() {
@@ -98,8 +98,9 @@ class FrontController extends Controller
 		$config = Configuracion::find(1);
 		$elements_home = Elemento::where('seccion',1)->get();
 		$elements = Elemento::where('seccion',5)->get();
+		$servicios = ZServicio::orderBy('orden', 'asc')->get();
 
-		return view('front.soluciones', compact('pagina', 'soluciones', 'elements', 'elements_home', 'config'));
+		return view('front.soluciones', compact('pagina', 'soluciones', 'elements', 'elements_home', 'config', 'servicios'));
 	}
 
 	public function punto_venta() {
@@ -120,8 +121,9 @@ class FrontController extends Controller
 	public function aboutus() {
 		$config = Configuracion::find(1);
 		$elements = Elemento::where('seccion',8)->get();
+		$servicios = ZServicio::orderBy('orden', 'asc')->get();
 
-		return view('front.aboutus', compact('config', 'elements'));
+		return view('front.aboutus', compact('config', 'elements', 'servicios'));
 	}
 
 	public function vacantes() {
@@ -129,11 +131,12 @@ class FrontController extends Controller
 		$vacantes = ZVacante::all();
 		$config = Configuracion::find(1);
 		$elements = Elemento::where('seccion',11)->get();
+		$servicios = ZServicio::orderBy('orden', 'asc')->get();
 		
 		$cont = 0;
 		$band = 0;
 
-		return view('front.vacantes', compact('config', 'elements', 'beneficios', 'cont', 'band', 'vacantes'));
+		return view('front.vacantes', compact('config', 'elements', 'beneficios', 'cont', 'band', 'vacantes', 'servicios'));
 	}
 
 	public function blog() {
@@ -141,14 +144,17 @@ class FrontController extends Controller
 		$blogs = ZBlog::all();
 		$config = Configuracion::find(1);
 		$cont = 1;
+		$servicios = ZServicio::orderBy('orden', 'asc')->get();
 
-		return view('front.blog', compact('blogs', 'cont'));
+		return view('front.blog', compact('blogs', 'cont', 'servicios'));
 	}
 
 	public function blog_detalle($id) {
+		$config = Configuracion::find(1);
 		$blog = ZBlog::find($id);
+		$servicios = ZServicio::orderBy('orden', 'asc')->get();
 
-		return view('front.blog_detalle', compact('blog'));
+		return view('front.blog_detalle', compact('blog', 'servicios', 'config'));
 	}
 
 	public function contact(){
@@ -159,8 +165,9 @@ class FrontController extends Controller
 		$sucursales = ZSucursal::all();
 		$estados = Estado::all();
 		$municipios = Municipio::all();
+		$servicios = ZServicio::orderBy('orden', 'asc')->get();
 
-		return view('front.contacto', compact('pagina', 'elements', 'config', 'config', 'sucursales', 'estados', 'municipios'));
+		return view('front.contacto', compact('pagina', 'elements', 'config', 'config', 'sucursales', 'estados', 'municipios', 'servicios'));
 	}
 
 
