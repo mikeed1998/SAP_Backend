@@ -52,7 +52,7 @@
                                         <div class="card bg-transparent border-0 ms-4 position-absolute bottom-0 start-0 translate-middle-y">
                                             <div class="row">
                                                 <div class="col-xxl-4 link-servicio">
-                                                    <a href="#" class="text-center  rounded-circle">
+                                                    <a href="{{ route('front.contact') }}" class="text-center  rounded-circle">
                                                         <img src="{{ asset('img/images/3my-imagetct2.png') }}" alt="right-up" class="img-fluid btn-serv rounded-circle">
                                                     </a>
                                                 </div>

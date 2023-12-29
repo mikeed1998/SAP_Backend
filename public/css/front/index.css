@@ -177,19 +177,24 @@ a {
 
 @media(min-width: 1800px) {
 
-    .titulo-index {
+    .titulo-index, .titulo-index2 {
         font-size: 8.6rem;
         font-weight: 500;
         line-height: 1.1;
     }
     
-    .titulo-index .mayuscula {
+    .titulo-index .mayuscula, .titulo-index2 .mayuscula2 {
         color: #CDE700;
         background-color: transparent;
     }
     
     .titulo-index .minuscula {
         color: white;
+        background-color: transparent;
+    }
+
+    .titulo-index2 .minuscula2 {
+        color: black;
         background-color: transparent;
     }
 
@@ -374,19 +379,24 @@ a {
 /* xxl */
 @media (min-width: 1400px) and (max-width: 1799px) {
 
-    .titulo-index {
+    .titulo-index, .titulo-index2 {
         font-size: 6rem;
         font-weight: 500;
         line-height: 1.1;
     }
     
-    .titulo-index .mayuscula {
+    .titulo-index .mayuscula, .titulo-index2 .mayuscula2 {
         color: #CDE700;
         background-color: transparent;
     }
     
     .titulo-index .minuscula {
         color: white;
+        background-color: transparent;
+    }
+
+    .titulo-index2 .minuscula2 {
+        color: black;
         background-color: transparent;
     }
 
@@ -576,19 +586,24 @@ a {
 /* xl */
 @media (min-width: 1200px) and (max-width: 1399px) {
 
-    .titulo-index {
+    .titulo-index, .titulo-index2 {
         font-size: 6rem;
         font-weight: 500;
         line-height: 1.1;
     }
     
-    .titulo-index .mayuscula {
+    .titulo-index .mayuscula, .titulo-index2 .mayuscula2 {
         color: #CDE700;
         background-color: transparent;
     }
     
     .titulo-index .minuscula {
         color: white;
+        background-color: transparent;
+    }
+
+    .titulo-index2 .minuscula2 {
+        color: black;
         background-color: transparent;
     }
 
@@ -779,19 +794,24 @@ a {
 /* lg */
 @media (min-width: 992px) and (max-width: 1199px) {
 
-    .titulo-index {
+    .titulo-index, .titulo-index2 {
         font-size: 6rem;
         font-weight: 500;
         line-height: 1.1;
     }
     
-    .titulo-index .mayuscula {
+    .titulo-index .mayuscula, .titulo-index2 .mayuscula2 {
         color: #CDE700;
         background-color: transparent;
     }
     
     .titulo-index .minuscula {
         color: white;
+        background-color: transparent;
+    }
+
+    .titulo-index2 .minuscula2 {
+        color: black;
         background-color: transparent;
     }
 
@@ -982,19 +1002,24 @@ a {
 /* md */
 @media (min-width: 768px) and (max-width: 991px) {
 
-    .titulo-index {
+    .titulo-index, .titulo-index2 {
         font-size: 4rem;
         font-weight: 500;
         line-height: 1.1;
     }
     
-    .titulo-index .mayuscula {
+    .titulo-index .mayuscula, .titulo-index2 .mayuscula2 {
         color: #CDE700;
         background-color: transparent;
     }
     
     .titulo-index .minuscula {
         color: white;
+        background-color: transparent;
+    }
+
+    .titulo-index2 .minuscula2 {
+        color: black;
         background-color: transparent;
     }
 
@@ -1185,19 +1210,24 @@ a {
 /* sm */
 @media (min-width: 576px) and (max-width: 767px) {
 
-    .titulo-index {
+    .titulo-index, .titulo-index2 {
         font-size: 5rem;
         font-weight: 500;
         line-height: 1.1;
     }
     
-    .titulo-index .mayuscula {
+    .titulo-index .mayuscula, .titulo-index2 .mayuscula2 {
         color: #CDE700;
         background-color: transparent;
     }
     
     .titulo-index .minuscula {
         color: white;
+        background-color: transparent;
+    }
+
+    .titulo-index2 .minuscula2 {
+        color: black;
         background-color: transparent;
     }
 
@@ -1388,19 +1418,24 @@ a {
 /* xs */
 @media (min-width: 0px) and (max-width: 575px) {
 
-    .titulo-index {
+    .titulo-index, .titulo-index2 {
         font-size: 3rem;
         font-weight: 500;
         line-height: 1.1;
     }
     
-    .titulo-index .mayuscula {
+    .titulo-index .mayuscula, .titulo-index2 .mayuscula2 {
         color: #CDE700;
         background-color: transparent;
     }
     
     .titulo-index .minuscula {
         color: white;
+        background-color: transparent;
+    }
+
+    .titulo-index2 .minuscula2 {
+        color: black;
         background-color: transparent;
     }
 

@@ -43,8 +43,8 @@
                     <div class="row">
                         <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 fs-4 py-3">
                             <div class="row">
-                                <div class="col" style="text-decoration: underline; color: #FFC000;">
-                                    Regresar
+                                <div class="col">
+                                    <a href="{{ route('front.blog') }}" style="text-decoration: underline; color: #FFC000;">Regresar</a>
                                 </div>
                             </div>
                         </div>

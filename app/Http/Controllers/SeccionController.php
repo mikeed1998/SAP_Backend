@@ -142,7 +142,7 @@ class SeccionController extends Controller
         $servicios = ZServicio::orderBy('orden', 'asc')->get();
         $proyectos = ZProyecto::all();
         $clientes = ZCliente::all();
-        $vacantes = ZVacante::all();
+        $vacantes = ZVacante::orderBy('orden', 'asc')->get();
         $estados = Estado::all();
         $municipios = Municipio::all();
         $beneficios = ZBeneficio::all();

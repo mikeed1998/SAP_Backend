@@ -132,7 +132,7 @@
             <div class="row">
                 <div class="col position-relative" style="background-color: #F0F0F0;">
                     <div class="col position-absolute start-0 top-0 z-1" id="map"></div>
-                    <div class="col-12 position-absolute" style="margin-top: 40rem;">
+                    <div class="col-11 position-absolute start-0" style="margin-top: 40rem;">
                         <div class="row">
                             <div class="col-2 z-3 p-5" style="
                                 background-color: #FE6E63;
@@ -153,12 +153,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 position-absolute" style="margin-top: 24rem;">
+                    <div class="col-12 position-absolute" style="margin-top: 24rem; margin-left: -1.5rem;">
                         <div class="row">
                             <div class="col-8 py-2"></div>
                             <div class="col-4 position-relative p-0 m-0 py-2 z-3">
                                 <img src="{{ asset('img/images/home/contador.png') }}" alt="" class="img-fluid">
-                                <div class="col-11 text-center position-absolute top-50 start-50 translate-middle">
+                                <div class="col-11 text-center position-absolute top-50 start-50 translate-middle" style="overflow: hidden;">
                                     <div class="row">
                                         <div class="col-9 fw-bolder text-center">
                                             <p id="contador_clientes" class="contad"></p>
@@ -309,7 +309,7 @@
             <div class="row mt-5" data-aos="zoom-in">
                 <div class="col mt-5 py-5">
                     <div class="row">
-                        <div class="col text-center display-1 fw-bolder">
+                        <div class="col text-center fw-bolder titulo-index2">
                             {{ $elements[16]->texto }}
                         </div>
                     </div>
@@ -427,18 +427,18 @@
 
     <!-- Modal -->
     <div class="modal fade" style="z-index: 9999;" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-fullscreen">
+        <div class="modal-dialog modal-fullscreen modal-dialog-scrollable ">
             <div class="modal-content">
                 <div class="modal-header">
                     
                 </div>
                 <div class="modal-body">
-                    <div class="container bg-secondary border-dark">
+                    <div class="container bg-secondary">
                         <div class="row">
-                            <div class="col-6 border-dark">
+                            <div class="col-6">
 
                             </div>
-                            <div class="col-6 border-dark">
+                            <div class="col-6">
 
                             </div>
                         </div>
@@ -494,6 +494,26 @@
 
         // Actualiza el contenido con los estilos aplicados
         tituloIndex.innerHTML = resultado.join(' ');
+
+        var tituloIndex2 = document.querySelector('.titulo-index2');
+
+        // Obtén el texto del elemento
+        var texto2 = tituloIndex2.textContent;
+
+        // Separa el texto2 en palabras
+        var palabras2 = texto2.split(/\s+/);
+
+        // Aplica estilos según si la palabra es mayúscula o minúscula
+        var resultado2 = palabras2.map(function (palabra2) {
+            if (palabra2 === palabra2.toUpperCase()) {
+                return '<span class="mayuscula2">' + palabra2 + '</span>';
+            } else {
+                return '<span class="minuscula2">' + palabra2 + '</span>';
+            }
+        });
+
+        // Actualiza el contenido con los estilos aplicados
+        tituloIndex2.innerHTML = resultado2.join(' ');
     });
 </script>
 <script>
@@ -732,13 +752,13 @@
             sucursales_galeriaHTML += '</div></div>';
 
             // Set the content of the modal body
-            modalBody.html('<div class="container-fluid border border-dark">' +
+            modalBody.html('<div class="container-fluid">' +
                 '<div class="row">' +
-                   '<div class="col-xxl-6 col-xl-6 col-lg-9 col-md-11 col-sm-11 col-11 mx-auto border border-dark py-5 fs-3">'+ 
+                   '<div class="col-xxl-6 col-xl-6 col-lg-9 col-md-11 col-sm-11 col-11 mx-auto py-5 fs-3">'+ 
                         'Lista de sucursales' +
                         sucursalesHTML +
                     '</div> ' + 
-                    '<div class="col-xxl-6 col-xl-6 col-lg-9 col-md-11 col-sm-11 col-11 mx-auto border border-dark py-1"> ' + 
+                    '<div class="col-xxl-6 col-xl-6 col-lg-9 col-md-11 col-sm-11 col-11 mx-auto py-1"> ' + 
                         sucursales_galeriaHTML +
                     '</div> ' + 
                 '</div> ' + 
