@@ -1,0 +1,353 @@
+
+.card {
+    overflow: hidden; /* Ocultar el contenido que se extiende más allá de la tarjeta */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Agregar transición suave para una apariencia más agradable */
+
+    /* Pseudo-clase para cambiar la opacidad al hacer hover */
+}
+
+.card:hover .overlay {
+    opacity: 1; /* Cambiar la opacidad al hacer hover */
+}
+
+@media(min-width: 1800px) {
+
+    .portada-servicio {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 78rem;
+    }
+
+    .carta-imagen {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 36.383125rem;
+    }
+
+    .col-pri {
+        padding-top: 15rem;
+    }
+
+    .titulo-card {
+        line-height: 1.1;
+        font-size: 3rem;
+    }
+
+    .mar-text {
+        margin-top: 28rem;
+    }
+
+    .texto-card {
+        line-height: 1.1; 
+        margin-top: 2rem; 
+        max-height: 3rem; 
+        overflow: scroll;
+    }
+
+    .contenedor-dots {
+        padding-top: 34rem;
+    }
+
+    .cont-izq {
+        margin-top: 6rem;
+    }
+     
+}
+
+/* xxl */
+@media (min-width: 1400px) and (max-width: 1799px) {
+    
+    .portada-servicio {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 64rem;
+    }
+
+    .carta-imagen {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 28.52rem;
+    }
+
+    .col-pri {
+        padding-top: 15rem;
+    }
+
+    .titulo-card {
+        line-height: 1.1;
+        font-size: 2.4rem;
+    }
+
+    .mar-text {
+        margin-top: 23rem;
+    }
+
+    .texto-card {
+        line-height: 1.1; 
+        margin-top: -1rem; 
+        max-height: 3.2rem; 
+        overflow: scroll;
+    }
+
+    .contenedor-dots {
+        padding-top: 24rem;
+    }
+
+    .cont-izq {
+        margin-top: -6rem;
+    }
+
+}
+
+/* xl */
+@media (min-width: 1200px) and (max-width: 1400px) {
+
+    .portada-servicio {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 56rem;
+    }
+
+    .carta-imagen {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 25.236875rem;
+    }
+
+    .col-pri {
+        padding-top: 15rem;
+    }
+
+    .titulo-card {
+        line-height: 1.1;
+        font-size: 2.6rem;
+    }
+
+    .mar-text {
+        margin-top: 18rem;
+    }
+
+    .texto-card {
+        line-height: 1.1; 
+        margin-top: 1rem; 
+        max-height: 3.2rem; 
+        overflow: scroll;
+    }
+
+    .contenedor-dots {
+        padding-top: 18rem;
+    }
+
+    .cont-izq {
+        margin-top: -8rem;
+    }
+
+}
+
+/* lg */
+@media (min-width: 992px) and (max-width: 1200px) {
+
+    .portada-servicio {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 52rem;
+    }
+
+    .carta-imagen {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 22.446875rem;
+    }
+
+    .col-pri {
+        padding-top: 15rem;
+    }
+
+    .titulo-card {
+        line-height: 1.1;
+        font-size: 2rem;
+    }
+
+    .mar-text {
+        line-height: 0.8;
+        margin-top: 13rem;
+    }
+
+    .texto-card {
+        line-height: 1.1; 
+        margin-top: 3rem; 
+        max-height: 3.2rem; 
+        overflow: scroll;
+    }
+
+    .contenedor-dots {
+        padding-top: 10rem;
+    }
+
+    .cont-izq {
+        margin-top: -20rem;
+    }
+
+}
+
+/* md */
+@media (min-width: 768px) and (max-width: 992px) {
+
+    .portada-servicio {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 50.015rem;
+    }
+
+    .carta-imagen {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 50.015rem;
+    }
+
+    .col-pri {
+        padding-top: 15rem;
+    }
+
+    .titulo-card {
+        line-height: 1.1;
+        font-size: 4rem;
+    }
+
+    .mar-text {
+        line-height: 0.8;
+        margin-top: 40rem;
+    }
+
+    .texto-card {
+        line-height: 1.1; 
+        margin-top: 2rem; 
+        max-height: 5rem; 
+        overflow: scroll;
+    }
+
+    .contenedor-dots {
+        padding-top: 40rem;
+    }
+
+    .cont-izq {
+        margin-top: -20rem;
+    }
+
+}
+
+/* sm */
+@media (min-width: 576px) and (max-width: 768px) {
+
+    .portada-servicio {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 60rem;
+    }
+
+    .carta-imagen {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 36.681875rem;
+    }
+
+    .col-pri {
+        padding-top: 15rem;
+    }
+
+    .titulo-card {
+        line-height: 1.1;
+        font-size: 2rem;
+    }
+
+    .mar-text {
+        line-height: 0.8;
+        margin-top: 28rem;
+    }
+
+    .texto-card {
+        line-height: 1.1; 
+        margin-top: 2rem; 
+        max-height: 3.2rem; 
+        overflow: scroll;
+    }
+
+    .contenedor-dots {
+        padding-top: 26rem;
+    }
+
+    .cont-izq {
+        margin-top: 4rem;
+    }
+
+}
+
+/* xs */
+@media (min-width: 0px) and (max-width: 576px) {
+
+    .portada-servicio {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 56rem;
+    }
+
+    .carta-imagen {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 20.90375rem;
+    }
+
+    .col-pri {
+        padding-top: 15rem;
+    }
+
+    .titulo-card {
+        line-height: 1.1;
+        font-size: 1.6rem;
+    }
+
+    .mar-text {
+        line-height: 1;
+        margin-top: 11rem;
+    }
+
+    .texto-card {
+        line-height: 1.1; 
+        margin-top: 3rem; 
+        max-height: 3.2rem; 
+        overflow: scroll;
+    }
+
+    .contenedor-dots {
+        padding-top: 9rem;
+    }
+
+    .cont-izq {
+        margin-top: 0rem;
+    }
+
+}

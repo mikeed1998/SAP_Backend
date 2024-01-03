@@ -1,0 +1,63 @@
+ <div class="row">
+            <div class="col-12 d-flex justify-content-center align-items-center flex-column mt-2 text-center">
+                <h3 class="fs-1 fw-bolder" style="color:white; font-family: Arial, sans-serif;">Agregar slider</h3>
+                <form id="form_image_slider" action="imgSider" method="POST"  class="file-upload mt-2" style="" enctype="multipart/form-data">
+                    @csrf
+                    <input id="input_slider_img" class="m-0 p-0" type="file" name="archivo">
+                    <label class="col-12 m-0 p-2 d-flex justify-content-center align-items-center" for="input_slider_img" style="opacity: 100%; !important; border-radius: 26px; background-color: #44B2E3;">Seleccionar archivo</label>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="carrusel-principal border">
+                @foreach ($slider_principal as $sp)
+                    <div class="col position-relative slider-principal py-5" style="
+                        background-image: url('{{ asset('img/photos/slider_principal/'.$sp->slider) }}'); 
+                    ">
+                        <div class="col-1 py-3 position-absolute top-0 end-0">
+                            <form action="{{ route('config.seccion.delSide', [$sp->id]) }}" method="POST" style="display: inline;">						
+                                @csrf
+                                @method('DELETE') 
+                                <button type="submit" class="btn btn-danger btn-block bg-danger rounded-pill"><i class="fas fa-trash"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+
+
+
+        <div class="row bg-white py-5" >
+            <div class="col-12 py-5 d-flex justify-content-center align-items-center flex-column mt-2 text-center">
+                <h3 class="fs-1 fw-bolder" style="color:black; font-family: Arial, sans-serif;">Agregar Cliente</h3>
+                <form id="form_image_slider2" action="{{ route('config.seccion.imgSiderCliente') }}" method="POST"  class="file-upload mt-2" style="" enctype="multipart/form-data">
+                    @csrf
+                    <input id="input_slider_img2" class="m-0 p-0" type="file" name="archivo">
+                    <label class="col-12 m-0 p-2 d-flex justify-content-center align-items-center" for="input_slider_img2" style="opacity: 100%; !important; border-radius: 26px; background-color: #44B234;">Seleccionar archivo</label>
+                </form>
+            </div>
+        </div>
+        <div class="row bg-white">
+            <div class="clientes">
+                @foreach ($clientes as $clie)
+					<div class="col position-relative">
+						<div style="
+							background-image: url('{{ asset('img/photos/clientes/'.$clie->logo) }}');
+							background-size: contain;
+							background-position: center center;
+							background-repeat: no-repeat;
+							height: 120px;
+							width: 100%;
+						"></div>
+						<div class="col-4 py-3 position-absolute top-0 end-0">
+							<form action="{{ route('config.seccion.delSideCliente', ['cliente' => $clie->id]) }}" method="POST" style="display: inline;">						
+								@csrf
+								@method('DELETE') 
+								<button type="submit" class="btn btn-danger btn-block bg-danger rounded-pill"><i class="fas fa-trash"></i></button>
+							</form>
+						</div>
+					</div>
+				@endforeach
+            </div>
+        </div>
