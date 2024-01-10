@@ -10,17 +10,15 @@
 
     </style>
     
-    
-    
     <header class="header-menu" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="500">
-        <div class="container-fluid" style="background-color: #201E1F;">
+        <div class="container-fluid" style="background-color: #000000;"> {{--  style="background-color: #201E1F;" --}}
             <div class="row px-5">
                 <div class="col px-5 mx-auto py-3 position-relative" style="flex-grow: 1;">
                     <div class="row">
                         <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-11 col-11 mx-auto ">
                             <div class="row py-xxl-0 py-xl-0 py-lg-0 py-md-0 py-sm-3 py-3">
-                                <div class="col-xxl-11 col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12 py-2">
-                                    <a href="{{ route('front.index') }}"><img src="{{ asset('img/images/home/logo.png') }}" alt="sap" class="img-fluid"></a>
+                                <div class="col-xxl-11 col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12 text-start">
+                                    <a href="{{ route('front.index') }}"><img src="{{ asset('img/logo_animado.gif') }}" alt="sap" class="img-fluid" style="width: 15rem; height: 8rem;"></a>
                                 </div>
                                 
                             </div>
