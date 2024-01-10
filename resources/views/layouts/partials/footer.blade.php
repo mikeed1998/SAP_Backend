@@ -1,3 +1,18 @@
+
+
+<style>
+        
+    @font-face {
+        font-family: 'Sansation Bold';
+        src: url("{{ asset('fonts/Sansation-Bold/Sansation_Bold.ttf') }}") format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+</style>
+
+
+
 <section>
     <div class="container-fluid" style="background-color: #201E1F;">
         <div class="row">
@@ -5,16 +20,17 @@
                 <div class="row">
                     <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 py-2">
                         <div class="row">
-                            <div class="col-12 fs-4 py-2" style="color: #FFC000;">
+                            <div class="col-12 fs-4 py-2" style="color: #FFC000; font-family: 'Sansation Bold', sans-serif;">
                                 Ubicación
                             </div>
                             <div class="col-12 py-2 display-5 fw-bolder">
-                                <a href="#" class="texto-hover">ENCUÉNTRANOS</a>
+                                <a href="#" class="texto-hover" style="font-family: 'Sansation Bold', sans-serif;">ENCUÉNTRANOS</a>
                             </div>
                             <div class="col-12 py-2 text-light">
                                 <div class="row">
-                                    <div class="col-xxl-4 col-xl-4 col-lg-4 fs-5 text-decoration-underline">
-                                        Av. Rio San Joaquín 436, Amp Granada, Miguel Hidalgo, CDMX
+                                    <div class="col-xxl-4 col-xl-4 col-lg-4 fs-5 text-decoration-underline" style="font-family: 'Sansation Bold', sans-serif;">
+                                        {{ $config->direccion }}
+                                        {{-- Av. Rio San Joaquín 436, Amp Granada, Miguel Hidalgo, CDMX --}}
                                     </div>
                                 </div>
                             </div>
@@ -50,7 +66,7 @@
                             <div class="col-12 pt-5 text-secondary">
                                 <div class="row">
                                     <div class="col-6">
-                                        <small>SAP 2023. TODOS LOS DERECHOS RESERVADOS DISEÑO POR WOZIAL.</small>
+                                        <small style="font-family: 'Sansation Bold', sans-serif;">SAP 2023. TODOS LOS DERECHOS RESERVADOS DISEÑO POR WOZIAL.</small>
                                     </div>
                                 </div>
                             </div>
@@ -60,40 +76,40 @@
                         <div class="row">
                             <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="row">
-                                    <div class="col-12 fs-4 py-2" style="color: #FFC000;">
+                                    <div class="col-12 fs-4 py-2" style="color: #FFC000; font-family: 'Sansation Bold', sans-serif;">
                                         Navegación
                                     </div>
                                     <div class="col-12 pt-2 pb-2 display-5 fw-bolder text-white">
-                                        <a href="{{ route('front.index') }}" class="texto-hover">INICIO</a>
+                                        <a href="{{ route('front.index') }}" style="font-family: 'Sansation Bold', sans-serif;" class="texto-hover">INICIO</a>
                                     </div>
                                     <div class="col-12 py-1 display-5 fw-bolder text-white">
-                                        <a href="#" class="texto-hover">SERVICIOS</a>
+                                        <a href="#" style="font-family: 'Sansation Bold', sans-serif;" class="texto-hover">SERVICIOS</a>
                                     </div>
                                     @foreach ($servicios as $serv_foot)
                                         <div class="col-6 text-light text-start" style="line-height: 1;">
                                             <small>
-                                                <a href="{{ route('front.servicio', ['id' => $serv_foot->id]) }}" class="texto-hover">{{ $serv_foot->titulo }}</a>
+                                                <a href="{{ route('front.servicio', ['id' => $serv_foot->id]) }}" style="font-family: 'Sansation Bold', sans-serif;" class="texto-hover">{{ $serv_foot->titulo }}</a>
                                             </small>
                                         </div>
                                     @endforeach
                                     <div class="col-12 py-1 display-5 fw-bolder text-white">
-                                        <a href="{{ route('front.aboutus') }}" class="texto-hover">NOSOTROS</a>
+                                        <a href="{{ route('front.aboutus') }}" style="font-family: 'Sansation Bold', sans-serif;" class="texto-hover">NOSOTROS</a>
                                     </div>
                                     <div class="col-12 py-1 display-5 fw-bolder text-white">
-                                        <a href="{{ route('front.blog') }}" class="texto-hover">BLOG</a>
+                                        <a href="{{ route('front.blog') }}" style="font-family: 'Sansation Bold', sans-serif;" class="texto-hover">BLOG</a>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
                                 <div class="row">
-                                    <div class="col-12 fs-4 py-2" style="color: #FFC000;">
+                                    <div class="col-12 fs-4 py-2" style="color: #FFC000; font-family: 'Sansation Bold', sans-serif;">
                                         Contacto
                                     </div>
                                     <div class="col-12 py-2 display-5 fw-bolder text-white">
-                                        <a href="{{ route('front.contact') }}" class="texto-hover">CONTACTO</a>
+                                        <a href="{{ route('front.contact') }}" style="font-family: 'Sansation Bold', sans-serif;" class="texto-hover">CONTACTO</a>
                                     </div>
                                     <div class="col-12 py-1 display-5 fw-bolder text-white" style="line-height: 1;">
-                                        <a href="{{ route('front.vacantes') }}" class="texto-hover">BOLSA DE TRABAJO</a>
+                                        <a href="{{ route('front.vacantes') }}" style="font-family: 'Sansation Bold', sans-serif;" class="texto-hover">BOLSA DE TRABAJO</a>
                                     </div>
                                 </div>
                             </div>
@@ -104,3 +120,4 @@
         </div>
     </div>
 </section>
+

@@ -2,8 +2,9 @@
     font-family: 'Sansation Bold';
     font-style: normal;
     font-weight: normal;
-    src: url('/fonts/Sansation-Bold/sansation-bold.ttf') format('ttf');
+    src: local('Sansation Bold'), url('fonts/Sansation-Bold/Sansation_Bold.ttf') format('truetype');
 }
+
 
 input {
     font-family: 'Blinker', sans-serif; font-family: 'Montserrat', sans-serif; font-weight: bold;
@@ -173,7 +174,7 @@ a {
     height: 100%;
     width: 100%;
     position: absolute;
-    top: 0;
+    top: 0; 
     left: 0;
     background-color: #fff; /* Color de fondo de la columna */
 }
@@ -197,26 +198,26 @@ a {
     }
 
     .titulo-index, .titulo-index2 {
-        font-family: 'Blinker', sans-serif; font-family: 'Montserrat', sans-serif; font-weight: bold;
+        font-family: 'Sansation Bold', sans-serif;
         font-size: 8.6rem;
         font-weight: 500;
         line-height: 1.1;
     }
 
     .titulo-index .mayuscula, .titulo-index2 .mayuscula2 {
-        font-family: 'Montserrat', sans-serif; font-weight: bold;
+        font-family: 'Sansation Bold', sans-serif;
         color: #CDE700;
         background-color: transparent;
     }
 
     .titulo-index .minuscula {
-        font-family: 'Montserrat', sans-serif;  font-weight: bold;
+        font-family: 'Sansation Bold', sans-serif;
         color: white;
         background-color: transparent;
     }
 
     .titulo-index2 .minuscula2 {
-    font-family: 'Montserrat', sans-serif; font-weight: bold;
+        font-family: 'Sansation Bold', sans-serif;
         color: black;
         background-color: transparent;
     }
@@ -383,8 +384,11 @@ a {
 
     .card-title {
         color: #000000;
-        font-size: 2.8rem;
+        line-height: 1;
+        font-size: 3.4rem;
         font-weight: 700;
+        height: 8rem;
+        overflow: hidden;
     }
 
     .card-text {
@@ -395,6 +399,8 @@ a {
         font-size: 1.2rem;
         font-weight: 500;
         color: black;
+        height: 16.8rem;
+        overflow: hidden;
     } 
 
 }
@@ -597,6 +603,8 @@ a {
         color: #000000;
         font-size: 2.2rem;
         font-weight: 700;
+        height: 6rem;
+        overflow: hidden;
     }
 
     .card-text {
@@ -607,6 +615,8 @@ a {
         font-size: 1rem;
         font-weight: 500;
         color: black;
+        height: 12.8rem;
+        overflow: hidden;
     } 
 
 }
@@ -810,6 +820,8 @@ a {
         color: #000000;
         font-size: 1.8rem;
         font-weight: 700;
+        height: 4.5rem;
+        overflow: hidden;
     }
 
     .card-text {
@@ -820,6 +832,8 @@ a {
         font-size: 0.8rem;
         font-weight: 500;
         color: black;
+        height: 9rem;
+        overflow: hidden;
     } 
 
 }
@@ -1023,6 +1037,8 @@ a {
         color: #000000;
         font-size: 2rem;
         font-weight: 700;
+        height: 5rem;
+        overflow: hidden;
     }
 
     .card-text {
@@ -1033,6 +1049,8 @@ a {
         font-size: 1rem;
         font-weight: 500;
         color: black;
+        height: 11rem;
+        overflow: hidden;
     } 
 
 }
@@ -1236,6 +1254,8 @@ a {
         color: #000000;
         font-size: 1.6rem;
         font-weight: 700;
+        height: 4rem;
+        overflow: hidden;
     }
 
     .card-text {
@@ -1246,6 +1266,8 @@ a {
         font-size: 0.8rem;
         font-weight: 500;
         color: black;
+        height: 8rem;
+        overflow: hidden;
     } 
 
 }
@@ -1457,6 +1479,8 @@ a {
         color: #000000;
         font-size: 3rem;
         font-weight: 700;
+        height: 8rem;
+        overflow: hidden;
     }
 
     .card-text {
@@ -1467,6 +1491,8 @@ a {
         font-size: 1.3rem;
         font-weight: 500;
         color: black;
+        height: 14rem;
+        overflow: hidden;
     }    
 
 }
@@ -1679,6 +1705,8 @@ a {
         color: #000000;
         font-size: 2.4rem;
         font-weight: 700;
+        height: 6rem;
+        overflow: hidden;
     }
 
     .card-text {
@@ -1689,6 +1717,8 @@ a {
         font-size: 1rem;
         font-weight: 500;
         color: black;
+        height: 9.8rem;
+        overflow: hidden;
     }    
 
 }

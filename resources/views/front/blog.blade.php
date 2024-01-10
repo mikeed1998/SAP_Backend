@@ -20,7 +20,7 @@
                             <div class="col-10 mx-auto titulo-blog">
                                 <div class="row">
                                     <!-- <div class="col-5"></div> -->
-                                    <div class="col-12 py-3 text-end" style="color: {{ $blog->color }}; font-family: 'Blinker', sans-serif; font-family: 'Montserrat', sans-serif; font-weight: bold;">
+                                    <div class="col-12 py-3 text-end" style="color: {{ $blog->color }}; font-family: 'Sansation Bold', sans-serif; font-weight: bold;">
                                         {{ $blog->titulo }}
                                     </div>
                                 </div>
@@ -41,7 +41,7 @@
                                             <div class="row">
                                                 <div class="col-11 mx-auto">
                                                     <div class="row">
-                                                        <div class="col-6">
+                                                        <div class="col-6" style="font-family: 'Sansation Bold', sans-serif;">
                                                             LEER MÁS
                                                         </div>
                                                         <div class="col-6 text-end">
@@ -94,7 +94,7 @@
                             <div class="col-10 mx-auto titulo-blog">
                                 <div class="row">
                                     <!-- <div class="col-5"></div> -->
-                                    <div class="col-12 py-3 text-end" style="color: {{ $blog->color }}; font-family: 'Blinker', sans-serif; font-family: 'Montserrat', sans-serif; font-weight: bold;">
+                                    <div class="col-12 py-3 text-end" style="color: {{ $blog->color }}; font-family: 'Sansation Bold', sans-serif; font-weight: bold;">
                                         {{ $blog->titulo }}
                                     </div>
                                 </div>
@@ -115,7 +115,7 @@
                                             <div class="row">
                                                 <div class="col-11 mx-auto">
                                                     <div class="row">
-                                                        <div class="col-6">
+                                                        <div class="col-6" style="font-family: 'Sansation Bold', sans-serif;">
                                                             LEER MÁS
                                                         </div>
                                                         <div class="col-6 text-end">

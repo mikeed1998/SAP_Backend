@@ -1,3 +1,17 @@
+    
+    <style>
+        
+        @font-face {
+            font-family: 'Sansation Bold';
+            src: url("{{ asset('fonts/Sansation-Bold/Sansation_Bold.ttf') }}") format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+    </style>
+    
+    
+    
     <header class="header-menu" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="500">
         <div class="container-fluid" style="background-color: #201E1F;">
             <div class="row px-5">
@@ -100,17 +114,17 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-10 m-0 p-0 fs-1 fw-bolder mx-auto">
-                                        <a href="{{ route('front.index') }}" class="texto-hover">Inicio</a>
+                                        <a href="{{ route('front.index') }}" style="font-family: 'Sansation Bold', sans-serif;" class="texto-hover">Inicio</a>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-10 texto-hover m-0 p-0 fs-1 fw-bolder mx-auto">
-                                        <a href="#/" id="toggleServicios" class="texto-hover">Servicios</a>
+                                        <a href="#/" id="toggleServicios" style="font-family: 'Sansation Bold', sans-serif;" class="texto-hover">Servicios</a>
                                     </div>   
                                     <div id="serviciosContent" style="display: none;">
                                         @foreach ($servicios as $serv_head)
                                             <div class="col-10 subtitulo m-0 p-0 fs-4 texto-hover mx-auto">
-                                                <a href="{{ route('front.servicio', ['id' => $serv_head->id]) }}" class="texto-hover">
+                                                <a href="{{ route('front.servicio', ['id' => $serv_head->id]) }}" style="font-family: 'Sansation Bold', sans-serif;" class="texto-hover">
                                                     {{ $serv_head->titulo }}
                                                 </a>
                                             </div> 
@@ -119,22 +133,22 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-10 texto-hover m-0 p-0 fs-1 fw-bolder mx-auto">
-                                        <a href="{{ route('front.aboutus') }}" class="texto-hover">Nosotros</a>
+                                        <a href="{{ route('front.aboutus') }}" style="font-family: 'Sansation Bold', sans-serif;" class="texto-hover">Nosotros</a>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-10 texto-hover m-0 p-0 fs-1 fw-bolder mx-auto">
-                                        <a href="{{ route('front.vacantes') }}" class="texto-hover">Bolsa de Trabajo</a>
+                                        <a href="{{ route('front.vacantes') }}" style="font-family: 'Sansation Bold', sans-serif;" class="texto-hover">Bolsa de Trabajo</a>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-10 texto-hover m-0 p-0 fs-1 fw-bolder mx-auto">
-                                        <a href="{{ route('front.contact') }}" class="texto-hover">Contacto</a>
+                                        <a href="{{ route('front.contact') }}" style="font-family: 'Sansation Bold', sans-serif;" class="texto-hover">Contacto</a>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-10 texto-hover m-0 p-0 fs-1 fw-bolder mx-auto">
-                                        <a href="{{ route('front.blog') }}" class="texto-hover">Blog</a>
+                                        <a href="{{ route('front.blog') }}" style="font-family: 'Sansation Bold', sans-serif;" class="texto-hover">Blog</a>
                                     </div>
                                 </div>
                                 <div class="row mt-3">
@@ -151,7 +165,7 @@
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="col-xxl-7 col-xl-7 col-lg-9 col-md-12 py-4 fs-4 fw-light text-white" style="font-family: 'Blinker', sans-serif; font-family: 'Montserrat', sans-serif; font-weight: bold;">
+                                            <div class="col-xxl-7 col-xl-7 col-lg-9 col-md-12 py-4 fs-4 fw-light text-white" style="font-family: 'Sansation Bold', sans-serif; font-weight: bold;">
                                                 TEL. {{ $config->telefono }}
                                             </div>
                                             <div class="col-xxl-5 col-xl-7 col-lg-7 col-md-7 col-sm-9 col-9 py-3">

@@ -18,7 +18,7 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col py-5 text-center fw-bolder text-white display-1 text-decoration-underline">
+        <div class="col py-5 text-center fw-bolder text-white display-1 text-decoration-underline" style="font-family: 'Sansation Bold', sans-serif;">
             {{ $blog->titulo }}
         </div>
     </div>

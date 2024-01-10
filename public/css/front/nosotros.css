@@ -1,19 +1,16 @@
 
-
-
-
 @media(min-width: 1800px) {
 
     .titu-1 {
         color: #FFFFFF; 
-        font-size: 6.6rem; 
+        font-size: 6rem; 
         font-weight: 600; 
         line-height: 1;
     }
 
     .titu-2 {
         color: #FE6E63; 
-        font-size: 8rem; 
+        font-size: 7rem; 
         font-weight: 600; 
         line-height: 1.2;
     }
@@ -22,6 +19,7 @@
         line-height: 1.2; 
         font-size: 1.1rem;
         margin-bottom: 6rem;
+        font-size: 1.4rem;
     }
 
     .cont-pri {
@@ -79,13 +77,15 @@
         text-align: justify; 
         line-height: 1.2; 
         font-size: 1.3rem; 
-        font-weight: 500;
+        font-weight: bolder;
+        height: 22rem;
+        overflow: hidden;
     }
 
     .titulo-nos {
         background-color: #FE6E63;
         font-size: 3rem;
-        font-weight: 700;
+        font-weight: normal;
         text-align: center;
         border: 1px solid #000000;
     }
@@ -121,14 +121,14 @@
     
     .titu-1 {
         color: #FFFFFF; 
-        font-size: 4.4rem; 
+        font-size: 4.5rem; 
         font-weight: 600; 
         line-height: 1;
     }
 
     .titu-2 {
         color: #FE6E63; 
-        font-size: 5.4rem; 
+        font-size: 5.5rem; 
         font-weight: 600; 
         line-height: 1.2;
     }
@@ -137,6 +137,7 @@
         line-height: 1.2; 
         font-size: 1.1rem;
         margin-bottom: 3rem;
+        font-size: 1rem;
     }
 
     .cont-pri {
@@ -194,13 +195,15 @@
         text-align: justify; 
         line-height: 1.2; 
         font-size: 1.1rem; 
-        font-weight: 500;
+        font-weight: bolder;
+        height: 18rem;
+        overflow: hidden;
     }
 
     .titulo-nos {
         background-color: #FE6E63;
         font-size: 3rem;
-        font-weight: 700;
+        font-weight: normal;
         text-align: center;
         border: 1px solid #000000;
     }
@@ -236,14 +239,14 @@
 
     .titu-1 {
         color: #FFFFFF; 
-        font-size: 2.6rem; 
+        font-size: 3.6rem; 
         font-weight: 600; 
         line-height: 1;
     }
 
     .titu-2 {
         color: #FE6E63; 
-        font-size: 4rem; 
+        font-size: 4.6rem; 
         font-weight: 600; 
         line-height: 1.2;
     }
@@ -309,13 +312,15 @@
         text-align: justify; 
         line-height: 1.1; 
         font-size: 1rem; 
-        font-weight: 500;
+        font-weight: bolder;
+        height: 16rem;
+        overflow: hidden;
     }
 
     .titulo-nos {
         background-color: #FE6E63;
         font-size: 2.4rem;
-        font-weight: 700;
+        font-weight: normal;
         text-align: center;
         border: 1px solid #000000;
     }
@@ -367,6 +372,8 @@
         line-height: 1.2; 
         font-size: 1rem;
         margin-bottom: 3rem;
+        height: 13.8rem;
+        overflow: hidden;
     }
 
     .cont-pri {
@@ -424,13 +431,15 @@
         text-align: justify; 
         line-height: 1.1; 
         font-size: 1rem; 
-        font-weight: 500;
+        font-weight: bolder;
+        height: 14rem;
+        overflow: hidden;
     }
 
     .titulo-nos {
         background-color: #FE6E63;
         font-size: 2.4rem;
-        font-weight: 700;
+        font-weight: normal;
         text-align: center;
         border: 1px solid #000000;
     }
@@ -466,7 +475,7 @@
 
     .titu-1 {
         color: #FFFFFF; 
-        font-size: 2.6rem; 
+        font-size: 3.6rem; 
         font-weight: 600; 
         line-height: 1;
         margin-top: 2rem;
@@ -474,7 +483,7 @@
 
     .titu-2 {
         color: #FE6E63; 
-        font-size: 4rem; 
+        font-size: 5rem; 
         font-weight: 600; 
         line-height: 1.2;
     }
@@ -540,13 +549,15 @@
         text-align: justify; 
         line-height: 1.1; 
         font-size: 1rem; 
-        font-weight: 500;
+        font-weight: bolder;
+        height: 16rem;
+        overflow: hidden;
     }
 
     .titulo-nos {
         background-color: #FE6E63;
         font-size: 2.4rem;
-        font-weight: 700;
+        font-weight: normal;
         text-align: center;
         border: 1px solid #000000;
     }
@@ -582,7 +593,7 @@
 
     .titu-1 {
         color: #FFFFFF; 
-        font-size: 2.6rem; 
+        font-size: 3.6rem; 
         font-weight: 600; 
         line-height: 1;
         margin-top: 2rem;
@@ -590,7 +601,7 @@
 
     .titu-2 {
         color: #FE6E63; 
-        font-size: 4rem; 
+        font-size: 5rem; 
         font-weight: 600; 
         line-height: 1.2;
     }
@@ -656,13 +667,15 @@
         text-align: justify; 
         line-height: 1.1; 
         font-size: 1rem; 
-        font-weight: 500;
+        font-weight: bolder;
+        height: 16rem;
+        overflow: hidden;
     }
 
     .titulo-nos {
         background-color: #FE6E63;
         font-size: 2.4rem;
-        font-weight: 700;
+        font-weight: normal;
         text-align: center;
         border: 1px solid #000000;
     }
@@ -706,7 +719,7 @@
 
     .titu-2 {
         color: #FE6E63; 
-        font-size: 4rem; 
+        font-size: 3rem; 
         font-weight: 600; 
         line-height: 1.2;
     }
@@ -738,7 +751,7 @@
 
     .nosotros-2 {
         color: #FFFFFF; 
-        font-size: 3.5rem; 
+        font-size: 2.5rem; 
         font-weight: 500; 
         line-height: 1;
     }
@@ -773,12 +786,14 @@
         line-height: 1.1; 
         font-size: 1rem; 
         font-weight: 500;
+        height: 14rem;
+        overflow: hidden;
     }
 
     .titulo-nos {
         background-color: #FE6E63;
         font-size: 2rem;
-        font-weight: 700;
+        font-weight: normal;
         text-align: center;
         border: 1px solid #000000;
     }

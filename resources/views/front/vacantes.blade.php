@@ -7,7 +7,14 @@
 @endsection
 
 @section('styleExtras')
-
+<style>
+    @font-face {
+        font-family: 'Sansation Bold';
+        src: url("{{ asset('fonts/Sansation-Bold/Sansation_Bold.ttf') }}") format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+</style>
 @endsection
 
 @section('content')
@@ -49,8 +56,8 @@
                                     </div>
                                     <div class="card-body">
                                         {{-- <small class="card-orden">{{ $vac->orden }}</small> --}}
-                                        <h3 class="card-title p-0 m-0" style="font-family: 'Blinker', sans-serif; font-family: 'Montserrat', sans-serif; font-weight: bold;">{{ $vac->titulo }}</h3>
-                                        <p class="card-text" style="font-family: 'Blinker', sans-serif; font-family: 'Montserrat', sans-serif; font-weight: bold;">
+                                        <h3 class="card-title p-0 m-0" style="font-family: 'Sansation Bold', sans-serif; font-weight: bold;">{{ $vac->titulo }}</h3>
+                                        <p class="card-text" style="font-family: 'Blinker', sans-serif; font-family: 'Montserrat', sans-serif; font-weight: bolder;">
                                             {{ $vac->descripcion }}
                                         </p>
                                     </div>
@@ -91,7 +98,7 @@
 
 <div class="container-fluid py-5 bg-white">
     <div class="row">
-        <div class="col-10 mx-auto beneficio-titulo" style="font-family: 'Blinker', sans-serif; font-family: 'Montserrat', sans-serif; font-weight: bold;">
+        <div class="col-10 mx-auto beneficio-titulo" style="font-family: 'Sansation Bold', sans-serif;  font-weight: bold;">
             Beneficios
         </div>
     </div>
@@ -117,7 +124,7 @@
         @endif
 
         <div class="row mt-3" data-aos="fade-right" data-aos-offset="300" data-aos-delay="300">
-            <div class="beneficio-col {{ (($cont == 0 || $cont == 1) ? "col-6" : (($cont == 2) ? "col-7" : (($cont == 3) ? "col-8": "col-9"))) }}" style="font-family: 'Blinker', sans-serif; font-family: 'Montserrat', sans-serif; font-weight: bold;">
+            <div class="beneficio-col {{ (($cont == 0 || $cont == 1) ? "col-6" : (($cont == 2) ? "col-7" : (($cont == 3) ? "col-8": "col-9"))) }}" style="font-family: 'Sansation Bold', sans-serif; font-weight: bold;">
                 {{ $ben->beneficio }}
             </div>
             <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 col-2 ms-3 d-flex abengn-content-start justify-content-start rounded-circle">
@@ -134,7 +141,7 @@
         <div class="row" data-aos="zoom-in">
             <div class="col py-5">
                 <div class="row">
-                    <div class="col text-center titulo-bolsa2">
+                    <div class="col text-center titulo-bolsa2" style="font-family: 'Sansation Bold', sans-serif; ">
                         Postúlate con NOSOTROS                           
                     </div>
                 </div>
@@ -306,9 +313,9 @@
         // Aplica estilos según si la palabra es mayúscula o minúscula
         var resultado = palabras.map(function (palabra) {
             if (palabra === palabra.toUpperCase()) {
-                return '<span class="mayuscula">' + palabra + '</span>';
+                return '<span style="font-family: \'Sansation Bold\', sans-serif;" class="mayuscula">' + palabra + '</span>';
             } else {
-                return '<span class="minuscula">' + palabra + '</span>';
+                return '<span style="font-family: \'Sansation Bold\', sans-serif;" class="minuscula">' + palabra + '</span>';
             }
         });
 
@@ -331,9 +338,9 @@
         // Aplica estilos según si la palabra es mayúscula o minúscula
         var resultado = palabras2.map(function (palabra) {
             if (palabra2 === palabra2.toUpperCase()) {
-                return '<span class="mayuscula2">' + palabra2 + '</span>';
+                return '<span style="font-family: \'Sansation Bold\', sans-serif;" class="mayuscula2">' + palabra2 + '</span>';
             } else {
-                return '<span class="minuscula2">' + palabra2 + '</span>';
+                return '<span style="font-family: \'Sansation Bold\', sans-serif;" class="minuscula2">' + palabra2 + '</span>';
             }
         });
 

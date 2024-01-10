@@ -4,9 +4,18 @@
 
 @section('cssExtras')
     <link rel="stylesheet" href="{{ asset('css/front/index.css') }}">
+
 @endsection
 
 @section('styleExtras')
+<style>
+    @font-face {
+        font-family: 'Sansation Bold';
+        src: url("{{ asset('fonts/Sansation-Bold/Sansation_Bold.ttf') }}") format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+</style>
 @endsection
 
 @section('content')
@@ -17,8 +26,8 @@
      data-aos-offset="0" style="background-color: #201E1F;">
         <div class="container-fluid py-5" style="background-color: #201E1F;">
             <div class="row py-5">
-                <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-11 col-11 titulo-pri mx-auto fw-bold text-end titulo-index" style="font-family: 'Sansation Bold';">
-                    {{ $elements[0]->texto }}
+                <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-11 col-11 titulo-pri mx-auto fw-bold text-end titulo-index" style="font-family: 'Sansation Bold', sans-serif;">
+                    {{ $elements[0]->texto }}RRRR
                 </div>
             </div>
             <div class="row">
@@ -33,7 +42,7 @@
                             <a href="{{ route('front.contact') }}" class="btn btn-outline py-3 fs-5 fw-bolder bg-white rounded-pill w-100 text-dark" style="font-family: 'Blinker', sans-serif; font-family: 'Montserrat', sans-serif; sans-serif; font-weight: bold;">
                                 COTIZAR AQUÍ <svg xmlns="http://www.w3.org/2000/svg" height="1.4rem" width="3rem" fill="#FFC000" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
                             </a>
-                        </div>s
+                        </div>
                     </div>
                 </div>
             </div>
@@ -57,7 +66,7 @@
             <div class="row py-5">
                 <div class="col-xxk-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mx-auto">
                     <div class="row">
-                        <div class="col fw-bold display-2 text-white py-4 serv-ttt" style="font-family: 'Montserrat', sans-serif; sans-serif; font-weight: 900;">
+                        <div class="col fw-bold display-2 text-white py-4 serv-ttt" style="font-family: 'Sansation Bold', sans-serif;">
                             Servicios
                         </div>
                     </div>
@@ -71,7 +80,7 @@
                                     </div>
                                     <div class="card-body">
                                     {{--    <small class="card-orden">{{ $serv->orden }}</small> --}}
-                                        <h3 class="card-title p-0 m-0" style="font-family: 'Montserrat', sans-serif; sans-serif; font-weight: 900;">{{ $serv->titulo }}</h3>
+                                        <h3 class="card-title p-0 m-0" style="font-family: 'Sansation Bold', sans-serif;">{{ $serv->titulo }}</h3>
                                         <p class="card-text" style="font-family: 'Blinker', sans-serif; font-family: 'Montserrat', sans-serif; sans-serif; font-weight: bold;">
                                             {{ $serv->descripcion }}
                                         </p>
@@ -210,7 +219,7 @@
                                 <div class="row">
                                     <div class="col-xxl-10 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 position-relative mx-auto circulo-imagen" style="background-image: url('{{ asset('img/photos/imagenes_estaticas/'.$elements[8]->imagen) }}'); background-color: #CDE700;">
                                         <div class="col-11 ms-5 position-absolute top-0 start-0 mt-5">
-                                            <h2><span><span style="font-family: 'Sansation Bold';">{{ $elements[7]->texto }}</span></span></h2>
+                                            <h2><span><span style="font-family: 'Sansation Bold', sans-serif;">{{ $elements[7]->texto }}</span></span></h2>
                                         </div>
                                     </div>
                                 </div>
@@ -219,7 +228,7 @@
                                 <div class="row">
                                     <div class="col-xxl-10 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 position-relative mx-auto circulo-imagen" style="background-image: url('{{ asset('img/photos/imagenes_estaticas/'.$elements[10]->imagen) }}'); background-color: #CCAEEC;">
                                         <div class="col-11 ms-5 position-absolute top-0 start-0 mt-5">
-                                            <h2><span><span style="font-family: 'Sansation Bold';">{{ $elements[9]->texto }}</span></span></h2>
+                                            <h2><span><span style="font-family: 'Sansation Bold', sans-serif;">{{ $elements[9]->texto }}</span></span></h2>
                                         </div>
                                     </div>
                                 </div>
@@ -232,7 +241,7 @@
                                 <div class="row">
                                     <div class="col-xxl-10 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 position-relative mx-auto circulo-imagen" style="background-image: url('{{ asset('img/photos/imagenes_estaticas/'.$elements[12]->imagen) }}'); background-color: #FE6E63;">
                                         <div class="col-11 ms-5 position-absolute top-0 start-0 mt-5">
-                                            <h2><span><span style="font-family: 'Sansation Bold';">{{ $elements[11]->texto }}</span></span></h2>
+                                            <h2><span><span style="font-family: 'Sansation Bold', sans-serif;">{{ $elements[11]->texto }}</span></span></h2>
                                         </div>
                                     </div>
                                 </div>
@@ -241,7 +250,7 @@
                                 <div class="row">
                                     <div class="col-xxl-10 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 position-relative mx-auto circulo-imagen" style="background-image: url('{{ asset('img/photos/imagenes_estaticas/'.$elements[14]->imagen) }}'); background-color: #A2E9FF;">
                                         <div class="col-11 ms-5 position-absolute top-0 start-0 mt-5">
-                                            <h2><span><span style="font-family: 'Sansation Bold';">{{ $elements[13]->texto }}</span></span></h2>
+                                            <h2><span><span style="font-family: 'Sansation Bold', sans-serif;">{{ $elements[13]->texto }}</span></span></h2>
                                         </div>    
                                     </div>
                                 </div>
@@ -425,16 +434,16 @@
     </section>
 
     <!-- Modal -->
-    <div class="modal fade bg-white" style="z-index: 9999;" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-fullscreen modal-dialog-scrollable ">
-            <div class="modal-content">
+    <div class="modal fade" style="z-index: 9999;" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen modal-dialog-scrollable  ng-dark">
+            <div class="modal-content" style="background-color: #201E1F; color: #FFFFFF;">
                 <div class="modal-header">
                     
                 </div>
                 <div class="modal-body">
-                    <div class="container bg-secondary">
+                    <div class="container">
                         <div class="row">
-                            <div class="col-6" style="font-family: 'Blinker', sans-serif; font-family: 'Montserrat', sans-serif; sans-serif; font-weight: bold;">
+                            <div class="col-6" style="font-family: 'Sansation Bold', sans-serif; font-weight: bold;">
 
                             </div>
                             <div class="col-6">
@@ -444,7 +453,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-lg btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-lg btn-danger w-100 text-white" data-bs-dismiss="modal">Cerrar ventana</button>
                 </div>
             </div>
         </div>
@@ -487,9 +496,9 @@
         // Aplica estilos según si la palabra es mayúscula o minúscula
         var resultado = palabras.map(function (palabra) {
             if (palabra === palabra.toUpperCase()) {
-                return '<span class="mayuscula">' + palabra + '</span>';
+                return '<span style="font-family: \'Sansation Bold\', sans-serif;" class="mayuscula">' + palabra + '</span>';
             } else {
-                return '<span class="minuscula">' + palabra + '</span>';
+                return '<span style="font-family: \'Sansation Bold\', sans-serif;" class="minuscula">' + palabra + '</span>';
             }
         });
 
@@ -507,9 +516,9 @@
         // Aplica estilos según si la palabra es mayúscula o minúscula
         var resultado2 = palabras2.map(function (palabra2) {
             if (palabra2 === palabra2.toUpperCase()) {
-                return '<span class="mayuscula2">' + palabra2 + '</span>';
+                return '<span style="font-family: \'Sansation Bold\', sans-serif;" class="mayuscula2">' + palabra2 + '</span>';
             } else {
-                return '<span class="minuscula2">' + palabra2 + '</span>';
+                return '<span style="font-family: \'Sansation Bold\', sans-serif;" class="minuscula2">' + palabra2 + '</span>';
             }
         });
 
@@ -662,7 +671,7 @@
     var sucursaless = @json($sucursales);
     console.log(sucursaless);
 
-    var map = L.map('map', { attributionControl: false, scrollWheelZoom: false, dragging: true }).setView([23.6345, -102.5528], 5);
+    var map = L.map('map', { attributionControl: false, scrollWheelZoom: false, dragging: true }).setView([23.6345, -102.5528], 6);
 
     // Cargar el archivo GeoJSON y agregarlo al mapa con un estilo personalizado
     $.getJSON('vendor/leaflet/maps/mexico.geojson', function (data) {
@@ -751,7 +760,7 @@
             var modalHeader = $('.modal-header');
             var modalBody = $('.modal-body');
 
-            modalHeader.html("<p style='font-size: 3rem; font-weight: 500; font-family: 'Blinker', sans-serif; font-family: 'Montserrat', sans-serif; sans-serif; font-weight: bold;'>Nuestras sucursales en " + stateName + "</p>" + 
+            modalHeader.html("<p style='font-size: 3rem; font-weight: 500; font-family: 'Sansation Bold', sans-serif; font-weight: bold;'>Nuestras sucursales en " + stateName + "</p>" + 
                 "<button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>");
 
             // Crear una lista HTML para las sucursales

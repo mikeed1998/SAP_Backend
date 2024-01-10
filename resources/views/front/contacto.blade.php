@@ -16,7 +16,7 @@
     <div class="row mt-5" data-aos="zoom-in">
         <div class="col-11 mx-auto mt-5 py-5">
             <div class="row">
-                <div class="col text-center fw-bolder titulo-contacto">
+                <div class="col text-center fw-bolder titulo-contacto" style="font-family: 'Sansation Bold', sans-serif; ">
                     Déjanos un MENSAJE, NOS PONEMOS en contacto
                 </div>
             </div>
@@ -329,9 +329,9 @@
         // Aplica estilos según si la palabra es mayúscula o minúscula
         var resultado = palabras.map(function (palabra) {
             if (palabra === palabra.toUpperCase()) {
-                return '<span class="mayuscula">' + palabra + '</span>';
+                return '<span style="font-family: \'Sansation Bold\', sans-serif;" class="mayuscula">' + palabra + '</span>';
             } else {
-                return '<span class="minuscula">' + palabra + '</span>';
+                return '<span style="font-family: \'Sansation Bold\', sans-serif;" class="minuscula">' + palabra + '</span>';
             }
         });
 
