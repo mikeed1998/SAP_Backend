@@ -783,7 +783,7 @@
             var modalHeader = $('.modal-header');
             var modalBody = $('.modal-body');
 
-            modalHeader.html("<p style='font-size: 3rem; font-weight: 500; font-family: 'Sansation Bold', sans-serif; font-weight: bold;'>Nuestras sucursales en " + stateName + "</p>" + 
+            modalHeader.html("<p style='font-size: 2.6rem; font-weight: 500; font-family: 'Sansation Bold', sans-serif; font-weight: bold;'>Nuestras sucursales en <strong>" + stateName + "</strong></p>" + 
                 "<button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>");
 
             // Crear una lista HTML para las sucursales
@@ -799,7 +799,7 @@
                         }
                     }
 
-                    sucursalesHTML += '<li class="fs-3">' + sucursal.sucursal + ' - <strong>' + nombreMunicipio + '</strong></li>';
+                    sucursalesHTML += '<p class="fs-3"><svg xmlns="http://www.w3.org/2000/svg" height="26" width="22" fill="#FFFFFF" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>&nbsp;&nbsp;&nbsp;' + sucursal.sucursal + ' - <strong>' + nombreMunicipio + '</strong></p>';
                 }
             });
 
@@ -816,7 +816,7 @@
             // Set the content of the modal body
             modalBody.html('<div class="container-fluid">' +
                 '<div class="row">' +
-                   '<div class="col-xxl-6 col-xl-6 col-lg-9 col-md-11 col-sm-11 col-11 mx-auto py-5 fs-3">'+ 
+                   '<div class="col-xxl-6 col-xl-6 col-lg-9 col-md-11 col-sm-11 col-11 mx-auto py-5 fs-3" style="font-family: \'Sansation Bold\', sans-serif;">'+ 
                         '' +
                         sucursalesHTML +
                     '</div> ' + 
