@@ -1,0 +1,1729 @@
+@font-face {
+    font-family: 'Sansation Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Sansation Bold'), url('fonts/Sansation-Bold/Sansation_Bold.ttf') format('truetype');
+}
+
+
+input {
+    font-family: 'Blinker', sans-serif; font-family: 'Montserrat', sans-serif; font-weight: bold;
+}
+
+#map { 
+    height: 70rem; 
+    background-image: url('images/fondo_mapa.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    /* margin-top: 10rem;  */
+}
+
+.modal-content {
+    background-color: rgba(255, 255, 255, 0.9); /
+}
+
+.serv-ttt {
+    margin-left: 12rem; 
+    overflow: hidden;
+}
+
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    flex-direction: row; /* Asegura una disposición horizontal */   
+    list-style: none;
+    padding: 0;
+    margin: 20px 0; /* Ajusta el margen según tus necesidades */
+}
+
+.slick-dots li {
+    margin: 0 10px;
+}
+
+.slick-dots li button {
+    border: 1px solid #fff;
+    background-color: #201E1F;
+    width: 16px;
+    color: transparent;
+    height: 16px;
+    border-radius: 100%;
+    transition: background-color 0.3s;
+}
+
+.slick-dots li button:hover, 
+.slick-dots li button:focus {
+    background-color: #FFC000;
+}
+
+h2 {
+    font-weight: bold;
+    /* text-transform: uppercase; */
+    line-height: 1.5em;
+    color: black;
+    /* mix-blend-mode: multiply; */
+}
+
+span {
+    background-color: white;
+    white-space: pre-wrap;
+    padding-right: 10px;
+}
+
+span span {
+    position: relative;
+    left: 20px;
+}
+
+.menu-sub {
+    border-top-left-radius: 4rem;
+    border-top-right-radius: 4rem;
+    border-bottom-left-radius: 4rem;
+    border-bottom-right-radius: 4rem;
+    background-color: #201E1F;
+}
+
+.texto-hover {
+    color: #ffffff;
+}
+
+.texto-hover:hover {
+    color: #FFC000;
+}
+
+.subtitulo {
+    font-weight: 100;
+    color: #B6B5B6;
+}
+
+.subtitulo:hover {
+    font-weight: 100;
+    color: #FFC000;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn-menu {
+    border: 1px solid #B6B5B6;
+    background-color: #ffffff;
+}
+
+.btn-menu:hover {
+    border: 1px solid black;
+    background-color: #B6B5B6;
+}
+
+.column-container {
+    position: relative;
+    overflow: hidden;
+    height: 4rem;
+    width: 100%;
+}
+
+.top-left,
+.top-right {
+    height: 100%;   
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #201E1F; /* Color de fondo de la columna */
+}
+
+.top-right {
+    transform-origin: top left;
+    transform: skewY(1.8deg); /* Ajusta el ángulo de inclinación según tus necesidades */
+    background-color: #DDDDDD; /* Color de fondo de la parte inclinada */
+}
+
+.column-container2 {
+    position: relative;
+    overflow: hidden;
+    height: 4rem;
+    width: 100%;
+}
+
+.top-left2,
+.top-right2 {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #201E1F; /* Color de fondo de la columna */
+}
+
+.top-right2 {
+    transform-origin: top left;
+    transform: skewY(-1.8deg); /* Ajusta el ángulo de inclinación según tus necesidades */
+    background-color: #DDDDDD; /* Color de fondo de la parte inclinada */
+}
+
+.column-container3 {
+    position: relative;
+    overflow: hidden;
+    height: 4rem;
+    width: 100%;
+}
+
+.top-left3,
+.top-right3 {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0; 
+    left: 0;
+    background-color: #fff; /* Color de fondo de la columna */
+}
+
+.top-right3 {
+    transform-origin: top left;
+    transform: skewY(-1.8deg); /* Ajusta el ángulo de inclinación según tus necesidades */
+    background-color: #201E1F; /* Color de fondo de la parte inclinada */
+}
+
+.titulo-index, 
+.titulo-index2 {
+    font-family: 'Blinker', sans-serif; font-family: 'Montserrat', sans-serif; font-weight: bold;
+}
+
+#map {
+    background-image: '';
+}
+
+@media(min-width: 1800px) {
+
+    .cont-letrero {
+        margin-top: 24rem; 
+        margin-left: -1.5rem;
+    }
+
+    .titulo-index, .titulo-index2 {
+        font-family: 'Sansation Bold', sans-serif;
+        font-size: 8.6rem;
+        font-weight: 500;
+        line-height: 1.1;
+    }
+
+    .titulo-index .mayuscula, .titulo-index2 .mayuscula2 {
+        font-family: 'Sansation Bold', sans-serif;
+        color: #CDE700;
+        background-color: transparent;
+    }
+
+    .titulo-index .minuscula {
+        font-family: 'Sansation Bold', sans-serif;
+        color: white;
+        background-color: transparent;
+    }
+
+    .titulo-index2 .minuscula2 {
+        font-family: 'Sansation Bold', sans-serif;
+        color: black;
+        background-color: transparent;
+    }
+
+    .texto-ind {
+        font-size: 1.2rem;
+        line-height: 1;
+    }
+
+    .imagen-cliente {
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 8rem;
+        /* border: 1px solid black; */
+    }
+
+    .imagen-slider {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 100%;
+        height: 84rem;
+    }
+
+    .letrero {
+        line-height: 1;
+        font-size: 1.8rem;
+    }
+
+    .carrusel-interno {
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 50rem;
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 2.6rem;
+        width: 34rem;
+    }
+
+    .contad {
+        color: #FE6E63; 
+        font-size: 9rem;
+        margin-top: 3rem;
+    }
+
+    .icono-contact {
+        width: 3.4rem;
+        height: 3.4rem;
+    }
+
+    .boton-circulo {
+        margin-left: 2.2rem;
+    }
+
+    .circulo-imagen {
+        border-radius: 100%;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 44rem;
+        height: 44rem;
+    }
+
+    .circulos-columan2 {
+        margin-top: 48rem;
+    }
+
+    .col-baja {
+        margin-top: 16rem;
+    }
+
+    .texto-abajo {
+        margin-top: 104rem;
+    }
+
+    .cuadro1 {
+        margin-top: 8rem;
+    }
+
+    .formu-grande {
+        display: block;
+    }
+
+    .formu-small {
+        display: none;
+    }
+
+    .contador-pos {
+        margin-top: 15rem;
+        margin-left: 24rem;
+    }
+
+    .mapa-pos {
+        margin-top: 0px;
+    }
+
+    .servicios, .titulo-servicios {
+        overflow: hidden;
+        width: 100%;
+        left: 12rem;
+    }
+
+    .cont-btn {
+        margin-top: 7rem;
+    }   
+
+    .link-servicio {
+        margin-top: -7rem;
+        padding: 0.7rem;
+        width: 7.8rem;
+    }
+
+    .link-servicio:hover .img-fluid {
+        box-shadow: 0 0 2rem rgba(0, 0, 255, 1); /* Ajusta el valor de azul y la opacidad según tus preferencias */
+    }
+
+    .carta {
+        position: relative;
+        overflow: hidden;
+        border-radius: 3rem;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+        padding-right: 1rem;
+        padding-left: 1rem;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        margin-top: 2rem;
+    }
+
+    .carta:hover {
+        transform: translateY(-2rem); /* Ajusta la cantidad de elevación según tus preferencias */
+        /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); Agrega una sombra para dar un efecto elevado */
+    }
+
+    .card-img-overlay {
+        background: rgba(0, 0, 0, 0.5); /* Cambia el color del overlay según tus preferencias */
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0; /* Inicialmente invisible */
+        transition: opacity 0.3s ease;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 100%; 
+        height: auto; 
+    }
+
+    .carta:hover .card-img-overlay {
+        opacity: 1; /* Hacer visible al pasar el cursor sobre la tarjeta */
+    }
+
+    .card-orden {
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+
+    .card-title {
+        color: #000000;
+        line-height: 1;
+        font-size: 3.4rem;
+        font-weight: 700;
+        height: 8rem;
+        overflow: hidden;
+    }
+
+    .card-text {
+        line-height: 1.2;
+        text-align: justify;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: black;
+        height: 16.8rem;
+        overflow: hidden;
+    } 
+
+}
+
+/* xxl */
+@media (min-width: 1400px) and (max-width: 1799px) {
+
+    .cont-letrero {
+        margin-top: 24rem; 
+        margin-left: -1.5rem;
+    }
+
+    .titulo-index, .titulo-index2 {
+        font-size: 6rem;
+        font-weight: 500;
+        line-height: 1.1;
+    }
+
+    .titulo-index .mayuscula, .titulo-index2 .mayuscula2 {
+        color: #CDE700;
+        background-color: transparent;
+    }
+
+    .titulo-index .minuscula {
+        color: white;
+        background-color: transparent;
+    }
+
+    .titulo-index2 .minuscula2 {
+        color: black;
+        background-color: transparent;
+    }
+
+    .texto-ind {
+        font-size: 1rem;
+        line-height: 1;
+    }
+
+    .titulo-pri {
+        font-size: 7rem;
+        line-height: 1;
+    }
+
+    .imagen-slider {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 100%;
+        height: 54rem;
+    }
+
+    .imagen-cliente {
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 6rem;
+        /* border: 1px solid black; */
+    }
+
+    .letrero {
+        line-height: 1;
+        font-size: 1.8rem;
+    }
+
+    .carrusel-interno {
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 40rem;
+        width: 100%;
+    }
+
+    h2 {
+        width: 32rem;
+        font-size: 2.5rem;
+    }
+
+    .contad {
+        color: #FE6E63; 
+        font-size: 8rem;
+        margin-top: 3rem;
+    }
+
+    .icono-contact {
+        width: 2.6rem;
+        height: 2.6rem;
+    }
+
+    .boton-circulo {
+        margin-left: 2.2rem;
+    }
+
+    .circulo-imagen {
+        border-radius: 100%;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 36rem;
+        height: 36rem;
+    }
+
+    .circulos-columan2 {
+        margin-top: 39rem;
+    }
+
+    .col-baja {
+        margin-top: 16rem;
+    }
+
+    .texto-abajo {
+        margin-top: 86rem;
+    }
+
+    .cuadro1 {
+        margin-top: 8rem;
+    }
+
+    .formu-grande {
+        display: block;
+    }
+
+    .formu-small {
+        display: none;
+    }
+
+    .contador-pos {
+        margin-top: 15rem;
+        margin-left: 27rem;
+    }
+
+    .mapa-pos {
+        margin-top: 0px;
+    }
+
+    .servicios, .titulo-servicios {
+        overflow: hidden;
+        width: 100%;
+        left: 12rem;
+    }
+
+    .cont-btn {
+        margin-top: 7rem;
+    }
+
+    .link-servicio {
+        margin-top: -7rem;
+        padding: 0.7rem;
+        width: 7.8rem;
+    }
+
+    .link-servicio:hover .img-fluid {
+        box-shadow: 0 0 2rem rgba(0, 0, 255, 1); /* Ajusta el valor de azul y la opacidad según tus preferencias */
+    }
+
+    .carta {
+        position: relative;
+        overflow: hidden;
+        border-radius: 3rem;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
+        margin-top: 2rem;
+    }
+
+    .carta:hover {
+        transform: translateY(-2rem); /* Ajusta la cantidad de elevación según tus preferencias */
+        /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); Agrega una sombra para dar un efecto elevado */
+    }
+
+    .card-img-overlay {
+        background: rgba(0, 0, 0, 0.5); /* Cambia el color del overlay según tus preferencias */
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0; /* Inicialmente invisible */
+        transition: opacity 0.3s ease;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 100%; 
+        height: auto; 
+    }
+
+    .carta:hover .card-img-overlay {
+        opacity: 1; /* Hacer visible al pasar el cursor sobre la tarjeta */
+    }
+
+    .card-orden {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .card-title {
+        color: #000000;
+        font-size: 2.2rem;
+        font-weight: 700;
+        height: 6rem;
+        overflow: hidden;
+    }
+
+    .card-text {
+        line-height: 1.1;
+        text-align: justify;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        font-size: 1rem;
+        font-weight: 500;
+        color: black;
+        height: 12.8rem;
+        overflow: hidden;
+    } 
+
+}
+
+/* xl */
+@media (min-width: 1200px) and (max-width: 1399px) {
+
+    .cont-letrero {
+        margin-top: 24rem; 
+        margin-left: -1.5rem;
+    }
+
+    .titulo-index, .titulo-index2 {
+        font-size: 6rem;
+        font-weight: 500;
+        line-height: 1.1;
+    }
+
+    .titulo-index .mayuscula, .titulo-index2 .mayuscula2 {
+        color: #CDE700;
+        background-color: transparent;
+    }
+
+    .titulo-index .minuscula {
+        color: white;
+        background-color: transparent;
+    }
+
+    .titulo-index2 .minuscula2 {
+        color: black;
+        background-color: transparent;
+    }
+
+    .texto-ind {
+        font-size: 1rem;
+        line-height: 1;
+    }
+
+    .imagen-slider {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 100%;
+        height: 40rem;
+    }
+
+    .imagen-cliente {
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 6rem;
+        /* border: 1px solid black; */
+    }
+
+    .letrero {
+        line-height: 1;
+        font-size: 1.4rem;
+    }
+
+    .carrusel-interno {
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 40rem;
+        width: 100%;
+    }
+
+    h2 {
+        width: 24rem;
+        font-size: 1.8rem;
+    }
+
+    .contad {
+        color: #FE6E63; 
+        font-size: 6rem;
+        margin-top: 3rem;
+    }
+
+    .icono-contact {
+        width: 2.6rem;
+        height: 2.6rem;
+    }
+
+    .boton-circulo {
+        margin-left: 2.2rem;
+    }
+
+    .link-servicio {
+        margin-top: -2.5rem;
+        padding: 1.6rem;
+        width: 4.8rem;
+    }
+
+    .circulo-imagen {
+        border-radius: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 28rem;
+        height: 28rem;
+    }
+
+    .circulos-columan2 {
+        margin-top: 32rem;
+    }
+
+    .col-baja {
+        margin-top: 16rem;
+    }
+
+    .texto-abajo {
+        margin-top: 70rem;
+    }
+
+    .cuadro1 {
+        margin-top: 12rem;
+    }
+
+    .formu-grande {
+        display: block;
+    }
+
+    .formu-small {
+        display: none;
+    }
+
+    .contador-pos {
+        margin-top: 4rem;
+        margin-left: 24rem;
+    }
+
+    .mapa-pos {
+        margin-top: 0px;
+    }
+
+    .servicios, .titulo-servicios {
+        overflow: hidden;
+        width: 100%;
+        left: 12rem;
+    }
+
+    .cont-btn {
+        margin-top: 6rem;
+    }
+
+    .link-servicio {
+        margin-top: -5rem;
+        padding: 0.7rem;
+        width: 6.4rem;
+    }
+
+    .link-servicio:hover .img-fluid {
+        box-shadow: 0 0 2rem rgba(0, 0, 255, 1); /* Ajusta el valor de azul y la opacidad según tus preferencias */
+    }
+
+    .carta {
+        position: relative;
+        overflow: hidden;
+        border-radius: 3rem;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
+        margin-top: 2rem;
+    }
+
+    .carta:hover {
+        transform: translateY(-2rem); /* Ajusta la cantidad de elevación según tus preferencias */
+        /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); Agrega una sombra para dar un efecto elevado */
+    }
+
+    .card-img-overlay {
+        background: rgba(0, 0, 0, 0.5); /* Cambia el color del overlay según tus preferencias */
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0; /* Inicialmente invisible */
+        transition: opacity 0.3s ease;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 100%; 
+        height: auto; 
+    }
+
+    .carta:hover .card-img-overlay {
+        opacity: 1; /* Hacer visible al pasar el cursor sobre la tarjeta */
+    }
+
+    .card-orden {
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+
+    .card-title {
+        color: #000000;
+        font-size: 1.8rem;
+        font-weight: 700;
+        height: 4.5rem;
+        overflow: hidden;
+    }
+
+    .card-text {
+        line-height: 1.1;
+        text-align: justify;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        font-size: 0.8rem;
+        font-weight: 500;
+        color: black;
+        height: 9rem;
+        overflow: hidden;
+    } 
+
+}
+
+/* lg */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .cont-letrero {
+        margin-top: 24rem; 
+        margin-left: -1.5rem;
+    }
+
+    .titulo-index, .titulo-index2 {
+        font-size: 6rem;
+        font-weight: 500;
+        line-height: 1.1;
+    }
+
+    .titulo-index .mayuscula, .titulo-index2 .mayuscula2 {
+        color: #CDE700;
+        background-color: transparent;
+    }
+
+    .titulo-index .minuscula {
+        color: white;
+        background-color: transparent;
+    }
+
+    .titulo-index2 .minuscula2 {
+        color: black;
+        background-color: transparent;
+    }
+
+    .texto-ind {
+        font-size: 1rem;
+        line-height: 1;
+    }
+
+    .imagen-slider {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 100%;
+        height: 36rem;
+    }
+
+    .imagen-cliente {
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 6rem;
+        /* border: 1px solid black; */
+    }
+
+    .letrero {
+        line-height: 1;
+        font-size: 1.4rem;
+    }
+
+    .carrusel-interno {
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 40rem;
+        width: 100%;
+    }
+
+    h2 {
+        width: 24rem;
+        font-size: 1.8rem;
+    }
+
+    .contad {
+        color: #FE6E63; 
+        font-size: 5rem;
+        margin-top: 3rem;
+    }
+
+    .icono-contact {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .boton-circulo {
+        margin-left: 2.2rem;
+    }
+
+    .link-servicio {
+        margin-top: -2.5rem;
+        padding: 1.6rem;
+        width: 4.8rem;
+    }
+
+    .circulo-imagen {
+        border-radius: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 28rem;
+        height: 28rem;
+    }
+
+    .circulos-columan2 {
+        margin-top: 32rem;
+    }
+
+    .col-baja {
+        margin-top: 16rem;
+    }   
+
+    .texto-abajo {
+        margin-top: 72rem;
+    }
+
+    .formu-grande {
+        display: block;
+    }
+
+    .formu-small {
+        display: none;
+    }
+
+    .cuadro1 {
+        margin-top: 12rem;
+    }
+
+    .contador-pos {
+        margin-top: 4rem;
+        margin-right: 8rem;
+    }
+
+    .mapa-pos {
+        margin-top: 0px;
+    }
+
+    .servicios, .titulo-servicios {
+        overflow: hidden;
+        width: 100%;
+        left: 12rem;
+    }
+
+    .cont-btn {
+        margin-top: 7rem;
+    }
+
+    .link-servicio {
+        margin-top: -7rem;
+        padding: 0.7rem;
+        width: 6.8rem;
+    }
+
+    .link-servicio:hover .img-fluid {
+        box-shadow: 0 0 2rem rgba(0, 0, 255, 1); /* Ajusta el valor de azul y la opacidad según tus preferencias */
+    }
+
+    .carta {
+        position: relative;
+        overflow: hidden;
+        border-radius: 3rem;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
+        margin-top: 2rem;
+    }
+
+    .carta:hover {
+        transform: translateY(-2rem); /* Ajusta la cantidad de elevación según tus preferencias */
+        /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); Agrega una sombra para dar un efecto elevado */
+    }
+
+    .card-img-overlay {
+        background: rgba(0, 0, 0, 0.5); /* Cambia el color del overlay según tus preferencias */
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0; /* Inicialmente invisible */
+        transition: opacity 0.3s ease;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 100%; 
+        height: auto; 
+    }
+
+    .carta:hover .card-img-overlay {
+        opacity: 1; /* Hacer visible al pasar el cursor sobre la tarjeta */
+    }
+
+    .card-orden {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .card-title {
+        color: #000000;
+        font-size: 2rem;
+        font-weight: 700;
+        height: 5rem;
+        overflow: hidden;
+    }
+
+    .card-text {
+        line-height: 1.1;
+        text-align: justify;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        font-size: 1rem;
+        font-weight: 500;
+        color: black;
+        height: 11rem;
+        overflow: hidden;
+    } 
+
+}
+
+/* md */
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .cont-letrero {
+        margin-top: 24rem; 
+        margin-left: -1.5rem;
+    }
+
+    .titulo-index, .titulo-index2 {
+        font-size: 4rem;
+        font-weight: 500;
+        line-height: 1.1;
+    }
+
+    .titulo-index .mayuscula, .titulo-index2 .mayuscula2 {
+        color: #CDE700;
+        background-color: transparent;
+    }
+
+    .titulo-index .minuscula {
+        color: white;
+        background-color: transparent;
+    }
+
+    .titulo-index2 .minuscula2 {
+        color: black;
+        background-color: transparent;
+    }
+
+    .texto-ind {
+        font-size: 1rem;
+        line-height: 1;
+    }
+
+    .imagen-slider {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 100%;
+        height: 36rem;
+    }
+
+    .imagen-cliente {
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 6rem;
+        /* border: 1px solid black; */
+    }
+
+    .letrero {
+        line-height: 1;
+        font-size: 1.2rem;
+    }
+
+    .carrusel-interno {
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 40rem;
+        width: 100%;
+    }
+
+    h2 {
+        width: 15rem;
+        font-size: 1.2rem;
+    }
+
+    .contad {
+        color: #FE6E63; 
+        font-size: 4rem;
+        margin-top: 2.2rem;
+    }
+
+    .icono-contact {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .boton-circulo {
+        margin-left: 2.2rem;
+    }
+
+    .link-servicio {
+        margin-top: -2.5rem;
+        padding: 1.6rem;
+        width: 4.8rem;
+    }
+
+    .circulo-imagen {
+        border-radius: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 18rem;
+        height: 18rem;
+    }
+
+    .circulos-columan2 {
+        margin-top: 20rem;
+    }
+
+    .col-baja {
+        margin-top: 16rem;
+    }
+
+    .texto-abajo {
+        margin-top: 50rem;
+    }
+
+    .formu-grande {
+        display: none;
+    }
+
+    .formu-small {
+        display: block;
+    }
+
+    .contador-pos {
+        margin-top: 3rem;
+        margin-left: 6rem;
+    }
+
+    .cuadro1 {
+        margin-top: 18rem;
+    }
+
+    .mapa-pos {
+        margin-top: 9rem;
+    }
+
+    .servicios, .titulo-servicios {
+        /* overflow: hidden; */
+        width: 100%;
+        /* left: 12rem; */
+    }
+
+    .cont-btn {
+        margin-top: 6rem;
+    }
+
+    .link-servicio {
+        margin-top: -3rem;
+        padding: 0.7rem;
+        width: 5.8rem;
+    }
+
+    .link-servicio:hover .img-fluid {
+        box-shadow: 0 0 2rem rgba(0, 0, 255, 1); /* Ajusta el valor de azul y la opacidad según tus preferencias */
+    }
+
+    .carta {
+        position: relative;
+        overflow: hidden;
+        border-radius: 3rem;
+        padding-top: 2rem;
+        padding-bottom: 0rem;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
+        margin-top: 2rem;
+    }
+
+    .carta:hover {
+        transform: translateY(-2rem); /* Ajusta la cantidad de elevación según tus preferencias */
+        /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); Agrega una sombra para dar un efecto elevado */
+    }
+
+    .card-img-overlay {
+        background: rgba(0, 0, 0, 0.5); /* Cambia el color del overlay según tus preferencias */
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0; /* Inicialmente invisible */
+        transition: opacity 0.3s ease;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 100%; 
+        height: auto; 
+    }
+
+    .carta:hover .card-img-overlay {
+        opacity: 1; /* Hacer visible al pasar el cursor sobre la tarjeta */
+    }
+
+    .card-orden {
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+
+    .card-title {
+        color: #000000;
+        font-size: 1.6rem;
+        font-weight: 700;
+        height: 4rem;
+        overflow: hidden;
+    }
+
+    .card-text {
+        line-height: 1.1;
+        text-align: justify;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        font-size: 0.8rem;
+        font-weight: 500;
+        color: black;
+        height: 8rem;
+        overflow: hidden;
+    } 
+
+}
+
+/* sm */
+@media (min-width: 576px) and (max-width: 767px) {
+
+    .cont-letrero {
+        margin-top: 14rem; 
+        margin-left: -1.5rem;
+    }
+
+    .slick-dots {
+        display: none;
+    }
+
+    .slick-dots li {
+        display: none;
+    }
+
+    .titulo-index, .titulo-index2 {
+        font-size: 5rem;
+        font-weight: 500;
+        line-height: 1.1;
+    }
+
+    .titulo-index .mayuscula, .titulo-index2 .mayuscula2 {
+        color: #CDE700;
+        background-color: transparent;
+    }
+
+    .titulo-index .minuscula {
+        color: white;
+        background-color: transparent;
+    }
+
+    .titulo-index2 .minuscula2 {
+        color: black;
+        background-color: transparent;
+    }
+
+    .texto-ind {
+        font-size: 1rem;
+        line-height: 1;
+    }
+
+    .imagen-slider {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 100%;
+        height: 32rem;
+    }
+
+    .imagen-cliente {
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 6rem;
+        /* border: 1px solid black; */
+    }
+
+    .letrero {
+        line-height: 1;
+        font-size: 1.2rem;
+    }
+
+    .carrusel-interno {
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 30rem;
+        width: 100%;
+    }
+
+    h2 {
+        width: 23rem;
+        font-size: 1.8rem;
+    }
+
+    .contad {
+        color: #FE6E63; 
+        font-size: 4rem;
+        margin-top: 2.2rem;
+    }
+
+    .icono-contact {
+        width: 3.6rem;
+        height: 3.6rem;
+    }
+
+    .boton-circulo {
+        margin-left: 2.2rem;
+    }
+
+    .link-servicio {
+        margin-top: -2.5rem;
+        padding: 1.6rem;
+        width: 4.8rem;
+    }
+
+    .circulo-imagen {
+        border-radius: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 27rem;
+        height: 27rem;
+    }
+
+    .circulos-columan2 {
+        margin-top: 60rem;
+    }
+
+    .col-baja {
+        margin-top: 3rem;
+    }
+
+    .texto-abajo {
+        margin-top: 112rem;
+    }
+
+    .formu-grande {
+        display: none;
+    }
+
+    .formu-small {
+        display: block;
+    }
+
+    .contador-pos {
+        margin-top: 3rem;
+        margin-left: 6rem;
+    }
+
+    .cuadro1 {
+        margin-top: 15rem;
+    }
+
+    .mapa-pos {
+        margin-top: 9rem;
+    }
+
+    .servicios, .titulo-servicios {
+        /* overflow: hidden; */
+        width: 100%;
+        /* left: 12rem; */
+    }
+
+    .cont-btn {
+        margin-top: 8rem;
+    }
+
+    .link-servicio {
+        margin-top: -7rem;
+        padding: 0.7rem;
+        width: 7.8rem;
+    }
+
+    .link-servicio:hover .img-fluid {
+        box-shadow: 0 0 2rem rgba(0, 0, 255, 1); /* Ajusta el valor de azul y la opacidad según tus preferencias */
+    }
+
+    .carta {
+        position: relative;
+        overflow: hidden;
+        border-radius: 3rem;
+        padding-top: 2rem;
+        padding-bottom: 0rem;
+        padding-right: 2rem;
+        padding-left: 2rem;
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
+        margin-top: 2rem;
+    }
+
+    .carta:hover {
+        transform: translateY(-2rem); /* Ajusta la cantidad de elevación según tus preferencias */
+        /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); Agrega una sombra para dar un efecto elevado */
+    }
+
+    .card-img-overlay {
+        background: rgba(0, 0, 0, 0.5); /* Cambia el color del overlay según tus preferencias */
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0; /* Inicialmente invisible */
+        transition: opacity 0.3s ease;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 100%; 
+        height: auto; 
+    }
+
+    .carta:hover .card-img-overlay {
+        opacity: 1; /* Hacer visible al pasar el cursor sobre la tarjeta */
+    }
+
+    .card-orden {
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+
+    .card-title {
+        color: #000000;
+        font-size: 3rem;
+        font-weight: 700;
+        height: 8rem;
+        overflow: hidden;
+    }
+
+    .card-text {
+        line-height: 1.1;
+        text-align: justify;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        font-size: 1.3rem;
+        font-weight: 500;
+        color: black;
+        height: 14rem;
+        overflow: hidden;
+    }    
+
+}
+
+/* xs */
+@media (min-width: 0px) and (max-width: 575px) {
+
+    .cont-letrero {
+        margin-top: 14rem; 
+        margin-left: -1.5rem;
+    }
+
+    .slick-dots {
+        display: none;
+    }
+
+    .slick-dots li {
+        display: none;
+    }
+
+    .titulo-index, .titulo-index2 {
+        font-size: 3rem;
+        font-weight: 500;
+        line-height: 1.1;
+    }
+
+    .titulo-index .mayuscula, .titulo-index2 .mayuscula2 {
+        color: #CDE700;
+        background-color: transparent;
+    }
+
+    .titulo-index .minuscula {
+        color: white;
+        background-color: transparent;
+    }
+
+    .titulo-index2 .minuscula2 {
+        color: black;
+        background-color: transparent;
+    }
+
+    .texto-ind {
+        font-size: 1rem;
+        line-height: 1;
+    }
+
+    .imagen-slider {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 100%;
+        height: 22rem;
+    }
+
+    .imagen-cliente {
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 6rem;
+        /* border: 1px solid black; */
+    }
+
+    .letrero {
+        line-height: 1;
+        font-size: 1rem;
+    }
+
+    .carrusel-interno {
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        height: 20rem;
+        width: 100%;
+    }
+
+    h2 {
+        width: 18rem;
+        font-size: 1.4rem;
+    }
+
+    .contad {
+        color: #FE6E63; 
+        font-size: 3.6rem;
+        margin-top: 2.2rem;
+    }
+
+    .icono-contact {
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+
+    .boton-circulo {
+        margin-left: 2.2rem;
+    }
+
+    .link-servicio {
+        margin-top: -2.5rem;
+        padding: 1.6rem;
+        width: 4.8rem;
+    }
+
+    .circulo-imagen {
+        border-radius: 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 21rem;
+        height: 21rem;
+    }
+
+    .circulos-columan2 {
+        margin-top: 48rem;
+    }
+
+    .col-baja {
+        margin-top: 3rem;
+    }
+
+    .texto-abajo {
+        margin-top: 90rem;
+    }
+
+    .formu-grande {
+        display: none;
+    }
+
+    .formu-small {
+        display: block;
+    }
+
+    .contador-pos {
+        margin-top: 3rem;
+        margin-left: 1rem;
+    }
+
+    .cuadro1 {
+        margin-top: 15rem;
+        margin-left: 6rem;
+    }
+
+    .mapa-pos {
+        margin-top: 9rem;
+    }
+
+    .servicios, .titulo-servicios {
+        /* overflow: hidden; */
+        width: 100%;
+        /* left: 12rem; */
+    }
+
+    .cont-btn {
+        margin-top: 6rem;
+    }
+
+    .link-servicio {
+        margin-top: -7rem;
+        padding: 0.7rem;
+        width: 6.8rem;
+    }
+
+    .link-servicio:hover .img-fluid {
+        box-shadow: 0 0 2rem rgba(0, 0, 255, 1); /* Ajusta el valor de azul y la opacidad según tus preferencias */
+    }
+
+    .carta {
+        position: relative;
+        overflow: hidden;
+        border-radius: 3rem;
+        padding-top: 2rem;
+        padding-bottom: 0rem;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+        margin-right: 0.5rem;
+        margin-left: 0.5rem;
+        margin-top: 2rem;
+    }
+
+    .carta:hover {
+        transform: translateY(-2rem); /* Ajusta la cantidad de elevación según tus preferencias */
+        /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); Agrega una sombra para dar un efecto elevado */
+    }
+
+    .card-img-overlay {
+        background: rgba(0, 0, 0, 0.5); /* Cambia el color del overlay según tus preferencias */
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0; /* Inicialmente invisible */
+        transition: opacity 0.3s ease;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        width: 100%; 
+        height: auto; 
+    }
+
+    .carta:hover .card-img-overlay {
+        opacity: 1; /* Hacer visible al pasar el cursor sobre la tarjeta */
+    }
+
+    .card-orden {
+        font-size: 1rem;
+        font-weight: 500;
+    }
+
+    .card-title {
+        color: #000000;
+        font-size: 2.4rem;
+        font-weight: 700;
+        height: 6rem;
+        overflow: hidden;
+    }
+
+    .card-text {
+        line-height: 1.1;
+        text-align: justify;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        font-size: 1rem;
+        font-weight: 500;
+        color: black;
+        height: 9.8rem;
+        overflow: hidden;
+    }    
+
+}
+
