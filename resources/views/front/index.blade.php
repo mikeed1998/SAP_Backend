@@ -375,6 +375,11 @@
                             </div>
                             
                         </div>
+                        <div class="row">
+                            <div class="col">
+                                <p id="errores-f"></p>
+                            </div>
+                        </div>
                     </div>
                 </form>
             </div>

@@ -81,7 +81,7 @@
             <div class="col-10 mx-auto">
                 <div class="row">
                     <div class="col-12 titu-1">
-                        <textarea class="col-12 fs-3 text-dark fw-bolder text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[1]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="3" style="border-radius: 10px; border:none; background: #ededed">{{$elements[1]->texto}}</textarea>
+                        <textarea class="col-12 fs-3 py-2 text-dark fw-bolder text-start editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[1]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="1" style="border-radius: 10px; border:none; background: #ededed">{{$elements[1]->texto}}</textarea>
                     </div>
                     <div class="col-12 display-1" style="color: #FE6E63;">
                         NOSOTROS
@@ -89,7 +89,7 @@
                 </div>
                 <div class="row">
                     <div class="col py-5 text-white titu-text">
-                        <textarea class="col-12 text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[2]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="3" style="border-radius: 10px; border:none; background: #ededed">{{$elements[2]->texto}}</textarea>
+                        <textarea class="col-12 text-start editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[2]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="8" style="border-radius: 10px; border:none; background: #ededed">{{$elements[2]->texto}}</textarea>
                     </div>
                 </div>
             </div>
@@ -102,7 +102,7 @@
         <div class="col nosotros-bg" style="background-image: url('{{ asset('img/images/nosotros/fondo.png') }}');">
             <div class="row">
                 <div class="col-6 mx-auto text-center nosotros-1">
-                    <textarea class="col-12 fs-5 text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[3]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="3" style="border-radius: 10px; border:none; background: #ededed">{{$elements[3]->texto}}</textarea>
+                    <textarea class="col-12 fs-5 text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[3]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="1" style="border-radius: 10px; border:none; background: #ededed">{{$elements[3]->texto}}</textarea>
                 </div>
             </div>
             <div class="row">
@@ -110,9 +110,9 @@
                     <textarea class="col-12 display-3 m-0 p-0 fw-bolder text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[4]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="3" style="border-radius: 10px; border:none; background: #ededed">{{$elements[4]->texto}}</textarea>
                 </div>
             </div>
-            <div class="row mt-5">
+            <div class="row mt-3">
                 <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-9 col-sm-11 col-11 mx-auto text-center nosotros-3">
-                    <textarea class="col-12 text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[5]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="3" style="border-radius: 10px; border:none; background: #ededed">{{$elements[5]->texto}}</textarea>
+                    <textarea class="col-12 text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[5]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="4" style="border-radius: 10px; border:none; background: #ededed">{{$elements[5]->texto}}</textarea>
                 </div>
             </div>
         </div>
@@ -132,12 +132,12 @@
                             <div class="col-3 bg-white py-5 position-absolute top-100 start-100 translate-middle"></div>
                             <div class="row">
                                 <div class="col-9 mx-auto pt-3 titulo-card">
-                                    <textarea class="col-12 text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[6]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="1" style="border-radius: 10px; border:none; background: #ededed">{{$elements[6]->texto}}</textarea>
+                                    <textarea class="col-12 text-start editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[6]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="1" style="border-radius: 10px; border:none; background: #ededed">{{$elements[6]->texto}}</textarea>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-9 py-5 mx-auto texto-card">
-                                    <textarea class="col-12 text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[7]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="6" style="border-radius: 10px; border:none; background: #ededed">{{$elements[7]->texto}}</textarea>
+                                    <textarea class="col-12 text-start editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[7]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="10" style="border-radius: 10px; border:none; background: #ededed">{{$elements[7]->texto}}</textarea>
                                 </div>
                             </div>
                         </div>
@@ -152,12 +152,12 @@
                             <div class="col-3 bg-white py-5 position-absolute top-100 start-100 translate-middle"></div>
                             <div class="row">
                                 <div class="col-9 mx-auto pt-3 titulo-card">
-                                    <textarea class="col-12 text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[8]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="1" style="border-radius: 10px; border:none; background: #ededed">{{$elements[8]->texto}}</textarea>
+                                    <textarea class="col-12 text-start editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[8]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="1" style="border-radius: 10px; border:none; background: #ededed">{{$elements[8]->texto}}</textarea>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-9 py-5 mx-auto texto-card">
-                                    <textarea class="col-12 text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[9]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="6" style="border-radius: 10px; border:none; background: #ededed">{{$elements[9]->texto}}</textarea>
+                                    <textarea class="col-12 editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[9]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="10" style="border-radius: 10px; border:none; background: #ededed">{{$elements[9]->texto}}</textarea>
                                 </div>
                             </div>
                         </div>
@@ -172,12 +172,12 @@
                             <div class="col-3 bg-white py-5 position-absolute top-100 start-100 translate-middle"></div>
                             <div class="row">
                                 <div class="col-9 mx-auto pt-3 titulo-card">
-                                    <textarea class="col-12 text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[10]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="1" style="border-radius: 10px; border:none; background: #ededed">{{$elements[10]->texto}}</textarea>
+                                    <textarea class="col-12 text-start editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[10]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="1" style="border-radius: 10px; border:none; background: #ededed">{{$elements[10]->texto}}</textarea>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-9 py-5 mx-auto texto-card">
-                                    <textarea class="col-12 text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[11]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="6" style="border-radius: 10px; border:none; background: #ededed">{{$elements[11]->texto}}</textarea>
+                                    <textarea class="col-12 editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[11]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="10" style="border-radius: 10px; border:none; background: #ededed">{{$elements[11]->texto}}</textarea>
                                 </div>
                             </div>
                         </div>
@@ -202,7 +202,7 @@
                             </div>
                             <div class="row">
                                 <div class="col py-3 texto-nos">
-                                    <textarea class="col-12 text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[13]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="2" style="border-radius: 10px; border:none; background: #ededed">{{$elements[13]->texto}}</textarea>
+                                    <textarea class="col-12 editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[13]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="2" style="border-radius: 10px; border:none; background: #ededed;">{{$elements[13]->texto}}</textarea>
                                 </div>
                             </div>
                         </div>

@@ -78,7 +78,7 @@
     <div class="container-fluid">
         <div class="row py-5">
             <div class="col imagen-vacantes position-relative" style="background-image: url('{{ asset('img/photos/imagenes_estaticas/'.$elements[2]->imagen) }}');">
-                <div class="col-12 position-absolute top-50 start-50 translate-middle">
+                <div class="col-6 position-absolute top-50 start-50 translate-middle-x">
                     <form id="form_aux3" action="image_input_ejemplo" method="POST" class="file-upload px-auto col-7" enctype="multipart/form-data">
                         @csrf
                         <input type="hidden" name="id_elemento" value="{{ $elements[2]->id }}">
