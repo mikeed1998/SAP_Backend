@@ -12,7 +12,8 @@ input {
 
 #map { 
     height: 70rem; 
-    background-image: url('images/fondo_mapa.png');
+    /* background-image: url('img/design/imagen.png'); */
+    /* background-color: #CDE700; */
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;

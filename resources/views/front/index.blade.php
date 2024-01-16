@@ -144,7 +144,7 @@
                         <div class="row">
                             <div class="col-2 z-3 p-5" style="
                                 background-color: #FE6E63;
-                                border-top-right-radius: 32px;
+                                border-top-right-radius: 32px; 
                                 border-bottom-right-radius: 32px;
                                 width: 9rem;
                             ">
