@@ -34,6 +34,14 @@
 
 </head>
 <style>
+
+	@font-face {
+        font-family: 'Sansation Bold';
+        src: url("{{ asset('fonts/Sansation-Bold/Sansation_Bold.ttf') }}") format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
 		.scrollux::-webkit-scrollbar {
 		width: 8px;     /* Tamaño del scroll en vertical */
 		height: 8px;    /* Tamaño del scroll en horizontal */
@@ -68,7 +76,7 @@
 	}
 
 </style>
-<body class="fixed-sn black-skin" style="background-repeat: no-repeat; background-size: 100%; background-image: url({{asset('img/design/fondoadmin.png')}})">
+<body class="fixed-sn black-skin" style="font-family: 'Sansation Bold', sans-serif; background-repeat: no-repeat; background-size: 100%; background-image: url({{asset('img/design/fondoadmin.png')}})">
 	@include('layouts.partials_ad.header')
 
 	{{-- @include('notify::messages') --}}

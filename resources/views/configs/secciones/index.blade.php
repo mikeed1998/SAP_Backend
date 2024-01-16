@@ -13,6 +13,7 @@
         font-weight: normal;
         src: local('Neusharp Bold'), url({{ asset('fonts/Neusharp-Bold/NeusharpBold-7B8RV.woff') }}) format('woff');
     }
+	
 	/* mas estilisado */	
 	body{
 		background-color: #e5e8eb  !important;
@@ -45,7 +46,7 @@
 	</div>
 	<div class="row justify-content-center">
 		@foreach ($seccion as $card)
-			
+
 				<div class="col-6 col-lg-2 p-2">
 					<a href="{{route('config.seccion.show',$card->slug)}}"  class="card h-100 card1" style="box-shadow: none; border-radius: 16px;">
 						<span class="card-body text-muted text-center">

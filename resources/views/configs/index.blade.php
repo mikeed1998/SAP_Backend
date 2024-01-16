@@ -29,17 +29,18 @@
 @section('content')
 	<div class="row justify-content-center">
 		@foreach ($cards as $card)
-			<div class="col-6 col-lg-2 p-2"  >
-				<a href="{{route($card['route'])}}" class="card h-100 card1" style="border-radius: 16px; box-shadow: none;">
-					<span class="card-body text-muted text-center">
-						<i class="icon_c {{$card['icon']}} fa-3x mb-3"></i> <br>
-						<span class="icon_c"> {{$card['text']}} </span>
-					</span>
-				</a>
-			</div>
+			@if ($card['text'] != "FAQ")
+				<div class="col-6 col-lg-2 p-2"  >
+					<a href="{{route($card['route'])}}" class="card h-100 card1" style="border-radius: 16px; box-shadow: none;">
+						<span class="card-body text-muted text-center">
+							<i class="icon_c {{$card['icon']}} fa-3x mb-3"></i> <br>
+							<span class="icon_c"> {{$card['text']}} </span>
+						</span>
+					</a>
+				</div>
+			@endif
 		@endforeach
 	</div>
-
 @endsection
 
 @section('scriptExtras')

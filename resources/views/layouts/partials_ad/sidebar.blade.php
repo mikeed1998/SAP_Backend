@@ -28,11 +28,11 @@
 							<li class="p-2">
 								<a href="{{ route('admin.home') }}" class="collapsible-header waves-effect {{ (request()->is('admin')) ? 'active' : '' }}" style="border-radius: 16px; text-decoration: none; "><i class="w-fa fas fa-cog"></i>Configuraci&oacute;n</a>
 							</li>
-							<li class="p-2">
+							{{-- <li class="p-2">
 								<a href="{{ route('config.faq.index') }}" class="collapsible-header waves-effect {{ (request()->is('admin/config/faq')) ? 'active' : '' }}" style="border-radius: 16px; text-decoration: none; "><i class="fas fa-question"></i>FAQ</a>
-							</li>
+							</li> --}}
 							<li class="p-2">
-								<a href="{{ route('config.politica.index') }}" class="collapsible-header waves-effect {{ (request()->is('admin/config/faq')) ? 'active' : '' }}" style="border-radius: 16px; text-decoration: none; "><i class="fas fa-shield-alt"></i>Pol&iacute;ticas</a>
+								<a href="{{ route('config.politica.index') }}" class="collapsible-header waves-effect {{ (request()->is('admin/config/faq')) ? 'active' : '' }}" style="border-radius: 16px; text-decoration: none; "><i class="fas fa-shield-alt"></i>Terminos y condiciones</a>
 							</li>
 							
 							

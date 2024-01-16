@@ -15,6 +15,13 @@
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
     
     <style>
+        @font-face {
+            font-family: 'Sansation Bold';
+            src: url("{{ asset('fonts/Sansation-Bold/Sansation_Bold.ttf') }}") format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
         #contador-caracteres {
             color: #999;
             font-size: 12px;
@@ -26,13 +33,13 @@
 </head>
 <body style="background-color: #201E1F;">
 
-    <div class="col-11 mx-auto">
+    <div class="col-11 mx-auto" style="font-family: 'Sansation Bold', sans-serif;">
         <div class="row mb-4 px-2">
             <a href="{{ route('config.seccion.show', ['slug' => 'blog']) }}" class="col mt-5 mb-5 col-md-2 btn btn-sm grey darken-2 text-dark bg-white mr-auto"><i class="fa fa-reply"></i> Regresar</a>
         </div>
     </div>
 
-    <div class="container-fluid">
+    <div class="container-fluid" style="font-family: 'Sansation Bold', sans-serif;">
         <div class="row">
             <div class="col-11 mb-5 mx-auto">
                 <form id="miFormulario" method="post" action="{{ route('config.blog.update', ['id' => $post->id]) }}" enctype="multipart/form-data">

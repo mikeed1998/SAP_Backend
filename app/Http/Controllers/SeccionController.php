@@ -101,25 +101,27 @@ class SeccionController extends Controller
             \Toastr::error('Error al crear sucursal');
             return redirect()->back();
         }
-
-
     }
 
-    public function sucursalDelete(Request $request){
-        $id_suc = $request->id_suc;
+    public function sucursalDelete(ZSucursal $sucursal){
+        $galeria = ZSucursalFoto::all();
 
-        $sucursal = services::find($id_suc);
-
-        if($sucursal->delete()){
-            \Toastr::success('Eliminado');
-            return redirect()->back();
-        }else{
-            \Toastr::error('Error al Eliminar sucursal');
-            return redirect()->back();
+        foreach ($galeria as $g) {
+            if ($g->sucursal == $sucursal->id) {
+                $img = "img/photos/sucursales/galeria/".$g->foto;
+                unlink($img);
+                $g->delete();
+            }
         }
 
+        if($sucursal->delete()){
+            \Toastr::success('Sucursal eliminada');
+            return redirect()->back();
+        }else{
+            \Toastr::error('No se pudo eliminar la sucursal');
+            return redirect()->back();
+        }
     }
-
 
     /**
      * Display the specified resource.

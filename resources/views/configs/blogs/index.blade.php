@@ -7,6 +7,13 @@
 @endsection
 @section('styleExtras')
 <style>
+    @font-face {
+        font-family: 'Sansation Bold';
+        src: url("{{ asset('fonts/Sansation-Bold/Sansation_Bold.ttf') }}") format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+    
     .boton {
         background-color: #FAC706;
         font-size: 2rem;

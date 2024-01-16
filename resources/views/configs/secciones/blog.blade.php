@@ -12,9 +12,9 @@
     <style>
         .boton {
             background-color: #FAC706;
-            font-size: 3rem;
+            font-size: 2rem;
             padding-left: 2rem;
-            padding: 4rem;
+            padding: 1rem;
             border-radius: 1rem;
             margin: 2rem;
         }

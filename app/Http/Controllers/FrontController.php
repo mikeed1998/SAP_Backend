@@ -226,8 +226,9 @@ class FrontController extends Controller
 	public function politicas() {
 		$config = Configuracion::find(1);
 		$politica = Politica::all();
+		$servicios = ZServicio::orderBy('orden', 'asc')->get();
 		$pagina = 'politicas';
-		return view('front.politicas', compact('politica', 'pagina', 'config'));
+		return view('front.politicas', compact('politica', 'pagina', 'config', 'servicios'));
 	}
 
 	public function metodos_pago() {

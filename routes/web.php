@@ -194,7 +194,7 @@ Route::prefix('admin')->group(function(){
 
 			///////////////////////////////////////////////// Sucursal /////////////////////////////////////////////////
 			Route::post('/sucursalCreate','SeccionController@sucursalCreate')->name('sucursalCreate');
-			Route::post('/sucursalDelete','SeccionController@sucursalDelete')->name('sucursalDelete');
+			Route::delete('/sucursalDelete/{sucursal}','SeccionController@sucursalDelete')->name('sucursalDelete');
 
 			///////////////////////////////////////////////// Sucursal /////////////////////////////////////////////////
 

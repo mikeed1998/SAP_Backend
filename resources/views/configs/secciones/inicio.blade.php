@@ -17,6 +17,13 @@
 @section('content')
 <style>
 
+@font-face {
+        font-family: 'Sansation Bold';
+        src: url("{{ asset('fonts/Sansation-Bold/Sansation_Bold.ttf') }}") format('truetype');
+        font-weight: normal;
+        font-style: normal;
+    }
+
     .cuadro:hover {
         color: #ffffff;
         background-color: rgba(0, 0, 0, 0.9);
@@ -170,12 +177,12 @@
         <div class="container-fluid py-5" style="background-color: #201E1F;">
             <div class="row py-5">
                 <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-11 col-11 titulo-pri mx-auto fw-bold text-end">
-                    <textarea class="col-12 display-5 text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[0]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="3" style="border-radius: 10px; border:none; background: #ededed">{{$elements[0]->texto}}</textarea>
+                    <textarea class="col-12 display-5 text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[0]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="3" style="border-radius: 10px; border:none; background: #ededed; font-family: 'Sansation Bold', sans-serif;">{{$elements[0]->texto}}</textarea>
                 </div>
             </div>
             <div class="row">
                 <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-8 col-sm-11 col-11 py-4 mx-auto text-white texto-ind">
-                    <textarea class="col-12 text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[1]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="3" style="border-radius: 10px; border:none; background: #ededed">{{$elements[1]->texto}}</textarea>
+                    <textarea class="col-12 text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[1]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="3" style="border-radius: 10px; border:none; background: #ededed; font-family: 'Sansation Bold', sans-serif;">{{$elements[1]->texto}}</textarea>
                 </div>
             </div>
             <div class="row">
@@ -196,11 +203,11 @@
         
         <div class="row">
             <div class="col-12 d-flex justify-content-center align-items-center flex-column mt-2 text-center">
-                <h3 class="fs-1 fw-bolder" style="color:white; font-family: Arial, sans-serif;">Agregar slider</h3>
+                <h3 class="fs-1 fw-bolder" style="color:white; font-family: 'Sansation Bold', sans-serif;">Agregar slider</h3>
                 <form id="form_image_slider" action="imgSider" method="POST"  class="file-upload mt-2" style="" enctype="multipart/form-data">
                     @csrf
                     <input id="input_slider_img" class="m-0 p-0" type="file" name="archivo">
-                    <label class="col-12 m-0 p-2 d-flex justify-content-center align-items-center" for="input_slider_img" style="opacity: 100%; !important; border-radius: 26px; background-color: #44B2E3;">Seleccionar archivo</label>
+                    <label class="col-12 m-0 p-2 d-flex justify-content-center align-items-center" for="input_slider_img" style="opacity: 100%; !important; border-radius: 26px; background-color: #44B2E3; font-family: 'Sansation Bold', sans-serif;">Seleccionar archivo</label>
                 </form>
             </div>
         </div>
@@ -231,7 +238,7 @@
             </div>
         </div>
         <div class="row py-5">
-            <div class="col py-5 position-relative text-center fs-1 fw-bolder border text-white py-5">
+            <div class="col py-5 position-relative text-center fs-1 fw-bolder border text-white py-5" style="font-family: 'Sansation Bold', sans-serif;">
                 SERVICIOS
                 <div class="col-12 d-flex align-content-center justify-content-center position-absolute top-0 bottom-0 start-0 cuadro">
 
@@ -239,7 +246,7 @@
             </div>
         </div>
         <div class="row py-5">
-            <div class="col py-5 position-relative text-center fs-1 fw-bolder border text-white py-5">
+            <div class="col py-5 position-relative text-center fs-1 fw-bolder border text-white py-5" style="font-family: 'Sansation Bold', sans-serif;">
                 SUCURSALES
                 <div class="col-12 d-flex align-content-center justify-content-center position-absolute top-0 bottom-0 start-0 cuadro">
                    
@@ -254,14 +261,14 @@
                             <div class="row">
                                 <div class="col-xxl-10 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 position-relative mx-auto circulo-imagen" style="background-image: url('{{ asset('img/photos/imagenes_estaticas/'.$elements[8]->imagen) }}'); background-color: #CDE700;">
                                     <div class="col-11 ms-5 position-absolute top-0 start-0 mt-5">
-                                        <textarea class="col-12 fs-3 fw-bolder text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[7]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="3" style="border-radius: 10px; border:none; background: #ededed">{{$elements[7]->texto}}</textarea>
+                                        <textarea class="col-12 fs-3 fw-bolder text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[7]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="3" style="border-radius: 10px; border:none; background: #ededed; font-family: 'Sansation Bold', sans-serif;">{{$elements[7]->texto}}</textarea>
                                     </div>
                                     <div class="col-12 position-absolute top-50 start-50 translate-middle">
                                         <form id="form_aux2" action="image_input_ejemplo" method="POST" class="file-upload px-auto col-7" enctype="multipart/form-data">
                                             @csrf
                                             <input type="hidden" name="id_elemento" value="{{ $elements[8]->id }}">
                                             <input id="img_aux2" class="m-0 p-0" type="file" name="archivo">
-                                            <label class="col-12 m-0 px-2 d-flex justify-content-center align-items-center" for="img_aux2" style=" height: 100%; opacity: 100%; border-radius: 20px;">Seleccionar archivo</label>
+                                            <label class="col-12 m-0 px-2 d-flex justify-content-center align-items-center" for="img_aux2" style=" height: 100%; opacity: 100%; border-radius: 20px; font-family: 'Sansation Bold', sans-serif;">Seleccionar archivo</label>
                                         </form>
                                         <script>
                                             $('#img_aux2').change(function(e) {
@@ -276,14 +283,14 @@
                             <div class="row">
                                 <div class="col-xxl-10 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 position-relative mx-auto circulo-imagen" style="background-image: url('{{ asset('img/images/home/index2.png') }}'); background-color: #CCAEEC;">
                                     <div class="col-11 ms-5 position-absolute top-0 start-0 mt-5">
-                                        <textarea class="col-12 fs-3 fw-bolder text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[9]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="3" style="border-radius: 10px; border:none; background: #ededed">{{$elements[9]->texto}}</textarea>
+                                        <textarea class="col-12 fs-3 fw-bolder text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[9]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="3" style="border-radius: 10px; border:none; background: #ededed; font-family: 'Sansation Bold', sans-serif;">{{$elements[9]->texto}}</textarea>
                                     </div>
                                     <div class="col-12 position-absolute top-50 start-50 translate-middle">
                                         <form id="form_aux3" action="image_input_ejemplo" method="POST" class="file-upload px-auto col-7" enctype="multipart/form-data">
                                             @csrf
                                             <input type="hidden" name="id_elemento" value="{{ $elements[10]->id }}">
                                             <input id="img_aux3" class="m-0 p-0" type="file" name="archivo">
-                                            <label class="col-12 m-0 px-2 d-flex justify-content-center align-items-center" for="img_aux3" style=" height: 100%; opacity: 100%; border-radius: 20px;">Seleccionar archivo</label>
+                                            <label class="col-12 m-0 px-2 d-flex justify-content-center align-items-center" for="img_aux3" style=" height: 100%; opacity: 100%; border-radius: 20px; font-family: 'Sansation Bold', sans-serif;">Seleccionar archivo</label>
                                         </form>
                                         <script>
                                             $('#img_aux3').change(function(e) {
@@ -302,14 +309,14 @@
                             <div class="row">
                                 <div class="col-xxl-10 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 position-relative mx-auto circulo-imagen" style="background-image: url('{{ asset('img/images/home/index3.png') }}'); background-color: #FE6E63;">
                                     <div class="col-11 ms-5 position-absolute top-0 start-0 mt-5">
-                                        <textarea class="col-12 fs-3 fw-bolder text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[11]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="3" style="border-radius: 10px; border:none; background: #ededed">{{$elements[11]->texto}}</textarea>
+                                        <textarea class="col-12 fs-3 fw-bolder text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[11]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="3" style="border-radius: 10px; border:none; background: #ededed; font-family: 'Sansation Bold', sans-serif;">{{$elements[11]->texto}}</textarea>
                                     </div>
                                     <div class="col-12 position-absolute top-50 start-50 translate-middle">
                                         <form id="form_aux4" action="image_input_ejemplo" method="POST" class="file-upload px-auto col-7" enctype="multipart/form-data">
                                             @csrf
                                             <input type="hidden" name="id_elemento" value="{{ $elements[12]->id }}">
                                             <input id="img_aux4" class="m-0 p-0" type="file" name="archivo">
-                                            <label class="col-12 m-0 px-2 d-flex justify-content-center align-items-center" for="img_aux4" style=" height: 100%; opacity: 100%; border-radius: 20px;">Seleccionar archivo</label>
+                                            <label class="col-12 m-0 px-2 d-flex justify-content-center align-items-center" for="img_aux4" style=" height: 100%; opacity: 100%; border-radius: 20px; font-family: 'Sansation Bold', sans-serif;">Seleccionar archivo</label>
                                         </form>
                                         <script>
                                             $('#img_aux4').change(function(e) {
@@ -324,14 +331,14 @@
                             <div class="row">
                                 <div class="col-xxl-10 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 position-relative mx-auto circulo-imagen" style="background-image: url('{{ asset('img/images/home/index4.png') }}'); background-color: #A2E9FF;">
                                     <div class="col-11 ms-5 position-absolute top-0 start-0 mt-5">
-                                        <textarea class="col-12 fs-3 fw-bolder text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[13]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="3" style="border-radius: 10px; border:none; background: #ededed">{{$elements[13]->texto}}</textarea>
+                                        <textarea class="col-12 fs-3 fw-bolder text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[13]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="3" style="border-radius: 10px; border:none; background: #ededed; font-family: 'Sansation Bold', sans-serif;">{{$elements[13]->texto}}</textarea>
                                     </div>
                                     <div class="col-12 position-absolute top-50 start-50 translate-middle">
                                         <form id="form_aux5" action="image_input_ejemplo" method="POST" class="file-upload px-auto col-7" enctype="multipart/form-data">
                                             @csrf
                                             <input type="hidden" name="id_elemento" value="{{ $elements[14]->id }}">
                                             <input id="img_aux5" class="m-0 p-0" type="file" name="archivo">
-                                            <label class="col-12 m-0 px-2 d-flex justify-content-center align-items-center" for="img_aux5" style=" height: 100%; opacity: 100%; border-radius: 20px;">Seleccionar archivo</label>
+                                            <label class="col-12 m-0 px-2 d-flex justify-content-center align-items-center" for="img_aux5" style=" height: 100%; opacity: 100%; border-radius: 20px; font-family: 'Sansation Bold', sans-serif;">Seleccionar archivo</label>
                                         </form>
                                         <script>
                                             $('#img_aux5').change(function(e) {
@@ -364,11 +371,11 @@
        
         <div class="row bg-white py-5" >
             <div class="col-12 py-5 d-flex justify-content-center align-items-center flex-column mt-2 text-center">
-                <h3 class="fs-1 fw-bolder" style="color:black; font-family: Arial, sans-serif;">Agregar Cliente</h3>
+                <h3 class="fs-1 fw-bolder" style="color:black; font-family: 'Sansation Bold', sans-serif;">Agregar Cliente</h3>
                 <form id="form_image_slider2" action="{{ route('config.seccion.imgSiderCliente') }}" method="POST"  class="file-upload mt-2" style="" enctype="multipart/form-data">
                     @csrf
                     <input id="input_slider_img2" class="m-0 p-0" type="file" name="archivo">
-                    <label class="col-12 m-0 p-2 d-flex justify-content-center align-items-center" for="input_slider_img2" style="opacity: 100%; !important; border-radius: 26px; background-color: #44B234;">Seleccionar archivo</label>
+                    <label class="col-12 m-0 p-2 d-flex justify-content-center align-items-center" for="input_slider_img2" style="opacity: 100%; !important; border-radius: 26px; background-color: #44B234; font-family: 'Sansation Bold', sans-serif;">Seleccionar archivo</label>
                 </form>
             </div>
         </div>
@@ -526,7 +533,8 @@
     </script>
     <script>
         $('.carrusel-principal').slick({
-        dots: true,
+        dots: false,
+        arrows: true,
         infinite: false,
         speed: 300,
         slidesToShow: 1,
