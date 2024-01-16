@@ -17,12 +17,12 @@ Aviso de Privacidad
 	</section>
 	<div class="container"  style="min-height:55vh">
 		<div class="my-4 p-5" style="background:url(img/photos/nosotros/bg-contacto.png);/* background-repeat: no-repeat; */background-position: center;">
-			<div class="col-12 col-md-8 p-4 mx-auto bg-white" style="border: .5em solid #e6e6e6;">
+			<div class="col-12 col-md-8 p-4 mx-auto fw-bolder bg-white" style="border: .5em solid #e6e6e6;">
 				{!! $politica[3]->descripcion !!}
 			</div>
 		</div>
 	</div>
-	
+
 	<section>
 		<div class="bg-global">
 			<div class="col-12 p-4" style="background-color: black; color: white;">
@@ -32,7 +32,7 @@ Aviso de Privacidad
 	</section>
 	<div class="container"  style="min-height:55vh">
 		<div class="my-4 p-5" style="background:url(img/photos/nosotros/bg-contacto.png);/* background-repeat: no-repeat; */background-position: center;">
-			<div class="col-12 col-md-8 p-4 mx-auto bg-white" style="border: .5em solid #e6e6e6;">
+			<div class="col-12 col-md-8 p-4 mx-auto fw-bolder bg-white" style="border: .5em solid #e6e6e6;">
 				{!! $politica[0]->descripcion !!}
 			</div>
 		</div>

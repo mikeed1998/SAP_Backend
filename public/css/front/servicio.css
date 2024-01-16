@@ -60,7 +60,7 @@
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 36.383125rem;
+        height: 36rem;
     }
 
     .titulo-card {
@@ -110,7 +110,7 @@
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 28.52rem;
+        height: 28rem;
     }
 
     .titulo-card {
@@ -132,7 +132,7 @@
 }
 
 /* xl */
-@media (min-width: 1200px) and (max-width: 1400px) {
+@media (min-width: 1200px) and (max-width: 1399px) {
 
     .fondo {
         height: 70rem;
@@ -164,7 +164,7 @@
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 25.236875rem;
+        height: 23rem;
     }
 
     .titulo-card {
@@ -186,7 +186,7 @@
 }
 
 /* lg */
-@media (min-width: 992px) and (max-width: 1200px) {
+@media (min-width: 992px) and (max-width: 1199px) {
 
     .fondo {
         height: 70rem;
@@ -218,12 +218,12 @@
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 22.446875rem;
+        height: 18.75rem;
     }
 
     .titulo-card {
         line-height: 1.1;
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .mar-text {
@@ -233,7 +233,8 @@
 
     .texto-card {
         line-height: 1.1; 
-        margin-top: 3rem; 
+        font-size: 0.8rem;
+        margin-top: 1rem; 
         max-height: 3.2rem; 
         overflow: scroll;
     }
@@ -241,7 +242,7 @@
 }
 
 /* md */
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 768px) and (max-width: 991px) {
 
     .fondo {
         height: 70rem;
@@ -273,7 +274,7 @@
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 50.015rem;
+        height: 46rem;
     }
 
     .titulo-card {
@@ -288,7 +289,7 @@
 
     .texto-card {
         line-height: 1.1; 
-        margin-top: 2rem; 
+        margin-top: 0rem; 
         max-height: 5rem; 
         overflow: scroll;
     }
@@ -296,7 +297,7 @@
 }
 
 /* sm */
-@media (min-width: 576px) and (max-width: 768px) {
+@media (min-width: 576px) and (max-width: 767px) {
 
     .fondo {
         height: 70rem;
@@ -328,7 +329,7 @@
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 36.681875rem;
+        height: 34rem;
     }
     .titulo-card {
         line-height: 1.1;
@@ -342,7 +343,7 @@
 
     .texto-card {
         line-height: 1.1; 
-        margin-top: 2rem; 
+        margin-top: 0rem; 
         max-height: 3.2rem; 
         overflow: scroll;
     }
@@ -350,7 +351,7 @@
 }
 
 /* xs */
-@media (min-width: 0px) and (max-width: 576px) {
+@media (min-width: 0px) and (max-width: 575px) {
 
     .fondo {
         height: 70rem;
@@ -382,7 +383,7 @@
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 20.90375rem;
+        height: 23rem;
     }
 
     .titulo-card {   

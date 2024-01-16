@@ -13,10 +13,10 @@
     <header class="header-menu" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500" data-aos-duration="500">
         <div class="container-fluid" style="background-color: #000000;"> {{--  style="background-color: #201E1F;" --}}
             <div class="row px-5">
-                <div class="col px-5 mx-auto py-3 position-relative" style="flex-grow: 1;">
+                <div class="col px-5 mx-auto  position-relative" style="flex-grow: 1;">
                     <div class="row">
                         <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-11 col-11 mx-auto ">
-                            <div class="row py-xxl-0 py-xl-0 py-lg-0 py-md-0 py-sm-3 py-3">
+                            <div class="row py-xxl-0 py-xl-0 py-lg-0 py-md-0 py-sm-0 py-0">
                                 <div class="col-xxl-11 col-xl-9 col-lg-9 col-md-12 col-sm-12 col-12 text-start">
                                     <a href="{{ route('front.index') }}"><img src="{{ asset('img/logo_animado.gif') }}" alt="sap" class="img-fluid" style="width: 15rem; height: 8rem;"></a>
                                 </div>
@@ -25,8 +25,8 @@
                         </div>
                         {{-- <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-3 d-xxl-block d-xl-block d-lg-block d-md-block d-sm-none d-none mx-auto position-relative"> --}}
                             <div class="col-xxl-4 col-xl-4 col-lg-4 d-xxl-block d-xl-block d-lg-block d-md-none d-sm-none d-none mx-auto">
-                                <div class="row mt-3">
-                                    <div class="col-xxl-9 col-xl-10 col-lg-12 col-md-9 col-sm-9 col-12  mx-auto text-center">
+                                <div class="row mt-4">
+                                    <div class="col-xxl-9 col-xl-10 col-lg-12 col-md-9 col-sm-9 col-12 mt-2  mx-auto text-center">
                                         <a href="{{ route('front.contact') }}" class="btn btn-outline py-3 fs-5 fw-bolder rounded-pill w-100 text-white" style="background-color: #FE6E62; font-family: 'Blinker', sans-serif; font-family: 'Montserrat', sans-serif; font-weight: bold;">
                                             COTIZAR AQUÍ <svg xmlns="http://www.w3.org/2000/svg" height="1.4rem" width="3rem" fill="#000000" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
                                         </a>
@@ -35,7 +35,7 @@
                             </div>
                         {{-- </div> --}}
                         <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-9 col-9 mx-auto ">
-                            <div class="row">
+                            <div class="row mt-3">
                                 
                                 <div class="col-xxl-3 col-xl-3 col-lg-1 col-md-4 d-flex align-items-center justify-content-center">
                               
