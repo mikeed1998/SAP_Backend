@@ -175,6 +175,20 @@
      data-aos-delay="300"
      data-aos-offset="0" style="background-color: #201E1F;">
         <div class="container-fluid py-5" style="background-color: #201E1F;">
+            <div class="row">
+                <div class="col text-center position-relative">
+                    <video muted autoplay loop style="width: 60rem; height: 30rem;">
+                        <source src="{{ asset('img/photos/video_principal/'.$elements[2]->imagen) }}" type="video/mp4">
+                    </video>
+                    <div class="col-4 mx-auto position-absolute top-50 start-50 translate-middle">
+                        <form id="form_video_slider" action="imgSiderVideo" method="POST"  class="file-upload mt-2" style="" enctype="multipart/form-data">
+                            @csrf
+                            <input id="input_slider_video" class="m-0 p-0" type="file" name="archivov">
+                            <label class="col-12 m-0 p-2 d-flex justify-content-center align-items-center" for="input_slider_video" style="opacity: 100%; !important; border-radius: 26px; background-color: #44B2E3; font-family: 'Sansation Bold', sans-serif;">Actualizar video de fondo</label>
+                        </form>
+                    </div>
+                </div>
+            </div>
             <div class="row py-5">
                 <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-11 col-11 position-relative titulo-pri mx-auto fw-bold text-end">
                     <textarea class="col-12 display-5 text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[0]->id}}" data-table="Elemento" data-campo="texto" name="" id="" cols="30" rows="3" style="border-radius: 10px; border:none; background: #ededed; font-family: 'Sansation Bold', sans-serif;">{{$elements[0]->texto}}</textarea>
@@ -554,6 +568,11 @@
 
         $('#input_slider_img2').change(function(e) {
 		    $('#form_image_slider2').trigger('submit');
+	    });
+    </script>
+    <script>
+        $('#input_slider_video').change(function(e) {
+		    $('#form_video_slider').trigger('submit');
 	    });
     </script>
     <script>

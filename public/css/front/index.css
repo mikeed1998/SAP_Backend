@@ -195,6 +195,22 @@ a {
     background-image: '';
 }
 
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(70%); /* Ajusta el valor según tus preferencias de oscuridad */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Color y opacidad del filtro oscuro */
+}
+
 @media(min-width: 1800px) {
 
     .cont-letrero {
@@ -249,9 +265,18 @@ a {
         height: 84rem;
     }
 
+    .pos-letrero {
+        margin-top: 8rem;
+    }
+
     .letrero {
         line-height: 1;
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+        margin-top: -10rem; 
+        height: 14rem; 
+        max-height: 14rem; 
+        overflow: auto; 
+        text-align: justify;
     }
 
     .carrusel-interno {
@@ -408,6 +433,13 @@ a {
         overflow: hidden;
     } 
 
+    .video-container {
+        position: relative;
+        width: 100%;
+        height: 56rem;
+        overflow: hidden;
+    }
+
 }
 
 /* xxl */
@@ -466,9 +498,18 @@ a {
         /* border: 1px solid black; */
     }
 
+    .pos-letrero {
+        margin-top: 8rem;
+    }
+
     .letrero {
         line-height: 1;
-        font-size: 1.8rem;
+        font-size: 1.4rem;
+        margin-top: -7rem; 
+        height: 10rem; 
+        max-height: 10rem; 
+        overflow: auto; 
+        text-align: justify;
     }
 
     .carrusel-interno {
@@ -624,6 +665,13 @@ a {
         overflow: hidden;
     } 
 
+    .video-container {
+        position: relative;
+        width: 100%;
+        height: 52rem;
+        overflow: hidden;
+    }
+
 }
 
 /* xl */
@@ -677,9 +725,18 @@ a {
         /* border: 1px solid black; */
     }
 
+    .pos-letrero {
+        margin-top: 8rem;
+    }
+
     .letrero {
         line-height: 1;
-        font-size: 1.4rem;
+        font-size: 1.2rem;
+        margin-top: -6rem; 
+        height: 8rem; 
+        max-height: 8rem; 
+        overflow: auto; 
+        text-align: justify;
     }
 
     .carrusel-interno {
@@ -841,6 +898,13 @@ a {
         overflow: hidden;
     } 
 
+    .video-container {
+        position: relative;
+        width: 100%;
+        height: 48rem;
+        overflow: hidden;
+    }
+
 }
 
 /* lg */
@@ -894,9 +958,18 @@ a {
         /* border: 1px solid black; */
     }
 
+    .pos-letrero {
+        margin-top: 8rem;
+    }
+
     .letrero {
         line-height: 1;
-        font-size: 1.4rem;
+        font-size: 1rem;
+        margin-top: -5rem; 
+        height: 6rem; 
+        max-height: 6rem; 
+        overflow: auto; 
+        text-align: justify;
     }
 
     .carrusel-interno {
@@ -1058,6 +1131,13 @@ a {
         overflow: hidden;
     } 
 
+    .video-container {
+        position: relative;
+        width: 100%;
+        height: 46rem;
+        overflow: hidden;
+    }
+
 }
 
 /* md */
@@ -1111,9 +1191,18 @@ a {
         /* border: 1px solid black; */
     }
 
+    .pos-letrero {
+        margin-top: 8rem;
+    }
+
     .letrero {
         line-height: 1;
-        font-size: 1.2rem;
+        font-size: 1rem;
+        margin-top: -4rem; 
+        height: 6rem; 
+        max-height: 6rem; 
+        overflow: auto; 
+        text-align: justify;
     }
 
     .carrusel-interno {
@@ -1275,6 +1364,13 @@ a {
         overflow: hidden;
     } 
 
+    .video-container {
+        position: relative;
+        width: 100%;
+        height: 42rem;
+        overflow: hidden;
+    }
+
 }
 
 /* sm */
@@ -1336,9 +1432,18 @@ a {
         /* border: 1px solid black; */
     }
 
+    .pos-letrero {
+        margin-top: 8rem;
+    }
+
     .letrero {
         line-height: 1;
-        font-size: 1.2rem;
+        font-size: 0.8rem;
+        margin-top: -4rem; 
+        height: 6rem; 
+        max-height: 6rem; 
+        overflow: auto; 
+        text-align: justify;
     }
 
     .carrusel-interno {
@@ -1500,6 +1605,13 @@ a {
         overflow: hidden;
     }    
 
+    .video-container {
+        position: relative;
+        width: 100%;
+        height: 44rem;
+        overflow: hidden;
+    }
+
 }
 
 /* xs */
@@ -1561,9 +1673,18 @@ a {
         /* border: 1px solid black; */
     }
 
+    .pos-letrero {
+        margin-top: 8rem;
+    }
+
     .letrero {
         line-height: 1;
-        font-size: 1rem;
+        font-size: 0.8rem;
+        margin-top: -3rem; 
+        height: 5rem; 
+        max-height: 5rem; 
+        overflow: auto; 
+        text-align: justify;
     }
 
     .carrusel-interno {
@@ -1725,6 +1846,13 @@ a {
         height: 9.8rem;
         overflow: hidden;
     }    
+
+    .video-container {
+        position: relative;
+        width: 100%;
+        height: 40rem;
+        overflow: hidden;
+    }
 
 }
 

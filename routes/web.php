@@ -131,6 +131,8 @@ Route::prefix('admin')->group(function(){
 			Route::post('/imgSider','SeccionController@imgSider')->name('imgSider');
 			Route::delete('/delSide/{slider}','SeccionController@delSide')->name('delSide');
 
+			Route::post('/imgSiderVideo','SeccionController@imgSiderVideo')->name('imgSiderVideo');
+
 			Route::post('/imgSiderCliente','SeccionController@imgSiderCliente')->name('imgSiderCliente');
 			Route::delete('/delSideCliente/{cliente}','SeccionController@delSideCliente')->name('delSideCliente');
 

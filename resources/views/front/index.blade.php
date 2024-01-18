@@ -8,14 +8,14 @@
 @endsection
 
 @section('styleExtras')
-<style>
-    @font-face {
-        font-family: 'Sansation Bold';
-        src: url("{{ asset('fonts/Sansation-Bold/Sansation_Bold.ttf') }}") format('truetype');
-        font-weight: normal;
-        font-style: normal;
-    }
-</style>
+    <style>
+        @font-face {
+            font-family: 'Sansation Bold';
+            src: url("{{ asset('fonts/Sansation-Bold/Sansation_Bold.ttf') }}") format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+    </style>
 @endsection
 
 @section('content')
@@ -24,24 +24,36 @@
      data-aos-easing="ease-in-back" 
      data-aos-delay="300"
      data-aos-offset="0" style="background-color: #201E1F;">
-        <div class="container-fluid py-5" style="background-color: #201E1F;">
-            <div class="row py-5">
-                <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-11 col-11 titulo-pri mx-auto fw-bold text-end titulo-index" style="font-family: 'Sansation Bold', sans-serif;">
-                    {{ $elements[0]->texto }}RRRR
-                </div>
-            </div>
+        <div class="container-fluid" style="">
             <div class="row">
-                <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-8 col-sm-11 col-11 py-4 mx-auto text-white texto-ind" style="font-family: 'Blinker', sans-serif; font-family: 'Montserrat', sans-serif; font-weight: bold;">
-                    {{ $elements[1]->texto }}
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-8 col-sm-11 col-11 mx-auto">
-                    <div class="row">
-                        <div class="col-xxl-7 col-xl-8 col-lg-7 col-md-7 col-sm-9 col-12 mx-xxl-0 mx-xl-0 mx-lg-0 mx-md-0 mx-sm-auto mx-auto text-center">
-                            <a href="{{ route('front.contact') }}" class="btn btn-outline py-3 fs-5 fw-bolder bg-white rounded-pill w-100 text-dark" style="font-family: 'Blinker', sans-serif; font-family: 'Montserrat', sans-serif; sans-serif; font-weight: bold;">
-                                COTIZAR AQUÍ <svg xmlns="http://www.w3.org/2000/svg" height="1.4rem" width="3rem" fill="#FFC000" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
-                            </a>
+                <div class="col px-0 position-relative">
+                    <div class="video-container">
+                        <video width="100%" height="400" autoplay loop muted>
+                            <source src="{{ asset('img/photos/video_principal/'.$elements[2]->imagen) }}" type="video/mp4">
+                        </video>
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="col-12 position-absolute top-50 start-50 translate-middle">
+                        <div class="row py-5">
+                            <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-11 col-11 titulo-pri mx-auto fw-bold text-end titulo-index" style="font-family: 'Sansation Bold', sans-serif;">
+                                {{ $elements[0]->texto }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-8 col-sm-11 col-11 py-4 mx-auto text-white texto-ind" style="font-family: 'Blinker', sans-serif; font-family: 'Montserrat', sans-serif; font-weight: bold;">
+                                {{ $elements[1]->texto }}
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-8 col-sm-11 col-11 mx-auto">
+                                <div class="row">
+                                    <div class="col-xxl-7 col-xl-8 col-lg-7 col-md-7 col-sm-9 col-12 mx-xxl-0 mx-xl-0 mx-lg-0 mx-md-0 mx-sm-auto mx-auto text-center">
+                                        <a href="{{ route('front.contact') }}" class="btn btn-outline py-3 fs-5 fw-bolder bg-white rounded-pill w-100 text-dark" style="font-family: 'Blinker', sans-serif; font-family: 'Montserrat', sans-serif; sans-serif; font-weight: bold;">
+                                            COTIZAR AQUÍ <svg xmlns="http://www.w3.org/2000/svg" height="1.4rem" width="3rem" fill="#FFC000" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -61,7 +73,7 @@
         </div>
     </section>
 
-    <section data-aos="zoom-in" data-aos-delay="500"  style="background-color: #201E1F; overflow: hidden;">
+    <section data-aos="zoom-in" data-aos-delay="500"  style="background-color: #201E1F; overflow: hidden; padding-bottom: 10rem;">
         <div class="container-fluid contenedor-serv py-5">
             <div class="row py-5">
                 <div class="col-xxk-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mx-auto">
@@ -139,7 +151,7 @@
             <div class="row">
                 <div class="col position-relative" style="background-color: #F0F0F0;">
                     
-                    <div class="col position-absolute start-0 top-0 z-1" id="map"></div>
+                    <div class="col position-absolute start-0 top-0 z-1" id="map" style="background-image: url('{{ asset('img/design/home/fondo_mapa.png') }}');"></div>
                     <div class="col-11 position-absolute start-0" id="container-visitas" style="margin-top: 40rem;">
                         <div class="row">
                             <div class="col-2 z-3 p-5" style="
@@ -184,6 +196,18 @@
                         </div>
                     </div>
                     <div class="row">
+                        <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-9 col-sm-12 col-12 position-relative mx-auto">
+                            <div class="col-12 position-absolute top-0 start-50 translate-middle z-2 pos-letrero" style="margin-top: -8rem;">
+                                <img src="{{ asset('img/design/home/letrero1.png') }}" alt="" class="img-fluid">
+                                <div class="col position-relative">
+                                    <div class="col-6 position-absolute bg-transparent top-50 start-50 translate-middle letrero z-3">
+                                        {{ $elements[5]->texto }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{-- <div class="row">
                         <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-9 col-sm-11 col-11 position-relative mx-auto">
                             <div class="col-12 position-absolute top-0 start-50 translate-middle z-3" style="margin-top: 2rem;">
                                 <div class="card" style="border-color: #ffffff; border-top-left-radius: 32px; border-top-right-radius: 32px; border-bottom-left-radius: 0px; border-bottom-right-radius: 32px; box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); padding: 1rem;">
@@ -193,12 +217,29 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-12 position-absolute start-0 z-3" style="margin-top: 70rem; padding: 0;">
-                        <div class="column-container2">
+                    </div> --}}
+                    <div class="col-12 position-absolute start-0 z-3" style="margin-top: 60.7rem; padding: 0;">
+                        <style>
+                            .triangu {
+                                width: 100%;
+   height: 2rem;
+   border-style: solid;
+   border-width: 0 0px 150px 3000px;
+   border-color: transparent transparent #201E1F transparent;
+   transform: rotate(0deg);
+  
+                            }
+                        </style>
+                        <div class="row px-0" style="overflow: hidden; --bs-gutter-x: 0rem;">
+                            <div class="col-12 triangu">
+                            
+                            </div>
+                        </div>
+                       
+                        {{-- <div class="column-container2">
                             <div class="top-left2"></div>
                             <div class="top-right2"></div>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </div>

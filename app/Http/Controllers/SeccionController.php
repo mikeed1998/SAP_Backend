@@ -1103,6 +1103,30 @@ class SeccionController extends Controller
         return redirect()->back();
     }
 
+    public function imgSiderVideo(Request $request) {
+        $element = Elemento::all();
+
+        // dd($element[2]->imagen);
+        
+        if ($video = $request->file('archivov')) {
+
+            $antiguo = "img/photos/video_principal/".$element[2]->imagen;
+            unlink($antiguo);
+
+            $destinationPath = 'img/photos/video_principal/';
+            $profileImage = date('YmdHis') . "." . $video->getClientOriginalExtension();
+            $video->move($destinationPath, $profileImage);
+            $element[2]->imagen = "$profileImage";
+        }else{
+            unset($input['archivo']);
+        }
+
+        $element[2]->save();
+
+        \Toastr::success('Video actualizado');
+        return redirect()->back();
+    }
+
     public function imgSiderCliente(Request $request) {
         $cliente = new ZCliente;
         // dd($request->archivo);
