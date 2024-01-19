@@ -305,7 +305,7 @@
 
     <section>
         <div class="row texto-abajo">
-            <div class="col-8 position-relative text-center mx-auto py-5 fs-3" style="line-height: 1;">
+            <div class="col-8 position-relative text-center mx-auto fs-3" style="line-height: 1;">
                 
             </div>
         </div>
@@ -313,8 +313,8 @@
 
     <section>
         <div class="container pt-5 pb-3 pb-0">
-            <div class="row">
-                <div class="col position-relative">
+            <div class="row py-5">
+                <div class="col position-relative py-5">
                 
                 </div>
             </div>
@@ -328,7 +328,19 @@
                     <div class="top-left3"></div>
                     <div class="top-right3"></div>
                 </div>
-                <div class="col position-relative " data-aos="flip-up">
+                <div class="col position-relative">
+                    <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-9 col-sm-12 col-12 p-1 position-absolute top-0 start-50 translate-middle pos-letrerob">
+                        <img src="{{ asset('img/design/home/letrero2.png') }}" alt="" class="img-fluid">
+                        <div class="row">
+                            <div class="col p-1 position-relative">
+                                <div class="col-8 ps-0 pe-4 position-absolute top-50 start-50 translate-middle letrerob">
+                                    {{ $elements[15]->texto }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{-- <div class="col position-relative " data-aos="flip-up">
                     <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-9 col-sm-11 col-11 position-absolute top-50 start-50 translate-middle"  style="margin-top: -2rem;">
                         <div class="card shadow" style="border-top-right-radius: 32px; border-top-left-radius: 32px; border-bottom-right-radius: 0px; border-bottom-left-radius: 32px;">
                             <div class="card-body fs-2 text-center" style="line-height: 1; font-family: 'Blinker', sans-serif; font-family: 'Montserrat', sans-serif; sans-serif;">
@@ -336,7 +348,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
            
 

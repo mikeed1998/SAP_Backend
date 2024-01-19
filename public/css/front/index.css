@@ -279,6 +279,20 @@ video {
         text-align: justify;
     }
 
+    .pos-letrerob {
+        margin-top: -9rem;
+    }
+
+    .letrerob {
+        margin-top: -8rem; 
+        height: 11rem; 
+        max-height: 11rem; 
+        overflow: hidden; 
+        line-height: 1; 
+        font-size: 1.4rem; 
+        text-align: justify;
+    }
+
     .carrusel-interno {
         background-size: cover;
         background-position: center center;
@@ -512,6 +526,20 @@ video {
         text-align: justify;
     }
 
+    .pos-letrerob {
+        margin-top: -7rem;
+    }
+
+    .letrerob {
+        margin-top: -7rem; 
+        height: 8rem; 
+        max-height: 8rem; 
+        overflow: hidden; 
+        line-height: 1; 
+        font-size: 1.4rem; 
+        text-align: justify;
+    }
+
     .carrusel-interno {
         background-size: cover;
         background-position: center center;
@@ -736,6 +764,20 @@ video {
         height: 8rem; 
         max-height: 8rem; 
         overflow: auto; 
+        text-align: justify;
+    }
+
+    .pos-letrerob {
+        margin-top: -6rem;
+    }
+
+    .letrerob {
+        margin-top: -6rem; 
+        height: 7rem; 
+        max-height: 7rem; 
+        overflow: hidden; 
+        line-height: 1; 
+        font-size: 1.2rem; 
         text-align: justify;
     }
 
@@ -972,6 +1014,20 @@ video {
         text-align: justify;
     }
 
+    .pos-letrerob {
+        margin-top: -5rem;
+    }
+
+    .letrerob {
+        margin-top: -4.5rem; 
+        height: 6rem; 
+        max-height: 6rem; 
+        overflow: hidden; 
+        line-height: 1; 
+        font-size: 1rem; 
+        text-align: justify;
+    }
+
     .carrusel-interno {
         background-size: cover;
         background-position: center center;
@@ -1202,6 +1258,20 @@ video {
         height: 6rem; 
         max-height: 6rem; 
         overflow: auto; 
+        text-align: justify;
+    }
+
+    .pos-letrerob {
+        margin-top: -4rem;
+    }
+
+    .letrerob {
+        margin-top: -3.5rem; 
+        height: 5rem; 
+        max-height: 5rem; 
+        overflow: hidden; 
+        line-height: 0.8; 
+        font-size: 1rem; 
         text-align: justify;
     }
 
@@ -1446,6 +1516,20 @@ video {
         text-align: justify;
     }
 
+    .pos-letrerob {
+        margin-top: -3rem;
+    }
+
+    .letrerob {
+        margin-top: -3.5rem; 
+        height: 5rem; 
+        max-height: 5rem; 
+        overflow: hidden; 
+        line-height: 0.8; 
+        font-size: 1rem; 
+        text-align: justify;
+    }
+
     .carrusel-interno {
         background-size: cover;
         background-position: center center;
@@ -1687,6 +1771,20 @@ video {
         text-align: justify;
     }
 
+    .pos-letrerob {
+        margin-top: -1.5rem;
+    }
+
+    .letrerob {
+        margin-top: -2.5rem; 
+        height: 3rem; 
+        max-height: 3rem; 
+        overflow: hidden; 
+        line-height: 1; 
+        font-size: 0.6rem; 
+        text-align: justify;
+    }
+
     .carrusel-interno {
         background-size: cover;
         background-position: center center;
@@ -1855,4 +1953,7 @@ video {
     }
 
 }
+
+
+
 
