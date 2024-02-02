@@ -56,29 +56,25 @@ input {
 
 @media(min-width: 1800px) {
 
-    .titulo-index, .titulo-index2 {
-        font-family: 'Sansation Bold', sans-serif;
+    .titulo-bolsa, .titulo-bolsa2 {
         font-size: 8.6rem;
         font-weight: 500;
         line-height: 1.1;
     }
-
-    .titulo-index .mayuscula, .titulo-index2 .mayuscula2 {
-        font-family: 'Sansation Bold', sans-serif;
+    
+    .titulo-bolsa .mayuscula, .titulo-bolsa2 .mayuscula2 {
         color: #CDE700;
-        background-color: transparent;
     }
-
-    .titulo-index .minuscula {
-        font-family: 'Sansation Bold', sans-serif;
+    
+    .titulo-bolsa .minuscula, .titulo-bolsa2 .minuscula2 {
         color: white;
-        background-color: transparent;
     }
-
-    .titulo-index2 .minuscula2 {
-        font-family: 'Sansation Bold', sans-serif;
-        color: black;
-        background-color: transparent;
+    
+    .texto-bolsa {
+        color: #BCBCBC;
+        font-size: 2rem;
+        line-height: 1;
+        margin-top: 2rem;
     }
     
     .imagen-vacantes {

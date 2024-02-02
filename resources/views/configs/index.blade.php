@@ -29,7 +29,7 @@
 @section('content')
 	<div class="row justify-content-center">
 		@foreach ($cards as $card)
-			@if ($card['text'] != "FAQ")
+			{{-- @if ($card['text'] != "FAQ") --}}
 				<div class="col-6 col-lg-2 p-2"  >
 					<a href="{{route($card['route'])}}" class="card h-100 card1" style="border-radius: 16px; box-shadow: none;">
 						<span class="card-body text-muted text-center">
@@ -38,7 +38,7 @@
 						</span>
 					</a>
 				</div>
-			@endif
+			{{-- @endif --}}
 		@endforeach
 	</div>
 @endsection

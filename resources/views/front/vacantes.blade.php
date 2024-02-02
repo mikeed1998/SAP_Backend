@@ -52,7 +52,7 @@
                             @foreach ($vacantes as $vac)
                             <div class="col-3">
                                 <div class="card position-relative carta border-0" style="background-color: {{ $vac->color }};">
-                                    <div class="card-img-overlay" style="background-image: url('{{ asset('img/photos/vacantes/'.$vac->portada) }}');">
+                                    <div class="card-img-overlay" {{--style="background-image: url('{{ asset('img/photos/vacantes/'.$vac->portada) }}');"--}}>
                                     </div>
                                     <div class="card-body">
                                         {{-- <small class="card-orden">{{ $vac->orden }}</small> --}}
@@ -128,7 +128,7 @@
                 {{ $ben->beneficio }}
             </div>
             <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 col-2 ms-3 d-flex abengn-content-start justify-content-start rounded-circle">
-                <div class="beneficio-color position-relative" style="background-color: {{ $ben->color }};">
+                <div class="beneficio-color position-relative" style="background-color: #FFC000">
                     <div class="beneficio-icono position-absolute top-50 start-50 translate-middle" style="background-image: url('{{ asset('img/photos/beneficios/'.$ben->icono) }}');"></div>
                 </div>
             </div>
@@ -141,7 +141,7 @@
         <div class="row" data-aos="zoom-in">
             <div class="col py-5">
                 <div class="row">
-                    <div class="col text-center titulo-index2">
+                    <div class="col text-center titulo-bolsa2" style="font-family: 'Sansation Bold', sans-serif; ">
                         Postúlate con NOSOTROS                           
                     </div>
                 </div>
@@ -302,28 +302,25 @@
 @section('jsLibExtras2')
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        // Actualiza el contenido con los estilos aplicados
-        tituloIndex.innerHTML = resultado.join(' ');
-
-        var tituloIndex2 = document.querySelector('.titulo-index2');
+        var tituloBolsa = document.querySelector('.titulo-bolsa');
 
         // Obtén el texto del elemento
-        var texto2 = tituloIndex2.textContent;
+        var texto = tituloBolsa.textContent;
 
-        // Separa el texto2 en palabras
-        var palabras2 = texto2.split(/\s+/);
+        // Separa el texto en palabras
+        var palabras = texto.split(/\s+/);
 
         // Aplica estilos según si la palabra es mayúscula o minúscula
-        var resultado2 = palabras2.map(function (palabra2) {
-            if (palabra2 === palabra2.toUpperCase()) {
-                return '<span style="font-family: \'Sansation Bold\', sans-serif;" class="mayuscula2">' + palabra2 + '</span>';
+        var resultado = palabras.map(function (palabra) {
+            if (palabra === palabra.toUpperCase()) {
+                return '<span style="font-family: \'Sansation Bold\', sans-serif;" class="mayuscula">' + palabra + '</span>';
             } else {
-                return '<span style="font-family: \'Sansation Bold\', sans-serif;" class="minuscula2">' + palabra2 + '</span>';
+                return '<span style="font-family: \'Sansation Bold\', sans-serif;" class="minuscula">' + palabra + '</span>';
             }
         });
 
         // Actualiza el contenido con los estilos aplicados
-        tituloIndex2.innerHTML = resultado2.join(' ');
+        tituloBolsa.innerHTML = resultado.join(' ');
 
         
     });

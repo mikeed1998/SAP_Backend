@@ -4,6 +4,8 @@
 
 @section('cssExtras')
     <link rel="stylesheet" href="{{ asset('css/front/contacto.css') }}">
+    <link rel="stylesheet" href="{{ asset('vendor/leaflet/leaflet.css') }}">
+		<script src="{{ asset('vendor/leaflet/leaflet.js') }}"></script>
 @endsection
 
 @section('styleExtras')

@@ -20,52 +20,33 @@
     opacity: 1; /* Cambiar la opacidad al hacer hover */
 }
 
-.col-pri {
-    padding-top: 15rem;
-}
-
 @media(min-width: 1800px) {
-
-    .fondo {
-        height: 70rem;
-    }
-    
-    .text-cont1 {
-        max-height: 10rem;
-        overflow: auto;
-    }
-
-    .text-cont2 {
-        max-height: 10rem;
-        overflow: auto;
-    }
 
     .portada-servicio {
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 60rem;
-        width: 60rem;
-    }
-
-    .contenedor-dots {
-        padding-top: 34rem;
-    }
-
-    .mar-text {
-        margin-top: 28rem;
+        height: 78rem;
     }
 
     .carta-imagen {
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 36rem;
+        height: 36.383125rem;
+    }
+
+    .col-pri {
+        padding-top: 15rem;
     }
 
     .titulo-card {
         line-height: 1.1;
         font-size: 5rem;
+    }
+
+    .mar-text {
+        margin-top: 28rem;
     }
 
     .texto-card {
@@ -75,42 +56,35 @@
         overflow: scroll;
     }
 
+    .contenedor-dots {
+        padding-top: 34rem;
+    }
+
+    .cont-izq {
+        margin-top: 6rem;
+    }
+     
 }
 
 /* xxl */
 @media (min-width: 1400px) and (max-width: 1799px) {
     
-    .fondo {
-        height: 70rem;
-    }
-    
-    .text-cont1 {
-        max-height: 10rem;
-        overflow: auto;
-    }
-
-    .text-cont2 {
-        max-height: 10rem;
-        overflow: auto;
-    }
-
     .portada-servicio {
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 60rem;
-        width: 60rem;
+        height: 64rem;
     }
 
-    .contenedor-dots {
-        padding-top: 34rem;
-    }
-    
     .carta-imagen {
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 28rem;
+        height: 28.52rem;
+    }
+
+    .col-pri {
+        padding-top: 15rem;
     }
 
     .titulo-card {
@@ -129,42 +103,35 @@
         overflow: scroll;
     }
 
+    .contenedor-dots {
+        padding-top: 24rem;
+    }
+
+    .cont-izq {
+        margin-top: -6rem;
+    }
+
 }
 
 /* xl */
-@media (min-width: 1200px) and (max-width: 1399px) {
-
-    .fondo {
-        height: 70rem;
-    }
-    
-    .text-cont1 {
-        max-height: 10rem;
-        overflow: auto;
-    }
-
-    .text-cont2 {
-        max-height: 10rem;
-        overflow: auto;
-    }
+@media (min-width: 1200px) and (max-width: 1400px) {
 
     .portada-servicio {
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 50rem;
-        width: 50rem;
-    }
-
-    .contenedor-dots {
-        padding-top: 18rem;
+        height: 56rem;
     }
 
     .carta-imagen {
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 23rem;
+        height: 25.236875rem;
+    }
+
+    .col-pri {
+        padding-top: 15rem;
     }
 
     .titulo-card {
@@ -183,47 +150,40 @@
         overflow: scroll;
     }
 
+    .contenedor-dots {
+        padding-top: 18rem;
+    }
+
+    .cont-izq {
+        margin-top: -8rem;
+    }
+
 }
 
 /* lg */
-@media (min-width: 992px) and (max-width: 1199px) {
-
-    .fondo {
-        height: 70rem;
-    }
-    
-    .text-cont1 {
-        max-height: 10rem;
-        overflow: auto;
-    }
-
-    .text-cont2 {
-        max-height: 10rem;
-        overflow: auto;
-    }
+@media (min-width: 992px) and (max-width: 1200px) {
 
     .portada-servicio {
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 40rem;
-        width: 40rem;
-    }
-
-    .contenedor-dots {
-        padding-top: 10rem;
+        height: 52rem;
     }
 
     .carta-imagen {
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 18.75rem;
+        height: 22.446875rem;
+    }
+
+    .col-pri {
+        padding-top: 15rem;
     }
 
     .titulo-card {
         line-height: 1.1;
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .mar-text {
@@ -233,48 +193,40 @@
 
     .texto-card {
         line-height: 1.1; 
-        font-size: 0.8rem;
-        margin-top: 1rem; 
+        margin-top: 3rem; 
         max-height: 3.2rem; 
         overflow: scroll;
+    }
+
+    .contenedor-dots {
+        padding-top: 10rem;
+    }
+
+    .cont-izq {
+        margin-top: -20rem;
     }
 
 }
 
 /* md */
-@media (min-width: 768px) and (max-width: 991px) {
-
-    .fondo {
-        height: 70rem;
-    }
-    
-    .text-cont1 {
-        max-height: 10rem;
-        overflow: auto;
-    }
-
-    .text-cont2 {
-        max-height: 10rem;
-        overflow: auto;
-    }
+@media (min-width: 768px) and (max-width: 992px) {
 
     .portada-servicio {
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 40rem;
-        width: 40rem;
-    }    
-
-    .contenedor-dots {
-        padding-top: 40rem;
+        height: 50.015rem;
     }
 
     .carta-imagen {
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 46rem;
+        height: 50.015rem;
+    }
+
+    .col-pri {
+        padding-top: 15rem;
     }
 
     .titulo-card {
@@ -289,48 +241,42 @@
 
     .texto-card {
         line-height: 1.1; 
-        margin-top: 0rem; 
+        margin-top: 2rem; 
         max-height: 5rem; 
         overflow: scroll;
+    }
+
+    .contenedor-dots {
+        padding-top: 40rem;
+    }
+
+    .cont-izq {
+        margin-top: -20rem;
     }
 
 }
 
 /* sm */
-@media (min-width: 576px) and (max-width: 767px) {
-
-    .fondo {
-        height: 70rem;
-    }
-    
-    .text-cont1 {
-        max-height: 10rem;
-        overflow: auto;
-    }
-
-    .text-cont2 {
-        max-height: 10rem;
-        overflow: auto;
-    }
+@media (min-width: 576px) and (max-width: 768px) {
 
     .portada-servicio {
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 36rem;
-        width: 36rem;
-    }
-
-    .contenedor-dots {
-        padding-top: 26rem;
+        height: 60rem;
     }
 
     .carta-imagen {
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 34rem;
+        height: 36.681875rem;
     }
+
+    .col-pri {
+        padding-top: 15rem;
+    }
+
     .titulo-card {
         line-height: 1.1;
         font-size: 4rem;
@@ -343,50 +289,43 @@
 
     .texto-card {
         line-height: 1.1; 
-        margin-top: 0rem; 
+        margin-top: 2rem; 
         max-height: 3.2rem; 
         overflow: scroll;
+    }
+
+    .contenedor-dots {
+        padding-top: 26rem;
+    }
+
+    .cont-izq {
+        margin-top: 4rem;
     }
 
 }
 
 /* xs */
-@media (min-width: 0px) and (max-width: 575px) {
-
-    .fondo {
-        height: 70rem;
-    }
-    
-    .text-cont1 {
-        max-height: 10rem;
-        overflow: auto;
-    }
-
-    .text-cont2 {
-        max-height: 10rem;
-        overflow: auto;
-    }
+@media (min-width: 0px) and (max-width: 576px) {
 
     .portada-servicio {
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 26rem;
-        width: 26rem;
-    }
-
-    .contenedor-dots {
-        padding-top: 9rem;
+        height: 56rem;
     }
 
     .carta-imagen {
         background-position: center center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 23rem;
+        height: 20.90375rem;
     }
 
-    .titulo-card {   
+    .col-pri {
+        padding-top: 15rem;
+    }
+
+    .titulo-card {
         line-height: 1.1;
         font-size: 2.6rem;
     }
@@ -403,6 +342,13 @@
         overflow: scroll;
     }
 
+    .contenedor-dots {
+        padding-top: 9rem;
+    }
+
+    .cont-izq {
+        margin-top: 0rem;
+    }
 
 }
 

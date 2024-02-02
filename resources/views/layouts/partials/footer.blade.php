@@ -114,6 +114,9 @@
                                     <div class="col-12 py-1 fs-5 fw-bolder text-white" style="line-height: 1.3;">
                                         <a href="{{ route('front.politicas') }}" style="font-family: 'Sansation Bold', sans-serif;" class="texto-hover">TERMINOS Y CONDICIONES</a>
                                     </div>
+                                    <div class="col-12 py-1 fs-5 fw-bolder text-white" style="line-height: 1.3;">
+                                        <a href="{{ route('front.faqs') }}" style="font-family: 'Sansation Bold', sans-serif;" class="texto-hover">PREGUNTAS FRECUENTES</a>
+                                    </div>
                                     {{-- <div class="col-12 py-1 fs-5 fw-bolder text-white" style="line-height: 1.3;">
                                         <a href="" style="font-family: 'Sansation Bold', sans-serif;" class="texto-hover">AVISO DE PRIVACIDAD</a>
                                     </div> --}}

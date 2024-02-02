@@ -219,8 +219,9 @@ class FrontController extends Controller
 	public function faqs() {
 		$config = Configuracion::find(1);
 		$preguntas = Faq::all();
+		$servicios = ZServicio::orderBy('orden', 'asc')->get();
 		$pagina = 'preguntas';
-		return view('front.faq', compact('preguntas', 'pagina', 'config'));
+		return view('front.faq', compact('preguntas', 'pagina', 'config', 'servicios'));
 	}
 
 	public function politicas() {
