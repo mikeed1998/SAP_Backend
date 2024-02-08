@@ -1,0 +1,409 @@
+
+.card {
+    overflow: hidden; /* Ocultar el contenido que se extiende más allá de la tarjeta */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Agregar transición suave para una apariencia más agradable */
+
+    /* Pseudo-clase para cambiar la opacidad al hacer hover */
+}
+
+.card:hover .overlay {
+    opacity: 1; /* Cambiar la opacidad al hacer hover */
+}
+
+.col-pri {
+    padding-top: 15rem;
+}
+
+@media(min-width: 1800px) {
+
+    .fondo {
+        height: 70rem;
+    }
+    
+    .text-cont1 {
+        max-height: 10rem;
+        overflow: auto;
+    }
+
+    .text-cont2 {
+        max-height: 10rem;
+        overflow: auto;
+    }
+
+    .portada-servicio {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 54rem;
+        width: 54rem;
+    }
+
+    .contenedor-dots {
+        padding-top: 34rem;
+    }
+
+    .mar-text {
+        margin-top: 28rem;
+    }
+
+    .carta-imagen {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 36rem;
+    }
+
+    .titulo-card {
+        line-height: 1.1;
+        font-size: 5rem;
+    }
+
+    .texto-card {
+        line-height: 1.1; 
+        margin-top: 2rem; 
+        max-height: 3rem; 
+        overflow: scroll;
+    }
+
+}
+
+/* xxl */
+@media (min-width: 1400px) and (max-width: 1799px) {
+    
+    .fondo {
+        height: 70rem;
+    }
+    
+    .text-cont1 {
+        max-height: 10rem;
+        overflow: auto;
+    }
+
+    .text-cont2 {
+        max-height: 10rem;
+        overflow: auto;
+    }
+
+    .portada-servicio {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 46rem;
+        width: 46rem;
+    }
+
+    .contenedor-dots {
+        padding-top: 34rem;
+    }
+    
+    .carta-imagen {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 28rem;
+    }
+
+    .titulo-card {
+        line-height: 1.1;
+        font-size: 3.4rem;
+    }
+
+    .mar-text {
+        margin-top: 23rem;
+    }
+
+    .texto-card {
+        line-height: 1.1; 
+        margin-top: -1rem; 
+        max-height: 3.2rem; 
+        overflow: scroll;
+    }
+
+}
+
+/* xl */
+@media (min-width: 1200px) and (max-width: 1399px) {
+
+    .fondo {
+        height: 70rem;
+    }
+    
+    .text-cont1 {
+        max-height: 10rem;
+        overflow: auto;
+    }
+
+    .text-cont2 {
+        max-height: 10rem;
+        overflow: auto;
+    }
+
+    .portada-servicio {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 40rem;
+        width: 40rem;
+    }
+
+    .contenedor-dots {
+        padding-top: 18rem;
+    }
+
+    .carta-imagen {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 23rem;
+    }
+
+    .titulo-card {
+        line-height: 1.1;
+        font-size: 3.1rem;
+    }
+
+    .mar-text {
+        margin-top: 18rem;
+    }
+
+    .texto-card {
+        line-height: 1.1; 
+        margin-top: 1rem; 
+        max-height: 3.2rem; 
+        overflow: scroll;
+    }
+
+}
+
+/* lg */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .fondo {
+        height: 70rem;
+    }
+    
+    .text-cont1 {
+        max-height: 10rem;
+        overflow: auto;
+    }
+
+    .text-cont2 {
+        max-height: 10rem;
+        overflow: auto;
+    }
+
+    .portada-servicio {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 34rem;
+        width: 34rem;
+    }
+
+    .contenedor-dots {
+        padding-top: 10rem;
+    }
+
+    .carta-imagen {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 18.75rem;
+    }
+
+    .titulo-card {
+        line-height: 1.1;
+        font-size: 2rem;
+    }
+
+    .mar-text {
+        line-height: 0.8;
+        margin-top: 13rem;
+    }
+
+    .texto-card {
+        line-height: 1.1; 
+        font-size: 0.8rem;
+        margin-top: 1rem; 
+        max-height: 3.2rem; 
+        overflow: scroll;
+    }
+
+}
+
+/* md */
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .fondo {
+        height: 70rem;
+    }
+    
+    .text-cont1 {
+        max-height: 10rem;
+        overflow: auto;
+    }
+
+    .text-cont2 {
+        max-height: 10rem;
+        overflow: auto;
+    }
+
+    .portada-servicio {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 27rem;
+        width: 27rem;
+    }    
+
+    .contenedor-dots {
+        padding-top: 40rem;
+    }
+
+    .carta-imagen {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 46rem;
+    }
+
+    .titulo-card {
+        line-height: 1.1;
+        font-size: 5rem;
+    }
+
+    .mar-text {
+        line-height: 0.8;
+        margin-top: 40rem;
+    }
+
+    .texto-card {
+        line-height: 1.1; 
+        margin-top: 0rem; 
+        max-height: 5rem; 
+        overflow: scroll;
+    }
+
+}
+
+/* sm */
+@media (min-width: 576px) and (max-width: 767px) {
+
+    .fondo {
+        height: 70rem;
+    }
+    
+    .text-cont1 {
+        max-height: 10rem;
+        overflow: auto;
+    }
+
+    .text-cont2 {
+        max-height: 10rem;
+        overflow: auto;
+    }
+
+    .portada-servicio {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 26rem;
+        width: 26rem;
+    }
+
+    .contenedor-dots {
+        padding-top: 26rem;
+    }
+
+    .carta-imagen {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 34rem;
+    }
+    .titulo-card {
+        line-height: 1.1;
+        font-size: 4rem;
+    }
+
+    .mar-text {
+        line-height: 0.8;
+        margin-top: 28rem;
+    }
+
+    .texto-card {
+        line-height: 1.1; 
+        margin-top: 0rem; 
+        max-height: 3.2rem; 
+        overflow: scroll;
+    }
+
+}
+
+/* xs */
+@media (min-width: 0px) and (max-width: 575px) {
+
+    .fondo {
+        height: 70rem;
+    }
+    
+    .text-cont1 {
+        max-height: 10rem;
+        overflow: auto;
+    }
+
+    .text-cont2 {
+        max-height: 10rem;
+        overflow: auto;
+    }
+
+    .portada-servicio {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 22rem;
+        width: 22rem;
+    }
+
+    .contenedor-dots {
+        padding-top: 9rem;
+    }
+
+    .carta-imagen {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 23rem;
+    }
+
+    .titulo-card {   
+        line-height: 1.1;
+        font-size: 2.6rem;
+    }
+
+    .mar-text {
+        line-height: 1;
+        margin-top: 11rem;
+    }
+
+    .texto-card {
+        line-height: 1.1; 
+        margin-top: 3rem; 
+        max-height: 3.2rem; 
+        overflow: scroll;
+    }
+
+
+}
+
+

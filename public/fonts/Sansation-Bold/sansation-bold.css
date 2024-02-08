@@ -1,0 +1,6 @@
+@font-face {
+    font-family: 'Sansation Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Sansation Bold'), url('fonts/Sansation-Bold/Sansation_Bold.ttf') format('truetype');
+}

@@ -1,0 +1,157 @@
+#map { 
+    height: 780px; 
+}
+
+input {
+    font-family: 'Blinker', sans-serif; font-family: 'Montserrat', sans-serif; font-weight: bold;
+}
+
+.titulo-contacto .mayuscula {
+    font-family: 'Blinker', sans-serif; font-family: 'Montserrat', sans-serif; font-weight: bold;
+    color: #FE6E63;
+}
+
+.titulo-contacto .minuscula {
+    font-family: 'Blinker', sans-serif; font-family: 'Montserrat', sans-serif; font-weight: bold;
+    color: #000000;
+}
+
+.custom-popup {
+    background-color: #fff;  
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);  
+    padding: 10px;  
+    font-size: 14px; 
+    color: #333;  
+}
+
+@media(min-width: 1800px) {
+
+    .titulo-contacto {
+        font-size: 9rem;
+        font-weight: 500;
+        line-height: 1.1;
+    }
+
+    .formu-grande {
+        display: block;
+    }
+
+    .formu-small {
+        display: none;
+    }
+ 
+}
+
+/* xxl */
+@media (min-width: 1400px) and (max-width: 1799px) {
+
+    .titulo-contacto {
+        font-size: 6.8rem;
+        font-weight: 500;
+        line-height: 1.1;
+    }
+
+    .formu-grande {
+        display: block;
+    }
+
+    .formu-small {
+        display: none;
+    }
+
+}
+
+/* xl */
+@media (min-width: 1200px) and (max-width: 1400px) {
+
+    .titulo-contacto {
+        font-size: 4.8rem;
+        font-weight: 500;
+        line-height: 1.1;
+    }
+
+    .formu-grande {
+        display: block;
+    }
+
+    .formu-small {
+        display: none;
+    }
+
+}
+
+/* lg */
+@media (min-width: 992px) and (max-width: 1200px) {
+
+    .titulo-contacto {
+        font-size: 3.8rem;
+        font-weight: 500;
+        line-height: 1.1;
+    }
+
+    .formu-grande {
+        display: block;
+    }
+
+    .formu-small {
+        display: none;
+    }
+
+}
+
+/* md */
+@media (min-width: 768px) and (max-width: 992px) {
+
+    .titulo-contacto {
+        font-size: 2.8rem;
+        font-weight: 500;
+        line-height: 1.1;
+    }
+
+    .formu-grande {
+        display: none;
+    }
+
+    .formu-small {
+        display: block;
+    }
+
+}
+
+/* sm */
+@media (min-width: 576px) and (max-width: 768px) {
+
+    .titulo-contacto {
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 1.1;
+    }
+
+    .formu-grande {
+        display: none;
+    }
+
+    .formu-small {
+        display: block;
+    }
+
+}
+
+/* xs */
+@media (min-width: 0px) and (max-width: 576px) {
+
+    .titulo-contacto {
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 1.1;
+    }
+
+    .formu-grande {
+        display: none;
+    }
+
+    .formu-small {
+        display: block;
+    }
+
+}
