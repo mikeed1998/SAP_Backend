@@ -88,7 +88,7 @@
                                     <li>
                                         <div class="col-12 px-3 py-1">
                                             <div class="card carta-imagen border-0 rounded-0" style="background-image: url('{{ asset('img/photos/proyectos/'.$proye->portado) }}');">
-                                                <div class="overlay" style="background-color: {{ $proye->color }};">
+                                                <div class="overlay" style="background-color: #FFC000;">
                                                     <div class="row">
                                                         <div class="col position-relative" >
                                                             <div class="col-12 p-4 position-absolute top-0 text-start fw-bolder titulo-card" style="font-family: 'Blinker', sans-serif; font-family: 'Montserrat', sans-serif; font-weight: bold;">
