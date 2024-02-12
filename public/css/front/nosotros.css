@@ -9,7 +9,8 @@
     }
 
     .titu-2 {
-        color: #FE6E63; 
+        /* color: #FFC000;  */
+        color: #FFC000; 
         font-size: 7rem; 
         font-weight: 600; 
         line-height: 1.2;
@@ -63,11 +64,11 @@
         height: 50rem;
         padding-top: 8rem;
         padding-bottom: 8rem;
-        box-shadow: inset 0 0 0 1000px rgba(254, 110, 99, 0.9);
+        box-shadow: inset 0 0 0 1000px rgba(255, 192, 0, 0.9);
     }
 
     .titulo-card {
-        color: #FE6E63; 
+        color: #FFC000; 
         font-size: 4rem; 
         font-weight: 500;
     }
@@ -83,7 +84,7 @@
     }
 
     .titulo-nos {
-        background-color: #FE6E63;
+        background-color: #FFC000;
         font-size: 3rem;
         font-weight: normal;
         text-align: center;
@@ -127,7 +128,7 @@
     }
 
     .titu-2 {
-        color: #FE6E63; 
+        color: #FFC000; 
         font-size: 5.5rem; 
         font-weight: 600; 
         line-height: 1.2;
@@ -185,7 +186,7 @@
     }
 
     .titulo-card {
-        color: #FE6E63; 
+        color: #FFC000; 
         font-size: 3rem; 
         font-weight: 500;
     }
@@ -201,7 +202,7 @@
     }
 
     .titulo-nos {
-        background-color: #FE6E63;
+        background-color: #FFC000;
         font-size: 3rem;
         font-weight: normal;
         text-align: center;
@@ -245,7 +246,7 @@
     }
 
     .titu-2 {
-        color: #FE6E63; 
+        color: #FFC000; 
         font-size: 4.6rem; 
         font-weight: 600; 
         line-height: 1.2;
@@ -302,7 +303,7 @@
     }
 
     .titulo-card {
-        color: #FE6E63; 
+        color: #FFC000; 
         font-size: 2.4rem; 
         font-weight: 500;
     }
@@ -318,7 +319,7 @@
     }
 
     .titulo-nos {
-        background-color: #FE6E63;
+        background-color: #FFC000;
         font-size: 2.4rem;
         font-weight: normal;
         text-align: center;
@@ -362,7 +363,7 @@
     }
 
     .titu-2 {
-        color: #FE6E63; 
+        color: #FFC000; 
         font-size: 4rem; 
         font-weight: 600; 
         line-height: 1.2;
@@ -421,7 +422,7 @@
     }
 
     .titulo-card {
-        color: #FE6E63; 
+        color: #FFC000; 
         font-size: 2.4rem; 
         font-weight: 500;
     }
@@ -437,7 +438,7 @@
     }
 
     .titulo-nos {
-        background-color: #FE6E63;
+        background-color: #FFC000;
         font-size: 2.4rem;
         font-weight: normal;
         text-align: center;
@@ -482,7 +483,7 @@
     }
 
     .titu-2 {
-        color: #FE6E63; 
+        color: #FFC000; 
         font-size: 5rem; 
         font-weight: 600; 
         line-height: 1.2;
@@ -539,7 +540,7 @@
     }
 
     .titulo-card {
-        color: #FE6E63; 
+        color: #FFC000; 
         font-size: 2.4rem; 
         font-weight: 500;
     }
@@ -555,7 +556,7 @@
     }
 
     .titulo-nos {
-        background-color: #FE6E63;
+        background-color: #FFC000;
         font-size: 2.4rem;
         font-weight: normal;
         text-align: center;
@@ -600,7 +601,7 @@
     }
 
     .titu-2 {
-        color: #FE6E63; 
+        color: #FFC000; 
         font-size: 5rem; 
         font-weight: 600; 
         line-height: 1.2;
@@ -657,7 +658,7 @@
     }
 
     .titulo-card {
-        color: #FE6E63; 
+        color: #FFC000; 
         font-size: 2.4rem; 
         font-weight: 500;
     }
@@ -673,7 +674,7 @@
     }
 
     .titulo-nos {
-        background-color: #FE6E63;
+        background-color: #FFC000;
         font-size: 2.4rem;
         font-weight: normal;
         text-align: center;
@@ -718,7 +719,7 @@
     }
 
     .titu-2 {
-        color: #FE6E63; 
+        color: #FFC000; 
         font-size: 3rem; 
         font-weight: 600; 
         line-height: 1.2;
@@ -775,7 +776,7 @@
     }
 
     .titulo-card {
-        color: #FE6E63; 
+        color: #FFC000; 
         font-size: 2.4rem; 
         font-weight: 500;
     }
@@ -791,7 +792,7 @@
     }
 
     .titulo-nos {
-        background-color: #FE6E63;
+        background-color: #FFC000;
         font-size: 2rem;
         font-weight: normal;
         text-align: center;

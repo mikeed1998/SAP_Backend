@@ -9,7 +9,7 @@
 @section('styleExtras')
 <style>
 
-@font-face {
+    @font-face {
         font-family: 'Neusharp Bold';
         font-style: normal;
         font-weight: normal;

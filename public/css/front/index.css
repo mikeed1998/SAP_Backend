@@ -396,7 +396,7 @@ video {
 
     .carta:hover {
         transform: translateY(-2rem); /* Ajusta la cantidad de elevación según tus preferencias */
-        /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); Agrega una sombra para dar un efecto elevado */
+        /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); Agrega una sombra para dar un efecto elevado */
     }
 
     .card-img-overlay {

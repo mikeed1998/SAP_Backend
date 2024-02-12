@@ -214,13 +214,14 @@ class FrontController extends Controller
 		$productosPhoto = ProductosPhoto::where('producto',$producto->id)->get();
 		$relacionado = Producto::where('categoria',$producto->categoria)->get();
 		return view('front.detprod',compact('user','producto','color','categorias','productosPhoto','relacionado', 'config'));
-	}
+	} 
 
 	public function faqs() {
 		$config = Configuracion::find(1);
 		$preguntas = Faq::all();
+		$servicios = ZServicio::orderBy('orden', 'asc')->get();
 		$pagina = 'preguntas';
-		return view('front.faq', compact('preguntas', 'pagina', 'config'));
+		return view('front.faq', compact('preguntas', 'pagina', 'config', 'servicios'));
 	}
 
 	public function politicas() {

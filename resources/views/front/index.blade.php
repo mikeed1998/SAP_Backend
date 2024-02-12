@@ -35,12 +35,12 @@
                     </div>
                     <div class="col-12 position-absolute top-50 start-50 translate-middle">
                         <div class="row py-5">
-                            <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-11 col-11 titulo-pri mx-auto fw-bold titulo-index" style="font-family: 'Sansation Bold', sans-serif; align-content: justify;">
+                            <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-11 col-11 titulo-pri mx-auto text-center fw-bold titulo-index" style="font-family: 'Sansation Bold', sans-serif; align-content: justify;">
                                 {{ $elements[0]->texto }}
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-8 col-sm-11 col-11 py-4 mx-auto text-white t" style="font-family: 'Blinker', sans-serif; font-family: 'Montserrat', sans-serif; font-weight: bold;">
+                            <div class="col-xxl-4 col-xl-4 col-lg-6 col-md-8 col-sm-11 col-11 py-4 mx-auto text-center text-white t" style="font-family: 'Blinker', sans-serif; font-family: 'Montserrat', sans-serif; font-weight: bold;">
                                 {{ $elements[1]->texto }}
                             </div>
                         </div>
@@ -288,13 +288,12 @@
                         <style>
                             .triangu {
                                 width: 100%;
-   height: 2rem;
-   border-style: solid;
-   border-width: 0 0px 150px 3000px;
-   border-color: transparent transparent #201E1F transparent;
-   margin-top: 3.9rem;
-   transform: rotate(0deg);
-  
+                                height: 2rem;
+                                border-style: solid;
+                                border-width: 0 0px 150px 3000px;
+                                border-color: transparent transparent #201E1F transparent;
+                                margin-top: 3.9rem;
+                                transform: rotate(0deg);
                             }
                         </style>
                         <div class="row px-0" style="overflow: hidden; --bs-gutter-x: 0rem;">
@@ -800,7 +799,7 @@
 
     var map = L.map('map', { attributionControl: false, scrollWheelZoom: false, dragging: true }).setView([23.6345, -102.5528], 6);
     // Ajustar el centro para desplazar el mapa a la derecha
-    var newCenter = L.latLng(24.3345, -100.4528); // Ajusta el valor de longitud según tus necesidades
+    var newCenter = L.latLng(24.3345, -98.4528); // Ajusta el valor de longitud según tus necesidades
     map.setView(newCenter, 6);
 
     map.on('zoomend', function () {

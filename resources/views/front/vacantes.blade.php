@@ -1287,7 +1287,7 @@ input {
                 {{ $ben->beneficio }}
             </div>
             <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-xs-2 col-2 ms-3 d-flex abengn-content-start justify-content-start rounded-circle">
-                <div class="beneficio-color position-relative" style="background-color: {{ $ben->color }};">
+                <div class="beneficio-color position-relative" style="background-color: #FFC000;">
                     <div class="beneficio-icono position-absolute top-50 start-50 translate-middle" style="background-image: url('{{ asset('img/photos/beneficios/'.$ben->icono) }}');"></div>
                 </div>
             </div>
