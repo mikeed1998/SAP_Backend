@@ -14,7 +14,7 @@
         font-weight: normal;
         src: local('Neusharp Bold'), url({{ asset('fonts/Neusharp-Bold/NeusharpBold-7B8RV.woff') }}) format('woff');
     }
-	/* mas estilisado */	
+	/* mas estilisado */
 		body{
 			background-color: #e5e8eb  !important;
 		}
@@ -95,27 +95,27 @@
 <style>
 
 	.card{
-		
+
 	}
 
-	@media only screen and (max-width: 768px){  
+	@media only screen and (max-width: 768px){
 		.cont_circle{
 			bottom: -150px !important;
 		}
 		.circle_slider{
-			width: 300px !important; 
+			width: 300px !important;
 			height: 300px !important;
 		}
 		.img_circle{
 			margin-top: -120px !important;
 		}
-	}  
-	@media only screen and (max-width: 390px){  
+	}
+	@media only screen and (max-width: 390px){
 		.cont_circle{
 			bottom: -100px !important;
 		}
 		.circle_slider{
-			width: 200px !important; 
+			width: 200px !important;
 			height: 200px !important;
 		}
 		.img_circle{
@@ -162,18 +162,18 @@
     }
 </style>
 <style>
-    
+
 @media(min-width: 1800px) {
 
     .portada-admin {
         height: 24rem;
     }
-     
+
 }
 
 /* xxl */
 @media (min-width: 1400px) and (max-width: 1799px) {
-    
+
     .portada-admin {
         height: 24rem;
     }
@@ -208,14 +208,14 @@
 /* sm */
 @media (min-width: 576px) and (max-width: 768px) {
 
-    
+
 
 }
 
 /* xs */
 @media (min-width: 0px) and (max-width: 576px) {
 
-    
+
 
 }
 
@@ -226,7 +226,7 @@
             <a href="{{ route('config.seccion.index') }}" class="col col-md-2 btn btn-sm grey darken-2 text-white mr-auto"><i class="fa fa-reply"></i> Regresar</a>
         </div>
 
-       
+
         <div class="col-12 my-5 text-center d-flex justify-content-center align-items-center flex-column">
             <p class="mt-5" style="font-size: 4.5rem; font-family:'Neusharp Bold'; color: #FFFFFF;">SERVICIOS</p>
 			{{-- <div class="col-6">
@@ -280,7 +280,7 @@
 							</script>
 						</div> --}}
                         <div class="col-3 card position-absolute">
-                            
+
                             <div class="row">
                                 <div class="col text-center p-3">
                                     <input type="number" class="form-control fw-bold editar_text_seccion_global" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$s->id}}" data-table="ZServicio" data-campo="orden" value="{{$s->orden}}" style="box-shadow: 0;" placeholder="Orden">
@@ -289,10 +289,10 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-12 mt-3 d-flex flex-column" style="text-align: justify;">
                     <div class="col-12 mt-2 position-relative">
-                        <input type="color" class="form-control py-2 editar_text_seccion_global" value="{{ $s->color }}" onchange="actualizarColor()"  data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$s->id}}" data-table="ZServicio" data-campo="color">
+                        {{-- <input type="color" class="form-control py-2 editar_text_seccion_global" value="{{ $s->color }}" onchange="actualizarColor()"  data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$s->id}}" data-table="ZServicio" data-campo="color"> --}}
                     </div>
                     <div class="col-12 mt-2 position-relative">
                         <h5><input type="text" class="form-control editar_text_seccion_global" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$s->id}}" data-table="ZServicio" data-campo="titulo" value="{{$s->titulo}}"></h5>
@@ -337,7 +337,7 @@
         <img src="{{asset('img/design/footerp.png')}}" alt="">
         <a href="" class="mt-2" style="color: #909986; font-size: 1.2rem;">VISITAR</a>
         <div class="col-auto d-flex justify-content-center align-items-center flex-row">
-            
+
         </div>
     </div> --}}
 
@@ -363,7 +363,7 @@
                     <label id="label_form" class="col-12 m-0 p-0 d-flex justify-content-center align-items-center" for="input_img_element" style="opacity: 100%; height: 100%;  border-radius: 16px;">Agregar icono</label>
                 </div>
                 <script>
-             
+
                     $('#input_img_element').change(function(e) {
                         $('#label_form').addClass('backr');
                         $('#label_form').html('Imagen añadida');
@@ -387,8 +387,8 @@
                 </script>
             </div>
             <div class="col-12 mb-2">
-                <label for="colorPicker" class="form-label">Selecciona un color de fondo:</label>
-                <input type="color" class="form-control" id="colorPicker" name="colorPicker" value="#CCAEEC" onchange="actualizarColor()">
+                {{-- <label for="colorPicker" class="form-label">Selecciona un color de fondo:</label> --}}
+                <input type="hidden" class="form-control" id="colorPicker" name="colorPicker" value="#FFC000" onchange="actualizarColor()">
             </div>
             <div class="col-12 mb-2">
                 <input type="number" name="orden" class="form-control" placeholder="Orden">

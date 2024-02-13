@@ -25,7 +25,7 @@
 .slick-dots {
     display: flex;
     justify-content: center;
-    flex-direction: row; /* Asegura una disposición horizontal */   
+    flex-direction: row; /* Asegura una disposición horizontal */
     list-style: none;
     padding: 0;
     margin: 20px 0; /* Ajusta el margen según tus necesidades */
@@ -80,7 +80,7 @@ input {
         color: black;
         background-color: transparent;
     }
-    
+
     .imagen-vacantes {
         background-position: center center;
         background-repeat: no-repeat;
@@ -90,12 +90,12 @@ input {
     }
 
     .beneficio-titulo {
-        font-size: 6rem; 
+        font-size: 6rem;
         font-weight: 700;
     }
 
     .beneficio-col {
-        background-color: #201E1F; 
+        background-color: #201E1F;
         color: #FFFFFF;
         border-top-right-radius: 64px;
         border-bottom-right-radius: 64px;
@@ -110,7 +110,7 @@ input {
     .beneficio-color {
         border-radius: 100%;
         height: 8.6rem;
-        width: 8.6rem; 
+        width: 8.6rem;
     }
 
     .beneficio-icono {
@@ -130,14 +130,14 @@ input {
     }
 
     .servicios, .titulo-servicios {
-        overflow: hidden;
+        /* overflow: hidden; */
         width: 100%;
-        left: 12rem;
+        /* left: 12rem; */
     }
 
     .cont-btn {
         margin-top: 7rem;
-    }   
+    }
 
     .link-servicio {
         margin-top: -7rem;
@@ -151,22 +151,21 @@ input {
 
     .carta {
         position: relative;
-        overflow: hidden;
-        border-radius: 3rem;
+        /* overflow: hidden; */
+        border-radius: 0rem;
         padding-top: 2rem;
         padding-bottom: 1rem;
-        padding-right: 1rem;
-        padding-left: 1rem;
-        margin-right: 1rem;
-        margin-left: 1rem;
+        padding-right: 0rem;
+        padding-left: 0rem;
+        height: 50rem;
         margin-top: 2rem;
     }
-    
+
     .carta:hover {
         transform: translateY(-2rem); /* Ajusta la cantidad de elevación según tus preferencias */
         /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); Agrega una sombra para dar un efecto elevado */
     }
-    
+
     .card-img-overlay {
         background: rgba(0, 0, 0, 0.5); /* Cambia el color del overlay según tus preferencias */
         position: absolute;
@@ -179,10 +178,10 @@ input {
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
-        width: 100%; 
-        height: auto; 
+        width: 100%;
+        height: auto;
     }
-    
+
     .carta:hover .card-img-overlay {
         opacity: 1; /* Hacer visible al pasar el cursor sobre la tarjeta */
     }
@@ -199,7 +198,7 @@ input {
         height: 8rem;
         overflow: hidden;
     }
-    
+
     .card-text {
         line-height: 1.2;
         text-align: justify;
@@ -210,34 +209,34 @@ input {
         color: black;
         height: 19.8rem;
         overflow: hidden;
-    } 
-     
+    }
+
 }
 
 /* xxl */
 @media (min-width: 1400px) and (max-width: 1799px) {
-    
+
     .titulo-bolsa, .titulo-bolsa2 {
         font-size: 6.6rem;
         font-weight: 500;
         line-height: 1.1;
     }
-    
+
     .titulo-bolsa .mayuscula, .titulo-bolsa2 .mayuscula2 {
         color: #CDE700;
     }
-    
+
     .titulo-bolsa .minuscula, .titulo-bolsa2 .minuscula2 {
         color: white;
     }
-    
+
     .texto-bolsa {
         color: #BCBCBC;
         font-size: 1.4rem;
         line-height: 1;
         margin-top: 2rem;
     }
-    
+
     .imagen-vacantes {
         background-position: center center;
         background-repeat: no-repeat;
@@ -247,12 +246,12 @@ input {
     }
 
     .beneficio-titulo {
-        font-size: 5rem; 
+        font-size: 5rem;
         font-weight: 700;
     }
 
     .beneficio-col {
-        background-color: #201E1F; 
+        background-color: #201E1F;
         color: #FFFFFF;
         border-top-right-radius: 64px;
         border-bottom-right-radius: 64px;
@@ -267,7 +266,7 @@ input {
     .beneficio-color {
         border-radius: 100%;
         height: 8.6rem;
-        width: 8.6rem; 
+        width: 8.6rem;
     }
 
     .beneficio-icono {
@@ -287,9 +286,9 @@ input {
     }
 
     .servicios, .titulo-servicios {
-        overflow: hidden;
+        /* overflow: hidden; */
         width: 100%;
-        left: 12rem;
+        /* left: 12rem; */
     }
 
     .cont-btn {
@@ -309,21 +308,22 @@ input {
     .carta {
         position: relative;
         overflow: hidden;
-        border-radius: 3rem;
+        border-radius: 0;
         padding-top: 2rem;
         padding-bottom: 1rem;
         padding-right: 0.5rem;
         padding-left: 0.5rem;
-        margin-right: 0.5rem;
-        margin-left: 0.5rem;
+        /* margin-right: 0.5rem; */
+        /* margin-left: 0.5rem; */
+        height: 44rem;
         margin-top: 2rem;
     }
-    
+
     .carta:hover {
         transform: translateY(-2rem); /* Ajusta la cantidad de elevación según tus preferencias */
         /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); Agrega una sombra para dar un efecto elevado */
     }
-    
+
     .card-img-overlay {
         background: rgba(0, 0, 0, 0.5); /* Cambia el color del overlay según tus preferencias */
         position: absolute;
@@ -336,10 +336,10 @@ input {
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
-        width: 100%; 
-        height: auto; 
+        width: 100%;
+        height: auto;
     }
-    
+
     .carta:hover .card-img-overlay {
         opacity: 1; /* Hacer visible al pasar el cursor sobre la tarjeta */
     }
@@ -356,7 +356,7 @@ input {
         height: 6rem;
         overflow: hidden;
     }
-    
+
     .card-text {
         line-height: 1.1;
         text-align: justify;
@@ -367,7 +367,7 @@ input {
         color: black;
         height: 15.4rem;
         overflow: hidden;
-    } 
+    }
 
 }
 
@@ -379,22 +379,22 @@ input {
         font-weight: 500;
         line-height: 1.1;
     }
-    
+
     .titulo-bolsa .mayuscula, .titulo-bolsa2 .mayuscula2 {
         color: #CDE700;
     }
-    
+
     .titulo-bolsa .minuscula, .titulo-bolsa2 .minuscula2 {
         color: white;
     }
-    
+
     .texto-bolsa {
         color: #BCBCBC;
         font-size: 1.4rem;
         line-height: 1;
         margin-top: 2rem;
     }
-    
+
     .imagen-vacantes {
         background-position: center center;
         background-repeat: no-repeat;
@@ -404,12 +404,12 @@ input {
     }
 
     .beneficio-titulo {
-        font-size: 5rem; 
+        font-size: 5rem;
         font-weight: 700;
     }
 
     .beneficio-col {
-        background-color: #201E1F; 
+        background-color: #201E1F;
         color: #FFFFFF;
         border-top-right-radius: 64px;
         border-bottom-right-radius: 64px;
@@ -424,7 +424,7 @@ input {
     .beneficio-color {
         border-radius: 100%;
         height: 8.6rem;
-        width: 8.6rem; 
+        width: 8.6rem;
     }
 
     .beneficio-icono {
@@ -444,9 +444,9 @@ input {
     }
 
     .servicios, .titulo-servicios {
-        overflow: hidden;
+        /* overflow: hidden; */
         width: 100%;
-        left: 12rem;
+        /* left: 12rem; */
     }
 
     .cont-btn {
@@ -466,21 +466,22 @@ input {
     .carta {
         position: relative;
         overflow: hidden;
-        border-radius: 3rem;
+        border-radius: 0;
         padding-top: 2rem;
         padding-bottom: 1rem;
         padding-right: 0.5rem;
         padding-left: 0.5rem;
-        margin-right: 0.5rem;
-        margin-left: 0.5rem;
+        /* margin-right: 0.5rem; */
+        /* margin-left: 0.5rem; */
+        height: 44rem;
         margin-top: 2rem;
     }
-    
+
     .carta:hover {
         transform: translateY(-2rem); /* Ajusta la cantidad de elevación según tus preferencias */
         /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); Agrega una sombra para dar un efecto elevado */
     }
-    
+
     .card-img-overlay {
         background: rgba(0, 0, 0, 0.5); /* Cambia el color del overlay según tus preferencias */
         position: absolute;
@@ -493,10 +494,10 @@ input {
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
-        width: 100%; 
-        height: auto; 
+        width: 100%;
+        height: auto;
     }
-    
+
     .carta:hover .card-img-overlay {
         opacity: 1; /* Hacer visible al pasar el cursor sobre la tarjeta */
     }
@@ -513,7 +514,7 @@ input {
         height: 5rem;
         overflow: hidden;
     }
-    
+
     .card-text {
         line-height: 1.1;
         text-align: justify;
@@ -524,7 +525,7 @@ input {
         color: black;
         height: 12rem;
         overflow: hidden;
-    } 
+    }
 
 }
 
@@ -536,22 +537,22 @@ input {
         font-weight: 500;
         line-height: 1.1;
     }
-    
+
     .titulo-bolsa .mayuscula, .titulo-bolsa2 .mayuscula2 {
         color: #CDE700;
     }
-    
+
     .titulo-bolsa .minuscula, .titulo-bolsa2 .minuscula2 {
         color: white;
     }
-    
+
     .texto-bolsa {
         color: #BCBCBC;
         font-size: 1.2rem;
         line-height: 1;
         margin-top: 2rem;
     }
-    
+
     .imagen-vacantes {
         background-position: center center;
         background-repeat: no-repeat;
@@ -561,12 +562,12 @@ input {
     }
 
     .beneficio-titulo {
-        font-size: 5rem; 
+        font-size: 5rem;
         font-weight: 700;
     }
 
     .beneficio-col {
-        background-color: #201E1F; 
+        background-color: #201E1F;
         color: #FFFFFF;
         border-top-right-radius: 64px;
         border-bottom-right-radius: 64px;
@@ -581,7 +582,7 @@ input {
     .beneficio-color {
         border-radius: 100%;
         height: 8.6rem;
-        width: 8.6rem; 
+        width: 8.6rem;
     }
 
     .beneficio-icono {
@@ -601,9 +602,9 @@ input {
     }
 
     .servicios, .titulo-servicios {
-        overflow: hidden;
+        /* overflow: hidden; */
         width: 100%;
-        left: 12rem;
+        /* left: 12rem; */
     }
 
     .cont-btn {
@@ -623,21 +624,22 @@ input {
     .carta {
         position: relative;
         overflow: hidden;
-        border-radius: 3rem;
+        border-radius: 0;
         padding-top: 2rem;
         padding-bottom: 1rem;
         padding-right: 0.5rem;
         padding-left: 0.5rem;
-        margin-right: 0.5rem;
-        margin-left: 0.5rem;
+        /* margin-right: 0.5rem; */
+        /* margin-left: 0.5rem; */
+        height: 38rem;
         margin-top: 2rem;
     }
-    
+
     .carta:hover {
         transform: translateY(-2rem); /* Ajusta la cantidad de elevación según tus preferencias */
         /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); Agrega una sombra para dar un efecto elevado */
     }
-    
+
     .card-img-overlay {
         background: rgba(0, 0, 0, 0.5); /* Cambia el color del overlay según tus preferencias */
         position: absolute;
@@ -650,10 +652,10 @@ input {
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
-        width: 100%; 
-        height: auto; 
+        width: 100%;
+        height: auto;
     }
-    
+
     .carta:hover .card-img-overlay {
         opacity: 1; /* Hacer visible al pasar el cursor sobre la tarjeta */
     }
@@ -670,7 +672,7 @@ input {
         height: 4rem;
         overflow: hidden;
     }
-    
+
     .card-text {
         line-height: 1.1;
         text-align: justify;
@@ -681,7 +683,7 @@ input {
         color: black;
         height: 9.8rem;
         overflow: hidden;
-    } 
+    }
 
 }
 
@@ -693,22 +695,22 @@ input {
         font-weight: 500;
         line-height: 1.1;
     }
-    
+
     .titulo-bolsa .mayuscula, .titulo-bolsa2 .mayuscula2 {
         color: #CDE700;
     }
-    
+
     .titulo-bolsa .minuscula, .titulo-bolsa2 .minuscula2 {
         color: white;
     }
-    
+
     .texto-bolsa {
         color: #BCBCBC;
         font-size: 1.2rem;
         line-height: 1;
         margin-top: 2rem;
     }
-    
+
     .imagen-vacantes {
         background-position: center center;
         background-repeat: no-repeat;
@@ -718,12 +720,12 @@ input {
     }
 
     .beneficio-titulo {
-        font-size: 4.4rem; 
+        font-size: 4.4rem;
         font-weight: 700;
     }
 
     .beneficio-col {
-        background-color: #201E1F; 
+        background-color: #201E1F;
         color: #FFFFFF;
         border-top-right-radius: 64px;
         border-bottom-right-radius: 64px;
@@ -738,7 +740,7 @@ input {
     .beneficio-color {
         border-radius: 100%;
         height: 7rem;
-        width: 7rem; 
+        width: 7rem;
     }
 
     .beneficio-icono {
@@ -780,21 +782,22 @@ input {
     .carta {
         position: relative;
         overflow: hidden;
-        border-radius: 3rem;
+        border-radius: 0;
         padding-top: 2rem;
         padding-bottom: 0rem;
         padding-right: 0.5rem;
         padding-left: 0.5rem;
-        margin-right: 0.5rem;
-        margin-left: 0.5rem;
+        /* margin-right: 0.5rem; */
+        /* margin-left: 0.5rem; */
+        height: 38rem;
         margin-top: 2rem;
     }
-    
+
     .carta:hover {
         transform: translateY(-2rem); /* Ajusta la cantidad de elevación según tus preferencias */
         /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); Agrega una sombra para dar un efecto elevado */
     }
-    
+
     .card-img-overlay {
         background: rgba(0, 0, 0, 0.5); /* Cambia el color del overlay según tus preferencias */
         position: absolute;
@@ -807,10 +810,10 @@ input {
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
-        width: 100%; 
-        height: auto; 
+        width: 100%;
+        height: auto;
     }
-    
+
     .carta:hover .card-img-overlay {
         opacity: 1; /* Hacer visible al pasar el cursor sobre la tarjeta */
     }
@@ -827,7 +830,7 @@ input {
         height: 4rem;
         overflow: hidden;
     }
-    
+
     .card-text {
         line-height: 1.1;
         text-align: justify;
@@ -838,7 +841,7 @@ input {
         color: black;
         height: 9.8rem;
         overflow: hidden;
-    } 
+    }
 
 }
 
@@ -850,22 +853,22 @@ input {
         font-weight: 500;
         line-height: 1.1;
     }
-    
+
     .titulo-bolsa .mayuscula, .titulo-bolsa2 .mayuscula2 {
         color: #CDE700;
     }
-    
+
     .titulo-bolsa .minuscula, .titulo-bolsa2 .minuscula2 {
         color: white;
     }
-    
+
     .texto-bolsa {
         color: #BCBCBC;
         font-size: 1rem;
         line-height: 1;
         margin-top: 2rem;
     }
-    
+
     .imagen-vacantes {
         background-position: center center;
         background-repeat: no-repeat;
@@ -875,12 +878,12 @@ input {
     }
 
     .beneficio-titulo {
-        font-size: 3.4rem; 
+        font-size: 3.4rem;
         font-weight: 700;
     }
 
     .beneficio-col {
-        background-color: #201E1F; 
+        background-color: #201E1F;
         color: #FFFFFF;
         border-top-right-radius: 64px;
         border-bottom-right-radius: 64px;
@@ -895,7 +898,7 @@ input {
     .beneficio-color {
         border-radius: 100%;
         height: 5rem;
-        width: 5rem; 
+        width: 5rem;
     }
 
     .beneficio-icono {
@@ -937,13 +940,14 @@ input {
     .carta {
         position: relative;
         overflow: hidden;
-        border-radius: 3rem;
+        border-radius: 0;
         padding-top: 2rem;
         padding-bottom: 0rem;
         padding-right: 2rem;
         padding-left: 2rem;
-        margin-right: 0.5rem;
-        margin-left: 0.5rem;
+        /* margin-right: 0.5rem; */
+        /* margin-left: 0.5rem; */
+        height: 50rem;
         margin-top: 2rem;
     }
 
@@ -964,8 +968,8 @@ input {
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
-        width: 100%; 
-        height: auto; 
+        width: 100%;
+        height: auto;
     }
 
     .carta:hover .card-img-overlay {
@@ -995,7 +999,7 @@ input {
         color: black;
         height: 16.8rem;
         overflow: hidden;
-    }    
+    }
 
 }
 
@@ -1007,22 +1011,22 @@ input {
         font-weight: 500;
         line-height: 1.1;
     }
-    
+
     .titulo-bolsa .mayuscula, .titulo-bolsa2 .mayuscula2 {
         color: #CDE700;
     }
-    
+
     .titulo-bolsa .minuscula, .titulo-bolsa2 .minuscula2 {
         color: white;
     }
-    
+
     .texto-bolsa {
         color: #BCBCBC;
         font-size: 0.8rem;
         line-height: 1;
         margin-top: 2rem;
     }
-    
+
     .imagen-vacantes {
         background-position: center center;
         background-repeat: no-repeat;
@@ -1032,12 +1036,12 @@ input {
     }
 
     .beneficio-titulo {
-        font-size: 2.4rem; 
+        font-size: 2.4rem;
         font-weight: 700;
     }
 
     .beneficio-col {
-        background-color: #201E1F; 
+        background-color: #201E1F;
         color: #FFFFFF;
         border-top-right-radius: 64px;
         border-bottom-right-radius: 64px;
@@ -1052,7 +1056,7 @@ input {
     .beneficio-color {
         border-radius: 100%;
         height: 3rem;
-        width: 3rem; 
+        width: 3rem;
     }
 
     .beneficio-icono {
@@ -1094,13 +1098,14 @@ input {
     .carta {
         position: relative;
         overflow: hidden;
-        border-radius: 3rem;
+        border-radius: 0;
         padding-top: 2rem;
         padding-bottom: 0rem;
         padding-right: 0.5rem;
         padding-left: 0.5rem;
-        margin-right: 0.5rem;
-        margin-left: 0.5rem;
+        /* margin-right: 0.5rem; */
+        /* margin-left: 0.5rem; */
+        height: 50rem;
         margin-top: 2rem;
     }
 
@@ -1121,8 +1126,8 @@ input {
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
-        width: 100%; 
-        height: auto; 
+        width: 100%;
+        height: auto;
     }
 
     .carta:hover .card-img-overlay {
@@ -1152,7 +1157,7 @@ input {
         color: black;
         height: 16.5rem;
         overflow: hidden;
-    }    
+    }
 
 }
 

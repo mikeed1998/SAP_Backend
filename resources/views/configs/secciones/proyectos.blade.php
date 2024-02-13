@@ -15,7 +15,7 @@
         font-weight: normal;
         src: local('Neusharp Bold'), url({{ asset('fonts/Neusharp-Bold/NeusharpBold-7B8RV.woff') }}) format('woff');
     }
-	/* mas estilisado */	
+	/* mas estilisado */
 		body{
 			background-color: #e5e8eb  !important;
 		}
@@ -96,27 +96,27 @@
 <style>
 
 	.card{
-		
+
 	}
 
-	@media only screen and (max-width: 768px){  
+	@media only screen and (max-width: 768px){
 		.cont_circle{
 			bottom: -150px !important;
 		}
 		.circle_slider{
-			width: 300px !important; 
+			width: 300px !important;
 			height: 300px !important;
 		}
 		.img_circle{
 			margin-top: -120px !important;
 		}
-	}  
-	@media only screen and (max-width: 390px){  
+	}
+	@media only screen and (max-width: 390px){
 		.cont_circle{
 			bottom: -100px !important;
 		}
 		.circle_slider{
-			width: 200px !important; 
+			width: 200px !important;
 			height: 200px !important;
 		}
 		.img_circle{
@@ -163,18 +163,18 @@
     }
 </style>
 <style>
-    
+
 @media(min-width: 1800px) {
 
     .portada-admin {
         height: 24rem;
     }
-     
+
 }
 
 /* xxl */
 @media (min-width: 1400px) and (max-width: 1799px) {
-    
+
     .portada-admin {
         height: 24rem;
     }
@@ -209,14 +209,14 @@
 /* sm */
 @media (min-width: 576px) and (max-width: 768px) {
 
-    
+
 
 }
 
 /* xs */
 @media (min-width: 0px) and (max-width: 576px) {
 
-    
+
 
 }
 
@@ -227,16 +227,16 @@
             <a href="{{ route('config.seccion.index') }}" class="col col-md-2 btn btn-sm grey darken-2 text-white mr-auto"><i class="fa fa-reply"></i> Regresar</a>
         </div>
 
-       
+
         <div class="col-12 my-5 text-center d-flex justify-content-center align-items-center flex-column">
             <p class="mt-5" style="font-size: 4.5rem; font-family:'Neusharp Bold'; color: #FFFFFF;">PROYECTOS</p>
 			<div class="col-6 text-white">
-                Cada uno de los servicios puede tener uno o varios proyectos, basicamene hay que agregar ejemplos para demostrar la calidad de cada servicio, en caso de no existir servicios no se podrán agregar proyectos. 
+                Cada uno de los servicios puede tener uno o varios proyectos, basicamene hay que agregar ejemplos para demostrar la calidad de cada servicio, en caso de no existir servicios no se podrán agregar proyectos.
 
 				{{-- <div class="col-12 mb-2 text-center"><i class="fa-solid fa-pencil" style="font-size: 1.5rem;"></i></div> --}}
 				{{-- <textarea class="col-12 text-center editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$elements[0]->id}}" data-table="elemento" data-campo="texto" name="" id="" cols="30" rows="3" style="border-radius: 10px; border:none; background: #ededed">{{$elements[0]->texto}}</textarea> --}}
 			</div>
-            
+
         </div>
 
 
@@ -278,10 +278,10 @@
                     @endforeach
                 </div>
                 <div class="col-12 position-relative mt-2">
-                    <input type="color" class="form-control py-2 editar_text_seccion_global" value="{{ $p->color }}" onchange="actualizarColor()"  data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$p->id}}" data-table="ZProyecto" data-campo="color">
-                    <div class="col-12 position-absolute top-0 start-100">
+                    {{-- <input type="hidden" class="form-control py-2 editar_text_seccion_global" value="{{ $p->color }}" onchange="actualizarColor()"  data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$p->id}}" data-table="ZProyecto" data-campo="color"> --}}
+                    {{-- <div class="col-12 position-absolute top-0 start-100">
                         <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" fill="#FFC000" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"/></svg>
-                    </div>
+                    </div> --}}
                 </div>
                 <div class="col-12 mt-2 position-relative">
                     <h5><input type="text" class="form-control editar_text_seccion_global" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{$p->id}}" data-table="ZProyecto" data-campo="titulo" value="{{$p->titulo}}"></h5>
@@ -294,7 +294,7 @@
                     <div class="col-12 position-absolute top-0 start-100">
                         <svg xmlns="http://www.w3.org/2000/svg" height="20" width="20" fill="#FFC000" viewBox="0 0 512 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M410.3 231l11.3-11.3-33.9-33.9-62.1-62.1L291.7 89.8l-11.3 11.3-22.6 22.6L58.6 322.9c-10.4 10.4-18 23.3-22.2 37.4L1 480.7c-2.5 8.4-.2 17.5 6.1 23.7s15.3 8.5 23.7 6.1l120.3-35.4c14.1-4.2 27-11.8 37.4-22.2L387.7 253.7 410.3 231zM160 399.4l-9.1 22.7c-4 3.1-8.5 5.4-13.3 6.9L59.4 452l23-78.1c1.4-4.9 3.8-9.4 6.9-13.3l22.7-9.1v32c0 8.8 7.2 16 16 16h32zM362.7 18.7L348.3 33.2 325.7 55.8 314.3 67.1l33.9 33.9 62.1 62.1 33.9 33.9 11.3-11.3 22.6-22.6 14.5-14.5c25-25 25-65.5 0-90.5L453.3 18.7c-25-25-65.5-25-90.5 0zm-47.4 168l-144 144c-6.2 6.2-16.4 6.2-22.6 0s-6.2-16.4 0-22.6l144-144c6.2-6.2 16.4-6.2 22.6 0s6.2 16.4 0 22.6z"/></svg>
                     </div>
-                </div>	
+                </div>
                 <div class="col-12 mt-2">
                     <form action="{{route('config.seccion.elimProy', ['proyecto' => $p->id])}}" id="form-{{ $p->id }}" method="POST" class="col-12 text-center">
                         @csrf
@@ -319,7 +319,7 @@
         <img src="{{asset('img/design/footerp.png')}}" alt="">
         <a href="" class="mt-2" style="color: #909986; font-size: 1.2rem;">VISITAR</a>
         <div class="col-auto d-flex justify-content-center align-items-center flex-row">
-            
+
         </div>
     </div> --}}
 
@@ -365,8 +365,8 @@
                 <small>En caso de no existir servicios, no se podran agregar proyectos</small>
             </div>
             <div class="col-12 mb-2">
-                <label for="colorPicker" class="form-label">Selecciona un color de fondo:</label>
-                <input type="color" class="form-control" id="colorPicker" name="colorPicker" value="#CCAEEC" onchange="actualizarColor()" required>
+                {{-- <label for="colorPicker" class="form-label">Selecciona un color de fondo:</label> --}}
+                <input type="hidden" class="form-control" id="colorPicker" name="colorPicker" value="#FFC000" onchange="actualizarColor()" required>
             </div>
             <div class="col-12 mb-2">
                 <input class="form-control" type="text" name="nom_proy" placeholder="Nombre del proyecto" required>
@@ -374,7 +374,7 @@
             <div class="col-12 mb-2">
                 <textarea class="form-control" name="desc_proy" id="" rows="6" placeholder="Descripción del proyecto" required></textarea>
             </div>
-            
+
             {{-- <div class="col-12">
                 <textarea class="col-12 form-control" name="desc_proy" id=""  rows="5"></textarea>
             </div> --}}

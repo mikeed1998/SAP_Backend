@@ -32,7 +32,7 @@
                             <div class="col-12">
                                 <div class="row">
                                     <div class="col-8 fs-4 mx-auto" style="line-height: 1.1; margin-top: 4rem; text-decoration: underline; font-family: 'Blinker', sans-serif; font-family: 'Montserrat', sans-serif; font-weight: bold;">
-                                        TEL. {{ $config->telefono }} 
+                                        TEL. {{ $config->telefono }}
                                     </div>
                                 </div>
                                 <div class="row">
@@ -81,7 +81,7 @@
                                                         <svg xmlns="http://www.w3.org/2000/svg" height="1.6rem" width="6rem" viewBox="0 0 448 512" fill="#FFFFFF"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
                                                     </div>
                                                 </div>
-                                            </div>    
+                                            </div>
                                         </button>
                                     </div>
                                 </div>
@@ -118,9 +118,9 @@
                                     <input required type="text" name="mensaje" class="form-control fs-3 bg-transparent rounded-0"  placeholder="Mensaje" style="border-bottom: 2px solid black; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;">
                                 </div>
                             </div>
-                            
+
                         </div>
-                        
+
                     </div>
                 </div>
             </form>
@@ -132,7 +132,7 @@
                 <input type="hidden" name="tipoForm" value="contacto">
                 <div class="col-11 mx-auto">
                     <div class="row">
-                        
+
                         <div class="col-md-9 col-sm-12 col-12 mx-auto position-relative py-3">
                             <div class="row">
                                 <div class="col pt-4">
@@ -164,7 +164,7 @@
                                     <input required type="text" name="mensaje" class="form-control fs-3 bg-transparent rounded-0"  placeholder="Mensaje" style="border-bottom: 2px solid black; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;">
                                 </div>
                             </div>
-                            
+
                         </div>
 
                         <div class="col-md-9 col-sm-12 col-12 mx-auto position-relative">
@@ -178,7 +178,7 @@
                                                     <svg xmlns="http://www.w3.org/2000/svg" height="1.6rem" width="6rem" viewBox="0 0 448 512" fill="#FFFFFF"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
                                                 </div>
                                             </div>
-                                        </div>    
+                                        </div>
                                     </button>
                                 </div>
                             </div>
@@ -224,7 +224,7 @@
                                     </div>
                                 </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </form>
@@ -239,14 +239,14 @@
                     @foreach ($sucursales as $index => $sucurs)
                     <a href="#/" id="sucursal{{ $index }}" >
 
-                    
+
                     <div class="card border-0">
                         <div class="row">
                             <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-3 col-3 text-end">
                                 <svg xmlns="http://www.w3.org/2000/svg" height="32" width="24" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2023 Fonticons, Inc.--><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>
                             </div>
-                            <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-9 col-9 fs-5 text-decoration-underline" style="font-family: 'Blinker', sans-serif; font-family: 'Montserrat', sans-serif; font-weight: bold;">                
-                                {{ $sucurs->sucursal }}, 
+                            <div class="col-xxl-10 col-xl-10 col-lg-10 col-md-10 col-sm-9 col-9 fs-5 text-decoration-underline" style="font-family: 'Blinker', sans-serif; font-family: 'Montserrat', sans-serif; font-weight: bold;">
+                                {{ $sucurs->sucursal }},
                                 @foreach ($municipios as $municip)
                                     @if ($municip->id == $sucurs->municip)
                                         {{ $municip->nombre }},
@@ -264,7 +264,7 @@
                     @endforeach
                 </div>
             </div>
-           
+
         </div>
     </div>
     <div class="row">
@@ -277,37 +277,54 @@
                 // Coordenadas aproximadas del centro de México
                 var latitud = 23.6345;
                 var longitud = -102.5528;
-            
-     
+
                 // Inicializa el mapa
-                var mymap = L.map('map').setView([latitud, longitud], 6);
-            
+                var mymap = L.map('map', {
+                    center: [latitud, longitud],
+                    zoom: 6,
+                    scrollWheelZoom: false  // Deshabilita el zoom con la rueda del mouse
+                });
+
                 // Agrega un mapa base de OpenStreetMap
                 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                     attribution: '© OpenStreetMap contributors'
                 }).addTo(mymap);
 
+                var isDragging = false;
 
                 sucursaless.forEach((succ, index) => {
                     var sucursalPopup = L.popup({
-                        closeButton: false,  // Desactiva el botón de cerrar
-                        autoClose: false,  // No cerrar automáticamente al hacer clic en otro lugar
-                        className: 'custom-popup',  // Agrega una clase personalizada al pop-up
+                        closeButton: false,
+                        autoClose: false,
+                        className: 'custom-popup',
                     }).setContent(succ.sucursal);
 
                     var marker = L.marker([succ.coordX, succ.coordY]).addTo(mymap);
 
                     marker.bindPopup(sucursalPopup);
 
+                    marker.on('mousedown', function (e) {
+                        isDragging = true;
+                    });
+
+                    marker.on('mouseup', function (e) {
+                        isDragging = false;
+                    });
+
+                    mymap.on('mousemove', function (e) {
+                        if (isDragging) {
+                            marker.setLatLng(e.latlng);
+                        }
+                    });
+
                     document.getElementById('sucursal' + index).addEventListener('click', function () {
                         mymap.setView([succ.coordX, succ.coordY], 14);
-                        marker.openPopup();  // Abre el pop-up cuando haces clic en el enlace
+                        marker.openPopup();
                     });
                 });
-
             </script>
 
-            
+
         </div>
     </div>
 </div>

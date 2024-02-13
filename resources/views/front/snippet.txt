@@ -17,7 +17,8 @@
     }
 
 
-.column-container {
+
+    .column-container {
     position: relative;
     overflow: hidden;
     height: 4rem;
@@ -74,25 +75,29 @@ input {
 
 @media(min-width: 1800px) {
 
-    .titulo-bolsa, .titulo-bolsa2 {
+    .titulo-index, .titulo-index2 {
+        font-family: 'Sansation Bold', sans-serif;
         font-size: 8.6rem;
         font-weight: 500;
         line-height: 1.1;
     }
 
-    .titulo-bolsa .mayuscula, .titulo-bolsa2 .mayuscula2 {
+    .titulo-index .mayuscula, .titulo-index2 .mayuscula2 {
+        font-family: 'Sansation Bold', sans-serif;
         color: #CDE700;
+        background-color: transparent;
     }
 
-    .titulo-bolsa .minuscula, .titulo-bolsa2 .minuscula2 {
+    .titulo-index .minuscula {
+        font-family: 'Sansation Bold', sans-serif;
         color: white;
+        background-color: transparent;
     }
 
-    .texto-bolsa {
-        color: #BCBCBC;
-        font-size: 2rem;
-        line-height: 1;
-        margin-top: 2rem;
+    .titulo-index2 .minuscula2 {
+        font-family: 'Sansation Bold', sans-serif;
+        color: black;
+        background-color: transparent;
     }
 
     .imagen-vacantes {
@@ -165,14 +170,13 @@ input {
 
     .carta {
         position: relative;
-        overflow: hidden;
-        border-radius: 3rem;
+        /* overflow: hidden; */
+        border-radius: 0rem;
         padding-top: 2rem;
         padding-bottom: 1rem;
-        padding-right: 1rem;
-        padding-left: 1rem;
-        /* margin-right: 1rem; */
-        /* margin-left: 1rem; */
+        padding-right: 0rem;
+        padding-left: 0rem;
+        height: 50rem;
         margin-top: 2rem;
     }
 
@@ -182,7 +186,7 @@ input {
     }
 
     .card-img-overlay {
-        background: rgba(0, 0, 0, 0.5); /* Cambia el color del overlay según tus preferencias */
+        background: rgba(0, 0, 0, 0.7); /* Cambia el color del overlay según tus preferencias */
         position: absolute;
         top: 0;
         left: 0;
@@ -219,7 +223,7 @@ input {
         text-align: justify;
         padding-top: 1rem;
         padding-bottom: 1rem;
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         font-weight: 500;
         color: black;
         height: 19.8rem;
@@ -323,13 +327,14 @@ input {
     .carta {
         position: relative;
         overflow: hidden;
-        border-radius: 3rem;
+        border-radius: 0;
         padding-top: 2rem;
         padding-bottom: 1rem;
         padding-right: 0.5rem;
         padding-left: 0.5rem;
         /* margin-right: 0.5rem; */
         /* margin-left: 0.5rem; */
+        height: 44rem;
         margin-top: 2rem;
     }
 
@@ -372,11 +377,11 @@ input {
     }
 
     .card-text {
-        line-height: 1.1;
+        line-height: 1;
         text-align: justify;
         padding-top: 1rem;
         padding-bottom: 1rem;
-        font-size: 1.1rem;
+        font-size: 1rem;
         font-weight: 500;
         color: black;
         height: 15.4rem;
@@ -480,13 +485,14 @@ input {
     .carta {
         position: relative;
         overflow: hidden;
-        border-radius: 3rem;
+        border-radius: 0;
         padding-top: 2rem;
         padding-bottom: 1rem;
         padding-right: 0.5rem;
         padding-left: 0.5rem;
         /* margin-right: 0.5rem; */
         /* margin-left: 0.5rem; */
+        height: 44rem;
         margin-top: 2rem;
     }
 
@@ -637,13 +643,14 @@ input {
     .carta {
         position: relative;
         overflow: hidden;
-        border-radius: 3rem;
+        border-radius: 0;
         padding-top: 2rem;
         padding-bottom: 1rem;
         padding-right: 0.5rem;
         padding-left: 0.5rem;
         /* margin-right: 0.5rem; */
         /* margin-left: 0.5rem; */
+        height: 38rem;
         margin-top: 2rem;
     }
 
@@ -794,13 +801,14 @@ input {
     .carta {
         position: relative;
         overflow: hidden;
-        border-radius: 3rem;
+        border-radius: 0;
         padding-top: 2rem;
         padding-bottom: 0rem;
         padding-right: 0.5rem;
         padding-left: 0.5rem;
-        margin-right: 0.5rem;
-        margin-left: 0.5rem;
+        /* margin-right: 0.5rem; */
+        /* margin-left: 0.5rem; */
+        height: 38rem;
         margin-top: 2rem;
     }
 
@@ -951,13 +959,14 @@ input {
     .carta {
         position: relative;
         overflow: hidden;
-        border-radius: 3rem;
+        border-radius: 0;
         padding-top: 2rem;
         padding-bottom: 0rem;
         padding-right: 2rem;
         padding-left: 2rem;
-        margin-right: 0.5rem;
-        margin-left: 0.5rem;
+        /* margin-right: 0.5rem; */
+        /* margin-left: 0.5rem; */
+        height: 50rem;
         margin-top: 2rem;
     }
 
@@ -1108,13 +1117,14 @@ input {
     .carta {
         position: relative;
         overflow: hidden;
-        border-radius: 3rem;
+        border-radius: 0;
         padding-top: 2rem;
         padding-bottom: 0rem;
         padding-right: 0.5rem;
         padding-left: 0.5rem;
-        margin-right: 0.5rem;
-        margin-left: 0.5rem;
+        /* margin-right: 0.5rem; */
+        /* margin-left: 0.5rem; */
+        height: 50rem;
         margin-top: 2rem;
     }
 
@@ -1173,6 +1183,9 @@ input {
 
 
 
+
+
+
 </style>
 @endsection
 
@@ -1205,7 +1218,7 @@ input {
         <div class="row px-0 py-5" data-aos="zoom-in-left">
             <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 mx-auto">
                 <div class="row">
-                    <div class="col-11 mx-auto display-3 text-white mt-5 mb-3 py-3" style="font-family: 'Sansation Bold', sans-serif;">
+                    <div class="col-11 mx-auto display-3 text-white mt-5 py-3" style="font-family: 'Sansation Bold', sans-serif;">
                         Nuestras vacantes
                     </div>
                 </div>
@@ -1243,11 +1256,11 @@ input {
                                     </div>
                                 </div>
                                 <div class="position-relative cont-btn">
-                                    <div class="card bg-transparent border-0 ms-5 position-absolute bottom-0 start-0 translate-middle-y">
+                                    <div class="card bg-transparent border-0 position-absolute bottom-0 start-0 translate-middle-y">
                                         <div class="row">
                                             <div class="col-xxl-4 link-servicio">
                                                 <a href="{{ route('front.contact') }}" class="text-center  rounded-circle">
-                                                    <img src="{{ asset('img/images/3my-imagetct3.png') }}" alt="right-up" class="img-fluid btn-serv rounded-circle" style="filter: grayscale(0%);">
+                                                    <img src="{{ asset('img/images/3my-imagetct3.png') }}" alt="right-up" class="img-fluid ms-3 btn-serv rounded-circle" style="filter: grayscale(0%);">
                                                 </a>
                                             </div>
                                         </div>
