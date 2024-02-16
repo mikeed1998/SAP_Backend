@@ -1,4 +1,19 @@
 
+
+wozialad_sap_administrador
+wozialad_sap_administrador
+t=B;*EW9x*SN
+
+
+
+
+
+
+
+
+
+
+
 @extends('layouts.front')
 
 @section('title', 'Vacantes')
