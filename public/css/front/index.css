@@ -9,8 +9,48 @@ input {
     font-family: 'Blinker', sans-serif; font-family: 'Montserrat', sans-serif; font-weight: bold;
 }
 
-#map { 
-    height: 74rem; 
+.carta-frase {
+    background-color: #FFC000;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    border-radius: 0;
+    height: 574px;
+    /* filter: grayscale(100%); */
+}
+
+.carta-frase {
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay-frases {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s; /* Añade una transición suave para mejorar la apariencia */
+}
+
+.carta-frase:hover .overlay-frases {
+    opacity: 1;
+}
+
+.overlay-frases p {
+    text-align: center;
+}
+
+
+#map {
+    height: 74rem;
     /* background-image: url('img/design/imagen.png'); */
     /* background-color: #CDE700; */
     background-position: center center;
@@ -25,14 +65,14 @@ input {
 }
 
 .serv-ttt {
-    margin-left: 12rem; 
+    margin-left: 12rem;
     overflow: hidden;
 }
 
 .slick-dots {
     display: flex;
     justify-content: center;
-    flex-direction: row; /* Asegura una disposición horizontal */   
+    flex-direction: row; /* Asegura una disposición horizontal */
     list-style: none;
     padding: 0;
     margin: 20px 0; /* Ajusta el margen según tus necesidades */
@@ -52,7 +92,7 @@ input {
     transition: background-color 0.3s;
 }
 
-.slick-dots li button:hover, 
+.slick-dots li button:hover,
 .slick-dots li button:focus {
     background-color: #FFC000;
 }
@@ -125,7 +165,7 @@ a {
 
 .top-left,
 .top-right {
-    height: 100%;   
+    height: 100%;
     width: 100%;
     position: absolute;
     top: 0;
@@ -174,7 +214,7 @@ a {
     height: 100%;
     width: 100%;
     position: absolute;
-    top: 0; 
+    top: 0;
     left: 0;
     background-color: #fff; /* Color de fondo de la columna */
 }
@@ -185,7 +225,7 @@ a {
     background-color: #201E1F; /* Color de fondo de la parte inclinada */
 }
 
-.titulo-index, 
+.titulo-index,
 .titulo-index2 {
     font-family: 'Blinker', sans-serif; font-family: 'Montserrat', sans-serif; font-weight: bold;
 }
@@ -213,7 +253,7 @@ video {
 @media(min-width: 1800px) {
 
     .cont-letrero {
-        margin-top: 18rem; 
+        margin-top: 18rem;
         margin-left: -1.5rem;
     }
 
@@ -271,10 +311,10 @@ video {
     .letrero {
         line-height: 1;
         font-size: 1.6rem;
-        margin-top: -10rem; 
-        height: 14rem; 
-        max-height: 14rem; 
-        overflow: auto; 
+        margin-top: -10rem;
+        height: 14rem;
+        max-height: 14rem;
+        overflow: auto;
         text-align: justify;
     }
 
@@ -283,12 +323,12 @@ video {
     }
 
     .letrerob {
-        margin-top: -8rem; 
-        height: 11rem; 
-        max-height: 11rem; 
-        overflow: hidden; 
-        line-height: 1; 
-        font-size: 1.4rem; 
+        margin-top: -8rem;
+        height: 11rem;
+        max-height: 11rem;
+        overflow: hidden;
+        line-height: 1;
+        font-size: 1.4rem;
         text-align: justify;
     }
 
@@ -306,7 +346,7 @@ video {
     }
 
     .contad {
-        color: #FE6E63; 
+        color: #FE6E63;
         font-size: 9rem;
         margin-top: 3rem;
     }
@@ -370,7 +410,7 @@ video {
 
     .cont-btn {
         margin-top: 7rem;
-    }   
+    }
 
     .link-servicio {
         margin-top: -7rem;
@@ -411,8 +451,8 @@ video {
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
-        width: 100%; 
-        height: auto; 
+        width: 100%;
+        height: auto;
     }
 
     .carta:hover .card-img-overlay {
@@ -443,7 +483,7 @@ video {
         color: black;
         height: 16.8rem;
         overflow: hidden;
-    } 
+    }
 
     .video-container {
         position: relative;
@@ -452,13 +492,15 @@ video {
         overflow: hidden;
     }
 
+
+
 }
 
 /* xxl */
 @media (min-width: 1400px) and (max-width: 1799px) {
 
     .cont-letrero {
-        margin-top: 24rem; 
+        margin-top: 24rem;
         margin-left: -1.5rem;
     }
 
@@ -517,10 +559,10 @@ video {
     .letrero {
         line-height: 1;
         font-size: 1.4rem;
-        margin-top: -7rem; 
-        height: 10rem; 
-        max-height: 10rem; 
-        overflow: auto; 
+        margin-top: -7rem;
+        height: 10rem;
+        max-height: 10rem;
+        overflow: auto;
         text-align: justify;
     }
 
@@ -529,12 +571,12 @@ video {
     }
 
     .letrerob {
-        margin-top: -7rem; 
-        height: 8rem; 
-        max-height: 8rem; 
-        overflow: hidden; 
-        line-height: 1; 
-        font-size: 1.4rem; 
+        margin-top: -7rem;
+        height: 8rem;
+        max-height: 8rem;
+        overflow: hidden;
+        line-height: 1;
+        font-size: 1.4rem;
         text-align: justify;
     }
 
@@ -552,7 +594,7 @@ video {
     }
 
     .contad {
-        color: #FE6E63; 
+        color: #FE6E63;
         font-size: 8rem;
         margin-top: 3rem;
     }
@@ -584,7 +626,7 @@ video {
     }
 
     .texto-abajo {
-        margin-top: 86rem;
+        margin-top: 26rem;
     }
 
     .cuadro1 {
@@ -659,8 +701,8 @@ video {
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
-        width: 100%; 
-        height: auto; 
+        width: 100%;
+        height: auto;
     }
 
     .carta:hover .card-img-overlay {
@@ -690,7 +732,7 @@ video {
         color: black;
         height: 12.8rem;
         overflow: hidden;
-    } 
+    }
 
     .video-container {
         position: relative;
@@ -705,7 +747,7 @@ video {
 @media (min-width: 1200px) and (max-width: 1399px) {
 
     .cont-letrero {
-        margin-top: 24rem; 
+        margin-top: 24rem;
         margin-left: -1.5rem;
     }
 
@@ -759,10 +801,10 @@ video {
     .letrero {
         line-height: 1;
         font-size: 1.2rem;
-        margin-top: -6rem; 
-        height: 8rem; 
-        max-height: 8rem; 
-        overflow: auto; 
+        margin-top: -6rem;
+        height: 8rem;
+        max-height: 8rem;
+        overflow: auto;
         text-align: justify;
     }
 
@@ -771,12 +813,12 @@ video {
     }
 
     .letrerob {
-        margin-top: -6rem; 
-        height: 7rem; 
-        max-height: 7rem; 
-        overflow: hidden; 
-        line-height: 1; 
-        font-size: 1.2rem; 
+        margin-top: -6rem;
+        height: 7rem;
+        max-height: 7rem;
+        overflow: hidden;
+        line-height: 1;
+        font-size: 1.2rem;
         text-align: justify;
     }
 
@@ -794,7 +836,7 @@ video {
     }
 
     .contad {
-        color: #FE6E63; 
+        color: #FE6E63;
         font-size: 6rem;
         margin-top: 3rem;
     }
@@ -907,8 +949,8 @@ video {
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
-        width: 100%; 
-        height: auto; 
+        width: 100%;
+        height: auto;
     }
 
     .carta:hover .card-img-overlay {
@@ -938,7 +980,7 @@ video {
         color: black;
         height: 9rem;
         overflow: hidden;
-    } 
+    }
 
     .video-container {
         position: relative;
@@ -953,7 +995,7 @@ video {
 @media (min-width: 992px) and (max-width: 1199px) {
 
     .cont-letrero {
-        margin-top: 24rem; 
+        margin-top: 24rem;
         margin-left: -1.5rem;
     }
 
@@ -1007,10 +1049,10 @@ video {
     .letrero {
         line-height: 1;
         font-size: 1rem;
-        margin-top: -5rem; 
-        height: 6rem; 
-        max-height: 6rem; 
-        overflow: auto; 
+        margin-top: -5rem;
+        height: 6rem;
+        max-height: 6rem;
+        overflow: auto;
         text-align: justify;
     }
 
@@ -1019,12 +1061,12 @@ video {
     }
 
     .letrerob {
-        margin-top: -4.5rem; 
-        height: 6rem; 
-        max-height: 6rem; 
-        overflow: hidden; 
-        line-height: 1; 
-        font-size: 1rem; 
+        margin-top: -4.5rem;
+        height: 6rem;
+        max-height: 6rem;
+        overflow: hidden;
+        line-height: 1;
+        font-size: 1rem;
         text-align: justify;
     }
 
@@ -1042,7 +1084,7 @@ video {
     }
 
     .contad {
-        color: #FE6E63; 
+        color: #FE6E63;
         font-size: 5rem;
         margin-top: 3rem;
     }
@@ -1077,7 +1119,7 @@ video {
 
     .col-baja {
         margin-top: 16rem;
-    }   
+    }
 
     .texto-abajo {
         margin-top: 72rem;
@@ -1155,8 +1197,8 @@ video {
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
-        width: 100%; 
-        height: auto; 
+        width: 100%;
+        height: auto;
     }
 
     .carta:hover .card-img-overlay {
@@ -1186,7 +1228,7 @@ video {
         color: black;
         height: 11rem;
         overflow: hidden;
-    } 
+    }
 
     .video-container {
         position: relative;
@@ -1201,7 +1243,7 @@ video {
 @media (min-width: 768px) and (max-width: 991px) {
 
     .cont-letrero {
-        margin-top: 24rem; 
+        margin-top: 24rem;
         margin-left: -1.5rem;
     }
 
@@ -1255,10 +1297,10 @@ video {
     .letrero {
         line-height: 1;
         font-size: 1rem;
-        margin-top: -4rem; 
-        height: 6rem; 
-        max-height: 6rem; 
-        overflow: auto; 
+        margin-top: -4rem;
+        height: 6rem;
+        max-height: 6rem;
+        overflow: auto;
         text-align: justify;
     }
 
@@ -1267,12 +1309,12 @@ video {
     }
 
     .letrerob {
-        margin-top: -3.5rem; 
-        height: 5rem; 
-        max-height: 5rem; 
-        overflow: hidden; 
-        line-height: 0.8; 
-        font-size: 1rem; 
+        margin-top: -3.5rem;
+        height: 5rem;
+        max-height: 5rem;
+        overflow: hidden;
+        line-height: 0.8;
+        font-size: 1rem;
         text-align: justify;
     }
 
@@ -1290,7 +1332,7 @@ video {
     }
 
     .contad {
-        color: #FE6E63; 
+        color: #FE6E63;
         font-size: 4rem;
         margin-top: 2.2rem;
     }
@@ -1403,8 +1445,8 @@ video {
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
-        width: 100%; 
-        height: auto; 
+        width: 100%;
+        height: auto;
     }
 
     .carta:hover .card-img-overlay {
@@ -1434,7 +1476,7 @@ video {
         color: black;
         height: 8rem;
         overflow: hidden;
-    } 
+    }
 
     .video-container {
         position: relative;
@@ -1449,7 +1491,7 @@ video {
 @media (min-width: 576px) and (max-width: 767px) {
 
     .cont-letrero {
-        margin-top: 14rem; 
+        margin-top: 14rem;
         margin-left: -1.5rem;
     }
 
@@ -1511,10 +1553,10 @@ video {
     .letrero {
         line-height: 1;
         font-size: 0.8rem;
-        margin-top: -4rem; 
-        height: 6rem; 
-        max-height: 6rem; 
-        overflow: auto; 
+        margin-top: -4rem;
+        height: 6rem;
+        max-height: 6rem;
+        overflow: auto;
         text-align: justify;
     }
 
@@ -1523,12 +1565,12 @@ video {
     }
 
     .letrerob {
-        margin-top: -3.5rem; 
-        height: 5rem; 
-        max-height: 5rem; 
-        overflow: hidden; 
-        line-height: 0.8; 
-        font-size: 1rem; 
+        margin-top: -3.5rem;
+        height: 5rem;
+        max-height: 5rem;
+        overflow: hidden;
+        line-height: 0.8;
+        font-size: 1rem;
         text-align: justify;
     }
 
@@ -1546,7 +1588,7 @@ video {
     }
 
     .contad {
-        color: #FE6E63; 
+        color: #FE6E63;
         font-size: 4rem;
         margin-top: 2.2rem;
     }
@@ -1659,8 +1701,8 @@ video {
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
-        width: 100%; 
-        height: auto; 
+        width: 100%;
+        height: auto;
     }
 
     .carta:hover .card-img-overlay {
@@ -1690,7 +1732,7 @@ video {
         color: black;
         height: 14rem;
         overflow: hidden;
-    }    
+    }
 
     .video-container {
         position: relative;
@@ -1705,7 +1747,7 @@ video {
 @media (min-width: 0px) and (max-width: 575px) {
 
     .cont-letrero {
-        margin-top: 14rem; 
+        margin-top: 14rem;
         margin-left: -1.5rem;
     }
 
@@ -1767,10 +1809,10 @@ video {
     .letrero {
         line-height: 1;
         font-size: 0.8rem;
-        margin-top: -3rem; 
-        height: 5rem; 
-        max-height: 5rem; 
-        overflow: auto; 
+        margin-top: -3rem;
+        height: 5rem;
+        max-height: 5rem;
+        overflow: auto;
         text-align: justify;
     }
 
@@ -1779,12 +1821,12 @@ video {
     }
 
     .letrerob {
-        margin-top: -2.5rem; 
-        height: 3rem; 
-        max-height: 3rem; 
-        overflow: hidden; 
-        line-height: 1; 
-        font-size: 0.6rem; 
+        margin-top: -2.5rem;
+        height: 3rem;
+        max-height: 3rem;
+        overflow: hidden;
+        line-height: 1;
+        font-size: 0.6rem;
         text-align: justify;
     }
 
@@ -1802,7 +1844,7 @@ video {
     }
 
     .contad {
-        color: #FE6E63; 
+        color: #FE6E63;
         font-size: 3.6rem;
         margin-top: 2.2rem;
     }
@@ -1916,8 +1958,8 @@ video {
         background-size: cover;
         background-position: center center;
         background-repeat: no-repeat;
-        width: 100%; 
-        height: auto; 
+        width: 100%;
+        height: auto;
     }
 
     .carta:hover .card-img-overlay {
@@ -1947,7 +1989,7 @@ video {
         color: black;
         height: 9.8rem;
         overflow: hidden;
-    }    
+    }
 
     .video-container {
         position: relative;

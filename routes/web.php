@@ -44,7 +44,7 @@ Route::name('front.')->group(function(){
 
 // rutas al admin
 Route::namespace("Admin")->prefix('admin')->group(function(){
-	
+
 	Route::name('admin.')->group(function(){
 		Route::get('/', 'HomeController@index')->name('home');
 		Route::get('/nuevo', 'HomeController@create')->name('create');
@@ -57,7 +57,7 @@ Route::namespace("Admin")->prefix('admin')->group(function(){
 			Route::post('/login', 'LoginController@login');
 			Route::post('logout', 'LoginController@logout')->name('logout');
 		});
-		
+
 	});
 
 
@@ -79,9 +79,9 @@ Route::namespace("Admin")->prefix('admin')->group(function(){
 // rutas al admin configuraciones
 // controllers dentro de Controllers/
 Route::prefix('admin')->group(function(){
-	
+
 	Route::prefix('config')->name('config.')->group(function(){
-		
+
 		Route::prefix('colores')->name('color.')->group(function(){
 			Route::get('/','ColorController@index')->name('index');
 			Route::post('/','ColorController@store')->name('store');
@@ -128,6 +128,9 @@ Route::prefix('admin')->group(function(){
 			Route::post('/imagenalianza','EquipoController@imagenalianza')->name('imagenalianza');
 			Route::post('/textareaup/{id}','SeccionController@textareaup')->name('textareaup');
 
+            Route::post('/createFrase','SeccionController@createFrase')->name('createFrase');
+            Route::delete('/deleteFrase/{frase}','SeccionController@deleteFrase')->name('deleteFrase');
+
 			Route::post('/imgSider','SeccionController@imgSider')->name('imgSider');
 			Route::delete('/delSide/{slider}','SeccionController@delSide')->name('delSide');
 
@@ -148,24 +151,24 @@ Route::prefix('admin')->group(function(){
 			Route::post('elimCat','SeccionController@elimCat')->name('elimCat');
 			///////////////////////////////////////////////// categoria /////////////////////////////////////////////////
 
-			
+
 			///////////////////////////////////////////////// proyectos /////////////////////////////////////////////////
 			Route::post('agproyect','SeccionController@agproyect')->name('agproyect');
 			Route::delete('elimProy/{proyecto}','SeccionController@elimProy')->name('elimProy');
 			///////////////////////////////////////////////// proyectos /////////////////////////////////////////////////
 
 			///////////////////////////////////////////////// Puntos de Venta /////////////////////////////////////////////////
-			Route::post('agpunto','SeccionController@agpunto')->name('agpunto'); 
+			Route::post('agpunto','SeccionController@agpunto')->name('agpunto');
 			Route::post('elimpunto/{punto}','SeccionController@elimpunto')->name('elimpunto');
 			///////////////////////////////////////////////// Puntos de Venta /////////////////////////////////////////////////
 
 			///////////////////////////////////////////////// Beneficios de ser subdistribuidor /////////////////////////////////////////////////
-			Route::post('agsubdistribuidor','SeccionController@agsubdistribuidor')->name('agsubdistribuidor'); 
+			Route::post('agsubdistribuidor','SeccionController@agsubdistribuidor')->name('agsubdistribuidor');
 			Route::post('elimsubdistribuidor/{sub}','SeccionController@elimsubdistribuidor')->name('elimsubdistribuidor');
 			///////////////////////////////////////////////// Beneficios de ser subdistribuidor /////////////////////////////////////////////////
 
 			///////////////////////////////////////////////// Necesidades /////////////////////////////////////////////////
-			Route::post('agnecesidades','SeccionController@agnecesidades')->name('agnecesidades'); 
+			Route::post('agnecesidades','SeccionController@agnecesidades')->name('agnecesidades');
 			Route::post('elimnecesidades/{nec}','SeccionController@elimnecesidades')->name('elimnecesidades');
 			///////////////////////////////////////////////// Necesidades /////////////////////////////////////////////////
 
@@ -211,7 +214,7 @@ Route::prefix('admin')->group(function(){
 
 			///////////////////////////////////////////////// rutas de productos /////////////////////////////////////////////////
 			// Route::post('/nuevoprod','ProductoController@nuevoprod')->name('nuevoprod');
-			
+
 			// Route::post('portada_prod/{id}','ProductoController@portada_prod')->name('portada_prod');
 			// Route::post('prodtext','ProductoController@prodtext')->name('prodtext');
 			// Route::post('selectcat','ProductoController@selectcat')->name('selectcat');
@@ -219,7 +222,6 @@ Route::prefix('admin')->group(function(){
 			// Route::get('productodetalle/{id}','ProductoController@prodDetalle')->name('productodetalle');
 			// Route::post('productodetalle/productogaleria/{id}','ProductoController@productogaleria')->name('productogaleria');
 			///////////////////////////////////////////////// rutas de productos /////////////////////////////////////////////////
-
 
 			Route::post('secciontexts','SeccionController@secciontexts')->name('secciontexts');
 			Route::post('secciontexth','SeccionController@secciontexth')->name('secciontexth');
@@ -276,9 +278,9 @@ Route::prefix('admin')->group(function(){
 	Route::prefix('pedidios')->name('pedidios.')->group(function () {
 		Route::get('show','PedidoController@show')->name('show');
 	});
-	
+
 	// Route::prefix('servicios')->name('productos.')->group(function () {
-		
+
 	// 	Route::get('/', 'ProductoController@index')->name('index');
 	// 	Route::get('nuevo', 'ProductoController@create')->name('create');
 	// 	Route::post('nuevo', 'ProductoController@store')->name('store');
@@ -294,7 +296,7 @@ Route::prefix('admin')->group(function(){
 	// 	});
 
 	// 	Route::name('version.')->group(function () {
-			
+
 	// 		Route::post('newvar/', 'ProductoVarianteController@store')->name('store');
 	// 		Route::get('variante/{id_var}', 'ProductoVarianteController@show')->name('show');
 	// 		Route::get('variante/edit/{id_var}', 'ProductoVarianteController@edit')->name('edit');
@@ -302,15 +304,15 @@ Route::prefix('admin')->group(function(){
 	// 	// 	Route::delete('pv/', 'ProductoVersionPhotoController@destroy')->name('delete');
 	// 	});
 
-		
+
 	// 	Route::name('rel.')->group(function(){
-			
+
 	// 		Route::put('rel/{id}','ProductoRelacionController@update')->name('update');
 	// 		// Route::delete('rel/','ProductoRelacionController@destroy')->name('delete');
 	// 	});
 
 	// 	Route::name('categoria' )->group(function () {
-			
+
 	// 		Route::get('categoria/{id}', 'ProductosPhotoController@store')->name('store');
 	// 	});
 

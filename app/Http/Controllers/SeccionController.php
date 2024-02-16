@@ -34,6 +34,7 @@ use App\Municipio;
 use App\ZBeneficio;
 use App\ZSucursal;
 use App\ZSucursalFoto;
+use App\ZFrase;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
@@ -51,14 +52,14 @@ class SeccionController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index() {
-        
+
 
 			$seccion = Seccion::all();
-            
+
 			foreach ($seccion as $sec) {
-				$sec->elements = $sec->elementos()->count();  
+				$sec->elements = $sec->elementos()->count();
 			}
-          
+
 			return view('configs.secciones.index',compact('seccion'));
     }
 
@@ -90,7 +91,7 @@ class SeccionController extends Controller
         // dd($request);
         $sucursal->estado = $request->estado;
         $sucursal->municipio = $request->municipio;
-        $sucursal->sucursal = $request->direccion; 
+        $sucursal->sucursal = $request->direccion;
         $sucursal->coordX = $request->coordX;
         $sucursal->coordY = $request->coordY;
 
@@ -131,15 +132,15 @@ class SeccionController extends Controller
      */
     public function show($seccion) {
         $config = Configuracion::all();
-      
+
         $seccion_nom = $seccion;
-            
+
 		$seccion = Seccion::where('slug',$seccion)->first();
 
         $elem_general = Elemento::all();
 
 		$elements = $seccion->elementos()->get();
-            
+
         $slider_principal = ZSliderPrincipal::all();
         $servicios = ZServicio::orderBy('orden', 'asc')->get();
         $proyectos = ZProyecto::all();
@@ -149,10 +150,11 @@ class SeccionController extends Controller
         $municipios = Municipio::all();
         $beneficios = ZBeneficio::all();
         $sucursales = ZSucursal::all();
+        $frases = ZFrase::all();
 
         $ruta = 'configs.secciones.'.$seccion->seccion;
 
-		return view($ruta,compact('elements', 'config', 'elem_general', 'slider_principal', 'servicios', 'proyectos', 'clientes', 'vacantes', 'estados', 'municipios', 'beneficios', 'sucursales'));
+		return view($ruta,compact('elements', 'frases', 'config', 'elem_general', 'slider_principal', 'servicios', 'proyectos', 'clientes', 'vacantes', 'estados', 'municipios', 'beneficios', 'sucursales'));
     }
 
     /**
@@ -231,7 +233,7 @@ class SeccionController extends Controller
             }
 
         }
-    
+
     }
 
     public function image_input_ejemplo(Request $request){
@@ -240,26 +242,26 @@ class SeccionController extends Controller
             if($request->tipo) {
                 if($request->tipo == 'proyecto') {
                     $uproyecto = ZProyecto::find($request->id_elemento);
-                    
+
                     /*
                     $file_proyecto = $request->file('archivo');
                     $oldFilePoryectos = 'img/photos/proyectos/'.$uproyecto->imagen;
                     $extension_proyecto = $file_proyecto->getClientOriginalExtension();
                     $namefile_proyecto = Str::random(30) . '.' . $extension_proyecto;
-    
+
                     \Storage::disk('local')->put("/img/photos/proyectos/" . $namefile_proyecto, \File::get($file_proyecto));
                     unlink($oldFilePoryectos);
 
                     $uproyecto->imagen = $namefile_proyecto;
                     */
-                    
+
                     $imagen = $request->file('archivo');
                     $oldFilePoryectos = 'img/photos/proyectos/'.$uproyecto->portado;
                     $destinationPath = 'img/photos/proyectos/';
                     $profileImage = date('YmdHis') . "." . $imagen->getClientOriginalExtension();
                     $imagen->move($destinationPath, $profileImage);
                     unlink($oldFilePoryectos);
-            
+
                     $uproyecto->portado = "$profileImage";
 
                     $uproyecto->update();
@@ -268,26 +270,26 @@ class SeccionController extends Controller
                     return redirect()->back();
                 } else if($request->tipo == 'vacante') {
                     $uvacante = ZVacante::find($request->id_elemento);
-                    
+
                     /*
                     $file_vacante = $request->file('archivo');
                     $oldFileVacante = 'img/photos/vacantes/'.$uvacante->portada;
                     $extension_vacante = $file_vacante->getClientOriginalExtension();
                     $namefile_vacante = Str::random(30) . '.' . $extension_vacante;
-    
+
                     \Storage::disk('local')->put("/img/photos/vacantes/" . $namefile_vacante, \File::get($file_vacante));
                     unlink($oldFileVacante);
 
                     $uvacante->portada = $namefile_vacante;
                     */
-                    
+
                     $imagen = $request->file('archivo');
                     $oldFilePoryectos = 'img/photos/vacantes/'.$uvacante->portada;
                     $destinationPath = 'img/photos/vacantes/';
                     $profileImage = date('YmdHis') . "." . $imagen->getClientOriginalExtension();
                     $imagen->move($destinationPath, $profileImage);
                     unlink($oldFilePoryectos);
-            
+
                     $uvacante->portada = "$profileImage";
 
                     $uvacante->update();
@@ -296,13 +298,13 @@ class SeccionController extends Controller
                     return redirect()->back();
                 } else if($request->tipo == 'servicio_imagen') {
                     $serv = ZServicio::find($request->id_elemento);
-                    
+
                     /*
                     $file_solucion = $request->file('archivo');
                     $oldFilesolucion = 'img/photos/servicios/'.$serv->imagen;
                     $extension_serv = $file_solucion->getClientOriginalExtension();
                     $namefile_serv = Str::random(30) . '.' . $extension_serv;
-    
+
                     \Storage::disk('local')->put("/img/photos/servicios/" . $namefile_serv, \File::get($file_solucion));
                     unlink($oldFilesolucion);
 
@@ -316,21 +318,21 @@ class SeccionController extends Controller
                     $profileImage = date('YmdHis') . "." . $imagen->getClientOriginalExtension();
                     $imagen->move($destinationPath, $profileImage);
                     //unlink($oldFilePoryectos);
-            
+
                     $serv->imagen = "$profileImage";
-                    
+
                     $serv->update();
 
                     \Toastr::success('Guardado');
                     return redirect()->back();
                 } else if($request->tipo == 'solucion_icono') {
                     $usolucion = PFSolucion::find($request->id_elemento);
-                    
+
                     $file_solucion = $request->file('archivo');
                     $oldFilesolucion = 'img/photos/soluciones/'.$usolucion->icono;
                     $extension_solucion = $file_solucion->getClientOriginalExtension();
                     $namefile_solucion = Str::random(30) . '.' . $extension_solucion;
-    
+
                     \Storage::disk('local')->put("/img/photos/soluciones/" . $namefile_solucion, \File::get($file_solucion));
                     unlink($oldFilesolucion);
 
@@ -342,12 +344,12 @@ class SeccionController extends Controller
                     return redirect()->back();
                 } else if($request->tipo == 'categoria') {
                     $ucategoria = PFCategoriaProducto::find($request->id_elemento);
-                    
+
                     $file_categoria = $request->file('archivo');
                     $oldFileCategoria = 'img/photos/categorias/'.$ucategoria->icono;
                     $extension_categoria = $file_categoria->getClientOriginalExtension();
                     $namefile_categoria = Str::random(30) . '.' . $extension_categoria;
-    
+
                     \Storage::disk('local')->put("/img/photos/categorias/" . $namefile_categoria, \File::get($file_categoria));
                     unlink($oldFileCategoria);
 
@@ -363,9 +365,9 @@ class SeccionController extends Controller
                     \Toastr::error('Error al subir imagen');
                     return redirect()->back();
                 }
-    
+
                 $elemento = Elemento::find($request->id_elemento);
-    
+
                 if(!empty($elemento->imagen)){
                     \Storage::disk('local')->delete("/img/photos/imagenes_estaticas/" .$elemento->imagen);
                     // unlink("img/photos/imagenes_estaticas/" .$elemento->imagen);
@@ -374,16 +376,16 @@ class SeccionController extends Controller
                 $file = $request->file('archivo');
                 $extension = $file->getClientOriginalExtension();
                 $namefile = Str::random(30) . '.' . $extension;
-      */          
+      */
                 $imagen = $request->file('archivo');
                 $destinationPath = 'img/photos/imagenes_estaticas/';
                 $profileImage = date('YmdHis') . "." . $imagen->getClientOriginalExtension();
                 $imagen->move($destinationPath, $profileImage);
-      
+
                 // \Storage::disk('local')->put("img/photos/imagenes_estaticas/" . $namefile, \File::get($file));
-    
+
                 $elemento->imagen = $profileImage;
-    
+
                 if($elemento->save()){
                     \Toastr::success('Guardado');
                     return redirect()->back();
@@ -393,7 +395,7 @@ class SeccionController extends Controller
                 }
             }
 
-           
+
 
         }else{
             \Toastr::error('Error al subir imagen');
@@ -422,7 +424,7 @@ class SeccionController extends Controller
             }else{
                 return response()->json(['success'=>true, 'mensaje'=>'Cambio Exitoso']);
             }
-            
+
         }else {
             if(isset($request->form)){
                 \Toastr::error('Error al guardar');
@@ -435,7 +437,7 @@ class SeccionController extends Controller
 
     public function portadaseccion(Request $request){
 
-        
+
         $carrusel =new Carrusel;
 
         // if(!empty($carrusel->imagen)){
@@ -487,10 +489,10 @@ class SeccionController extends Controller
     }
 
     public function deletesslider(Request $request){
-        
+
         $carrusel = Carrusel::find($request->producto);
 
-        
+
         \Storage::disk('local')->delete("/img/photos/sliders/" .$carrusel->image);
 
         if($carrusel->delete()){
@@ -543,11 +545,11 @@ class SeccionController extends Controller
         $cat->$campo = $request->valor;
 
         if($cat->save()){
-            
+
             return response()->json(['success'=>true, 'mensaje'=>'Cambio Exitoso']);
 
         }else{
-            
+
             return response()->json(['success'=>false, 'mensaje'=>'Error al actualizar']);
         }
 
@@ -555,8 +557,8 @@ class SeccionController extends Controller
 
     public function catimg(Request $request, $id){
 
-        
-        
+
+
         $cat = Categoria::find($request->id);
 
         if(!empty($cat->image)){
@@ -618,16 +620,16 @@ class SeccionController extends Controller
         $servicio->$campo = $request->valor;
 
         if($servicio->save()){
-            
+
             return response()->json(['success'=>true, 'mensaje'=>'Cambio Exitoso']);
 
         }else{
-            
+
             return response()->json(['success'=>false, 'mensaje'=>'Error al actualizar']);
         }
 
 
-        
+
 
     }
 
@@ -640,7 +642,7 @@ class SeccionController extends Controller
             return response()->json(['success'=>false, 'mensaje'=>'Error al agregar']);
         }
 
-        
+
 
     }
 
@@ -653,12 +655,12 @@ class SeccionController extends Controller
             return response()->json(['success'=>false, 'mensaje'=>'Error al agregar']);
         }
 
-        
+
 
     }
 
     public function checkb(Request $request){
-        
+
 
         $servicio = services::find($request->id);
 
@@ -668,7 +670,7 @@ class SeccionController extends Controller
             if($request->valor == 'true'){
                 return response()->json(['success'=>false, 'mensaje'=>'No puedes agregar mas de 4 servicios destacados']);
             }
-            
+
         }
 
         if($request->valor == "true"){
@@ -689,7 +691,7 @@ class SeccionController extends Controller
 
 
 
-        
+
     }
 
     public function selecticon(Request $request){
@@ -704,7 +706,7 @@ class SeccionController extends Controller
             return response()->json(['success'=>false, 'mensaje'=>'Error al actualizar icono']);
         }
 
-        
+
     }
 
     public function portadaservicio(Request $request, $id){
@@ -722,7 +724,7 @@ class SeccionController extends Controller
             $file = $request->file('image_service');
             $extension = $file->getClientOriginalExtension();
             $namefile = Str::random(30) . '.' . $extension;
-           
+
 
             \Storage::disk('local')->put("/img/photos/seccions/" . $namefile, \File::get($file));
 
@@ -737,7 +739,7 @@ class SeccionController extends Controller
     }
 
     public function deletes(Request $request){
-        
+
         $servicio = services::find($request->elimins);
 
         if($servicio->image !='servicio_1.png'){
@@ -768,7 +770,7 @@ class SeccionController extends Controller
     }
 
 
-    /////////////////////////////////// funciones de categoria /////////////////////////////////// 
+    /////////////////////////////////// funciones de categoria ///////////////////////////////////
 
 
 
@@ -796,7 +798,7 @@ class SeccionController extends Controller
         }else{
             \Toastr::error('Error al algregar categoria');
         }
-        
+
         return redirect()->back();
 
     }
@@ -823,7 +825,7 @@ class SeccionController extends Controller
                            $ppe->delete();
                         }
                     }
-        
+
                     foreach($producto_galeria_elim as $gale) {
                         if($gale->producto == $pe->id) {
                             $aux_img = 'img/photos/productos/'.$gale->galeria;
@@ -835,11 +837,11 @@ class SeccionController extends Controller
                     $aux_pd = 'img/photos/productos/'.$pe->imagen;
                     unlink($aux_pd);
                     $pe->delete();
-                } 
+                }
             }
         }
 
-       
+
        $img_cat = 'img/photos/categorias/'.$categoria->icono;
        unlink($img_cat);
        $categoria->delete();
@@ -849,21 +851,21 @@ class SeccionController extends Controller
 
     }
 
-    /////////////////////////////////// funciones de categoria /////////////////////////////////// 
+    /////////////////////////////////// funciones de categoria ///////////////////////////////////
 
-    /////////////////////////////////// funciones de prooyectos /////////////////////////////////// 
+    /////////////////////////////////// funciones de prooyectos ///////////////////////////////////
 
     public function agproyect(Request $request){
-        
+
         $proyecto = new ZProyecto;
-        
+
         $proyecto->titulo = $request->nom_proy;
         $proyecto->descripcion = $request->desc_proy;
         $proyecto->color = $request->colorPicker;
         $proyecto->servicio = $request->servicio;
         /*
         if(!empty($request->file('archivo'))){
-            
+
             $file = $request->file('archivo');
             $extension = $file->getClientOriginalExtension();
             $namefile = Str::random(30) . '.' . $extension;
@@ -883,7 +885,7 @@ class SeccionController extends Controller
             // dd($profileImage);
             $proyecto->portado = "$profileImage";
         }
-        
+
          if($proyecto->save()){
             \Toastr::success('Proyecto agregada');
             return redirect()->back();
@@ -891,12 +893,12 @@ class SeccionController extends Controller
             \Toastr::error('Error al algregar proyecto');
             return redirect()->back();
         }
-        
+
 
     }
 
     public function elimProy(ZProyecto $proyecto){
-        
+
         if(!empty($proyecto->portado)){
             \Storage::disk('local')->delete("/img/photos/proyectos/" .$proyecto->portado);
         }
@@ -911,8 +913,8 @@ class SeccionController extends Controller
 
     }
 
-    /////////////////////////////////// funciones de prooyectos /////////////////////////////////// 
-    
+    /////////////////////////////////// funciones de prooyectos ///////////////////////////////////
+
 
     public function agservicio(Request $request){
         $solucion = new ZServicio;
@@ -949,7 +951,7 @@ class SeccionController extends Controller
 
             $solucion->imagen = $namefile2;
         }*/
-        
+
         if ($imagen = $request->file('archivo2')) {
             $destinationPath = 'img/photos/servicios/';
             $profileImage = date('YmdHis') . "." . $imagen->getClientOriginalExtension();
@@ -971,7 +973,7 @@ class SeccionController extends Controller
         }else{
             \Toastr::error('Error al algregar el servicio');
         }
-        
+
         return redirect()->back();
 
     }
@@ -1002,7 +1004,7 @@ class SeccionController extends Controller
         }else{
             \Toastr::error('Error al eliminar el servicio');
         }
-        
+
         return redirect()->back();
     }
 
@@ -1019,7 +1021,7 @@ class SeccionController extends Controller
             $vacante->portada = $namefile;
         }
         */
-        
+
         if ($imagen = $request->file('archivo')) {
             $destinationPath = 'img/photos/vacantes/';
             $profileImage = date('YmdHis') . "." . $imagen->getClientOriginalExtension();
@@ -1041,13 +1043,13 @@ class SeccionController extends Controller
         }else{
             \Toastr::error('Error al algregar el servicio');
         }
-        
+
         return redirect()->back();
 
     }
 
     public function elimVacante(ZVacante $vacante) {
-        
+
         if(!empty($vacante->portada)){
             \Storage::disk('local')->delete("/img/photos/vacantes/" .$vacante->portada);
         }
@@ -1075,7 +1077,7 @@ class SeccionController extends Controller
             $slider->slider = $namefile;
         }
         */
-        
+
         if ($imagen = $request->file('archivo')) {
             $destinationPath = 'img/photos/slider_principal/';
             $profileImage = date('YmdHis') . "." . $imagen->getClientOriginalExtension();
@@ -1107,7 +1109,7 @@ class SeccionController extends Controller
         $element = Elemento::all();
 
         // dd($element[2]->imagen);
-        
+
         if ($video = $request->file('archivov')) {
 
             $antiguo = "img/photos/video_principal/".$element[2]->imagen;
@@ -1130,7 +1132,7 @@ class SeccionController extends Controller
     public function imgSiderCliente(Request $request) {
         $cliente = new ZCliente;
         // dd($request->archivo);
-        
+
         /*
         if ($request->hasFile('archivo')) {
             $file = $request->file('archivo');
@@ -1142,7 +1144,7 @@ class SeccionController extends Controller
             $cliente->logo = $namefile;
         }
         */
-        
+
         if ($imagen = $request->file('archivo')) {
             $destinationPath = 'img/photos/clientes/';
             $profileImage = date('YmdHis') . "." . $imagen->getClientOriginalExtension();
@@ -1154,7 +1156,7 @@ class SeccionController extends Controller
         }
 
         $cliente->save();
-        
+
         \Toastr::success('Guardado');
         return redirect()->back();
     }
@@ -1178,7 +1180,7 @@ class SeccionController extends Controller
         $punto->ciudad = $request->municipio;
         $punto->estado = $request->estado;
         $punto->mapa = $request->mapa;
-        
+
         $punto->save();
 
         \Toastr::success('Punto de venta agregado');
@@ -1209,7 +1211,7 @@ class SeccionController extends Controller
         \Toastr::success('Beneficio eliminado');
         return redirect()->back();
     }
-    
+
     public function agnecesidades(Request $request) {
         $necesidad = new PFNecesidades;
 
@@ -1230,7 +1232,7 @@ class SeccionController extends Controller
 
     public function elimnecesidades(PFNecesidades $nec) {
         $nec->delete();
-        
+
         \Toastr::success('Necesidad eliminada');
         return redirect()->back();
     }
@@ -1272,7 +1274,7 @@ class SeccionController extends Controller
             $beneficio->icono = $namefile;
         }
         */
-        
+
         if ($imagen = $request->file('archivo')) {
             $destinationPath = 'img/photos/beneficios/';
             $profileImage = date('YmdHis') . "." . $imagen->getClientOriginalExtension();
@@ -1287,7 +1289,7 @@ class SeccionController extends Controller
         $beneficio->color = $request->colorPicker;
 
         $beneficio->save();
-        
+
         \Toastr::success('Guardado');
         return redirect()->back();
     }
@@ -1324,7 +1326,7 @@ class SeccionController extends Controller
 
             $galeria->foto = $namefile;
         }*/
-        
+
         if ($imagen = $request->file('archivo')) {
             $destinationPath = 'img/photos/sucursales/galeria/';
             $profileImage = date('YmdHis') . "." . $imagen->getClientOriginalExtension();
@@ -1341,7 +1343,7 @@ class SeccionController extends Controller
         $galeria->municipio = $request->municipio;
 
         $galeria->save();
-        
+
         \Toastr::success('Guardado');
         return redirect()->back();
     }
@@ -1356,6 +1358,37 @@ class SeccionController extends Controller
         return redirect()->back();
     }
 
+    public function createFrase(Request $request) {
+        $frase = new ZFrase;
+
+        if ($imagen = $request->file('archivo')) {
+            $destinationPath = 'img/photos/frases/';
+            $profileImage = date('YmdHis') . "." . $imagen->getClientOriginalExtension();
+            $imagen->move($destinationPath, $profileImage);
+            $frase->imagen = "$profileImage";
+
+            $frase->frase = $request->frase;
+        }
+
+         if($frase->save()){
+            \Toastr::success('Agregada');
+            return redirect()->back();
+        }else{
+            \Toastr::error('Error al algregar');
+            return redirect()->back();
+        }
+
+    }
+
+    public function deleteFrase(ZFrase $frase) {
+        $img = "img/photos/frases/".$frase->imagen;
+        unlink($img);
+
+        $frase->delete();
+
+        \Toastr::success('Eliminada');
+        return redirect()->back();
+    }
 
 }
 

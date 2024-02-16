@@ -1,17 +1,26 @@
 @extends('layouts.front')
 
-@section('title') 
+@section('title')
 {{-- {{$politica->titulo}} --}}
 Aviso de Privacidad
 @endsection
 {{-- @section('cssExtras')@endsection --}}
 {{-- @section('styleExtras')@endsection --}}
 @section('content')
-	
+
+<style>
+	@font-face {
+		font-family: 'Sansation Bold';
+		src: url("{{ asset('fonts/Sansation-Bold/Sansation_Bold.ttf') }}") format('truetype');
+		font-weight: normal;
+		font-style: normal;
+	}
+</style>
+
 	<section>
 		<div class="bg-global">
 			<div class="col-12 p-4" style="background-color: black; color: white;">
-				<div class="d-inline" style="font-size:24px;color: white;"> {{ $politica[3]->titulo }} </div>
+				<div class="text-center text-white fs-1" style="font-size:24px;color: white; font-family: 'Sansation Bold';"> {{ $politica[3]->titulo }} </div>
 			</div>
 		</div>
 	</section>
@@ -26,7 +35,7 @@ Aviso de Privacidad
 	<section>
 		<div class="bg-global">
 			<div class="col-12 p-4" style="background-color: black; color: white;">
-				<div class="d-inline" style="font-size:24px;color: white;"> {{ $politica[0]->titulo }} </div>
+				<div class="text-center text-white fs-1" style="font-size:24px;color: white; font-family: 'Sansation Bold';"> {{ $politica[0]->titulo }} </div>
 			</div>
 		</div>
 	</section>

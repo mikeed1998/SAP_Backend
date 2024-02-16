@@ -21,7 +21,7 @@
 @section('content')
 
     <section data-aos="fade-zoom-in"
-     data-aos-easing="ease-in-back" 
+     data-aos-easing="ease-in-back"
      data-aos-delay="300"
      data-aos-offset="0" style="background-color: #201E1F;">
         <div class="container-fluid" style="">
@@ -84,7 +84,7 @@
                     </div>
 
 
-                    <div class="row" style="overflow: hidden;"> 
+                    <div class="row" style="overflow: hidden;">
                         <div class="servicios2 px-0">
 
                             @foreach ($servicios as $serv)
@@ -92,14 +92,14 @@
                                 <div class="card border position-relative carta border-0">
                                     <div class="card rounded-0 position-absolute start-0 top-0 bottom-0" style="
                                         background-color: #201E1F;
-                                        background-image: url('{{ asset('img/photos/servicios/'.$serv->imagen) }}'); 
+                                        background-image: url('{{ asset('img/photos/servicios/'.$serv->imagen) }}');
                                         background-size: cover;
                                         background-position: center center;
                                         background-repeat: no-repeat;
                                         width: 100%;
                                         filter: grayscale(80%);
                                     "></div>
-                                    
+
                                     <div class="card-img-overlay rounded-0 py-5 " style="height: auto; filter: grayscale(100%);">
                                         <div class="card rounded-0 bg-transparent position-absolute start-0 top-50  text-white" style="margin-top: -10rem;">
                                             <div class="row">
@@ -120,7 +120,7 @@
                                         </div>
                                     </div>
                                     <div class="position-relative cont-btn">
-                                        
+
                                         <div class="card bg-transparent border-0 position-absolute bottom-0 start-0 translate-middle-y">
                                             <div class="row">
                                                 <div class="col-xxl-4 link-servicio">
@@ -131,7 +131,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                 </div>
                             </div>
                             @endforeach
@@ -141,14 +141,14 @@
                     <div class="row mt-5">
                         <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12"></div>
                         <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6 col-6 mx-xxl-auto mx-xl-auto mx-lg-auto mx-md-auto mx-sm-auto mx-auto position-relative text-center slider-dots-container-pri">
-                            <button class="slick-prev-pri btn position-absolute start-0" style="overflow: hidden"><img src="{{ asset('img/design/chevron-left.png') }}" alt="" class="img-fluid"></button>    
+                            <button class="slick-prev-pri btn position-absolute start-0" style="overflow: hidden"><img src="{{ asset('img/design/chevron-left.png') }}" alt="" class="img-fluid"></button>
                             <div class="slider-dots"></div>
                             <button class="slick-next-pri btn position-absolute end-0" style="overflow: hidden"><img src="{{ asset('img/design/chrevron-right.png') }}" alt="" class="img-fluid"></button>
                         </div>
                     </div>
 
 
-                    {{-- <div class="row" style="overflow: hidden;"> 
+                    {{-- <div class="row" style="overflow: hidden;">
                         <div class="servicios">
 
                             @foreach ($servicios as $serv)
@@ -174,7 +174,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                 </div>
                             </div>
                             @endforeach
@@ -184,7 +184,7 @@
                     <div class="row mt-5">
                         <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-8 col-sm-12 col-12"></div>
                         <div class="col-xxl-3 col-xl-3 col-lg-4 col-md-8 col-sm-10 col-xs-10 col-10 mx-xxl-0 mx-xl-0 mx-lg-0 mx-md-auto mx-sm-auto mx-auto slide-dotresp position-relative text-center slider-dots-container-pri">
-                            <button class="slick-prev-pri btn position-absolute start-0" style="overflow: hidden"><img src="{{ asset('img/design/chevron-left.png') }}" alt="" class="img-fluid"></button>    
+                            <button class="slick-prev-pri btn position-absolute start-0" style="overflow: hidden"><img src="{{ asset('img/design/chevron-left.png') }}" alt="" class="img-fluid"></button>
                             <div class="slider-dots"></div>
                             <button class="slick-next-pri btn position-absolute end-0" style="overflow: hidden"><img src="{{ asset('img/design/chrevron-right.png') }}" alt="" class="img-fluid"></button>
                         </div>
@@ -216,13 +216,13 @@
             </div>
             <div class="row">
                 <div class="col position-relative" style="background-color: #F0F0F0;">
-                    
+
                     <div class="col position-absolute start-0 top-0 z-1" id="map" style="background-image: url('{{ asset('img/design/home/fondo_mapa.png') }}');"></div>
                     <div class="col-11 position-absolute start-0" id="container-visitas" style="margin-top: 40rem;">
                         <div class="row">
                             <div class="col-2 z-3 p-5" style="
                                 background-color: #FE6E63;
-                                border-top-right-radius: 32px; 
+                                border-top-right-radius: 32px;
                                 border-bottom-right-radius: 32px;
                                 width: 9rem;
                             ">
@@ -298,10 +298,10 @@
                         </style>
                         <div class="row px-0" style="overflow: hidden; --bs-gutter-x: 0rem;">
                             <div class="col-12 triangu">
-                            
+
                             </div>
                         </div>
-                       
+
                         {{-- <div class="column-container2">
                             <div class="top-left2"></div>
                             <div class="top-right2"></div>
@@ -313,14 +313,25 @@
     </div>
 
 
-    
+
     </section>
-    
+
     <section style="margin-top: 80rem;">
         <div class="container-fluid py-5">
             <div class="row py-5">
-                <div class="col-11 position-relative mx-auto">
-                    <div class="col-12 position-absolute">
+                <div class="col-12 position-relative mx-auto">
+                    <div class="row">
+                        @foreach ($frases as $frase)
+                            <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-4">
+                                <div class="card mt carta-frase border" style="background-image: url('{{ asset('img/photos/frases/'.$frase->imagen) }}')">
+                                    <div class="overlay-frases">
+                                        <p class="fs-1" style="font-family: 'Sansation Bold', sans-serif;">{{ $frase->frase }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                    {{-- <div class="col-12 position-absolute">
                         <div class="row">
                             <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12" data-aos="zoom-in" data-aos-delay="100">
                                 <div class="row">
@@ -331,7 +342,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 col-baja" data-aos="zoom-in" data-aos-delay="100"> 
+                            <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 col-baja" data-aos="zoom-in" data-aos-delay="100">
                                 <div class="row">
                                     <div class="col-xxl-10 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 position-relative mx-auto circulo-imagen" style="background-image: url('{{ asset('img/photos/imagenes_estaticas/'.$elements[10]->imagen) }}'); background-color: #FFC000;">
                                         <div class="col-11 ms-5 position-absolute top-0 start-0 mt-5">
@@ -358,21 +369,21 @@
                                     <div class="col-xxl-10 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 position-relative mx-auto circulo-imagen" style="background-image: url('{{ asset('img/photos/imagenes_estaticas/'.$elements[14]->imagen) }}'); background-color: #FFC000;">
                                         <div class="col-11 ms-5 position-absolute top-0 start-0 mt-5">
                                             <h2><span><span style="font-family: 'Sansation Bold', sans-serif;">{{ $elements[13]->texto }}</span></span></h2>
-                                        </div>    
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
     </section>
 
     <section>
-        <div class="row texto-abajo">
+        <div class="row">
             <div class="col-8 position-relative text-center mx-auto fs-3" style="line-height: 1;">
-                
+
             </div>
         </div>
     </section>
@@ -381,7 +392,7 @@
         <div class="container pt-5 pb-3 pb-0">
             <div class="row py-5">
                 <div class="col position-relative py-5">
-                
+
                 </div>
             </div>
         </div>
@@ -416,7 +427,7 @@
                     </div>
                 </div> --}}
             </div>
-           
+
 
 
             <div class="row" data-aos="zoom-in" style="margin-top: 9rem;">
@@ -429,12 +440,12 @@
                                         <div class="imagen-cliente" style="background-image: url('{{ asset('img/photos/clientes/'.$cli->logo) }}');"></div>
                                     </div>
                                 </div>
-                            @endforeach        
+                            @endforeach
                         </div>
                     </div>
                 </div>
             </div>
-           
+
             <div class="row mt-5" data-aos="zoom-in">
                 <div class="col mt-5 py-5">
                     <div class="row">
@@ -463,7 +474,7 @@
                                                             <svg xmlns="http://www.w3.org/2000/svg" height="1.6rem" width="6rem" viewBox="0 0 448 512" fill="#FFC000"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
                                                         </div>
                                                     </div>
-                                                </div>    
+                                                </div>
                                             </button>
                                         </div>
                                     </div>
@@ -490,9 +501,9 @@
                                         <input required type="text" name="mensaje" class="form-control fs-3 bg-transparent rounded-0"  placeholder="Mensaje" style="border-bottom: 2px solid black; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;">
                                     </div>
                                 </div>
-                                
+
                             </div>
-                            
+
                         </div>
                         <div class="row">
                             <div class="col">
@@ -509,7 +520,7 @@
                     <input type="hidden" name="tipoForm" value="inicio">
                     <div class="col-11 mx-auto">
                         <div class="row">
-                            
+
                             <div class="col-md-9 col-sm-12 col-12 mx-auto position-relative py-3">
                                 <div class="row">
                                     <div class="col pt-4">
@@ -531,7 +542,7 @@
                                         <input required type="text" name="mensaje" class="form-control fs-3 bg-transparent rounded-0"  placeholder="Mensaje" style="border-bottom: 2px solid black; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;">
                                     </div>
                                 </div>
-                                
+
                             </div>
 
                             <div class="col-md-9 col-sm-12 col-12 mx-auto position-relative">
@@ -545,17 +556,17 @@
                                                         <svg xmlns="http://www.w3.org/2000/svg" height="1.6rem" width="6rem" viewBox="0 0 448 512" fill="#FFC000"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
                                                     </div>
                                                 </div>
-                                            </div>    
+                                            </div>
                                         </button>
                                     </div>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
                 </form>
             </div>
-           
+
         </div>
     </section>
 
@@ -564,7 +575,7 @@
         <div class="modal-dialog modal-fullscreen modal-dialog-scrollable  ng-dark">
             <div class="modal-content" style="background-color: #201E1F; color: #FFFFFF;">
                 <div class="modal-header">
-                    
+
                 </div>
                 <div class="modal-body">
                     <div class="container">
@@ -599,7 +610,7 @@
         function incrementarContador() {
             valorActual++;
             contadorElemento.text(valorActual);
-      
+
             if (valorActual === 110) {
                 clearInterval(intervalo);
             }
@@ -817,7 +828,7 @@
             contenedorVisita.style.display = "block";
             contenedorLetrero.style.display = "block";
         }
-            
+
     });
 
     // Cargar el archivo GeoJSON y agregarlo al mapa con un estilo personalizado
@@ -838,7 +849,7 @@
             // Manejar el evento de doble toque (doble clic)
             enableZoom();
         });
-       
+
 
         hammer.on('tap', function () {
             // Si es un toque único, deshabilitar el zoom y la interactividad
@@ -869,7 +880,7 @@
         // Añadir efecto de hover para todos los estados
         geojsonLayer.on('mouseover', function (e) {
             var layer = e.layer;
-            // var hoverColor = getRandomColor(); 
+            // var hoverColor = getRandomColor();
             var hoverColor = '#FFC000';
             layer.setStyle({
                 fillColor: hoverColor,
@@ -911,7 +922,7 @@
             var modalHeader = $('.modal-header');
             var modalBody = $('.modal-body');
 
-            modalHeader.html("<p style='font-size: 2.6rem; font-weight: 500; font-family: 'Sansation Bold', sans-serif; font-weight: bold;'>Nuestras sucursales en <strong>" + stateName + "</strong></p>" + 
+            modalHeader.html("<p style='font-size: 2.6rem; font-weight: 500; font-family: 'Sansation Bold', sans-serif; font-weight: bold;'>Nuestras sucursales en <strong>" + stateName + "</strong></p>" +
                 "<button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>");
 
             // Crear una lista HTML para las sucursales
@@ -944,14 +955,14 @@
             // Set the content of the modal body
             modalBody.html('<div class="container-fluid">' +
                 '<div class="row">' +
-                   '<div class="col-xxl-6 col-xl-6 col-lg-9 col-md-11 col-sm-11 col-11 mx-auto py-5 fs-3" style="font-family: \'Sansation Bold\', sans-serif;">'+ 
+                   '<div class="col-xxl-6 col-xl-6 col-lg-9 col-md-11 col-sm-11 col-11 mx-auto py-5 fs-3" style="font-family: \'Sansation Bold\', sans-serif;">'+
                         '' +
                         sucursalesHTML +
-                    '</div> ' + 
-                    '<div class="col-xxl-6 col-xl-6 col-lg-9 col-md-11 col-sm-11 col-11 mx-auto py-1"> ' + 
+                    '</div> ' +
+                    '<div class="col-xxl-6 col-xl-6 col-lg-9 col-md-11 col-sm-11 col-11 mx-auto py-1"> ' +
                         sucursales_galeriaHTML +
-                    '</div> ' + 
-                '</div> ' + 
+                    '</div> ' +
+                '</div> ' +
             '</div>');
 
             // Show the modal
@@ -996,9 +1007,9 @@
                 if (e.target.classList.contains('carrusel-interno')) {
                     nextItem();
                 }
-            }); 
+            });
         }
-        
+
     });
 
 

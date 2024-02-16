@@ -29,6 +29,7 @@ use App\Municipio;
 use App\ZBlog;
 use App\ZSucursal;
 use App\ZSucursalFoto;
+use App\ZFrase;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
@@ -45,7 +46,7 @@ class FrontController extends Controller
 	 * @return \Illuminate\Http\Response
 	 */
 	public function index(){
-		
+
 		$pagina = 'home';
 
 		$slider_principal = ZSliderPrincipal::all();
@@ -57,13 +58,14 @@ class FrontController extends Controller
 		$estados = Estado::all();
 		$municipios = Municipio::all();
 		$galeria = ZSucursalFoto::all();
+        $frases = ZFrase::all();
 
 		$contador = 0;
 		foreach ($sucursales as $sc) {
 			$contador++;
 		}
-		
-		return view('front.index', compact('pagina', 'galeria', 'contador', 'slider_principal', 'config', 'elements', 'servicios', 'clientes', 'sucursales', 'estados', 'municipios'));
+
+		return view('front.index', compact('pagina', 'frases', 'galeria', 'contador', 'slider_principal', 'config', 'elements', 'servicios', 'clientes', 'sucursales', 'estados', 'municipios'));
 	}
 
 	public function servicio($id) {
@@ -84,7 +86,7 @@ class FrontController extends Controller
 	}
 
 	public function producto($id) {
-	
+
 		$pagina = 'producto_detalle';
 
 		return view('front.tienda_detalle', compact('pagina'));
@@ -132,7 +134,7 @@ class FrontController extends Controller
 		$config = Configuracion::find(1);
 		$elements = Elemento::where('seccion',11)->get();
 		$servicios = ZServicio::orderBy('orden', 'asc')->get();
-		
+
 		$cont = 0;
 		$band = 0;
 
@@ -159,7 +161,7 @@ class FrontController extends Controller
 
 	public function contact(){
 		$pagina = 'contacto';
-		
+
 		$config = Configuracion::find(1);
 		$elements = Elemento::where('seccion',4)->get();
 		$sucursales = ZSucursal::all();
@@ -182,7 +184,7 @@ class FrontController extends Controller
 		return view('front.projects',compact('user','proyectos','elements', 'config'));
 	}
 
-	
+
 
 	public function products(Request $request){
 		$user=null;
@@ -198,7 +200,7 @@ class FrontController extends Controller
 			$productos = Producto::where('categoria',$request->Categoria)->get();
 			$nom_cat =  Categoria::find($request->Categoria);
 		}
-		
+
 		return view('front.productos',compact('user','productos','categorias','nom_cat', 'config'));
 	}
 
@@ -214,7 +216,7 @@ class FrontController extends Controller
 		$productosPhoto = ProductosPhoto::where('producto',$producto->id)->get();
 		$relacionado = Producto::where('categoria',$producto->categoria)->get();
 		return view('front.detprod',compact('user','producto','color','categorias','productosPhoto','relacionado', 'config'));
-	} 
+	}
 
 	public function faqs() {
 		$config = Configuracion::find(1);
@@ -243,7 +245,7 @@ class FrontController extends Controller
 	// public function tienda(Request $request){
 	// 	$elements = Elemento::where('seccion',2)->get();
 		// $categoria = $request->get('categoria');
-		
+
 		// if(!empty($categoria)){
 		// 	$categoria_b = Categoria::find($categoria);
 		// 	$busqueda = $request->get('busqueda');
@@ -280,19 +282,19 @@ class FrontController extends Controller
 	// }
 
 	// public function details($id){
-		
+
 	// 	$producto = Producto::find($id);
 
 
 	// 	$productosr = Producto::where('categoria',$producto->categoria)->get();
 
-		
+
 
 	// 	$producto->categoria = Categoria::find($producto->categoria);
 
 	// 	$productos_photos =  ProductosPhoto::where('producto',$producto->id)->get();
 
-		
+
 
 		// $variantes = ProductoVariante::where('producto', $product->id)->get();
 		// $medidas = ProductoMedida::where('producto',$product->id)->orderBy('orden', 'asc')->get();
@@ -324,12 +326,12 @@ class FrontController extends Controller
 				'ciudad' => 'required',
 				"mensaje" => "required",
 			],[],[]);
-	
+
 			if ($validate->fails()) {
 				\Toastr::error('Error, se requieren todos los datos');
 				return redirect()->back();
 			}
-	
+
 			$data = array(
 				'tipoForm' => $request->tipoForm,
 				'nombre' => $request->nombre,
@@ -347,7 +349,7 @@ class FrontController extends Controller
 				"mensaje" => "required",
 				'curriculum' => 'required|mimes:pdf',
 			],[],[]);
-	
+
 			if ($validate->fails()) {
 				\Toastr::error('Error, se requieren todos los datos');
 				return redirect()->back();
@@ -360,7 +362,7 @@ class FrontController extends Controller
 
 			// Adjunta el archivo cargado
 			$mail->addAttachment('img/'.$profileImage, $profileImage);
-	
+
 			$data = array(
 				'tipoForm' => $request->tipoForm,
 				'nombre' => $request->nombre,
@@ -379,12 +381,12 @@ class FrontController extends Controller
 				'asunto' => 'required',
 				"mensaje" => "required",
 			],[],[]);
-	
+
 			if ($validate->fails()) {
 				\Toastr::error('Error, se requieren todos los datos');
 				return redirect()->back();
 			}
-	
+
 			$data = array(
 				'tipoForm' => $request->tipoForm,
 				'nombre' => $request->nombre,
@@ -406,8 +408,8 @@ class FrontController extends Controller
 
 		$config = Configuracion::first();
 
-		
-		
+
+
 		try {
 			$mail->isSMTP();
 			// $mail->SMTPDebug = SMTP::DEBUG_SERVER;
@@ -426,17 +428,17 @@ class FrontController extends Controller
 			if (!empty($config->destinatario2)) {
 				$mail->AddBCC($config->destinatario2,'SAP anuncios - Contacto');
 			}
-			
+
 			if($data['tipoForm'] == 'contacto') {
 				$mail->Subject = $data['asuntow'];
 			} else {
 				$mail->Subject = 'Mensaje';
 			}
-			
+
 			$mail->msgHTML($html);
 			// $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
-			
+
 
 			if($mail->send()){
 				// dd('paso culo');
@@ -457,10 +459,10 @@ class FrontController extends Controller
 			\Toastr::error($e->getMessage());//Boring error messages from anything else!
 			return redirect()->back();
 		}
-		
+
 
 	}
 
-	
+
 
 }

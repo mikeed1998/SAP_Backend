@@ -39,7 +39,7 @@
             box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.1);
         }
 
-      
+
     }
 
     /* xxl */
@@ -53,7 +53,7 @@
             box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.1);
         }
 
-       
+
     }
 
     /* xl */
@@ -80,7 +80,7 @@
             box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.1);
         }
 
-       
+
     }
 
     /* md */
@@ -94,7 +94,7 @@
             box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.1);
         }
 
-       
+
     }
 
     /* sm */
@@ -225,7 +225,7 @@
     </section>
 
     <div class="container-fluid px-0">
-        
+
         <div class="row">
             <div class="col-12 d-flex justify-content-center align-items-center flex-column mt-2 text-center">
                 <h3 class="fs-1 fw-bolder" style="color:white; font-family: 'Sansation Bold', sans-serif;">Agregar slider</h3>
@@ -242,23 +242,23 @@
                     <div class="col-12 position-relative">
                         <div class="row">
                             <div class="col-12 mx-auto py-3 position-relative text-end">
-                                <form action="{{ route('config.seccion.delSide', [$sp->id]) }}" method="POST">						
+                                <form action="{{ route('config.seccion.delSide', [$sp->id]) }}" method="POST">
                                     @csrf
-                                    @method('DELETE') 
+                                    @method('DELETE')
                                     <button type="submit" class="btn btn-danger btn-block bg-danger rounded-pill"><i class="fas fa-trash"></i></button>
                                 </form>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col slider-principal py-5" style="
-                                background-image: url('{{ asset('img/photos/slider_principal/'.$sp->slider) }}'); 
+                                background-image: url('{{ asset('img/photos/slider_principal/'.$sp->slider) }}');
                             ">  </div>
                         </div>
-                        
+
                     </div>
-                        
-                  
-                    
+
+
+
                 @endforeach
             </div>
         </div>
@@ -279,13 +279,14 @@
             <div class="col py-5 position-relative text-center fs-1 fw-bolder border text-white py-5" style="font-family: 'Sansation Bold', sans-serif;">
                 SUCURSALES
                 <div class="col-12 d-flex align-content-center justify-content-center position-absolute top-0 bottom-0 start-0 cuadro">
-                   
+
                 </div>
             </div>
         </div>
         <div class="row py-5">
-            <div class="col-11 position-relative mx-auto">
-                <div class="col-12 position-absolute">
+            <div class="col-12 position-relative mx-auto">
+
+                {{-- <div class="col-12 position-absolute">
                     <div class="row">
                         <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12" data-aos="zoom-in" data-aos-delay="100">
                             <div class="row">
@@ -317,7 +318,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 col-baja" data-aos="zoom-in" data-aos-delay="100"> 
+                        <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 col-baja" data-aos="zoom-in" data-aos-delay="100">
                             <div class="row">
                                 <div class="col-xxl-10 col-xl-11 col-lg-11 col-md-11 col-sm-12 col-12 position-relative mx-auto circulo-imagen" style="background-image: url('{{ asset('img/images/home/index2.png') }}'); background-color: #CCAEEC;">
                                     <div class="col-11 position-relative ms-5 position-absolute top-0 start-0 mt-5">
@@ -412,10 +413,48 @@
                             </div>
                         </div>
                     </div>
+                </div> --}}
+                <div class="row">
+                    <div class="col-12 py-3 text-center d-flex justify-content-center flex-column">
+                        <h4 style="font-family:'Neusharp Bold'; color: #FFFFFF;">Agregar Nuevo</h4>
+                        <div >
+                            <button style="background: none !important; border:none; color: #FFFFFF;" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-circle-plus" style="font-size: 2rem;"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="slider-frases">
+                        @foreach ($frases as $frase)
+                        <div class="col-4 border-0">
+                            <div class="card carta-frase border" style="
+                                background-image: url('{{ asset('img/photos/frases/'.$frase->imagen) }}');
+                                background-position: center center;
+                                background-size: cover;
+                                background-repeat: no-repeat;
+                                width: 100%;
+                                height: 574px;
+                            ">
+
+                            </div>
+                            <div class="card-body">
+                                <input type="text" class="form-control editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{ $frase->id }}" data-table="ZFrase" data-campo="frase"  placeholder="Texto" value="{{ $frase->frase }}">
+                            </div>
+                            <div class="text-center py-4">
+                                <form action="{{ route('config.seccion.deleteFrase', ['frase' => $frase->id]) }}" method="POST" enctype="multipart/form-data" id="elim-frase-{{ $frase->id }}">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-outline border-0">
+                                        <i class="fa fa-trash fs-1 text-danger"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="row bg-white" style="margin-top: 120rem;">
+        <div class="row bg-white" style="margin-top: 20rem;">
             <div class="column-container3">
                 <div class="top-left3"></div>
                 <div class="top-right3"></div>
@@ -433,7 +472,7 @@
                 </div>
             </div>
         </div>
-       
+
         <div class="row bg-white py-5" >
             <div class="col-12 py-5 d-flex justify-content-center align-items-center flex-column mt-2 text-center">
                 <h3 class="fs-1 fw-bolder" style="color:black; font-family: 'Sansation Bold', sans-serif;">Agregar Cliente</h3>
@@ -450,6 +489,7 @@
                     @foreach ($clientes as $clie)
                         <div class="col position-relative">
                             <div style="
+                                background-color: #FFC000;
                                 background-image: url('{{ asset('img/photos/clientes/'.$clie->logo) }}');
                                 background-size: contain;
                                 background-position: center center;
@@ -458,9 +498,9 @@
                                 width: 100%;
                             "></div>
                             <div class="col-4 py-3 position-absolute top-0 end-0">
-                                <form action="{{ route('config.seccion.delSideCliente', ['cliente' => $clie->id]) }}" method="POST" style="display: inline;">						
+                                <form action="{{ route('config.seccion.delSideCliente', ['cliente' => $clie->id]) }}" method="POST" style="display: inline;">
                                     @csrf
-                                    @method('DELETE') 
+                                    @method('DELETE')
                                     <button type="submit" class="btn btn-danger btn-block bg-danger rounded-pill"><i class="fas fa-trash"></i></button>
                                 </form>
                             </div>
@@ -475,8 +515,8 @@
             </div>
         </div>
 
-   
-       
+
+
         <div class="row bg-white py-5" data-aos="zoom-in">
             <div class="col mt-5 py-5">
                 <div class="row">
@@ -505,7 +545,7 @@
                                                         <svg xmlns="http://www.w3.org/2000/svg" height="1.6rem" width="6rem" viewBox="0 0 448 512" fill="#FFC000"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
                                                     </div>
                                                 </div>
-                                            </div>    
+                                            </div>
                                         </button>
                                     </div>
                                 </div>
@@ -532,11 +572,11 @@
                                     <input type="text" class="form-control fs-3 bg-transparent rounded-0"  placeholder="Mensaje" style="border-bottom: 2px solid black; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;" disabled>
                                 </div>
                             </div>
-                            
+
                         </div>
-                        
+
                     </div>
-                    
+
                 </div>
             </form>
         </div>
@@ -545,7 +585,7 @@
             <form action="" id="form-small">
                 <div class="col-11 mx-auto">
                     <div class="row">
-                        
+
                         <div class="col-md-9 col-sm-12 col-12 mx-auto position-relative py-3">
                             <div class="row">
                                 <div class="col pt-4">
@@ -567,7 +607,7 @@
                                     <input type="text" class="form-control fs-3 bg-transparent rounded-0"  placeholder="Mensaje" style="border-bottom: 2px solid black; border-top: 0; border-right: 0; border-left: 0; box-shadow: none;">
                                 </div>
                             </div>
-                            
+
                         </div>
 
                         <div class="col-md-9 col-sm-12 col-12 mx-auto position-relative">
@@ -581,18 +621,63 @@
                                                     <svg xmlns="http://www.w3.org/2000/svg" height="1.6rem" width="6rem" viewBox="0 0 448 512" fill="#FFC000"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
                                                 </div>
                                             </div>
-                                        </div>    
+                                        </div>
                                     </button>
                                 </div>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </form>
         </div>
-       
+
     </div>
+
+    <form action="{{route('config.seccion.createFrase')}}" method="POST" class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" enctype="multipart/form-data">
+        <div class="modal-dialog modal-dialog-centered">
+        <div  class="modal-content" style="border-radius: 16px;" >
+            @csrf
+            <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Datos</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <style>
+                    .backr{
+                        background: #1555bc !important;
+                    }
+                </style>
+                <div class="col-12 mb-2" style="height: 100px; position: relative;">
+                        <div  class="file-upload col-12 p-0 m-0" style=" top: 0; bottom: 0; background: ; height: 100%;" >
+                            @csrf
+                            <input id="input_img_element" class="m-0 p-0" type="file" name="archivo" required>
+                            <label id="label_form" class="col-12 m-0 p-0 d-flex justify-content-center align-items-center" for="input_img_element" style="opacity: 100%; height: 100%;  border-radius: 16px;">Seleccionar imagen</label>
+                        </div>
+                        <script>
+                            ///////////////////// Editar campos imegn categoria ////////////////////
+                            $('#input_img_element').change(function(e) {
+                                $('#label_form').addClass('backr');
+                                $('#label_form').html('Imagen añadida');
+                            });
+                            ///////////////////// Editar campos imegn categoria ////////////////////
+                        </script>
+                </div>
+
+
+                <div class="col-12 mb-2">
+                    <input class="form-control" type="text" name="frase" placeholder="Nombre del proyecto" required>
+                </div>
+
+
+            </div>
+            <div class="modal-footer">
+            <div class="btn btn-secondary" data-bs-dismiss="modal" style="background: red !important; border:none;">Cerrar</div>
+            <button type="submit" class="btn btn-primary" style="background: #1555bc !important; border:none;">Agregar</button>
+            </div>
+        </div>
+        </div>
+    </form>
 @endsection
 
 @section('jqueryExtra')
@@ -634,16 +719,16 @@
         $(document).ready(function() {
             var contadorElemento = $("#contador_clientes");
             var valorActual = 0;
-    
+
             function incrementarContador() {
                 valorActual++;
                 contadorElemento.text(valorActual);
-          
+
                 if (valorActual === 110) {
                     clearInterval(intervalo);
                 }
             }
-    
+
             // Establece un intervalo para llamar a la función incrementarContador cada segundo
             var intervalo = setInterval(incrementarContador, 380);
         });
@@ -651,13 +736,13 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             var tituloIndex = document.querySelector('.titulo-index');
-    
+
             // Obtén el texto del elemento
             var texto = tituloIndex.textContent;
-    
+
             // Separa el texto en palabras
             var palabras = texto.split(/\s+/);
-    
+
             // Aplica estilos según si la palabra es mayúscula o minúscula
             var resultado = palabras.map(function (palabra) {
                 if (palabra === palabra.toUpperCase()) {
@@ -666,13 +751,13 @@
                     return '<span class="minuscula">' + palabra + '</span>';
                 }
             });
-    
+
             // Actualiza el contenido con los estilos aplicados
             tituloIndex.innerHTML = resultado.join(' ');
         });
     </script>
     <script>
-    
+
         $('.servicios').slick({
             dots: true,
             infinite: false,
@@ -722,7 +807,7 @@
             }
             ]
         });
-    
+
         $('.slider-principal').slick({
             dots: false,
             infinite: false,
@@ -757,7 +842,7 @@
             }
             ]
         });
-    
+
         $('.slider-clientes').slick({
             dots: false,
             infinite: false,
@@ -807,11 +892,60 @@
             }
             ]
         });
-    
+
+    </script>
+    <script>
+         $('.slider-frases').slick({
+            dots: false,
+            infinite: false,
+            speed: 300,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            centerMode: false,
+            responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 576,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+            ]
+        });
     </script>
     <script>
         var map = L.map('map',  { attributionControl: false }).setView([23.6345, -102.5528], 5);
-    
+
         // Cargar el archivo GeoJSON y agregarlo al mapa con un estilo personalizado
         $.getJSON('vendor/leaflet/maps/mexico.geojson', function (data) {
             var geojsonLayer = L.geoJson(data, {
@@ -821,7 +955,7 @@
                     fillOpacity: 0.8  // Opacidad del relleno
                 }
             }).addTo(map);
-    
+
             // Añadir efecto de hover para todos los estados
             geojsonLayer.on('mouseover', function (e) {
                 var layer = e.layer;
@@ -830,7 +964,7 @@
                     fillOpacity: 1  // Ajusta la opacidad en hover
                 });
             });
-    
+
             geojsonLayer.on('mouseout', function (e) {
                 var layer = e.layer;
                 layer.setStyle({
@@ -838,18 +972,18 @@
                     fillOpacity: 0.8  // Restaura la opacidad
                 });
             });
-    
+
             geojsonLayer.on('click', function (e) {
                 var stateName = e.layer.feature.properties.state_name;
                 var modalBody = $('.modal-body');
-                
+
                 // Set the content of the modal body
                 modalBody.html('<p style="font-size: 2rem; font-weight: 500;">' + stateName + '</p>');
-    
+
                 // Show the modal
                 $('#exampleModal').modal('show');
             });
         });
-    
+
     </script>
 @endsection
