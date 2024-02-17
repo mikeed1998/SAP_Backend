@@ -1224,7 +1224,7 @@ input {
                                     filter: grayscale(100%);
                                 "></div>
                                 <div class="card-img-overlay rounded-0 py-5 " style="height: auto; filter: grayscale(100%);">
-                                    <div class="card rounded-0 border-0 bg-transparent position-absolute start-0 top-50 text-white" style="margin-top: -10rem;">
+                                    <div class="card rounded-0 border-0 bg-transparent position-absolute start-0 top-50 text-white" style="margin-top: -18rem; line-height: 1.1;">
                                         <div class="row">
                                             <div class="col-9 mx-auto" style="font-family: 'Sansation Bold', sans-serif; text-align: justify; height: 40rem;">
                                                 {{ $vac->descripcion }}
@@ -1235,7 +1235,7 @@ input {
                                 <div class="card-body border-0">
                                     {{-- <h3 class="card-title text-white p-0 m-0" style="font-family: 'Sansation Bold', sans-serif;">{{ $vac->titulo }}</h3> --}}
                                 </div>
-                                <div class="card col-12 bg-transparent border-0 position-absolute top-0 start-0 mt-5">
+                                <div class="card col-12 bg-transparent border-0 position-absolute bottom-0 start-0" style="margin-bottom: 10rem; font-size: 1.2rem;">
                                     <div class="row">
                                         <div class="col-9 mx-auto">
                                             <h3 class="card-title text-white p-0 m-0" style="font-family: 'Sansation Bold', sans-serif;">{{ $vac->titulo }}</h3>
@@ -1243,7 +1243,7 @@ input {
                                     </div>
                                 </div>
                                 <div class="position-relative cont-btn">
-                                    <div class="card bg-transparent border-0 ms-5 position-absolute bottom-0 start-0 translate-middle-y">
+                                    <div class="card bg-transparent border-0 ms-5 position-absolute bottom-0 start-0 transSlate-middle-y">
                                         <div class="row">
                                             <div class="col-xxl-4 link-servicio">
                                                 <a href="{{ route('front.contact') }}" class="text-center  rounded-circle">

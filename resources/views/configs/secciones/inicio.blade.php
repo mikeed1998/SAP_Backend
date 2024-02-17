@@ -417,7 +417,7 @@
                 <div class="row">
                     <div class="col-12 py-3 text-center d-flex justify-content-center flex-column">
                         <h4 style="font-family:'Neusharp Bold'; color: #FFFFFF;">Agregar Nuevo</h4>
-                        <div >
+                        <div>
                             <button style="background: none !important; border:none; color: #FFFFFF;" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-circle-plus" style="font-size: 2rem;"></i></button>
                         </div>
                     </div>
@@ -426,15 +426,28 @@
                     <div class="slider-frases">
                         @foreach ($frases as $frase)
                         <div class="col-4 border-0">
-                            <div class="card carta-frase border" style="
+                            <div class="card carta-frase border position-relative" style="
                                 background-image: url('{{ asset('img/photos/frases/'.$frase->imagen) }}');
                                 background-position: center center;
                                 background-size: cover;
                                 background-repeat: no-repeat;
                                 width: 100%;
-                                height: 574px;
+                                height: 400px;
                             ">
-
+                                <div class="card bg-transparent border-0 w-100 position-absolute top-0 start-0">
+                                    <form id="form_aux_img-{{ $frase->id }}" action="image_input_ejemplo" method="POST" class="file-upload px-auto col-7" enctype="multipart/form-data">
+                                        @csrf
+                                        <input type="hidden" name="id_elemento" value="{{ $frase->id }}">
+                                        <input type="hidden" name="tipo" value="frase">
+                                        <input id="img_aux_img-{{ $frase->id }}" class="m-0 p-0" type="file" name="archivo">
+                                        <label class="col-12 m-0 px-2 d-flex justify-content-center align-items-center" for="img_aux_img-{{ $frase->id }}" style=" height: 100%; opacity: 100%; border-radius: 20px; font-family: 'Sansation Bold', sans-serif;">Cambiar imágen</label>
+                                    </form>
+                                    <script>
+                                        $('#img_aux_img-{{ $frase->id }}').change(function(e) {
+                                            $('#form_aux_img-{{ $frase->id }}').trigger('submit');
+                                        });
+                                    </script>
+                                </div>
                             </div>
                             <div class="card-body">
                                 <input type="text" class="form-control editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{ $frase->id }}" data-table="ZFrase" data-campo="frase"  placeholder="Texto" value="{{ $frase->frase }}">
@@ -489,7 +502,7 @@
                     @foreach ($clientes as $clie)
                         <div class="col position-relative">
                             <div style="
-                                background-color: #FFC000;
+                                background-color: #FFFFFF;
                                 background-image: url('{{ asset('img/photos/clientes/'.$clie->logo) }}');
                                 background-size: contain;
                                 background-position: center center;

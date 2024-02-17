@@ -323,9 +323,9 @@
                     <div class="row">
                         @foreach ($frases as $frase)
                             <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 mt-4">
-                                <div class="card mt carta-frase border" style="background-image: url('{{ asset('img/photos/frases/'.$frase->imagen) }}')">
+                                <div class="card border-0 carta-frase border" style="background-image: url('{{ asset('img/photos/frases/'.$frase->imagen) }}')">
                                     <div class="overlay-frases">
-                                        <p class="fs-1" style="font-family: 'Sansation Bold', sans-serif;">{{ $frase->frase }}</p>
+                                        <p class="col-9 mx-auto fs-3" style="font-family: 'Sansation Bold', sans-serif;">{{ $frase->frase }}</p>
                                     </div>
                                 </div>
                             </div>

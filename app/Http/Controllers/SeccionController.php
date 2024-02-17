@@ -268,6 +268,22 @@ class SeccionController extends Controller
 
                     \Toastr::success('Guardado');
                     return redirect()->back();
+                } else if($request->tipo == 'frase') {
+                    $ufrase = ZFrase::find($request->id_elemento);
+                    
+                    $imagen = $request->file('archivo');
+                    $oldFilePoryectos = 'img/photos/frases/'.$ufrase->imagen;
+                    $destinationPath = 'img/photos/frases/';
+                    $profileImage = date('YmdHis') . "." . $imagen->getClientOriginalExtension();
+                    $imagen->move($destinationPath, $profileImage);
+                    unlink($oldFilePoryectos);
+
+                    $ufrase->imagen = "$profileImage";
+
+                    $ufrase->update();
+
+                    \Toastr::success('Guardado');
+                    return redirect()->back();
                 } else if($request->tipo == 'vacante') {
                     $uvacante = ZVacante::find($request->id_elemento);
 
