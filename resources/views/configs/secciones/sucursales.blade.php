@@ -43,6 +43,30 @@
             </div>
         </div>
         <div class="row">
+            <div class="col-12 text-center fs-2 mt-3">
+                Estados
+            </div>
+            <div class="col-12 text-center ">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="slider-estados">
+                @foreach ($estadosdesc as $esta)
+                    <div class="col-4 px-2">
+                        <div class="card mt-4">
+                            <div class="card-title text-center fs-5 mt-3">
+                                {{ $esta->estado }}
+                            </div>
+                            <div class="card-body">
+                                <textarea name="" id="" cols="30" rows="10" class="form-control editar_text_seccion_global editarajax" data-url="{{route('config.seccion.textglobalseccion')}}" data-id="{{ $esta->id }}" data-table="ZEstado" data-campo="descripcion"  placeholder="Esta descripción aparecerá al hacer clic en algún estado dentro del mapa de la sección HOME">{{ $esta->descripcion }}</textarea>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+        <div class="row">
             <div class="col-9 text-center mx-auto fs-3 py-5 h4" style="font-family:'Neusharp Bold'; color: white;">
                 <div class="row">
                     <div class="col-12">Agregar sucursal al mapa</div>
@@ -134,7 +158,7 @@
 
 
 <form action="{{ route('config.seccion.sucursalCreate') }}" method="POST" class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" enctype="multipart/form-data">
-    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
     <div  class="modal-content" style="border-radius: 16px;" >
         @csrf
         <div class="modal-header">
@@ -147,22 +171,25 @@
                     background: #1555bc !important;
                 }
             </style>
-            <div class="col-12 mb-2">
-                <label for="estados" class="fs-5">Estado</label>
-                <select name="estado" id="estados" class="form-control" required>
-                    @foreach ($estados as $es)
-                        <option value="{{ $es->id }}">{{ $es->nombre }}</option>
-                    @endforeach
-                </select>
+            <div class="row">
+                <div class="col-6 mb-2">
+                    <label for="estados" class="fs-5">Estado de la sucursal</label>
+                    <select name="estado" id="estados" class="form-control" required>
+                        @foreach ($estados as $es)
+                            <option value="{{ $es->id }}">{{ $es->nombre }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="col-6 mb-2">
+                    <label for="municipios" class="fs-5">Municipio de la sucursal</label>
+                    <select name="municipio" id="municipios" class="form-control" required>
+                        @foreach ($municipios as $mun)
+                            <option value="{{ $mun->id }}" data-estado="{{ $mun->estado_id }}">{{ $mun->nombre }}</option>
+                        @endforeach
+                    </select>
+                </div>
             </div>
-            <div class="col-12 mb-2">
-                <label for="municipios" class="fs-5">Municipios</label>
-                <select name="municipio" id="municipios" class="form-control" required>
-                    @foreach ($municipios as $mun)
-                        <option value="{{ $mun->id }}" data-estado="{{ $mun->estado_id }}">{{ $mun->nombre }}</option>
-                    @endforeach
-                </select>
-            </div>
+            
             <div class="col-12 mb-2">
                 <label for="direccion" class="fs-5">Dirección de la sucursal</label>
                 <textarea class="col-12 form-control" id="direccion" name="direccion" id="" rows="5" placeholder="Dirección de la sucursal" required></textarea>
@@ -215,6 +242,57 @@
 
 @endsection
 @section('jqueryExtra')
+<script>
+    $('.slider-estados').slick({
+       dots: false,
+       infinite: false,
+       speed: 300,
+       rows: 2,
+       slidesPerRow: 3,
+    //    slidesToShow: 3,
+    //    slidesToScroll: 1,
+       centerMode: false,
+       responsive: [
+       {
+           breakpoint: 1200,
+           settings: {
+               slidesToShow: 3,
+               slidesToScroll: 1,
+               infinite: true,
+               dots: true
+           }
+       },
+       {
+           breakpoint: 992,
+           settings: {
+               slidesToShow: 2,
+               slidesToScroll: 1
+           }
+       },
+       {
+           breakpoint: 768,
+           settings: {
+               slidesToShow: 1,
+               slidesToScroll: 1
+           }
+       },
+       {
+           breakpoint: 576,
+           settings: {
+               slidesToShow: 1,
+               slidesToScroll: 1
+           }
+       },
+       {
+           breakpoint: 480,
+           settings: {
+               slidesToShow: 1,
+               slidesToScroll: 1
+           }
+       }
+       ]
+   });
+</script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         console.log("Antes de ocultar/mostrar el select de municipios");

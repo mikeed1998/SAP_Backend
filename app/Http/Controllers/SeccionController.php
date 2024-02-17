@@ -29,6 +29,7 @@ use App\ZCliente;
 use App\ZServicio;
 use App\ZProyecto;
 use App\ZVacante;
+use App\ZEstado;
 use App\Estado;
 use App\Municipio;
 use App\ZBeneficio;
@@ -151,10 +152,11 @@ class SeccionController extends Controller
         $beneficios = ZBeneficio::all();
         $sucursales = ZSucursal::all();
         $frases = ZFrase::all();
+        $estadosdesc = ZEstado::all();
 
         $ruta = 'configs.secciones.'.$seccion->seccion;
 
-		return view($ruta,compact('elements', 'frases', 'config', 'elem_general', 'slider_principal', 'servicios', 'proyectos', 'clientes', 'vacantes', 'estados', 'municipios', 'beneficios', 'sucursales'));
+		return view($ruta,compact('elements', 'estadosdesc', 'frases', 'config', 'elem_general', 'slider_principal', 'servicios', 'proyectos', 'clientes', 'vacantes', 'estados', 'municipios', 'beneficios', 'sucursales'));
     }
 
     /**

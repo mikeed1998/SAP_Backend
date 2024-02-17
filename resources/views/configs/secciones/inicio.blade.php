@@ -416,7 +416,7 @@
                 </div> --}}
                 <div class="row">
                     <div class="col-12 py-3 text-center d-flex justify-content-center flex-column">
-                        <h4 style="font-family:'Neusharp Bold'; color: #FFFFFF;">Agregar Nuevo</h4>
+                        <h4 style="color: #FFFFFF;">Agregar Nuevo</h4>
                         <div>
                             <button style="background: none !important; border:none; color: #FFFFFF;" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-circle-plus" style="font-size: 2rem;"></i></button>
                         </div>

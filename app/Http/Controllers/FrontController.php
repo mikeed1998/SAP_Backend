@@ -24,6 +24,7 @@ use App\ZCliente;
 use App\ZServicio;
 use App\ZProyecto;
 use App\ZVacante;
+use App\ZEstado;
 use App\Estado;
 use App\Municipio;
 use App\ZBlog;
@@ -59,13 +60,23 @@ class FrontController extends Controller
 		$municipios = Municipio::all();
 		$galeria = ZSucursalFoto::all();
         $frases = ZFrase::all();
+		$estadosdesc = ZEstado::all();
+
+		foreach($estadosdesc as $e) {
+			foreach($sucursales as $s) {
+				if($s->estado == $e->ide) {
+					$s->estadodesc = $e->descripcion;
+					$s->save();
+				}
+			}
+		}
 
 		$contador = 0;
 		foreach ($sucursales as $sc) {
 			$contador++;
 		}
 
-		return view('front.index', compact('pagina', 'frases', 'galeria', 'contador', 'slider_principal', 'config', 'elements', 'servicios', 'clientes', 'sucursales', 'estados', 'municipios'));
+		return view('front.index', compact('pagina', 'estadosdesc', 'frases', 'galeria', 'contador', 'slider_principal', 'config', 'elements', 'servicios', 'clientes', 'sucursales', 'estados', 'municipios'));
 	}
 
 	public function servicio($id) {

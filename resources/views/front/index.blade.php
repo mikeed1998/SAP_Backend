@@ -806,7 +806,9 @@
 <script>
 
     var sucursaless = @json($sucursales);
+    var estados_desc = @json($estadosdesc);
     console.log(sucursaless);
+    // console.log($estadosdesc)
 
     var map = L.map('map', { attributionControl: false, scrollWheelZoom: false, dragging: true }).setView([23.6345, -102.5528], 6);
     // Ajustar el centro para desplazar el mapa a la derecha
@@ -916,19 +918,23 @@
             console.log(municipios);
             var galeria = @json($galeria);
             console.log(galeria);
+            var $est = @json($estadosdesc);
+            console.log($est);
 
             var stateName = e.layer.feature.properties.state_name;
             var stateId = e.layer.feature.properties.state_code;
             var modalHeader = $('.modal-header');
             var modalBody = $('.modal-body');
 
-            modalHeader.html("<p style='font-size: 2.6rem; font-weight: 500; font-family: 'Sansation Bold', sans-serif; font-weight: bold;'>Nuestras sucursales en <strong>" + stateName + "</strong></p>" +
+            modalHeader.html("<p style='font-size: 2.6rem; font-weight: 500; font-family: 'Sansation Bold', sans-serif; font-weight: bold;'><strong>" + stateName + "</strong></p>" +
                 "<button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>");
 
             // Crear una lista HTML para las sucursales
             var sucursalesHTML = '<ul>';
+            var bandera = 0;
             sucursales.forEach(sucursal => {
-                if (sucursal.estado == stateId) {
+                if (sucursal.estado == stateId && bandera != 1) {
+                    bandera = 1;
                     var nombreMunicipio;
 
                     for (const mun of municipios) {
@@ -938,7 +944,8 @@
                         }
                     }
 
-                    sucursalesHTML += '<p class="fs-3"><svg xmlns="http://www.w3.org/2000/svg" height="26" width="22" fill="#FFFFFF" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>&nbsp;&nbsp;&nbsp;' + sucursal.sucursal + ' - <strong>' + nombreMunicipio + '</strong></p>';
+                    sucursalesHTML += '<p class="fs-3">' + sucursal.estadodesc + '</p>';
+                    // sucursalesHTML += '<p class="fs-3"><svg xmlns="http://www.w3.org/2000/svg" height="26" width="22" fill="#FFFFFF" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>&nbsp;&nbsp;&nbsp;' + sucursal.sucursal + ' - <strong>' + nombreMunicipio + '</strong></p>';
                 }
             });
 
